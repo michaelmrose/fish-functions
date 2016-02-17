@@ -32,8 +32,10 @@ function fn
     case export
       ftags export $argv[2..-1]
     case import
-      fn rm (fn ls @$file)
       set file $argv[2]
+      if ftags exists $file
+        fn rm (fn ls @$file)
+      end
       source $file
       set dir ~/.config/fish/functions/
       set fns (return-fnames-of-file $file) 
