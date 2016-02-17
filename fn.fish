@@ -12,6 +12,12 @@ function fn
       ftags new $argv[2..-1]
     case untag
       ftags rm $argv[2..-1]
+    case save
+      for fn in $argv[2..-1]
+        funcsave $fn
+        git -C ~/.config/fish/functions add $fn.fish
+        git -C ~/.config/fish/functions commit -m "editing $fn.fish"
+      end
     case rm
       switch $argv[2]
         case tag
