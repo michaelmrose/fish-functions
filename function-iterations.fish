@@ -1,5 +1,11 @@
 function function-iterations
-	set revisions (get-function-revisions $argv)
+	switch $argv
+    case -p
+      set prettyprint true
+      set revisions (get-function-revisions $argv[2])
+    case '*'
+      set revisions (get-function-revisions $argv)
+  end
   set cnt 1
 	for c in $revisions
 
@@ -8,7 +14,11 @@ function function-iterations
     if not contains $checksum $checksums
       set checksums $checksums $checksum
       echo \($cnt\)
-      println $src
+      if exists $prettyprint
+        println $src | pymentize
+      else
+        println $src
+      end
       set cnt (math $cnt + 1)
     else
     end
