@@ -32,7 +32,7 @@ function fn
     case export
       ftags export $argv[2..-1]
     case import
-      # fn rm (fn ls @$file)
+      fn rm (fn ls @$file)
       set file $argv[2]
       source $file
       set dir ~/.config/fish/functions/
