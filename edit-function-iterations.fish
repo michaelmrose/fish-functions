@@ -1,6 +1,6 @@
 function edit-function-iterations
 	set tmp /tmp/function-iterations.fish
-  function-iterations > $tmp
+  function-iterations $argv > $tmp
   set checksum (checksum-simple $tmp)
   eval $EDITOR $tmp
   set newsum (checksum-simple $tmp)
