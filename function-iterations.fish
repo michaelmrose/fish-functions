@@ -5,7 +5,6 @@ function function-iterations
     echo \($cnt\)
     set src (eval git -C ~/.config/fish/functions --no-pager show $c:$argv.fish)
     set checksum (echo $src | checksum-simple)
-    echo cs is $checksum and css is $checksums
     if not contains $checksum $checksums
       set checksums $checksums $checksum
       println $src
