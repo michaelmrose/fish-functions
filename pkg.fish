@@ -1,4 +1,5 @@
 function pkg
+	#a wrapper for gentoo package tools
 	if contains $argv[1] (equery-fns) (equery-short-fns)
     equery $argv
     return 0
