@@ -39,6 +39,7 @@ function fn
       for fn in $fns
         println (fn src $fn) > $dir/$fn.fish
         fn save $fn
+        fn tag $fn @$file
       end
     case src
       functions $argv[2..-1]
