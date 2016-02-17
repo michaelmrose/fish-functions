@@ -2,6 +2,8 @@ function ftags
 	ensure-dir-exists ~/.config/fish/tags
 	set tagdir ~/.config/fish/tags
 	switch $argv[1]
+    case exists
+      test -f $tagdir/$argv[2]
     case list
       if startswith @ $argv[2]
         for tag in $argv[2..-1]
