@@ -1,5 +1,5 @@
 function function-set-iteration
-	set revision (get-function-revisions $argv[1])[$argv[2]]
-  echo $revision
+	set rev (get-function-revisions foobar)[2]
+  echo $rev
   # eval git -C ~/.config/fish/functions --no-pager show $revision:$argv[1].fish
 end
