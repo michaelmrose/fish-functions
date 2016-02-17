@@ -3,7 +3,8 @@ function function-iterations
   set cnt 1
 	for c in $revisions
     echo \($cnt\)
-    eval git -C ~/.config/fish/functions --no-pager show $c:$argv.fish
+    set src (eval git -C ~/.config/fish/functions --no-pager show $c:$argv.fish)
+    println $src
     set cnt (math $cnt + 1)
   end
 end
