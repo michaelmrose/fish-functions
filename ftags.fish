@@ -4,6 +4,8 @@ function ftags
 	switch $argv[1]
     case exists
       test -f $tagdir/$argv[2]
+    case rename
+      mv $tagdir/$argv[2] $tagdir/$argv[3]
     case list
       if startswith @ $argv[2]
         for tag in $argv[2..-1]
