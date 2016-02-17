@@ -16,14 +16,16 @@ function function-iterations
     if not contains $checksum $checksums
       set checksums $checksums $checksum
       if exists $prettyprint
-        echo \($cnt\)
-        println $src | pygmentize
+        set input $input (echo \($cnt\))
+        set input $input (println $src)
       else
         println $src
       end
       set cnt (math $cnt + 1)
     else
     end
-
+  end
+  if exists $prettyprint
+    println $input | fish-color
   end
 end
