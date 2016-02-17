@@ -33,6 +33,7 @@ function fn
         rm ~/.config/fish/functions/$fn.fish
         ftags removeall $fn
         git -C ~/.config/fish/functions rm $fn.fish
+        git -C ~/.config/fish/functions commit -m "removed $fn.fish"
       end
       # switch $argv[2]
       #   case tag
