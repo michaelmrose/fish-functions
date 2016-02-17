@@ -6,6 +6,6 @@ function fish-color
       set input $input $line
     end
     println $input | pygmentize -O style=monokai -l fish -f 256
-    println $input | fish_indent --ansi
+    # println $input | fish_indent --ansi
   end
 end
