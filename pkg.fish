@@ -26,12 +26,14 @@ function pkg
       pkg search $argv[2..-1]
     case S
       sudo emerge --sync
-    case uw
-      pkg updateworld
     case status
       em-status
     case updateworld
-      sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert
+      if test (count $argv) -gt 1
+        sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert $argv[2..-1]
+      else
+        sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert
+      end
     case depends
         equery depends $argv[2..-1]
     case overlay
