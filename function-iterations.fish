@@ -1,5 +1,5 @@
 function function-iterations
-	switch $argv
+	switch $argv[1]
     case -p
       set prettyprint true
       set revisions (get-function-revisions $argv[2])
