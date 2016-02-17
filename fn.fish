@@ -30,13 +30,6 @@ function fn
       set tags (filter-with-expr "startswith @" $argv[2..-1])
       apply-to-list "ftags delete" $tags
       apply-to-list "fn remove-function" $fns
-      # for fn in $fns
-      #   functions -e $fn
-      #   rm ~/.config/fish/functions/$fn.fish
-      #   ftags clear $fn
-      #   git -C ~/.config/fish/functions rm $fn.fish
-      #   git -C ~/.config/fish/functions commit -m "removed $fn.fish"
-      # end
     case export
       ftags export $argv[2..-1]
     case mv
