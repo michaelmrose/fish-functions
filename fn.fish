@@ -19,8 +19,6 @@ function fn
         git -C ~/.config/fish/functions commit -m "editing $fn.fish"
       end
     case rm
-      # set fns (ftags return-fns $argv[2..-1])
-      # set tags (ftags return-tags $argv[2..-1])
       set fns (filter-with-expr "not startswith @" $argv[2..-1])
       set tags (filter-with-expr "startswith @" $argv[2..-1])
       if exists $tags
