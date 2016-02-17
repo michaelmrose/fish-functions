@@ -36,13 +36,13 @@ function fn
     case src
       functions $argv[2..-1]
     case pprint
-      fn src $argv[2..-1] | pygmentize -l Fish -O style=monokai
+      fn src $argv[2..-1] | fish-color
     case iterations
       switch $argv[2]
         case edit
           edit-function-iterations $argv[3]
         case show
-          function-iterations $argv[3]
+          function-iterations -p $argv[3]
         case set
           function-set-iteration $argv[3] $argv[4]
       end
