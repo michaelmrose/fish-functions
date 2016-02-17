@@ -35,6 +35,8 @@ function fn
       ftags export $argv[2..-1]
     case src
       functions $argv[2..-1]
+    case pprint
+      fn src $argv[2..-1] | pygmentize -l Fish -O style=monokai
     case iterations
       switch $argv[2]
         case edit
