@@ -5,7 +5,9 @@ function ftags
     case exists
       test -f $tagdir/$argv[2]
     case rename
-      mv $tagdir/$argv[2] $tagdir/$argv[3]
+      set tag (strip-char @ $argv[2])
+      set dest (strip-char @ $argv[3])
+      mv $tagdir/$tag $tagdir/$dest
     case list
       if startswith @ $argv[2]
         for tag in $argv[2..-1]
