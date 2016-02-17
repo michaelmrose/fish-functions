@@ -1,0 +1,3 @@
+function blarg.txt
+	
+end
