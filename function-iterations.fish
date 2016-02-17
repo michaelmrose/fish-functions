@@ -7,9 +7,9 @@ function function-iterations
     set checksum (echo $src | checksum-simple)
     echo cs is $checksum and css is $checksums
     if not contains $checksum $checksums
+      set checksums $checksums $checksum
       println $src
     else
-      set checksums $checksums $checksum
     end
     set cnt (math $cnt + 1)
   end
