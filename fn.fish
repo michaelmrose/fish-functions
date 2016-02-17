@@ -37,7 +37,7 @@ function fn
       functions $argv[2..-1]
     case pprint
       fn src $argv[2..-1] | fish-color
-    case iterations
+    case revs
       switch $argv[2]
         case edit
           edit-function-iterations $argv[3]
