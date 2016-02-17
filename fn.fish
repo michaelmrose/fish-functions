@@ -31,6 +31,10 @@ function fn
       end
     case export
       ftags export $argv[2..-1]
+    case mv
+      if startswith @ $argv[2]
+        # ftags rename $argv[2]
+      end
     case import
       set file $argv[2]
       if ftags exists $file
