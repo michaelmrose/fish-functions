@@ -1,3 +1,3 @@
 function foobar
-	echo very very much ass
+	echo very very much
 end
