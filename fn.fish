@@ -25,7 +25,7 @@ function fn
       for fn in $fns
         functions -e $fn
         rm ~/.config/fish/functions/$fn.fish
-        ftags removeall $fn
+        ftags clear $fn
         git -C ~/.config/fish/functions rm $fn.fish
         git -C ~/.config/fish/functions commit -m "removed $fn.fish"
       end
