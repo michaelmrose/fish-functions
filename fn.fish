@@ -34,12 +34,11 @@ function fn
     case import
       set file $argv[2]
       source $file
-      set name (cutlast / $argv[2] | cut -d "." -f1)
-      set dir ~/.config/fish/functions/$name
-      ensure-dir-exists $dir
+      set dir ~/.config/fish/functions/
       set fns (return-fnames-of-file $file) 
       for fn in $fns
         println (fn src $fn) > $dir/$fn.fish
+        fn save $fn
       end
     case src
       functions $argv[2..-1]
