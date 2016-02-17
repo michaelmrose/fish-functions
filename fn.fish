@@ -33,7 +33,11 @@ function fn
       ftags export $argv[2..-1]
     case mv
       if startswith @ $argv[2]
-        # ftags rename $argv[2]
+        ftags rename $argv[2] $argv[3]
+      else
+        functions -c $argv[2] $argv[3]
+        fn save $argv[3]
+        fn rm $argv[2]
       end
     case import
       set file $argv[2]
