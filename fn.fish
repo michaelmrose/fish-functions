@@ -31,6 +31,16 @@ function fn
       end
     case export
       ftags export $argv[2..-1]
+    case import
+      set file $argv[2]
+      source $file
+      set name (cutlast / $argv[2] | cut -d "." -f1)
+      set dir ~/.config/fish/functions/$name
+      ensure-dir-exists $dir
+      set fns (return-fnames-of-file $file) 
+      for fn in $fns
+        println (fn src $fn) > $dir/$fn.fish
+      end
     case src
       functions $argv[2..-1]
     case pprint
