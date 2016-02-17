@@ -13,8 +13,8 @@ function function-iterations
     set checksum (echo $src | checksum-simple)
     if not contains $checksum $checksums
       set checksums $checksums $checksum
-      echo \($cnt\)
       if exists $prettyprint
+        echo \($cnt\)
         println $src | pymentize
       else
         println $src
