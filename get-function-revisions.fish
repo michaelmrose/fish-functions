@@ -1,3 +1,4 @@
 function get-function-revisions
-	git -C ~/.config/fish/functions lgg | grep "editing $argv.fish" | cut -d " " -f2
+	set revs (git -C ~/.config/fish/functions lgg | grep "editing $argv.fish" | cut -d " " -f2)
+  println $rev
 end
