@@ -36,7 +36,14 @@ function fn
     case src
       functions $argv[2..-1]
     case iterations
-      edit-function-iterations $argv[2]
+      switch $argv[2]
+        case edit
+          edit-function-iterations $argv[3]
+        case show
+          function-iterations $argv[3]
+        case set
+          function-set-iteration $argv[3] $argv[4]
+      end
     case show-iterations
       function-iterations $argv[2]
   end
