@@ -38,6 +38,7 @@ function fn
         functions -c $argv[2] $argv[3]
         fn save $argv[3]
         fn rm $argv[2]
+        echo $argv[2] >> ~/.config/fish/mappings/$argv[3] 
       end
     case import
       set file $argv[2]
