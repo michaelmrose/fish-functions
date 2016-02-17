@@ -18,12 +18,6 @@ function fn
         git -C ~/.config/fish/functions add $fn.fish
         git -C ~/.config/fish/functions commit -m "editing $fn.fish"
       end
-    # case delete
-    #   for fn in $argv[2..-1]
-    #     functions -e $fn
-    #     rm ~/.config/fish/functions/$fn.fish
-    #     ftags removeall $fn
-    #   end
     case rm
       set fns (ftags return-fns $argv[2..-1])
       set tags (ftags return-tags $argv[2..-1])
@@ -35,12 +29,6 @@ function fn
         git -C ~/.config/fish/functions rm $fn.fish
         git -C ~/.config/fish/functions commit -m "removed $fn.fish"
       end
-      # switch $argv[2]
-      #   case tag
-      #     ftags delete $argv[3..-1]
-      #   case fn
-      #     fd $argv[3..-1]
-      # end
     case export
       ftags export $argv[2..-1]
     case src
