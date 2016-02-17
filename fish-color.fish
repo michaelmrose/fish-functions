@@ -1,10 +1,10 @@
 function fish-color
 	if exists $argv
-    cat $argv | pygmentize -l Fish -O style=emacs
+    cat $argv | pygmentize -O style=monokai -l fish -f 256
   else
     while read -l line
       set input $input $line
     end
-    println $input | pygmentize -l Fish -O style=emacs
+    println $input | pygmentize -O style=monokai -l fish -f 256
   end
 end
