@@ -18,17 +18,25 @@ function fn
         git -C ~/.config/fish/functions add $fn.fish
         git -C ~/.config/fish/functions commit -m "editing $fn.fish"
       end
+    case remove-function
+      set fn $argv[2]
+      functions -e $fn
+      rm ~/.config/fish/functions/$fn.fish
+      ftags clear $fn
+      git -C ~/.config/fish/functions rm $fn.fish
+      git -C ~/.config/fish/functions commit -m "removed $fn.fish"
     case rm
       set fns (filter-with-expr "not startswith @" $argv[2..-1])
       set tags (filter-with-expr "startswith @" $argv[2..-1])
       apply-to-list "ftags delete" $tags
-      for fn in $fns
-        functions -e $fn
-        rm ~/.config/fish/functions/$fn.fish
-        ftags clear $fn
-        git -C ~/.config/fish/functions rm $fn.fish
-        git -C ~/.config/fish/functions commit -m "removed $fn.fish"
-      end
+      apply-to-list "fn remove-function" $fns
+      # for fn in $fns
+      #   functions -e $fn
+      #   rm ~/.config/fish/functions/$fn.fish
+      #   ftags clear $fn
+      #   git -C ~/.config/fish/functions rm $fn.fish
+      #   git -C ~/.config/fish/functions commit -m "removed $fn.fish"
+      # end
     case export
       ftags export $argv[2..-1]
     case mv
