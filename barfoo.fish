@@ -1,3 +1,3 @@
 function barfoo
-	echo fuck you asshole
+	echo fuck you
 end
