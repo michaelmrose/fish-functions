@@ -21,9 +21,7 @@ function fn
     case rm
       set fns (filter-with-expr "not startswith @" $argv[2..-1])
       set tags (filter-with-expr "startswith @" $argv[2..-1])
-      if exists $tags
-        apply-to-list "ftags delete" $tags
-      end
+      apply-to-list "ftags delete" $tags
       for fn in $fns
         functions -e $fn
         rm ~/.config/fish/functions/$fn.fish
