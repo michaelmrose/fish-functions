@@ -7,7 +7,6 @@ function vals
       return 0
     end
     set last (lesserof $max (count $rest))  
-    echo min is $min and last is $last and rest is $rest
     for i in $rest[$min..$last]
       echo $i
     end
