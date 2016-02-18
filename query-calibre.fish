@@ -9,5 +9,5 @@ function query-calibre --description 'usage: query-calibre [exact,contains] crit
         case "contains"
             set com (echo calibredb list --fields formats,title,$field -s $field:$query --for-machine)
     end
-    echo $com
+    eval $com
 end
