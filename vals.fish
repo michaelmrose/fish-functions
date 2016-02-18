@@ -1,6 +1,6 @@
 function vals
 	set min (echo $argv[1] | cut -c1)
-  set max (echo $argv[1] | cut -c(sizeof $argv[1])-)
+  set max (echo $argv[1] | cut -c4-5)
   set rest $argv[2..-1]
   echo min is $min max is $max and rest is $rest
   set last (lesserof $max (count $rest))  
