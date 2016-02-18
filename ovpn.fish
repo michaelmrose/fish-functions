@@ -15,7 +15,7 @@ function ovpn
                     set location $argv[2..-1]
             end
             # set file (ovpn list | grep -i $location | head -1)
-            set file (ls /etc/openvpn/*.ovpn | grep -i $location)
+            set file (ls /etc/openvpn/*.ovpn | grep -i $location | head -1)
             set -U openvpn_location $location
             echo $location > $tmp
             signal-i3blocks vpn
