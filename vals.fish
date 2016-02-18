@@ -4,7 +4,7 @@ function vals
   if test (count $argv) -gt 1
     set rest $argv[2..-1]
     set last (lesserof $max (count $rest))  
-    echo min is $min and last is $last
+    echo min is $min and last is $last and rest is $rest
     for i in $rest[$min..$last]
       echo $i
     end
