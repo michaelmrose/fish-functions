@@ -19,7 +19,7 @@ function ovpn
             set -U openvpn_location $location
             echo $location > $tmp
             signal-i3blocks vpn
-            sudo openvpn "$file"
+            echo sudo openvpn "$file"
             rm $tmp
             signal-i3blocks vpn
         case disconnect
