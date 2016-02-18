@@ -44,7 +44,7 @@ function books --description 'open books given either as a title or criteria que
             case -e
                 books --erase
             case --query
-                gvfs-open (choose-format (get-fname-of-book (select-book (query-calibre-title (return-query $tail)))))
+                echo gvfs-open (choose-format (get-fname-of-book (select-book (query-calibre-title (return-query $tail)))))
                 # e open choose-format get-fname-of-book select-book query-calibre-title return-query $tail
             case -q
                 books --query $tail
