@@ -29,11 +29,12 @@ function pkg
     case status
       em-status
     case updateworld
-      if test (count $argv) -gt 1
-        sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert $argv[2..-1]
-      else
-        sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert
-      end
+        echo sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert (vals 2..-1 $argv)
+      # if test (count $argv) -gt 1
+      #   sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert $argv[2..-1]
+      # else
+      #   sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert
+      # end
     case depends
         equery depends $argv[2..-1]
     case overlay
