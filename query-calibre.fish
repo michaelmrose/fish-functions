@@ -4,7 +4,8 @@ function query-calibre --description 'usage: query-calibre [exact,contains] crit
     set query $argv[3..-1]
     switch $type
         case "exact"
-            set com (echo calibredb list --fields formats,title,$field -s {$field}:\"=\"$query\"\" --for-machine)
+            # set com (echo calibredb list --fields formats,title,$field -s {$field}:\"=\"$query\"\" --for-machine)
+            set com (echo calibredb list --fields formats,title,$field -s \'{$field}:=\"$query\"\' --for-machine)
         case "contains"
             set com (echo calibredb list --fields formats,title,$field -s $field:$query --for-machine)
     end
