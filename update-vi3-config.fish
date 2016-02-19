@@ -5,4 +5,5 @@ function update-vi3-config
     i3-msg restart
     sleep 3
     transparent-bars
+    wp recall
 end
