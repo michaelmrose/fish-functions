@@ -1,4 +1,5 @@
 function vi3_workspace --description 'switch workspace [a-z]'
+	echo hi
 	switch (count $argv)
       case 1
         i3-msg $argv
