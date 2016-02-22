@@ -11,7 +11,12 @@ function m
         set list (pick-subsect-list (cat ~/playlists/$argv[2]))
         println $list > ~/playlists/$argv[2]
       case -l
-        cat ~/playlists/$argv[2]
+        switch (count $argv)
+          case 1
+            println (ls ~/playlists)
+          case 2          
+            cat ~/playlists/$argv[2]
+        end
       case -p
         switch (count $argv)
           case 2
