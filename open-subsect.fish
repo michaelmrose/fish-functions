@@ -1,13 +1,12 @@
 function open-subsect
-	set fn $argv[1]
-  set target $argv[2]
+	set target $argv[1]
   switch (count $argv)
-    case 3
-      set begin $argv[3]
+    case 2
+      set begin $argv[2]
       set end -1
-    case 4
-      set begin $argv[3]
-      set end $argv[4]
+    case 3
+      set begin $argv[2]
+      set end $argv[3]
     end
     set list (eval println $target)
     # set list (quote $list)
