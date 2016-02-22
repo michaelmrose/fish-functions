@@ -1,6 +1,6 @@
 function quote
 	if exists $argv
-        if not startswith \" $argv
+        if not startswith-special \" $argv
             set val \"$argv
         end
         if not endswith \" $argv
