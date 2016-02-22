@@ -5,9 +5,6 @@ function reverse-string
   set res ""
   for i in (seq $size)
     set c (echo $argv | cut -c$cnt)
-    echo c is $c
-    echo (sizeof $c)
-    echo $cnt
     set res (echo $res$c)
     set cnt (math $cnt - 1)
   end
