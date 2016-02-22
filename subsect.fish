@@ -11,6 +11,6 @@ function subsect
   set foo (println 1 2 3)
   set list (eval println $argv[1])
   println $list
-  println $foo[$argv[2]]
+  println $list[$argv[2]]
   # eval println (println $argv[1])[$argv[2]]
 end
