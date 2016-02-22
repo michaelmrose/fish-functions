@@ -9,6 +9,8 @@ function open-subsect
       set begin $argv[3]
       set end $argv[4]
     end
-    echo fn is $fn target is $target begin is $begin end is $end
+    set list (println $target)
+    printn $list
+    # echo fn is $fn target is $target begin is $begin end is $end
     # echo eval $fn (println (println $target)[$begin..end])
 end
