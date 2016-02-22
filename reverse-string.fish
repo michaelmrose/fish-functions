@@ -3,7 +3,7 @@ function reverse-string
   set size (sizeof $argv)
   set cnt $size
   for i in (seq $size)
-    set res $res (echo $argv | cut -c$cnt)
+    set res {$res}(echo $argv | cut -c$cnt)
     echo $cnt
     set cnt (math $cnt - 1)
   end
