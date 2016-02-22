@@ -1,8 +1,7 @@
 function pick-subsect-list
 	set list $argv
-  echo (count $argv)
   set choice (rfi match "select start: " $argv)
   set start (findindex $choice $list)
   set end (rfi match "select end: " $argv[$start..-1])
-  println $argv[$start..$end]
+  println $list[1..3]
 end
