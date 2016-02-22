@@ -4,8 +4,8 @@ function reverse-string
   set cnt $size
   for i in (seq $size)
     set res $res(echo $argv | cut -c$cnt)
-    set cnt (math $cnt - 1)
     echo $cnt
+    set cnt (math $cnt - 1)
   end
   echo $res
 end
