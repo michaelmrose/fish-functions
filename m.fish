@@ -10,9 +10,13 @@ function m
       case -p
         switch (count $argv)
           case 2
-            m (cat ~/playlists/$argv[2])
+            if test -f ~/playlists/$argv[2]
+              m (cat ~/playlists/$argv[2])
+            else
+              sendit not a playlist
+            end
           case 1
-            echo pick a playlist
+            m -p (rfi match "pick a playlist: " (ls ~/playlists))
         end
       case '*'
         for i in $argv
