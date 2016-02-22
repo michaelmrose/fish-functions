@@ -5,5 +5,5 @@ function pick-subsect
   echo start is $start
   set choice (rfi match "select end: " (subsect $argv $start..-1))
   set end (findindex $choice $files)
-  subsect $argv $start $end
+  subsect $argv $start..$end
 end
