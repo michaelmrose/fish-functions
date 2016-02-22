@@ -8,7 +8,7 @@ function reverse-string
     echo c is $c
     echo (sizeof $c)
     echo $cnt
-    echo $res$c
+    set res (echo $res$c)
     set cnt (math $cnt - 1)
   end
   echo $res
