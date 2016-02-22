@@ -6,7 +6,7 @@ function m
       case -s
         m (pick-subsect-list $LAST_PLAYLIST)
       case -w
-        echo $LAST_PLAYLIST > ~/playlists/$argv[2]
+        println $LAST_PLAYLIST > ~/playlists/$argv[2]
       case -p
         switch (count $argv)
           case 2
