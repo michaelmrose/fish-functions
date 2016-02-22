@@ -11,7 +11,7 @@ function open-subsect
     end
     set list (eval println $target)
     set list (quote $list)
-    println $list[$begin..$end]
+    println $list
     # println $list[$begin..$end]
     # echo fn is $fn target is $target begin is $begin end is $end
     # echo eval $fn (println (println $target)[$begin..end])
