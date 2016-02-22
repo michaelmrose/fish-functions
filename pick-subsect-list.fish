@@ -4,5 +4,5 @@ function pick-subsect-list
   set start (findindex $choice $list)
   set end (rfi match "select end: " $argv[$start..-1])
   set end (findindex $choice $list)
-  println $list[1..3]
+  println $list[start..end]
 end
