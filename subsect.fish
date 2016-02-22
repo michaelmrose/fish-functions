@@ -1,6 +1,9 @@
 function subsect
 	set target $argv[1]
   switch (count $argv)
+    case 1
+      set begin 1
+      set end -1
     case 2
       set begin $argv[2]
       set end -1
