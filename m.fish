@@ -10,6 +10,8 @@ function m
       case -n
         set list (pick-subsect-list (cat ~/playlists/$argv[2]))
         println $list > ~/playlists/$argv[2]
+      case -l
+        cat ~/playlists/$argv[2]
       case -p
         switch (count $argv)
           case 2
