@@ -3,7 +3,7 @@ function quote
         if not startswith-special \" $argv
             set val \"$argv
         end
-        if not endswith \" $argv
+        if not endswith-special \" $argv
             set val $val\"
         end
         echo $val
