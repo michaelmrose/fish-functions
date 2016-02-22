@@ -9,7 +9,7 @@ function m
         println $LAST_PLAYLIST > ~/playlists/$argv[2]
       case -n
         set list (pick-subsect-list (cat ~/playlists/$argv[2]))
-        println $list
+        println $list > ~/playlists/$argv[2]
       case -p
         switch (count $argv)
           case 2
