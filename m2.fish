@@ -9,7 +9,7 @@ function m2
   echo v is $vals t is $tags and a is $arguments
   if get-tag playlist $vals
     echo if true
-    for p in (get-tag playlist)
+    for p in (get-tag playlist $vals)
       echo p is $p
       println $arguments > ~/playlists/$p
     end
