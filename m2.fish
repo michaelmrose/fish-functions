@@ -8,7 +8,7 @@ function m2
     end
   end
   echo v is $vals t is $tags and a is $arguments
-  if contains @playlist $tags
+  if get-tag @playlist $tags
     echo if true
     for p in (get-tag playlist)
       echo p is $p
