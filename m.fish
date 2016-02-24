@@ -1,6 +1,9 @@
 function m
 	if not exists $argv
-    m $LAST_PLAYLIST
+    while read -l line
+      set acc $acc $line
+    end
+    m $acc
   else
     switch $argv[1]
       case -s
