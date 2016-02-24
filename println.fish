@@ -1,5 +1,9 @@
 function println
 	for i in $argv
-        echo -e $i
+        if test -f $i
+          cat $i
+        else
+          echo -e $i
+        end
     end
 end
