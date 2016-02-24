@@ -17,11 +17,11 @@ function m
   end
   set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
-  # if not exists $arguments or get-tag play
-  #   while read -l line
-  #     set arguments $arguments $line
-  #   end
-  # end
+  if not exists $arguments
+    while read -l line
+      set arguments $arguments $line
+    end
+  end
   # if get-tag replace $vals
   #   for p in (get-tag replace $vals)
   #     println $arguments > ~/playlists/$p
