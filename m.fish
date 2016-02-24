@@ -14,13 +14,14 @@ function m
         m (cat ~/playlists/$argv[2])
         return 0
       case append-to
-        println $argv[3..-1] >> ~/playlists/$argv[2]
+        println $argv[3..-1] >> ~/playlists/$argv[2..-1]
         return 0
       case replace-playlist
-        println $argv[3..-1] > ~/playlists/$argv[2]
+        println $argv[3..-1] > ~/playlists/$argv[2..-1]
         return 0
       case from-clipboard
-        m append-to $argv[2] (xclip -o -primary)
+        set url (xclip -o -primary)
+        m append-to $argv[2] "$url"
         return 0
     end
   end
