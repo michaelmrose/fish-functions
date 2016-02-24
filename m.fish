@@ -31,6 +31,7 @@ function m
   set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
   echo before for
+  echo arguments is $arguments
   for a in $arguments
     set acc $acc (fullpath $a)
     echo acc is $acc
