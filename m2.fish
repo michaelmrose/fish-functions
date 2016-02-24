@@ -9,7 +9,9 @@ function m2
   end
   echo v is $vals t is $tags and a is $arguments
   if contains playlist $tags
+    echo if true
     for p in (get-tag playlist)
+      echo p is $p
       println $arguments > ~/playlists/$p
     end
   end
