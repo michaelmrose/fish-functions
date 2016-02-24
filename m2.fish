@@ -8,5 +8,9 @@ function m2
     end
   end
   echo v is $vals t is $tags and a is $arguments
-  #println $LAST_PLAYLIST > ~/playlists/$argv[2]
+  if contains playlist $tags
+    for p in (get-tag playlist)
+      println $arguments > ~/playlists/$p
+    end
+  end
 end
