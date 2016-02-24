@@ -1,6 +1,5 @@
 function m2
 	set vals (vals 1..-1 $argv)
-	set tags (get-tags $vals)
   set arguments (filter-with-expr "not startswith @" $vals)
   if not exists $arguments
     while read -l line
@@ -8,7 +7,7 @@ function m2
     end
   end
   echo v is $vals t is $tags and a is $arguments
-  if get-tag @playlist $tags
+  if get-tag @playlist $tag
     echo if true
     for p in (get-tag playlist)
       echo p is $p
