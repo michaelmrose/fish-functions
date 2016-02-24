@@ -33,4 +33,5 @@ function m
   #   end
   # end
   umpv $arguments &
+  return 0
 end
