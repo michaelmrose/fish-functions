@@ -2,7 +2,7 @@ function m2
 	set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
   echo v is $vals t is $tags and a is $arguments
-  if not exists $arguments or get-tag play or get-tag list or get-tag list-playlists
+  if not exists $arguments or get-tag play or get-tag ls or get-tag list-playlists
     while read -l line
       set arguments $arguments $line
     end
@@ -24,8 +24,8 @@ function m2
     end
   end
   umpv $arguments &
-  if get-tag list $vals
-    for p in (get-tag list $vals)
+  if get-tag ls $vals
+    for p in (get-tag ls $vals)
       cat ~/playlists/$p
     end
   end
