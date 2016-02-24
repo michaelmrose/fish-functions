@@ -21,6 +21,7 @@ function m
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
+        return 0
       case from-clipboard
         set url (xclip -o -primary)
         m append-to $argv[2] "$url"
