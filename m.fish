@@ -22,11 +22,11 @@ function m
       set arguments $arguments $line
     end
   end
-  # if get-tag replace $vals
-  #   for p in (get-tag replace $vals)
-  #     println $arguments > ~/playlists/$p
-  #   end
-  # end
+  if get-tag replace $vals
+    for p in (get-tag replace $vals)
+      println $arguments > ~/playlists/$p
+    end
+  end
   # if get-tag append $vals
   #   for p in (get-tag append $vals)
   #     println $arguments >> ~/playlists/$p
