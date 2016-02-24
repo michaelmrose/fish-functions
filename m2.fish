@@ -1,7 +1,7 @@
 function m2
 	if exists $argv
     switch $argv[1]
-      case list-playlist
+      case list-playlists
         ls ~/playlists
         return 0
       case ls
