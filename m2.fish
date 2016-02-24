@@ -2,7 +2,7 @@ function m2
 	set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
   echo v is $vals t is $tags and a is $arguments
-  if not exists $arguments
+  if not exists $arguments or get-tag play
     while read -l line
       set arguments $arguments $line
     end
