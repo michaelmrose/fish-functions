@@ -35,7 +35,6 @@ function m
       set arguments $arguments $line
     end
   end
-  set arguments (apply fullpath arguments)
   # for a in $arguments
   #   set acc $acc (fullpath $a)
   #   echo acc is $acc
