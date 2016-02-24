@@ -21,6 +21,7 @@ function m
         return 0
       case from-clipboard
         m append-to $argv[2] (xclip -o -primary)
+        return 0
     end
   end
   set vals (vals 1..-1 $argv)
