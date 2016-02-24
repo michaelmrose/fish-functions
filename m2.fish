@@ -7,11 +7,27 @@ function m2
     end
   end
   echo v is $vals t is $tags and a is $arguments
-  if get-tag playlist $vals
-    echo if true
-    for p in (get-tag playlist $vals)
-      echo p is $p
+  if get-tag replace $vals
+    for p in (get-tag replace $vals)
       println $arguments > ~/playlists/$p
     end
+  end
+  if get-tag append $vals
+    for p in (get-tag append $vals)
+      println $arguments >> ~/playlists/$p
+    end
+  end
+  if get-tag play $vals
+    for p in (get-tag play $vals)
+      m (cat ~/playlists/$p)
+    end
+  end
+  if get-tag list $vals
+    for p in (get-tag list $vals)
+      cat ~/playlists/$p
+    end
+  end
+  if get-tag list-playlists
+    ls ~/playlists
   end
 end
