@@ -1,4 +1,5 @@
 function m2
+	echo v is $vals t is $tags and a is $arguments
 	set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
   if not exists $arguments
@@ -6,7 +7,6 @@ function m2
       set arguments $arguments $line
     end
   end
-  echo v is $vals t is $tags and a is $arguments
   if get-tag replace $vals
     for p in (get-tag replace $vals)
       println $arguments > ~/playlists/$p
@@ -19,6 +19,7 @@ function m2
   end
   if get-tag play $vals
     for p in (get-tag play $vals)
+      echo 
       m (cat ~/playlists/$p)
     end
   end
