@@ -38,7 +38,7 @@ function m
       println $arguments >> ~/playlists/$p
     end
   end
-  if not get-tag noplay > /dev/null
+  if not get-tag noplay $vals > /dev/null
     umpv $arguments &
   end
   return 0
