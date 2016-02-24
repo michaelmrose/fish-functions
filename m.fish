@@ -35,11 +35,11 @@ function m
       set arguments $arguments $line
     end
   end
-  # for a in $arguments
-  #   set acc $acc (fullpath $a)
-  #   echo acc is $acc
-  # end
-  # set arguments $acc
+  set cnt 1
+  for a in $arguments
+    set arguments[$cnt] (pathof $arguments[$cnt])
+    set cnt (increase $cnt)
+  end
 
   if get-tag replace $vals > /dev/null
     for p in (get-tag replace $vals)
