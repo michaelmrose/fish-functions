@@ -17,17 +17,17 @@ function m2
       println $arguments >> ~/playlists/$p
     end
   end
-  if get-tag play $vals
-    for p in (get-tag play $vals)
-      m (cat ~/playlists/$p)
-    end
-  end
-  if get-tag list $vals
-    for p in (get-tag list $vals)
-      cat ~/playlists/$p
-    end
-  end
-  if get-tag list-playlists
-    ls ~/playlists
-  end
+  # if get-tag play $vals
+  #   for p in (get-tag play $vals)
+  #     m (cat ~/playlists/$p)
+  #   end
+  # end
+  # if get-tag list $vals
+  #   for p in (get-tag list $vals)
+  #     cat ~/playlists/$p
+  #   end
+  # end
+  # if get-tag list-playlists
+  #   ls ~/playlists
+  # end
 end
