@@ -7,6 +7,9 @@ function m
       case ls
         cat ~/playlists/$argv[2]
         return 0
+      case rm
+        rm ~/playlists/$argv[2]
+        return 0
       case play
         m (cat ~/playlists/$argv[2])
         return 0
