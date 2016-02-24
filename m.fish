@@ -19,6 +19,8 @@ function m
       case replace-playlist
         println $argv[3..-1] > ~/playlists/$argv[2..-1]
         return 0
+      case narrow
+        m ls $argv[2] | pick | m @replace:$argv @noplay
       case from-clipboard
         set url (xclip -o -primary)
         m append-to $argv[2] "$url"
