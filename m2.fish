@@ -23,7 +23,7 @@ function m2
       m2 (cat ~/playlists/$p)
     end
   end
-  umpv $arguments
+  umpv $arguments &
   # if get-tag list $vals
   #   for p in (get-tag list $vals)
   #     cat ~/playlists/$p
