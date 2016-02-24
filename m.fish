@@ -30,6 +30,10 @@ function m
   end
   set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
+  for a in $arguments
+    set acc $acc (fullpath $a)
+  end
+  set arguments $acc
   if not exists $arguments
     while read -l line
       set arguments $arguments $line
