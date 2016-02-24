@@ -20,9 +20,10 @@ function m2
   if get-tag play $vals
     for p in (get-tag play $vals)
       echo 
-      m (cat ~/playlists/$p)
+      m2 (cat ~/playlists/$p)
     end
   end
+  umpv $arguments
   # if get-tag list $vals
   #   for p in (get-tag list $vals)
   #     cat ~/playlists/$p
