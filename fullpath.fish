@@ -1,3 +1,4 @@
 function fullpath
-	echo (pwd)/$argv
+	set com \'(pwd)/$argv\'
+  eval com
 end
