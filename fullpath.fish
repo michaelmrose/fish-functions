@@ -1,3 +1,3 @@
 function fullpath
-	echo (pwd)/$argv
+	echo "(pwd)/$argv"
 end
