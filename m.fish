@@ -32,6 +32,7 @@ function m
   set arguments (filter-with-expr "not startswith @" $vals)
   for a in $arguments
     set acc $acc (fullpath $a)
+    echo acc is $acc
   end
   set arguments $acc
   if not exists $arguments
