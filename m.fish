@@ -30,18 +30,17 @@ function m
   end
   set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
-  echo before for
-  echo arguments is $arguments
-  for a in $arguments
-    set acc $acc (fullpath $a)
-    echo acc is $acc
-  end
-  set arguments $acc
   if not exists $arguments
     while read -l line
       set arguments $arguments $line
     end
   end
+  for a in $arguments
+    set acc $acc (fullpath $a)
+    echo acc is $acc
+  end
+  set arguments $acc
+
   if get-tag replace $vals > /dev/null
     for p in (get-tag replace $vals)
       println $arguments > ~/playlists/$p
