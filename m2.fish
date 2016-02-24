@@ -24,12 +24,12 @@ function m2
     end
   end
   umpv $arguments &
-  # if get-tag list $vals
-  #   for p in (get-tag list $vals)
-  #     cat ~/playlists/$p
-  #   end
-  # end
-  # if get-tag list-playlists
-  #   ls ~/playlists
-  # end
+  if get-tag list $vals
+    for p in (get-tag list $vals)
+      cat ~/playlists/$p
+    end
+  end
+  if get-tag list-playlists
+    ls ~/playlists
+  end
 end
