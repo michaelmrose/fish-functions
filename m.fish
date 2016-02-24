@@ -14,16 +14,10 @@ function m
         m (cat ~/playlists/$argv[2])
         return 0
       case append-to
-        # println $argv[3..-1] >> ~/playlists/$argv[2..-1]
-        set list ($argv[3..-1])
-        set list (apply pathof list)
-        p $list >> ~/playlists/$argv[2]
+        println $argv[3..-1] >> ~/playlists/$argv[2..-1]
         return 0
       case replace-playlist
-        # println $argv[3..-1] > ~/playlists/$argv[2..-1]
-        set list ($argv[3..-1])
-        set list (apply pathof list)
-        p $list > ~/playlists/$argv[2]
+        println $argv[3..-1] > ~/playlists/$argv[2..-1]
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
@@ -43,14 +37,11 @@ function m
   end
   if get-tag replace $vals > /dev/null
     for p in (get-tag replace $vals)
-      # println $arguments > ~/playlists/$p
-      set arguments (apply pathof arguments)
       println $arguments > ~/playlists/$p
     end
   end
   if get-tag append $vals > /dev/null
     for p in (get-tag append $vals)
-      set arguments (apply pathof arguments)
       println $arguments >> ~/playlists/$p
     end
   end
