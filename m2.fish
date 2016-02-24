@@ -3,8 +3,10 @@ function m2
     switch $argv[1]
       case list-playlist
         ls ~/playlists
+        return 0
       case ls
         cat ~/playlists/$argv[2]
+        return 0
     end
   end
 	set vals (vals 1..-1 $argv)
