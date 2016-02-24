@@ -1,42 +1,33 @@
 function m
-	if not exists $argv
-    while read -l line
-      set acc $acc $line
-    end
-    m $acc
-  else
+	if exists $argv
     switch $argv[1]
-      case -s
-        m (pick-subsect-list $LAST_PLAYLIST)
-      case -w
-        println $LAST_PLAYLIST > ~/playlists/$argv[2]
-      case -n
-        set list (pick-subsect-list (cat ~/playlists/$argv[2]))
-        println $list > ~/playlists/$argv[2]
-      case -l
-        switch (count $argv)
-          case 1
-            println (ls ~/playlists)
-          case 2          
-            cat ~/playlists/$argv[2]
-        end
-      case -p
-        switch (count $argv)
-          case 2
-            if test -f ~/playlists/$argv[2]
-              m (cat ~/playlists/$argv[2])
-            else
-              sendit not a playlist
-            end
-          case 1
-            m -p (rfi match "pick a playlist: " (ls ~/playlists))
-        end
-      case '*'
-        for i in $argv
-          set acc $acc (pathof $i)
-        end
-        set -U LAST_PLAYLIST $acc
-        umpv $argv
-      end
+      case list-playlists
+        println (ls ~/playlists)
+        return 0
+      case ls
+        cat ~/playlists/$argv[2]
+        return 0
+      case play
+        m (cat ~/playlists/$argv[2])
+        return 0
     end
+  end
+  set vals (vals 1..-1 $argv)
+  set arguments (filter-with-expr "not startswith @" $vals)
+  if not exists $arguments or get-tag play
+    while read -l line
+      set arguments $arguments $line
+    end
+  end
+  if get-tag replace $vals
+    for p in (get-tag replace $vals)
+      println $arguments > ~/playlists/$p
+    end
+  end
+  if get-tag append $vals
+    for p in (get-tag append $vals)
+      println $arguments >> ~/playlists/$p
+    end
+  end
+  umpv $arguments &
 end
