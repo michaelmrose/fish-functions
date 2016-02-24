@@ -1,3 +1,4 @@
 function m2
-	set tags (get-tags $argv)
+	set args (vals 1..-1 $argv)
+	set tags (get-tags $args)
 end
