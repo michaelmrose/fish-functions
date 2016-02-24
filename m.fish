@@ -15,7 +15,7 @@ function m
         return 0
     end
   end
-  # set vals (vals 1..-1 $argv)
+  set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
   # if not exists $arguments or get-tag play
   #   while read -l line
