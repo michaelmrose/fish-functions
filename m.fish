@@ -13,6 +13,12 @@ function m
       case play
         m (cat ~/playlists/$argv[2])
         return 0
+      case append-to
+        println $argv[2..-1] >> ~/playlists/$argv[1]
+        return 0
+      case replace-playlist
+        println $argv[2..-1] > ~/playlists/$argv[1]
+        return 0
     end
   end
   set vals (vals 1..-1 $argv)
