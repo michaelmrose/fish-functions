@@ -1,7 +1,7 @@
 function m2
-	echo v is $vals t is $tags and a is $arguments
 	set vals (vals 1..-1 $argv)
   set arguments (filter-with-expr "not startswith @" $vals)
+  echo v is $vals t is $tags and a is $arguments
   if not exists $arguments
     while read -l line
       set arguments $arguments $line
