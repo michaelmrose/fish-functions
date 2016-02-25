@@ -1,4 +1,5 @@
 function calc-brightness
+	set display (get-connected-displays)[1]
 	set number $argv[1]
   set adjustment (stripsign $number)
   set currentval (get-brightness $display)
