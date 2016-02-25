@@ -1,6 +1,6 @@
 function calc-brightness
-	set display (get-connected-displays)[1]
-	set number $argv[1]
+	set display $argv[1]
+	set number $argv[2]
   set adjustment (stripsign $number)
   set currentval (get-brightness $display)
   if expr $number : +[0-9]\* > /dev/null
