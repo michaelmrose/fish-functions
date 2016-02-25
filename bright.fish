@@ -12,5 +12,4 @@ function bright
     set com $com --output $displays[$i] --brightness $vals[$i]
   end
   eval $com
-  update-brights &
 end
