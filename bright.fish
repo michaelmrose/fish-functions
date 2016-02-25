@@ -5,7 +5,7 @@ function bright
     set displays $argv[2]
   end
   set vals (apply-to-list "calc-brightness $argv" $displays)
-  set -U BRIGHTS (apply-to-list "multiply 100" $vals)
+  # set -U BRIGHTS (apply-to-list "multiply 100" $vals)
   set cnt (count $displays)
   set com "xrandr"
   for i in (seq $cnt)
