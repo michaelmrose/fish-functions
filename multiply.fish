@@ -1,3 +1,3 @@
 function multiply
-	math $argv[1] \* $argv[2]
+	wcalc -q "$argv[1] * $argv[2]"
 end
