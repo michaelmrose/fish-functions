@@ -6,5 +6,5 @@ function set-bright
   for i in (seq $cnt)
     set com $com --output $displays[$i] --brightness $vals[$i]
   end
-  echo $com
+  eval $com
 end
