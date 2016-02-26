@@ -10,5 +10,5 @@ function edit
   set tmp /tmp/edited
   println $acc > $tmp   
   eval $EDITOR $tmp
-  # cat $tmp
+  cat $tmp
 end
