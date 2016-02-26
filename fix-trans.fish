@@ -1,3 +1,3 @@
 function fix-trans
-	transset -i $argv (return-trans-value (return-winclass (wininfo id dec)))
+	transset -i $argv (return-trans-value (return-winclass $argv))
 end
