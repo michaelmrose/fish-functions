@@ -1,5 +1,7 @@
 function i3-elements
-	set ids (get-i3bar-ids) (get-i3-frame-ids)
+	set i3_bar_ids (xwininfo -all -root | grep 'i3bar for output' | condense_spaces | cut -d " " -f1)
+  set i3_frame_ids (xwininfo -all -root | grep i3-frame | grep 'has no name' | trim | cut -d ' ' -f1)
+  set ids $i3_bar_ids $i3_frame_ids
   switch $argv[1]
     case trans
       set val 0.8
