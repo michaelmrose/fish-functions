@@ -8,7 +8,6 @@ function edit
   end
   set tmp /tmp/(uid)
   println $acc > $tmp   
-  echo $tmp
-  # eval $EDITOR $tmp
+  eval $EDITOR $tmp
   # cat $tmp
 end
