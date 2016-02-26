@@ -4,7 +4,7 @@ function i3-elements
     case trans
       set val 0.8
     case hide
-      ste val 0
+      set val 0
   end
   for id in $ids
     transset -i $id $val
