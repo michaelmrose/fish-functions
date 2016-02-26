@@ -1,6 +1,7 @@
 function lockme
 	save-workspaces
-  i3-msg bar mode invisible
+  # i3-msg bar mode invisible
+  invisible-i3-bars
   i3-msg mode locked
   for window in (windows-list)
     transset -i $window 0
