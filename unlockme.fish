@@ -1,6 +1,5 @@
 function unlockme
 	i3-msg mode default
-  transparent-bars
-  transparent-i3-frames
+  i3-elements trans
   fix-all-trans
 end
