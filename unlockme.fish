@@ -3,5 +3,4 @@ function unlockme
   transparent-bars
   transparent-i3-frames
   fix-all-trans
-  # restore-workspaces
 end
