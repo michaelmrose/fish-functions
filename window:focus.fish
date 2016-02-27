@@ -1,3 +1,3 @@
 function window:focus
-	signal-i3blocks windowtitle
+	make-all-hidden-windows-invisible
 end
