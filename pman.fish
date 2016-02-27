@@ -8,5 +8,5 @@ function pman
         help2man $app > /tmp/{$app}.txt
         man -lt /tmp/{$app}.txt | ps2pdf - $pdf
     end
-    open /tmp/{$argv}.pdf &
+    o /tmp/{$argv}.pdf &
 end
