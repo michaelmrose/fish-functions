@@ -11,7 +11,6 @@ function i3-elements
       set val 1.0
   end
   for id in $ids
-    # transset -i $id $val > /dev/null
-    n transset -i $id $val
+    transset -i $id $val > /dev/null
   end
 end
