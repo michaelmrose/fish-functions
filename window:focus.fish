@@ -1,3 +1,3 @@
 function window:focus
-	make-all-hidden-windows-invisible
+	hide-all-hidden-windows
 end
