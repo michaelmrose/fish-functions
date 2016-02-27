@@ -5,7 +5,7 @@ function mime-set
 
     set video mkv wmv avi mov mp4
     set audio mp3 flac ogg wav
-    set ebooks epub mobi
+    set ebooks epub mobi azw3
     set web http https
     
     if not desktop_file_exists $command
@@ -21,5 +21,4 @@ function mime-set
         gvfs-mime --set $mimetype $command.desktop
         xdg-mime default $command.desktop $mimetype
     end
-
 end
