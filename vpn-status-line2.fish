@@ -1,5 +1,6 @@
 function vpn-status-line2
-	switch $atestval
+	set vpnstatus (vpn show)
+	switch ($vpnstatus)
         case none
             set symbol  
             echo -e {$blue}$symbol $vpnstatus
