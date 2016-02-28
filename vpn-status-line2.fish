@@ -1,6 +1,6 @@
 function vpn-status-line2
 	set vpnstatus (vpn show)
-	switch ($vpnstatus)
+	switch $vpnstatus
         case none
             set symbol  
             echo -e {$blue}$symbol $vpnstatus
