@@ -12,7 +12,7 @@ function return-trans-value
         case LilyTerm
             echo 0.88
         case Hexchat
-            echo 1.0
+            echo 0.96
         case i3bar
             echo 0.8
         case i3-frame
