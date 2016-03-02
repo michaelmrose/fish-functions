@@ -1,5 +1,5 @@
 function i3-colors
-	set info (i3-color-rofi)
+	set info (p (i3-color-rofi))
   set switches (odds $info)
   set colors (evens $info)
   for i in (seq (count $switches))
