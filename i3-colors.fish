@@ -1,5 +1,5 @@
 function i3-colors
-	set info (println (i3-color-rofi))
+	set info (explode-words (i3-color-rofi))
   count $info
   # set switches (odds $info)
   # set colors (evens $info)
