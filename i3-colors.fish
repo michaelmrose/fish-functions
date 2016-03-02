@@ -7,5 +7,5 @@ function i3-colors
     set com $com $colors[$i]
     # set com $com (singlequote $colors[$i])
   end
-  echo $com
+  # echo $com
 end
