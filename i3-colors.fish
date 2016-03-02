@@ -3,7 +3,7 @@ function i3-colors
   set switches (odds $info)
   set colors (evens $info)
   for i in (seq (count $switches))
-    set com $com $switches[$i] \"$colors[$i]\"
+    set args $args $switches[$i] \"$colors[$i]\"
   end
-  echo $com
+  eval rofi $args $argv
 end
