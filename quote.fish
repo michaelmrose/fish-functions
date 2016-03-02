@@ -9,7 +9,7 @@ function quote
         echo $val
     else
         while read -l line
-            quote $line
+            quote "$line"
         end
     end
 end
