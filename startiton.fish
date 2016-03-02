@@ -13,7 +13,7 @@ function startiton
         set app $applist[$i]
         set winclass (return-windowclass $app)
         echo w is $winclass and a is $app
-        cat ~/test.json | sed "s/#winclass/$winclass/g" > $layout
+        cat ~/scripts/test.json | sed "s/#winclass/$winclass/g" > $layout
         ws $workspace
         im append_layout $layout
         fish -c "$app &"
