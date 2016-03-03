@@ -20,5 +20,7 @@ function cmd-duration
       echo -n '❮'
       echo -n (set_color white)' '$days$hours$minutes$seconds(set_color white)' ❮'
       # echo -n (set_color white)' '$days$hours$minutes$seconds(set_color white)' ❮'
+    else
+      echo instant
   end
 end
