@@ -6,7 +6,7 @@ function return-trans-value
         case Clementine
             echo 0.89
         case Zathura
-            echo 0.95
+            echo 1.0
         case Spacefm
             echo 0.95
         case LilyTerm
