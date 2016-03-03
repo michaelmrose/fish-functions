@@ -17,5 +17,5 @@ function get-sched-html
     set hdrequest (make-request-payload j_username j_password j_storenumber j_userbelongsto language callingProgram appendSessionID myLocation storeUser action successUrl)
     #eval curl -c ~/.cjar.txt -L --data \'$hdrequest\' $url
 
-    curl -c ~/.cjar.txt -L --data "j_username=mmr1135&j_password=hdac3456&j_storenumber=4716&j_userbelongsto=Store&language=en_US&callingProgram=lmslLaborMgtTools&uiLoc=ext&appendSessionID=false&myLocation=Store&storeUser=true&action=Login&successUrl=$successUrl" $url
+    curl -c -s ~/.cjar.txt -L --data "j_username=mmr1135&j_password=hdac3456&j_storenumber=4716&j_userbelongsto=Store&language=en_US&callingProgram=lmslLaborMgtTools&uiLoc=ext&appendSessionID=false&myLocation=Store&storeUser=true&action=Login&successUrl=$successUrl" $url
 end
