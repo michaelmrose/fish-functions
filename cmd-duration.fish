@@ -24,6 +24,10 @@ function cmd-duration
       set_color '#6CDEF9'
       echo -n '❮ '
       set_color white
-      echo $CMD_DURATION 'ms'
+      if [ $CMD_DURATION = 0 ]
+        echo instant
+      else
+        echo $CMD_DURATION 'ms'
+      end
   end
 end
