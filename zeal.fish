@@ -1,4 +1,3 @@
 function zeal
-	/usr/bin/zeal -style adwaita (vals $argv)
-  echo (vals $argv)
+	/usr/bin/zeal -style adwaita (vals 1..-1 $argv)
 end
