@@ -1,9 +1,9 @@
 function sched
 	switch $argv[1]
     case new
-      filter-with-expr event-not-past (get-current-work-sched)
+      get-new-work-sched 2> /dev/null
     case current
-      get-new-work-sched
+      filter-with-expr event-not-past (get-current-work-sched)
     case sync
       set -U schedule_updated (date)
       set new (println (get-new-work-sched))
