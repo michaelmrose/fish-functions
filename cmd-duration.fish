@@ -24,6 +24,6 @@ function cmd-duration
       set_color '#6CDEF9'
       echo -n '❮'
       set_color white
-      echo $CMD_DURATION milliseconds
+      echo $CMD_DURATION ' ms'
   end
 end
