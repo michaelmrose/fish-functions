@@ -30,6 +30,6 @@ function cmd-duration
         echo $CMD_DURATION 'ms'
       end
       set_color '#6CDEF9'
-      echo -n '❮ '
+      echo -n ' ❮ '
   end
 end
