@@ -29,5 +29,7 @@ function cmd-duration
       else
         echo $CMD_DURATION 'ms'
       end
+      set_color '#6CDEF9'
+      echo -n '❮ '
   end
 end
