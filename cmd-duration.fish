@@ -21,9 +21,9 @@ function cmd-duration
       switch $pwd_style
           case short long
               if [ $last_status -ne 0 ]
-                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
+                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color white)' ❮'
               else
-                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
+                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color white)' ❮'
               end
       end
   end
