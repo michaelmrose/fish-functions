@@ -1,7 +1,7 @@
 function sched
 	switch $argv[1]
     case new
-      get-new-work-sched 2> /dev/null
+      get-new-work-sched
     case current
       filter-with-expr event-not-past (get-current-work-sched)
     case sync
