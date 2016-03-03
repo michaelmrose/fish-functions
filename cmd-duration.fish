@@ -16,14 +16,14 @@ function cmd-duration
               end
           end
       end
-      set_color $dangerous_colors[3]
+      set_color '#6CDEF9'
       echo -n '❮'
       switch $pwd_style
           case short long
               if [ $last_status -ne 0 ]
-                  echo -n (set_color $dangerous_colors[7])' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
+                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
               else
-                  echo -n (set_color $dangerous_colors[12])' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
+                  echo -n (set_color white)' '$days$hours$minutes$seconds(set_color $dangerous_colors[3])' ❮'
               end
       end
   end
