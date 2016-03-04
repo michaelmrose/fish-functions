@@ -1,13 +1,13 @@
 function cmd-duration
+	if not exists $CMD_DURATION
+    return 0
+  end
 	set_color normal
   set -l seconds ''
   set -l minutes ''
   set -l hours ''
   set -l days ''
   set -l cmd_duration (expr $CMD_DURATION / 1000)
-  if not exists $CMD_DURATION
-    return 0
-  end
   if [ $cmd_duration -gt 0 ]
       set seconds (expr $cmd_duration \% 68400 \% 3600 \% 60)'s'
       if [ $cmd_duration -ge 60 ]
