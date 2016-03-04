@@ -1,3 +1,3 @@
 function fish_right_prompt
-	# cmd-duration
+	cmd-duration
 end
