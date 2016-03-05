@@ -3,7 +3,7 @@ function album-art
     if exists $argv
         switch $argv[1]
             case -o
-                open $data
+                o $data
         end
     else
         echo $data
