@@ -1,5 +1,6 @@
 function println
-	for i in $argv
-    echo -e $i
-  end
+	apply-to-list "echo -e" $argv
+	# for i in $argv
+    # echo -e $i
+  # end
 end
