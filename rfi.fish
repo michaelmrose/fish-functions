@@ -1,20 +1,20 @@
 function rfi
 	set bindings -kb-accept-custom "Return"
-  # set colors (i3-colors)
+  set i3colors (i3-i3colors)
     switch $argv[1]
         case run
-            eval rofi $colors $bindings -show run
+            eval rofi $i3colors $bindings -show run
         case window
-            eval rofi $colors -show window
+            eval rofi $i3colors -show window
         case match
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | eval rofi $colors -dmenu -i -p $argv[2]
+            println $argv[3..-1] | eval rofi $i3colors -dmenu -i -p $argv[2]
         case menu
-            println "" | eval rofi $bindings $colors -dmenu -p $argv[2]
+            println "" | eval rofi $bindings $i3colors -dmenu -p $argv[2]
         case enter
-            echo '' | eval rofi $colors -dmenu -p $argv[2]
+            echo '' | eval rofi $i3colors -dmenu -p $argv[2]
         case ssh
             rofi -show ssh
         case windows
