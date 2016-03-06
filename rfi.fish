@@ -4,7 +4,7 @@ function rfi
     switch $argv[1]
         case run
           echo c is $colors
-            echo rofi $colors $bindings -show run
+            eval rofi $colors $bindings -show run
         case window
             rofi -show window
         case match
