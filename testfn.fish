@@ -1,3 +1,4 @@
 function testfn
-	echo fuck you very much asshole
+	echo %self
+  sleep 10000
 end
