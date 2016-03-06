@@ -3,6 +3,7 @@ function rfi
   set colors (i3-colors)
     switch $argv[1]
         case run
+          echo c is $colors
             rofi $colors $bindings -show run
         case window
             rofi -show window
