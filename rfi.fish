@@ -1,6 +1,6 @@
 function rfi
 	set bindings -kb-accept-custom "Return"
-  set colors (i3-colors)
+  # set colors (i3-colors)
     switch $argv[1]
         case run
             eval rofi $colors $bindings -show run
