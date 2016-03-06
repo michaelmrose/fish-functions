@@ -14,7 +14,7 @@ function rfi
         case menu
             println "" | rofi $bindings -dmenu -p $argv[2]
         case enter
-            echo '' | rofi -dmenu -p $argv[2]
+            echo '' | rofi $colors -dmenu -p $argv[2]
         case ssh
             rofi -show ssh
         case windows
