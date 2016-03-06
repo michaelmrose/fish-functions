@@ -1,4 +1,5 @@
 function testfn
-	echo %self
-  sleep 10000
+	set pid %self
+  fish
+  kill -9 $pid
 end
