@@ -1,9 +1,9 @@
 function rfi
 	set bindings -kb-accept-custom "Return"
+  set colors (i3-colors)
     switch $argv[1]
         case run
             rofi $bindings -show run
-            #dmenu_run -nb "black" -sf "#036300" -sb "#A6CD01" -nf "grey" -b -l 10 -i -p "Command: "
         case window
             rofi -show window
         case match
