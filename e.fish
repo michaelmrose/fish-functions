@@ -1,3 +1,4 @@
 function e
-	evalinturn $argv; 
+	eval $argv
+  exit
 end
