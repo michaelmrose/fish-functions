@@ -1,6 +1,6 @@
 function convertargb
 	if startswith-special '#' "$argv"
-    echo argb:99(cdr $argv)
+    echo argb:FF(cdr $argv)
   else
     echo $argv
   end
