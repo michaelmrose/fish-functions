@@ -5,5 +5,6 @@ function i3-colors
   for i in (seq (count $switches))
     set args $args $switches[$i] \"$colors[$i]\"
   end
-  eval rofi $args $argv
+  echo $args | sed 's/#/\\\\#/g'
+  # eval rofi $args $argv
 end
