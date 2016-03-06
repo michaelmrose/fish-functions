@@ -6,6 +6,8 @@ function rfi
             eval rofi $i3colors $bindings -show run
         case window
             eval rofi $i3colors -show window
+        case history
+          rfi match 'select: ' (println (history) | grep -i (vals 2..-1 $argv))
         case match
             if test (count $argv) -lt 3
                 return 1
