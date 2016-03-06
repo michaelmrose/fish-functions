@@ -1,3 +1,3 @@
 function +=
-	echo hi
+	set $$argv[1] $argv[2]
 end
