@@ -3,19 +3,18 @@ function rfi
   set colors (i3-colors)
     switch $argv[1]
         case run
-          echo c is $colors
             eval rofi $colors $bindings -show run
         case window
-            rofi -show window
+            eval rofi $colors -show window
         case match
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | rofi -dmenu -i -p $argv[2]
+            println $argv[3..-1] | rofi $colors -dmenu -i -p $argv[2]
         case menu
-            println "" | rofi $bindings -dmenu -p $argv[2]
+            println "" | rofi $bindings $colors -dmenu -p $argv[2]
         case enter
-            echo '' | rofi -dmenu -p $argv[2]
+            echo '' | rofi $colors -dmenu -p $argv[2]
         case ssh
             rofi -show ssh
         case windows
