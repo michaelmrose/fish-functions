@@ -3,7 +3,7 @@ function rfi
   set colors (i3-colors)
     switch $argv[1]
         case run
-            rofi $bindings -show run
+            rofi $colors $bindings -show run
         case window
             rofi -show window
         case match
@@ -14,7 +14,7 @@ function rfi
         case menu
             println "" | rofi $bindings -dmenu -p $argv[2]
         case enter
-            echo '' | rofi $colors -dmenu -p $argv[2]
+            echo '' | rofi -dmenu -p $argv[2]
         case ssh
             rofi -show ssh
         case windows
