@@ -1,4 +1,4 @@
 function e
-	eval $argv
+	eval $argv &
   exit
 end
