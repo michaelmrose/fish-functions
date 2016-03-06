@@ -1,3 +1,5 @@
 function convertargb
-	echo argb:99(cdr $argv)
+	if startswith-special '#' "$argv"
+    echo argb:99(cdr $argv)
+  end
 end
