@@ -3,18 +3,18 @@ function rfi
   # set i3colors (i3-i3colors)
     switch $argv[1]
         case run
-            eval rofi $i3colors $bindings -show run
+            eval rofi $bindings -show run
         case window
-            eval rofi $i3colors -show window
+            eval rofi -show window
         case history
           rfi match 'select: ' (println (history) | grep -i (vals 2..-1 $argv))
         case match
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | eval rofi $i3colors -dmenu -i -p "$argv[2..-1]"
+            println $argv[3..-1] | rofi -dmenu -i -p "$argv[2..-1]"
         case menu
-            println "" | eval rofi $bindings $i3colors -dmenu -p "$argv[2..-1]"
+            println "" | rofi $bindings -dmenu -p "$argv[2..-1]"
         case enter
             echo '' | rofi -dmenu -p "$argv[2..-1]"
         case ssh
