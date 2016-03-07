@@ -16,7 +16,7 @@ function rfi
         case menu
             println "" | eval rofi $bindings $i3colors -dmenu -p "$argv[2..-1]"
         case enter
-            echo '' | eval rofi $i3colors -dmenu -p "$argv[2..-1]"
+            echo '' | rofi -dmenu -p "$argv[2..-1]"
         case ssh
             rofi -show ssh
         case windows
