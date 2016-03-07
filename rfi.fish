@@ -12,11 +12,11 @@ function rfi
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | eval rofi $i3colors -dmenu -i -p $argv[2]
+            println $argv[3..-1] | eval rofi $i3colors -dmenu -i -p "$argv[2..-1]"
         case menu
-            println "" | eval rofi $bindings $i3colors -dmenu -p $argv[2]
+            println "" | eval rofi $bindings $i3colors -dmenu -p "$argv[2..-1]"
         case enter
-            echo '' | eval rofi $i3colors -dmenu -p $argv[2..-1]
+            echo '' | eval rofi $i3colors -dmenu -p "$argv[2..-1]"
         case ssh
             rofi -show ssh
         case windows
