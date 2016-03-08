@@ -1,4 +1,4 @@
 function lightsout
-	sleep 1
+	sleep 0.5
 	xset dpms force off
 end
