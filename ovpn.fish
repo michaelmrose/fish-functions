@@ -1,7 +1,7 @@
 function ovpn
 	set dir (pwd)
     cd /etc/openvpn
-    set default seattle
+    set default silicon
     set tmp /tmp/vpn_location
     if not exists $argv
         ovpn toggle
