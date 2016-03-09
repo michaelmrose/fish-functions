@@ -9,6 +9,7 @@ function m
         return 0
       case yt 
         ytube pl="$argv[2..-1]"
+        return 0
       case ls
         cat ~/playlists/$argv[2]
         return 0
