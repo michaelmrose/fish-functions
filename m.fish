@@ -8,7 +8,7 @@ function m
         umpv (list-youtube-playlist $argv[2..-1])
         return 0
       case yt 
-        ytube pl="$argv[2..-1]"
+        ytube (vals 2..-1 $argv)
         return 0
       case ls
         cat ~/playlists/$argv[2]
