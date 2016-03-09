@@ -5,7 +5,7 @@ function m
         println (ls ~/playlists)
         return 0
       case ytube-pl
-        println (list-youtube-playlist $argv[2..-1])
+        umpv (list-youtube-playlist $argv[2..-1])
         return 0
       case yt 
         ytube pl="$argv[2..-1]"
