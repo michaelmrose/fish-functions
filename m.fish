@@ -17,7 +17,12 @@ function m
         rm ~/playlists/$argv[2]
         return 0
       case play
-        m (cat ~/playlists/$argv[2])
+        set pl ~/playlists/$argv[2]
+        if test -f $pl
+          m (cat $pl)
+        else
+          m ytube-pl $argv[2]
+        end
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
