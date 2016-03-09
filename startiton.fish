@@ -20,4 +20,7 @@ function startiton
         rm $layout
     end
     restore-workspaces
+    sleep 3
+    fix-all-trans
+    hide-all-hidden-windows
 end
