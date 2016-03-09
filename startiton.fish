@@ -20,6 +20,4 @@ function startiton
         rm $layout
     end
     restore-workspaces
-    sleep 3
-    apply-transparency
 end
