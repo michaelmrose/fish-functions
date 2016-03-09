@@ -8,7 +8,16 @@ function m
         umpv (list-youtube-playlist $argv[2..-1])
         return 0
       case vl
-        umpv (rfi match 'select video: ' (find-video $argv[2..-1]))
+        set files (find-video $argv[2..-1])
+        switch (count $files)
+          case 0
+            nil
+          case 1
+            umpv $files
+          case '*'
+            umpv (rfi match 'select video: ' (println $files))
+          end
+        # umpv (rfi match 'select video: ' (find-video $argv[2..-1]))
         return 0
       case yt 
         ytube (vals 2..-1 $argv)
