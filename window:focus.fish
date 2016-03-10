@@ -5,5 +5,7 @@ function window:focus
     hide-all-hidden-windows
     sleep 0.1
     fade-in-trans-window $NEW_WINDOW
+  else
+    fix-all-trans
   end
 end
