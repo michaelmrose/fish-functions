@@ -1,3 +1,4 @@
 function new-fix-trans
-	repeat (count (list-windows)) -i
+	set switches (repeat (count (list-windows)) -i)
+  p $switches
 end
