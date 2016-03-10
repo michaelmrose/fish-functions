@@ -1,4 +1,4 @@
 function ev
+	bind q exit
 	eval $argv
-  bind q "kill -9 %self"
 end
