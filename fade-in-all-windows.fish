@@ -7,5 +7,5 @@ function fade-in-all-windows
       transset -i $j $i > /dev/null
     end
   end
-  fix-all-trans
+  fix-all-trans > /dev/null
 end
