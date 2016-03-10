@@ -1,5 +1,5 @@
 function window:focus
 	hide-all-hidden-windows
   sleep 0.1
-  fix-trans (wininfo id dec)
+  fade-in-trans-window (xdotool getactivewindow)
 end
