@@ -5,5 +5,7 @@ function update-vi3-config
     i3-msg restart
     sleep 3
     i3-elements trans
+    fix-all-trans
+    hide-all-hidden-windows
     wp recall
 end
