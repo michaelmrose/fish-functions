@@ -1,4 +1,4 @@
 function window:focus
 	hide-all-hidden-windows
-  fix-trans
+  fix-trans (wininfo id dec)
 end
