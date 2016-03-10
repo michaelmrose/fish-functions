@@ -9,6 +9,9 @@ function i3-elements
       set val 0
     case show
       set val 1.0
+    case ids
+      echo $i3_bar_ids $i3_frame_ids
+      return 0
   end
   for id in $ids
     transset -i $id $val > /dev/null
