@@ -1,6 +1,6 @@
 function fade-in-trans-window
 	set step 0.01
-  set steps 10
+  set steps 8
   set id $argv
   set final (return-trans-value (return-winclass $argv))
   set transstep (wcalc -q "$final / $steps")
