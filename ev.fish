@@ -1,5 +1,4 @@
 function ev
 	eval $argv
-  read
-  kill -9 %self
+  bind q kill -9 %self
 end
