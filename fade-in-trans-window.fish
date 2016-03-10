@@ -8,8 +8,9 @@ function fade-in-trans-window
   # echo transstep is $transstep
   for i in (seq $steps)
     set val (wcalc -q "$transstep * $i")
+    transset (remove-newlines (apply-to-list "compose-transset-arg $val" (list-windows)))
     # transset -i $id $val > /dev/null
-    transset (squish (apply-to-list "echo -i " $argv) | sed 's#-i# -i #g' | trim)
+    # transset (squish (apply-to-list "echo -i " $argv) | sed 's#-i# -i #g' | trim)
     sleep $step
   end
 end
