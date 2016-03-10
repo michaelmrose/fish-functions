@@ -5,6 +5,5 @@ function fade-out-all-windows
     for j in (list-windows)
       transset -i $j $i > /dev/null
     end
-    sleep 0.01
   end
 end
