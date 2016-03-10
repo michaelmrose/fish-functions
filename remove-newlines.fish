@@ -5,6 +5,6 @@ function remove-newlines
     while read -l line
       set acc $acc $line
     end
-    echo $line
+    echo $acc | sed ':a;N;$!ba;s/\n/ /g'
   end
 end
