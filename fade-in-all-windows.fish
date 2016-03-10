@@ -1,6 +1,5 @@
 function fade-in-all-windows
-	set step 0.001
-  set steps 5
+	set steps 3
   for i in (seq $steps)
     for j in (list-windows)
       set final (return-real-trans-value $j)
@@ -8,6 +7,5 @@ function fade-in-all-windows
       set val (wcalc -q "$transstep * $i")
       transset -i $j $val > /dev/null
     end
-    sleep $step
   end
 end
