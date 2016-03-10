@@ -1,5 +1,5 @@
 function fade-in-all-windows
-	set steps 3
+	set steps 2
   for i in (seq $steps)
     for j in (list-windows)
       set final (return-real-trans-value $j)
