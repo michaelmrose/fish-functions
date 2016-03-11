@@ -1,5 +1,5 @@
 function testfn
-	set pid %self
-  fish
-  kill -9 $pid
+	if test (count $argv) -gt 0
+    msg it fucking ran
+  end
 end
