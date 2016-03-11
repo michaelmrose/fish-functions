@@ -29,12 +29,16 @@ function m
         rm ~/playlists/$argv[2]
         return 0
       case play
+        echo l1
         set pl ~/playlists/$argv[2]
+        echo before if
         if test -f $pl
           m (cat $pl)
+          echo after m
         else
           m ytube-pl $argv[2]
         end
+        echo after if
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
