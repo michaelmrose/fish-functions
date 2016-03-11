@@ -1,6 +1,6 @@
 function m
-	echo  before everything
-	if exists $argv
+	# if exists $argv
+  if test (count $argv) -gt 0
     switch $argv[1]
       case list-playlists
         println (ls ~/playlists)
