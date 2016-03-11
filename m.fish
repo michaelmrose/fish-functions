@@ -1,4 +1,5 @@
 function m
+	echo  before everything
 	if exists $argv
     switch $argv[1]
       case list-playlists
