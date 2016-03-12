@@ -8,7 +8,7 @@ function fix-trans
   end
   for i in $vals
     transset -i $argv $i
-    sleep 0.01
+    sleep 0.1
   end
 	# transset -i $argv (return-real-trans-value $argv)
 end
