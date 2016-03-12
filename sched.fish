@@ -5,6 +5,10 @@ function sched
     case current
       filter-with-expr event-not-past (get-current-work-sched)
     case show
+      echo WORK SCHEDULE
+      echo ------------------------------
+      echo last updated $schedule_updated
+      echo ------------------------------
       println $CURRENT_SCHED
     case sync
       set -U schedule_updated (date)
@@ -25,6 +29,6 @@ function sched
               add-to-calendar $i
           end
       end
-      set -u CURRENT_SCHED (sched current)
+      set -U CURRENT_SCHED (sched current)
   end
 end
