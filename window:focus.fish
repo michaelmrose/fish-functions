@@ -1,9 +1,7 @@
 function window:focus
 	set -U OLD_WINDOW $NEW_WINDOW
   set -U NEW_WINDOW (xdotool getactivewindow)
-  if is-window-hidden $OLD_WINDOW
-    fix-trans-fade $OLD_WINDOW
-  end
+  fix-trans-fade $OLD_WINDOW
   fix-trans-fade $NEW_WINDOW
   # # hide-all-hidden-windows
   # # fade-in-trans-window (xdotool getactivewindow)
