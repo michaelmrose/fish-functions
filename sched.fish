@@ -5,7 +5,7 @@ function sched
     case current
       filter-with-expr event-not-past (get-current-work-sched)
     case show
-      echo WORK SCHEDULE
+      echo '    WORK SCHEDULE           '
       echo ------------------------------
       echo last updated $schedule_updated
       echo ------------------------------
