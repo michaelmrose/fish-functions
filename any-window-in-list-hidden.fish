@@ -1,6 +1,6 @@
 function any-window-in-list-hidden
 	for window in $argv
-    if window-is-hidden $window
+    if is-window-hidden $window
       return 0
     end
   end
