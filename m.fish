@@ -29,6 +29,9 @@ function m
       case rm
         rm ~/playlists/$argv[2]
         return 0
+      case edit
+        eval $EDITOR ~/playlists/$argv[2]
+        return 0
       case play
         echo l1
         set pl ~/playlists/$argv[2]
