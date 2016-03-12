@@ -3,4 +3,5 @@ function unlockme
   i3-elements trans
   # fix-all-trans
   fade-in-all-windows
+  fix-all-trans
 end
