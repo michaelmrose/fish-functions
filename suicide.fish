@@ -4,6 +4,8 @@ function suicide
     if test (seconds) -gt ZERO_HOUR
       echo if true
       kill -9 %self
+    else
+      echo if false
     end
   end
 end
