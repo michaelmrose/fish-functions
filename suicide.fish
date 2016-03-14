@@ -3,6 +3,8 @@ function suicide
   function fish_prompt
     if greater-than (seconds) $ZERO_HOUR
       kill -9 %self
+    else
+      echo '#> '
     end
   end
 end
