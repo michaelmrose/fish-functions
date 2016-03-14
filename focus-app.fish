@@ -1,4 +1,5 @@
 function focus-app
+	msg focus app run
 	# set currentclass (winclass)
   # set command (appkey $argv)
   focus (tolower (return-windowclass (appkey $argv)))
