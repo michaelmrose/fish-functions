@@ -2,9 +2,9 @@ function focus-app
 	msg focus app run and argv is $argv
 	# set currentclass (winclass)
   # set command (appkey $argv)
-  set com (tolower (return-windowclass (appkey $argv)))
+  set com focus (tolower (return-windowclass (appkey $argv)))
   msg $com
-  eval $com
+  # eval $com
   # set targetclass (return-windowclass $command)
   # sendit t is $targetclass c is $currentclass
   # if match $currentclass $targetclass
