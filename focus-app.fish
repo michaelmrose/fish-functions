@@ -1,7 +1,7 @@
 function focus-app
 	# set currentclass (winclass)
   # set command (appkey $argv)
-  echo focus (tolower (return-windowclass (appkey $argv)))
+  focus (tolower (return-windowclass (appkey $argv)))
   # set targetclass (return-windowclass $command)
   # sendit t is $targetclass c is $currentclass
   # if match $currentclass $targetclass
