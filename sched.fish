@@ -14,7 +14,11 @@ function sched
       set -U schedule_updated (date)
       set new (println (get-new-work-sched))
       if test (count $new) -eq 0
-        echo sync failed
+        if in-terminal
+          echo sync failed
+        else
+          cat ~/docs/mail/sync-failure.txt | msmtp -a default michael@rosenetwork.net
+        end
         return 1
       end
       set current (println (get-current-work-sched))
