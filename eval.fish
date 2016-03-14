@@ -1,5 +1,4 @@
 function eval --description 'Evaluate parameters as a command' --no-scope-shadowing
-	
 	# If we are in an interactive shell, eval should enable full
 	# job control since it should behave like the real code was
 	# executed.  If we don't do this, commands that expect to be
@@ -32,9 +31,11 @@ function eval --description 'Evaluate parameters as a command' --no-scope-shadow
         # what it reads from. So builtins are magic in that, in pipes, their stdin
         # is not fd 0.
 
-	echo "begin; $argv "\n" ;end eval2_inner <&3 3<&-" | source 3<&0
+	echo "begin; $argv "
+" ;end eval2_inner <&3 3<&-" | source 3<&0
 	set -l res $status
 
 	status --job-control $mode
 	return $res
+  exit
 end
