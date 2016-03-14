@@ -2,6 +2,7 @@ function focus-app
 	set currentclass (winclass)
     set command (appkey $argv)
     set class (return-windowclass $command)
+    echo c is $currentclass t is $target
     if match $currentclass $target
         nextwindow
         msg next
