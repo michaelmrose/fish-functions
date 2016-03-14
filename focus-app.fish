@@ -1,5 +1,6 @@
 function focus-app
-	focus (return-windowclass (appkey $argv))
+	set class (return-windowclass (appkey $argv))
+  i3-msg [class=$class] focus
   er vi3op
   update-op-status
 end
