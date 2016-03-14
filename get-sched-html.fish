@@ -18,5 +18,5 @@ function get-sched-html
     #eval curl -c ~/.cjar.txt -L --data \'$hdrequest\' $url
     echo hdpw is $hdpw
 
-    curl -s -c ~/.cjar.txt -L --data "j_username=mr1135&j_password=$hdpw&j_storenumber=4716&j_userbelongsto=Store&language=en_US&callingProgram=lmslLaborMgtTools&uiLoc=ext&appendSessionID=false&myLocation=Store&storeUser=true&action=Login&successUrl=$successUrl" $url
+    curl -s -c ~/.cjar.txt -L --data "j_username=mr1135&j_password={$hdpw}&j_storenumber=4716&j_userbelongsto=Store&language=en_US&callingProgram=lmslLaborMgtTools&uiLoc=ext&appendSessionID=false&myLocation=Store&storeUser=true&action=Login&successUrl=$successUrl" $url
 end
