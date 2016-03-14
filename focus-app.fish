@@ -1,8 +1,8 @@
 function focus-app
 	set currentclass (winclass)
     set command (appkey $argv)
-    set class (return-windowclass $command)
-    if match $currentclass $class
+    set targetclass (return-windowclass $command)
+    if match $currentclass $targetclass
         nextwindow
         msg next
     else
