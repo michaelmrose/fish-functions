@@ -4,7 +4,7 @@ function focus-app
   # set command (appkey $argv)
   set com focus (tolower (return-windowclass (appkey $argv)))
   msg $com
-  # eval $com
+  eval $com
   # set targetclass (return-windowclass $command)
   # sendit t is $targetclass c is $currentclass
   # if match $currentclass $targetclass
