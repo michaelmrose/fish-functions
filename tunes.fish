@@ -1,4 +1,4 @@
 function tunes
+	update-now-playing &
 	clementine &
-  update-now-playing &
 end
