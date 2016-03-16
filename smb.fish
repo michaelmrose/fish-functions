@@ -1,5 +1,5 @@
 function smb
-	if not exist $argv
+	if not exists $argv
     serv samba status
   else
     serv samba $argv
