@@ -3,7 +3,7 @@ function nv
         nvim $argv
         trans 88 > /dev/null
     else
-        lilyterm -e nvim $argv
+        lilyterm -e nvim $argv &
         trans 88
     end
 end
