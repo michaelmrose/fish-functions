@@ -1,3 +1,3 @@
 function es6
-	echo traceur --out (rpl $argv .es6 .js) --script $argv
+	traceur --out (echo $argv | sed 's#\.es6$#\.js#g') --script $argv
 end
