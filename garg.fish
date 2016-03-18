@@ -1,8 +1,7 @@
 function garg
 	switch $argv[1]
     case last
-      gargoyle $LAST_GAME
-      return 0
+      set game $LAST_GAME
     case select
       switch (count $argv)
         case 1
@@ -15,9 +14,9 @@ function garg
       else
         set game $games
       end
-      if exists $game
-        set -U LAST_GAME (pathof $game)
-      end
-      gargoyle $game
   end
+  if exists $game
+    set -U LAST_GAME (pathof $game)
+  end
+  gargoyle $game
 end
