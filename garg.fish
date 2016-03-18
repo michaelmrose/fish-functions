@@ -1,3 +1,3 @@
 function garg
-	gargoyle (rfi match "select a game: " (ls ~/if))
+	echo gargoyle (rfi match "select a game: " (ls ~/if))
 end
