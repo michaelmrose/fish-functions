@@ -1,5 +1,5 @@
 function garg
-	switch $argv
+	switch $argv[1]
     case last
       gargoyle ~/if/$LAST_GAME
       return 0
