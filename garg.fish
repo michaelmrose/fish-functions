@@ -16,7 +16,7 @@ function garg
         set game $games
       end
       if exists $game
-        set -U LAST_GAME $game
+        set -U LAST_GAME (pathof $game)
       end
       gargoyle ~/if/$game
   end
