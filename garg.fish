@@ -1,8 +1,8 @@
 function garg
 	switch (count $argv)
-    case 1
-      set games (ls ~/if)
     case 0
+      set games (ls ~/if)
+    case 1
       set games (ls ~/if | grep -i $argv)
   end
 	set game (rfi match "select a game: " $games)
