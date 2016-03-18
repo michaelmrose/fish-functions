@@ -1,6 +1,10 @@
 function garg
-	set args (vals 1..-1 $argv)
-	set game (rfi match "select a game: " (ls ~/if | grep -i $args))
+	if exists $argv
+    set games (ls ~/if)
+  else
+    set games (ls ~/if | grep -i $argv)
+  end
+	set game (rfi match "select a game: " $games)
   echo $game
   # gargoyle ~/if/$game
 end
