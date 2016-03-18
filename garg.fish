@@ -2,6 +2,8 @@ function garg
 	switch $argv
     case last
       set game $LAST_GAME
+      gargoyle ~/if/$game
+      return 0
     case select
       switch (count $argv)
         case 1
