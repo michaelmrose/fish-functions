@@ -4,10 +4,11 @@ function garg
       gargoyle ~/if/$LAST_GAME
       return 0
     case select
-      if exists $argv[2]
-          set games (ls ~/if | grep -i $argv[2..-1])
-        else
+      switch (count $argv)
+        case 1
           set games (ls ~/if)
+        case '*'
+          set games (ls ~/if | grep -i $argv[2..-1])
       end
       if test (count $games) -gt 1
         set game (rfi match "select a game: " $games)
@@ -18,11 +19,5 @@ function garg
         set -U LAST_GAME $game
       end
       gargoyle ~/if/$game
-      # switch (count $argv)
-      #   case 1
-      #     set games (ls ~/if)
-      #   case '*'
-      #     set games (ls ~/if | grep -i $argv[2..-1])
-      # end
   end
 end
