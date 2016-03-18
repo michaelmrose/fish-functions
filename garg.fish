@@ -6,6 +6,5 @@ function garg
       set games (ls ~/if | grep -i $argv)
   end
 	set game (rfi match "select a game: " $games)
-  echo $game
-  # gargoyle ~/if/$game
+  gargoyle ~/if/$game
 end
