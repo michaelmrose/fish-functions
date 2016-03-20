@@ -48,7 +48,7 @@ function m
         echo after if
         return 0
       case open
-        umpv $argv[2..-1]
+        umpv $argv[2..-1] &
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
