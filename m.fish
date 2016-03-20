@@ -37,7 +37,10 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
-        if m ls $argv[2] > /dev/null
+        echo in switch
+        set pl ~/playlists/$argv[2]
+        if test -f $pl
+          # m (cat $pl)
           m ls $argv[2] | m
           return 0
         else
@@ -45,7 +48,7 @@ function m
           return 0
         end
         echo after if
-        return 1
+        return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
         return 0
@@ -56,6 +59,7 @@ function m
     end
   end
   set vals (vals 1..-1 $argv)
+  set arguments (filter-with-expr "not startswith @" $vals)
   if not exists $arguments
     while read -l line
       set arguments $arguments $line
@@ -66,19 +70,17 @@ function m
     set arguments[$cnt] (pathof $arguments[$cnt])
     set cnt (increase $cnt)
   end
-    set arguments (filter-with-expr "not startswith @" $vals)
-    
-    if get-tag replace $vals > /dev/null
-      for p in (get-tag replace $vals)
-        println $arguments > ~/playlists/$p
-      end
-    end
-    if get-tag append $vals > /dev/null
-      for p in (get-tag append $vals)
-        println $arguments >> ~/playlists/$p
-      end
-    end
 
+  if get-tag replace $vals > /dev/null
+    for p in (get-tag replace $vals)
+      println $arguments > ~/playlists/$p
+    end
+  end
+  if get-tag append $vals > /dev/null
+    for p in (get-tag append $vals)
+      println $arguments >> ~/playlists/$p
+    end
+  end
   if not get-tag noplay $vals > /dev/null
     umpv $arguments &
   end
