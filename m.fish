@@ -37,10 +37,7 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
-        echo case play
-        echo a is $argv[2]
-        if m ls $argv[2]
-          echo if pos
+        if m ls $argv[2] > /dev/null
           m ls $argv[2] | m
           return 0
         else
@@ -59,6 +56,9 @@ function m
     end
   end
   set vals (vals 1..-1 $argv)
+  if test (count $vals) -eq 0
+    return 0
+  end
   set arguments (filter-with-expr "not startswith @" $vals)
   if not exists $arguments
     while read -l line
