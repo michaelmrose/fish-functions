@@ -37,8 +37,10 @@ function m
         if test -f $pl
           # m (cat $pl)
           m ls $argv[2] | m
+          return 0
         else
           m ytube-pl $argv[2]
+          return 0
         end
         echo after if
         return 0
