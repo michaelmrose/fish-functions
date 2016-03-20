@@ -37,10 +37,7 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
-        echo in switch
-        set pl ~/playlists/$argv[2]
-        if test -f $pl
-          # m (cat $pl)
+        if m ls $argv[2]
           m ls $argv[2] | m
           return 0
         else
@@ -48,7 +45,7 @@ function m
           return 0
         end
         echo after if
-        return 0
+        return 1
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
         return 0
