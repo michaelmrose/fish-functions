@@ -33,12 +33,10 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
-        echo l1
         set pl ~/playlists/$argv[2]
-        echo before if
         if test -f $pl
-          m (cat $pl)
-          echo after m
+          # m (cat $pl)
+          m ls $argv[2] | m
         else
           m ytube-pl $argv[2]
         end
