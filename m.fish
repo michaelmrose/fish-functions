@@ -37,7 +37,10 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
+        echo case play
+        echo a is $argv[2]
         if m ls $argv[2]
+          echo if pos
           m ls $argv[2] | m
           return 0
         else
