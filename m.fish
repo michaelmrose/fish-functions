@@ -66,7 +66,6 @@ function m
     set arguments[$cnt] (pathof $arguments[$cnt])
     set cnt (increase $cnt)
   end
-  if test (count $argv -gt 0)
     set arguments (filter-with-expr "not startswith @" $vals)
     
     if get-tag replace $vals > /dev/null
@@ -79,7 +78,6 @@ function m
         println $arguments >> ~/playlists/$p
       end
     end
-  end
 
   if not get-tag noplay $vals > /dev/null
     umpv $arguments &
