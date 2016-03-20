@@ -1,6 +1,5 @@
 function m
-	# if exists $argv
-  if test (count $argv) -gt 0
+	if test (count $argv) -gt 0
     switch $argv[1]
       case list-playlists
         println (ls ~/playlists)
@@ -40,14 +39,16 @@ function m
         echo in switch
         set pl ~/playlists/$argv[2]
         if test -f $pl
-          # m (cat $pl)
-          m ls $argv[2] | m
+          m open (m ls $argv[2])
           return 0
         else
           m ytube-pl $argv[2]
           return 0
         end
         echo after if
+        return 0
+      case open
+        umpv $argv[2..-1]
         return 0
       case narrow
         m ls $argv[2] | pick | m @replace:$argv @noplay
