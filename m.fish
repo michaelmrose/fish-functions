@@ -24,8 +24,12 @@ function m
         ytube (vals 2..-1 $argv)
         return 0
       case ls
-        cat ~/playlists/$argv[2]
-        return 0
+        if test -f ~/playlists/$argv[2]
+          cat ~/playlists/$argv[2]
+          return 0
+        else
+          return 1
+        end
       case rm
         rm ~/playlists/$argv[2]
         return 0
