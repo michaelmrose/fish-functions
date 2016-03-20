@@ -36,7 +36,6 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case play
-        echo in switch
         set pl ~/playlists/$argv[2]
         if test -f $pl
           m open (m ls $argv[2])
