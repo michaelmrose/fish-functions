@@ -56,10 +56,6 @@ function m
     end
   end
   set vals (vals 1..-1 $argv)
-  if test (count $vals) -eq 0
-    return 0
-  end
-  set arguments (filter-with-expr "not startswith @" $vals)
   if not exists $arguments
     while read -l line
       set arguments $arguments $line
@@ -70,17 +66,21 @@ function m
     set arguments[$cnt] (pathof $arguments[$cnt])
     set cnt (increase $cnt)
   end
+  if test (count $argv -gt 0)
+    set arguments (filter-with-expr "not startswith @" $vals)
+    
+    if get-tag replace $vals > /dev/null
+      for p in (get-tag replace $vals)
+        println $arguments > ~/playlists/$p
+      end
+    end
+    if get-tag append $vals > /dev/null
+      for p in (get-tag append $vals)
+        println $arguments >> ~/playlists/$p
+      end
+    end
+  end
 
-  if get-tag replace $vals > /dev/null
-    for p in (get-tag replace $vals)
-      println $arguments > ~/playlists/$p
-    end
-  end
-  if get-tag append $vals > /dev/null
-    for p in (get-tag append $vals)
-      println $arguments >> ~/playlists/$p
-    end
-  end
   if not get-tag noplay $vals > /dev/null
     umpv $arguments &
   end
