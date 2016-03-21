@@ -130,7 +130,7 @@ function wallpaper
         set -U wallpaperindex 1
     else
     end
-    cp $img /mnt/ext/Images/backgrounds/lightdm
+    cp $img $wallpaperroot/lightdm
 
     set ratio (get-image-aspect-ratio-type $img)
     switch $ratio
