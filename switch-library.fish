@@ -5,7 +5,7 @@ function switch-library
     end
     if pgrep calibre
         calibre -s
-        calibre --with-library ~/calibre/$argv --detach &
+        calibre --with-library /med/ebooks/$argv --detach &
         sleep 2
     else
         change-calibre-library-offline $argv
