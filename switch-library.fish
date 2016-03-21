@@ -1,5 +1,5 @@
 function switch-library
-	if not contains $argv (ls ~/calibre)
+	if not contains $argv (ls /med/ebooks)
         sendit library $argv does not exist
         return 1
     end
