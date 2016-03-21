@@ -14,6 +14,7 @@ function wallpaper
 
     switch $argv[1]
         case help
+          echo write a real fucking help option soon
           echo view \[category\] - view category
           echo categories - list categories
           echo edit - edit $bgimage with gimp, reload on exit
