@@ -21,6 +21,7 @@ function wallpaper
           echo cat \[cateory\] - move $bgime to category
           echo name - return name
           echo album - set current album art as background
+          return 0
         case view
             pics $argv[2]
             return 0
