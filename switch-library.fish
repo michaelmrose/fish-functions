@@ -3,7 +3,7 @@ function switch-library
         sendit library $argv does not exist
         return 1
     end
-    if pgrep calibre
+    if wmctrl -lxp | grep calibre-gui.libprs500
         calibre -s
         calibre --with-library /med/ebooks/$argv --detach &
         sleep 2
