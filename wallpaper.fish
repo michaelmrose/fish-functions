@@ -13,6 +13,14 @@ function wallpaper
     end
 
     switch $argv[1]
+        case help
+          echo view \[category\] - view category
+          echo categories - list categories
+          echo edit - edit $bgimage with gimp, reload on exit
+          echo recent - show recently used backgrounds
+          echo cat \[cateory\] - move $bgime to category
+          echo name - return name
+          echo album - set current album art as background
         case view
             pics $argv[2]
             return 0
