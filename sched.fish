@@ -42,5 +42,6 @@ function sched
           end
       end
       set -U CURRENT_SCHED (sched current)
+      signal-i3blocks sched
   end
 end
