@@ -10,6 +10,8 @@ function sched
       echo last updated $schedule_updated
       echo ------------------------------------------
       println $CURRENT_SCHED
+    case list
+      println $CURRENT_SCHED
     case sync
       set -U schedule_updated (date)
       set new (println (get-new-work-sched))
