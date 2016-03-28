@@ -3,7 +3,7 @@ function setvolume
     set vol (ponymix get-volume)
     set newvol (bounded (wcalc -q "$vol + $argv") 0 130)
   else
-    set newvol $argv
+    set newvol (bounded $argv 0 150)
   end
   ponymix set-volume $newvol
   signal-i3blocks output
