@@ -15,6 +15,10 @@ function pkg
       shutitdown
     case pick 
       pick-package $argv[2..-1]
+    case keep
+      sudo emerge --noreplace $argv[2..-1]
+    case deps
+      sudo emerge --depclean -a --complete-graph
     case search
       switch $argv[2]
         case desc
