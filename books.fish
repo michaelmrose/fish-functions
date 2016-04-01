@@ -41,6 +41,8 @@ function books --description 'open books given either as a title or criteria que
                 books --cover $tail
             case --erase
                 set -e recent_reads
+            case -g
+              pick-book-by-cover
             case -e
                 books --erase
             case --query
