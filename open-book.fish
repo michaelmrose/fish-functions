@@ -9,10 +9,10 @@ function open-book
 
     switch $ext
         case "pdf"
-            zathura "$argv"
+            zathura "$argv" &
           case "epub"
-            zathura "$argv"
+            zathura "$argv" &
         case "*"
-            ebook-viewer "$argv"
+            ebook-viewer "$argv" &
     end
 end
