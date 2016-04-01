@@ -1,3 +1,3 @@
 function time-has-passed
-	return 1
+	return 0
 end
