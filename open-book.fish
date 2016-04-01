@@ -15,4 +15,5 @@ function open-book
         case "*"
             ebook-viewer "$argv" &
     end
+    set-recent-book-covers
 end
