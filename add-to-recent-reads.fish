@@ -4,6 +4,7 @@ function add-to-recent-reads --description 'keep a list of the 10 most recent un
         # set library (get-current-calibre-library)
         # set entry \"$title @$library\"
         set -U recent_reads (take 10 (unique (println "$title" $recent_reads)))
+        echo \"$title\"
     else
         msg could not add to recent reads
         return 1
