@@ -4,9 +4,10 @@ function event-in-future
   if date-in-future $date
     return 0
   end
-  if date-is-current $date -a not time-has-passed $time
-    return 0
-  else
-    return 1
+  if date-is-current $date 
+    if not time-has-passed $time
+      return 0
+    end
   end
+  return 1
 end
