@@ -13,7 +13,8 @@ function sched
     case list
       println $CURRENT_SCHED
     case next
-      filter-with-expr event-in-future $CURRENT_SCHED | head -1
+      # filter-with-expr event-in-future $CURRENT_SCHED | head -1
+      sched-next
     case sync
       set -U schedule_updated (date)
       set new (println (get-new-work-sched))
