@@ -3,7 +3,7 @@ function browser-memory-info
   if pgrep firefox
     set res $res firefox: (meminfo firefox)
   end
-  if prep aurora
+  if pgrep aurora
     set res $res aurora: (meminfo aurora)
   end
   echo $res
