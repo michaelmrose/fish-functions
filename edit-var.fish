@@ -1,8 +1,8 @@
 function edit-var
-	set lst (println $$argv)
-    for i in (range (count $lst))
-        echo $lst[$i]
-        vared lst[$i]
-    end
-    set $argv $lst
+	set name $arg[1]
+  set vals $$name
+  set tmp /tmp/(uid)
+  p $vals > $tmp
+  eval $EDITOR $tmp
+  cat $tmp
 end
