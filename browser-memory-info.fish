@@ -1,6 +1,5 @@
 function browser-memory-info
-	set res ""
-  if pgrep firefox > /dev/null
+	if pgrep firefox > /dev/null
     set res $res firefox: (meminfo firefox)
   end
   if pgrep aurora > /dev/null
