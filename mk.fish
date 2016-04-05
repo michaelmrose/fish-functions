@@ -8,7 +8,7 @@ function mk
       end
     case -c
       for i in $MARKED
-        cp $i $argv[2]
+        cp -R $i $argv[2]
       end
     case '*'
       for i in $argv
