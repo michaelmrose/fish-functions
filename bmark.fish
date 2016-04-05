@@ -4,7 +4,11 @@ function bmark
     end
     switch $argv[1]
         case dl
-            echo /mnt/ext/dl
+          echo /mnt/ext/dl
+        case docs
+          echo ~/docs
+        case proj
+          echo ~/proj
         case '*'
             return 1
     end
