@@ -12,14 +12,14 @@ function mk
       for i in $MARKED
         eval mv $i $argv[2]
         er MARKED
-        return 0
       end
+      return 0
     case -cp
       for i in $MARKED
         eval cp -R $i $argv[2]
         er MARKED
-        return 0
       end
+      return 0
     case '*'
       for i in $argv
         set -U MARKED $MARKED (fullpath $i)
