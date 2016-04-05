@@ -1,7 +1,7 @@
 function mk
 	switch $argv[1]
     case -e
-      er $MARKED
+      er MARKED
     case -m
       for i in $MARKED
         mv $i $argv[2]
