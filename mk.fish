@@ -1,5 +1,5 @@
 function mk
-	switch $argv
+	switch $argv[1]
     case -e
       er $MARKED
     case -m
