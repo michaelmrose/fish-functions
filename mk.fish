@@ -10,13 +10,13 @@ function mk
       p $MARKED
     case -mv
       for i in $MARKED
-        echo mv $i $argv[2]
-        # er MARKED
+        eval mv $i $argv[2]
+        er MARKED
       end
     case -cp
       for i in $MARKED
-        echo cp -R $i $argv[2]
-        # er MARKED
+        eval cp -R $i $argv[2]
+        er MARKED
       end
     case '*'
       for i in $argv
