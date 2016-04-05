@@ -12,11 +12,13 @@ function mk
       for i in $MARKED
         eval mv $i $argv[2]
         er MARKED
+        return 0
       end
     case -cp
       for i in $MARKED
         eval cp -R $i $argv[2]
         er MARKED
+        return 0
       end
     case '*'
       for i in $argv
