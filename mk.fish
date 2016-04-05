@@ -20,7 +20,7 @@ function mk
       end
     case '*'
       for i in $argv
-        set -U MARKED $MARKED (pathof $i)
+        set -U MARKED $MARKED (fullpath $i)
       end
   end
 end
