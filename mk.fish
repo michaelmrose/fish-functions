@@ -1,7 +1,11 @@
 function mk
 	switch $argv[1]
-    case -e
+    case -c
       er MARKED
+    case -e
+      p $MARKED > /tmp/MARKED
+      nvim /tmp/MARKED
+      set -U MARKED (cat /tmp/MARKED)
     case -p
       p $MARKED
     case -m
