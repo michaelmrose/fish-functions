@@ -8,13 +8,13 @@ function mk
       set -U MARKED (cat /tmp/MARKED)
     case -p
       p $MARKED
-    case -mv
+    case mv
       for i in $MARKED
         eval mv $i $argv[2]
         er MARKED
       end
       return 0
-    case -cp
+    case cp
       for i in $MARKED
         eval cp -R $i $argv[2]
         er MARKED
