@@ -1,3 +1,3 @@
 function choose-video
-	mm watch (dm choice "enter search query")
+	mm watch (rfi enter "enter a search query: ")
 end
