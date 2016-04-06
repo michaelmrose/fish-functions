@@ -7,7 +7,6 @@ function uz
                 case '*'
                     atool -x $argv
             end
-            atool -x $1
         case '*'
             for i in $argv
                 uz $i
