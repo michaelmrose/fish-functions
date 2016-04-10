@@ -5,6 +5,6 @@ function pick-book-by-cover
     set books $books $recent_reads[(findindex $choice $RECENT_BOOK_COVERS)]
   end
   for book in $books
-    echo books $argv
+    books $book
   end
 end
