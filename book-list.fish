@@ -1,5 +1,5 @@
 function book-list
 	for i in $argv
-    books $argv
+    echo books $argv
   end
 end
