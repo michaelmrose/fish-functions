@@ -1,5 +1,5 @@
 function book-list
-	while read -l line
-    books $line
+	for i in $argv
+    books $argv
   end
 end
