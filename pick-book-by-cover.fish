@@ -5,7 +5,6 @@ function pick-book-by-cover
     set books $books $recent_reads[(findindex $choice $RECENT_BOOK_COVERS)]
   end
   for book in $books
-    books $argv
+    echo books $argv
   end
-	# books $recent_reads[(findindex (sxiv -tbfor $RECENT_BOOK_COVERS) $RECENT_BOOK_COVERS)]
 end
