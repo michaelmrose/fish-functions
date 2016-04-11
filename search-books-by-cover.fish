@@ -1,6 +1,6 @@
 function search-books-by-cover
 	set titles (query-calibre-title $argv)
-  set covers (apply-to-list 'get-title-from-cover' $titles)
+  set covers (apply-to-list 'get-cover-by-title' $titles)
   # set choices (sxiv -tbfor $covers)
   p $covers
   # for choice in $choices
