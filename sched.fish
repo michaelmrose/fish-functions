@@ -15,6 +15,7 @@ function sched
                   echo $i
                   # date -d (echo $i | cut -d ' ' -f5) '+%A'
                end)
+               println $days
                # zip-lists $CURRENT_SCHED $days
     case list
       println $CURRENT_SCHED
