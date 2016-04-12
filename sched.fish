@@ -9,7 +9,7 @@ function sched
       echo ------------------------------------------
       echo last updated $schedule_updated
       echo ------------------------------------------
-      println $CURRENT_SCHED
+      # println $CURRENT_SCHED
 
       set days (for i in $CURRENT_SCHED                                                                                                          ❮ 14 ms ❮ 
                   date -d (echo $i | cut -d ' ' -f5) '+%A'
