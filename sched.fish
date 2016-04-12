@@ -14,7 +14,7 @@ function sched
       set days (for i in $CURRENT_SCHED                                                                                                          ❮ 14 ms ❮ 
                   date -d (echo $i | cut -d ' ' -f5) '+%A'
                end)
-               zip-lists $CURRENT_SCHED $days
+               # zip-lists $CURRENT_SCHED $days
     case list
       println $CURRENT_SCHED
     case next
