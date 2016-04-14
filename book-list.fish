@@ -1,6 +1,5 @@
 function book-list
-	for i in $argv
-    echo books $argv &
-    echo on to the next
+	while read -l line
+    echo books $line &
   end
 end
