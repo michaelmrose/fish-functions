@@ -1,3 +1,6 @@
 function emd
-	emacs --daemon
+	if not pgrep emacs
+    emacs --daemon
+  end
+  emacsclient -c $argv
 end
