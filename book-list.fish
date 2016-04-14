@@ -1,6 +1,6 @@
 function book-list
 	for i in $argv
-    books $argv &
+    echo books $argv &
     echo on to the next
   end
 end
