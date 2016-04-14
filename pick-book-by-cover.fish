@@ -4,7 +4,5 @@ function pick-book-by-cover
   for choice in $choices
     set books $books $recent_reads[(findindex $choice $RECENT_BOOK_COVERS)]
   end
-  for book in $books
-    books $book &
-  end
+  p $books | book-list
 end
