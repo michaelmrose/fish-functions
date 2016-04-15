@@ -9,7 +9,7 @@ function open-book
 
     switch $ext
         case "pdf"
-            emacsclient -c "$argv" &
+            zathura "$argv" &
           case "epub"
             zathura "$argv" &
         case "*"
