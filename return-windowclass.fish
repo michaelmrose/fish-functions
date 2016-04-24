@@ -1,6 +1,5 @@
 function return-windowclass
-	
-    if test (count $argv -eq 1)
+	if test (count $argv -eq 1)
         set xs (explode-words $argv)
     else
         set xs $argv
@@ -20,6 +19,8 @@ function return-windowclass
             set returnval Clementine
         case mpv
             set returnval mpv
+        case emacsclient
+            set returnval Emacs
         case kdesudo
             set returnval (return-windowclass $argv[2..-1])
         case lilyterm
