@@ -5,7 +5,7 @@ function set-path
 
     set builtinpaths /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin /usr/games /usr/local/games
 
-    set mypaths /opt/racket/bin /opt/i3blocks /opt/bin /home/michael/bin /home/michael/scripts  /opt/cxoffice/bin /home/michael/proj/contrib ~/.autojump/bin /usr/games/bin
+    set mypaths /opt/racket/bin /opt/i3blocks /opt/bin /home/michael/bin /home/michael/scripts  /opt/cxoffice/bin /home/michael/proj/contrib ~/.autojump/bin /usr/games/bin /opt/vmware/bin
 
     set PATH $wtf $mypaths $javapaths $builtinpaths
 end
