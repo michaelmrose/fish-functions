@@ -26,7 +26,8 @@ function pick-list-from-wh
     set url "https://alpha.wallhaven.cc/search?q=$q&purity=$purity&sorting=$sort&order=desc"
     set numbers (curl $curloptions $cookies $url | pup 'a[class=preview]' | grep href | head -$n | cut -d '"' -f4 | rev | cut -d "/" -f1 | rev)
     for i in (seq (count $numbers))
-        set targetimage http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$numbers[$i].jpg
+        # set targetimage http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$numbers[$i].jpg
+        set targetimage https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$numbers[$i].jpg
         curl $curloptions $cookies $targetimage > $wallhavengallery/$i.jpg &
     end
     while pgrep curl > /dev/null
