@@ -23,6 +23,7 @@ function pick-list-from-wh
 
     set img /tmp/wallhaven.jpg
     set url "http://alpha.wallhaven.cc/search?q=$q&categories=111&purity=$purity&resolutions=$resolutions&sorting=$sort&order=desc"
+    set url "https://alpha.wallhaven.cc/search?q=ass&purity=111&sorting=date_added&order=desc&page=3"
     set numbers (curl $curloptions $cookies $url | pup 'a[class=preview]' | grep href | head -$n | cut -d '"' -f4 | rev | cut -d "/" -f1 | rev)
     for i in (seq (count $numbers))
         set targetimage http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$numbers[$i].jpg
