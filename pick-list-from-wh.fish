@@ -9,7 +9,7 @@ function pick-list-from-wh
 
     ensure-dir-exists /tmp/wallhavengallery 
     if exists (ls /tmp/wallhavengallery)
-      rm /tmp/wallhavengallery/* #get rid of the files from last run
+      # rm /tmp/wallhavengallery/* #get rid of the files from last run
     end
 
     for i in (getvariables $argv)
@@ -24,7 +24,6 @@ function pick-list-from-wh
     set img /tmp/wallhaven.jpg
     set url "http://alpha.wallhaven.cc/search?q=$q&categories=111&purity=$purity&resolutions=$resolutions&sorting=$sort&order=desc"
     set numbers (curl $curloptions $cookies $url | pup 'a[class=preview]' | grep href | head -$n | cut -d '"' -f4 | rev | cut -d "/" -f1 | rev)
-    ensure-dir-exists $wallhavengallery
     for i in (seq (count $numbers))
         set targetimage http://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$numbers[$i].jpg
         curl $curloptions $cookies $targetimage > $wallhavengallery/$i.jpg &
