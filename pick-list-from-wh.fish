@@ -7,8 +7,10 @@ function pick-list-from-wh
     set resolutions 1440x900,1600x900,1600x1200,1680x1050,1920x1080,1920x1200,2560x1440,2560x1600,3840x1080,5760x1080,3840x2160
     set wallhavengallery /tmp/wallhavengallery
 
-    ensure-dir-exists /tmp/wallhavengallery
-    rm /tmp/wallhavengallery/* #get rid of the files from last run
+    ensure-dir-exists /tmp/wallhavengallery 
+    if exists (ls /tmp/wallhavengallery)
+      rm /tmp/wallhavengallery/* #get rid of the files from last run
+    end
 
     for i in (getvariables $argv)
         set val (explode $i)
