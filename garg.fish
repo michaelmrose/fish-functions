@@ -5,9 +5,9 @@ function garg
     case select
       switch (count $argv)
         case 1
-          set games (findall ~/if z5)
+          set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]')
         case '*'
-          set games (findall ~/if z5 | grep -i $argv[2..-1])
+          set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]' | grep -i $argv[2..-1])
       end
       if test (count $games) -gt 1
         set game (rfi match "select a game: " $games)
