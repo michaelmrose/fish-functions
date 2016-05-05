@@ -21,6 +21,8 @@ function pkg
       sudo etc-update
     case deps
       sudo emerge --depclean -a --complete-graph
+    case time
+      sudo genlop -t $argv[2..-1]
     case search
       switch $argv[2]
         case desc
