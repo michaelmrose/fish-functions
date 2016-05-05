@@ -17,6 +17,8 @@ function pkg
       pick-package $argv[2..-1]
     case keep
       sudo emerge --noreplace $argv[2..-1]
+    case etc
+      sudo etc-update
     case deps
       sudo emerge --depclean -a --complete-graph
     case search
