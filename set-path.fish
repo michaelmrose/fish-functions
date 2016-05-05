@@ -5,5 +5,5 @@ function set-path
 
     set mypaths /opt/racket/bin /opt/i3blocks /opt/bin /home/michael/bin /home/michael/scripts  /opt/cxoffice/bin ~/.autojump/bin /usr/games/bin /opt/vmware/bin
 
-    set -gx PATH $mypaths $javapaths $builtinpaths
+    set -xg PATH $mypaths $javapaths $builtinpaths
 end
