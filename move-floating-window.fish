@@ -10,7 +10,8 @@ function move-floating-window
   set halfwinheight (math $winheight / 2)
   set halfdispwidth (math $dwidth / 2)
   set halfdispheight (math $dheight / 2)
-  set availableheight (math $dheight - (get-bar-height))
+  set barheight (get-bar-height)
+  set availableheight (math $dheight - $barheight)
   set ycenter (math $availableheight / 2 + $yoff) 
   set xcenter (math $dwidth / 2 + $xoff)
   switch $argv[1]
@@ -25,6 +26,13 @@ function move-floating-window
           set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
       end
      case bottom
+       set ypos (math $border + $barheight)
+       switch $argv[2]
+         case left
+         case right
+         case center
+          set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+       end
      case left
        set ypos (math $ycenter - $halfwinheight)
        set xpos (math $xoff + $border)
