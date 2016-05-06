@@ -19,7 +19,6 @@ function move-floating-window
     set ypos (math $yoff + $border)
     if test (count $argv) -lt 2 > /dev/null
         set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
-        echo its true
     else
       switch $argv[2]
         case left
@@ -29,14 +28,16 @@ function move-floating-window
       end
     end
    case bottom
-     set ypos (math $dheight - \($border + $barheight + $winheight\))
-     switch $argv[2]
-       case left
-         set xpos (math $xoff + $border)
-       case right
-         set xpos (math $xoff + $dwidth - $winwidth - $border)
-       case center
-         set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+    set ypos (math $dheight - \($border + $barheight + $winheight\))
+    if test (count $argv) -lt 2 > /dev/null
+       set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+    else
+       switch $argv[2]
+         case left
+           set xpos (math $xoff + $border)
+         case right
+           set xpos (math $xoff + $dwidth - $winwidth - $border)
+       end
      end
    case left
      set ypos (math $ycenter - $halfwinheight)
