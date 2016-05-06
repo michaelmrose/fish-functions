@@ -47,6 +47,6 @@ function move-floating-window
      set xpos (math $xoff + $dwidth - $winwidth - $border)
      # set xpos (math $xcenter - $halfwinwidth - $border)
  end
- echo xy $xpos $ypos
+ # echo xy $xpos $ypos
  xdotool getactivewindow windowmove  $xpos $ypos
 end
