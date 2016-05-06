@@ -8,7 +8,8 @@ function move-floating-window
   set winheight (get-window-height)
   set halfwin (math $winwidth / 2)
   set halfdisp (math $dwidth / 2)
-  set ycenter (math $availableheight / 2) set availableheight (math $dheight - (get-bar-height))
+  set ycenter (math $availableheight / 2) 
+  set availableheight (math $dheight - (get-bar-height))
   switch $argv[1]
     case top
       set ypos (math $yoff + $border)
