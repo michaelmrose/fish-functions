@@ -25,7 +25,7 @@ function move-floating-window
       end
      case bottom
      case left
-       set ypos (math $ycenter + $halfwinheight)
+       set ypos (math $ycenter - $halfwinheight)
        set xpos (math $xoff + $border)
        echo xpos ypos $xpos $ypos
      case right
