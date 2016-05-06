@@ -17,7 +17,7 @@ function move-floating-window
         case center
           set halfwin (math $winwidth / 2)
           set halfdisp (math $hwidth / 2)
-          set xpos (math $xoff + $halfdisplay - $halfwin )
+          set xpos (math $xoff + $halfdisplay)
       end
      case bottom
      case left
