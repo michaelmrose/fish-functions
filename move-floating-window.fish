@@ -19,6 +19,7 @@ function move-floating-window
     set ypos (math $yoff + $border)
     if count $argv -lt 2
         set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+        echo its true
     else
       switch $argv[2]
         case left
