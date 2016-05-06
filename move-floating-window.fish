@@ -16,8 +16,8 @@ function move-floating-window
   set xcenter (math $dwidth / 2 + $xoff)
   switch $argv[1]
     case center
-      set xpos (math $xcenter + $halfwinwidth)
-      set ypos (math $ycenter + $halfwinheight)
+      set xpos (math $xcenter - $halfwinwidth)
+      set ypos (math $ycenter - $halfwinheight)
     case top
     set ypos (math $yoff + $border)
     if test (count $argv) -lt 2 > /dev/null
