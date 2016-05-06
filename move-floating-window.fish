@@ -22,6 +22,8 @@ function move-floating-window
       end
      case bottom
      case left
+       set ypos $yoff
+       set xpos $xoff
      case right
    end
   xdotool getactivewindow windowmove  $xpos $ypos
