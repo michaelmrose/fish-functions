@@ -7,7 +7,7 @@ function move-floating-window
   set winwidth (get-window-width)
   set winheight (get-window-height)
   set halfwinwidth (math $winwidth / 2)
-  set halfwinheight (math $winwidth / 2)
+  set halfwinheight (math $winheight / 2)
   set halfdispwidth (math $dwidth / 2)
   set halfdispheight (math $dheight / 2)
   set availableheight (math $dheight - (get-bar-height))
