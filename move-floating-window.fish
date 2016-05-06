@@ -18,27 +18,22 @@ function move-floating-window
     case center
       set xpos (math $xcenter - $halfwinwidth)
       set ypos (math $ycenter - $halfwinheight)
-      set -U LAST_WINDOW_OP center
     case top
     set ypos (math $yoff + $border)
     if test (count $argv) -lt 2 > /dev/null
       set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
-      set -U LAST_WINDOW_OP top
     else
       switch $argv[2]
         case left
           set xpos (math $xoff + $border)
-          set -U LAST_WINDOW_OP top left
         case right
           set xpos (math $xoff  + $dwidth - $winwidth - $border)
-          set -U LAST_WINDOW_OP top right
       end
     end
    case bottom
      set ypos (math $dheight - \($border + $barheight + $winheight\))
      if test (count $argv) -lt 2 > /dev/null
        set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
-       set -U LAST_WINDOW_OP bottom
     else
       switch $argv[2]
          case left
