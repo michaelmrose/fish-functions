@@ -18,7 +18,7 @@ function move-floating-window
           set halfwin (math $winwidth / 2)
           set halfdisp (math $dwidth / 2)
           set xpos (math $xoff + $halfdisplay - $halfwin)
-          echo xpos is $xpos xo is $xoffset hw is $halfwin hd is $halfdisp
+          echo xpos is $xpos xo is $xoff hw is $halfwin hd is $halfdisp
       end
      case bottom
      case left
