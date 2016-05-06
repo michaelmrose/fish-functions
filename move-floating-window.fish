@@ -31,9 +31,9 @@ function move-floating-window
          case left
            set xpos (math $xoff + $border)
          case right
-           set xpos (math $xoff + $dwidth - $winwidth)
+           set xpos (math $xoff + $dwidth - $winwidth - $border)
          case center
-           set xpos (math $xoff + $halfdispwidth - $winwidth - $border) 
+           set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
        end
      case left
        set ypos (math $ycenter - $halfwinheight)
