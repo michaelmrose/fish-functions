@@ -9,7 +9,7 @@ function move-floating-window
   switch $argv[1]
     case top
       set ypos (math $yoff + $border)
-      switch $argv[1]
+      switch $argv[2]
         case left
           set xpos (math $xoff + $border)
         case right
@@ -17,6 +17,9 @@ function move-floating-window
         case center
           nil
       end
-  end
+     case bottom
+     case left
+     case right
+   end
   xdotool getactivewindow windowmove  $xpos $ypos
 end
