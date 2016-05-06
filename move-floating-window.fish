@@ -1,4 +1,9 @@
 function move-floating-window
+	if [ $argv[1] = "resize" ]
+      xdotool getactivewindow windowsize $argv[2] $argv[3]
+      move-floating-window $LAST_WIN_POS
+      return 0
+  end
 	set border (math (get-border-floating) + 1)
   set xoff (get-focused-display-x-offset)
   set yoff (get-focused-display-y-offset)
@@ -15,10 +20,6 @@ function move-floating-window
   set ycenter (math $availableheight / 2 + $yoff) 
   set xcenter (math $dwidth / 2 + $xoff)
   switch $argv[1]
-    case resize
-      xdotool getactivewindow windowsize $argv[2] $argv[3]
-      move-floating-window $LAST_WIN_POS
-      return 0
     case center
       set xpos (math $xcenter - $halfwinwidth)
       set ypos (math $ycenter - $halfwinheight)
