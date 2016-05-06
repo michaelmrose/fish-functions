@@ -6,14 +6,17 @@ function move-floating-window
   set dheight (get-focused-display-height)
   set winwidth (get-window-width)
   set winheight (get-window-height)
-  set ypos (math $yoff + $border)
   switch $argv[1]
-    case left
-      set xpos (math $xoff + $border)
-    case right
-      set xpos (math $xoff  + $dwidth - $winwidth - $border)
-    case center
-      nil
+    case top
+      set ypos (math $yoff + $border)
+      switch $argv[1]
+        case left
+          set xpos (math $xoff + $border)
+        case right
+          set xpos (math $xoff  + $dwidth - $winwidth - $border)
+        case center
+          nil
+      end
   end
   xdotool getactivewindow windowmove  $xpos $ypos
 end
