@@ -15,34 +15,36 @@ function move-floating-window
   set ycenter (math $availableheight / 2 + $yoff) 
   set xcenter (math $dwidth / 2 + $xoff)
   switch $argv[1]
-    case top
-      set ypos (math $yoff + $border)
+  case top
+    set ypos (math $yoff + $border)
+    if count $argv -lt 2
+        set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+    else
       switch $argv[2]
         case left
           set xpos (math $xoff + $border)
         case right
           set xpos (math $xoff  + $dwidth - $winwidth - $border)
-        case center
-          set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
       end
-     case bottom
-       set ypos (math $dheight - \($border + $barheight + $winheight\))
-       switch $argv[2]
-         case left
-           set xpos (math $xoff + $border)
-         case right
-           set xpos (math $xoff + $dwidth - $winwidth - $border)
-         case center
-           set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
-       end
-     case left
-       set ypos (math $ycenter - $halfwinheight)
-       set xpos (math $xoff + $border)
-     case right
-       set ypos (math $ycenter - $halfwinheight)
-       set xpos (math $xoff + $dwidth - $winwidth - $border)
-       # set xpos (math $xcenter - $halfwinwidth - $border)
-   end
-   echo xy $xpos $ypos
-  xdotool getactivewindow windowmove  $xpos $ypos
+    end
+   case bottom
+     set ypos (math $dheight - \($border + $barheight + $winheight\))
+     switch $argv[2]
+       case left
+         set xpos (math $xoff + $border)
+       case right
+         set xpos (math $xoff + $dwidth - $winwidth - $border)
+       case center
+         set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
+     end
+   case left
+     set ypos (math $ycenter - $halfwinheight)
+     set xpos (math $xoff + $border)
+   case right
+     set ypos (math $ycenter - $halfwinheight)
+     set xpos (math $xoff + $dwidth - $winwidth - $border)
+     # set xpos (math $xcenter - $halfwinwidth - $border)
+ end
+ echo xy $xpos $ypos
+ xdotool getactivewindow windowmove  $xpos $ypos
 end
