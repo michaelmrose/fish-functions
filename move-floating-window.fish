@@ -20,7 +20,6 @@ function move-floating-window
           set xpos (math $xoff  + $dwidth - $winwidth - $border)
         case center
           set xpos (math $xoff + $halfdisp - $halfwin)
-          echo xpos is $xpos xo is $xoff hw is $halfwin hd is $halfdisp
       end
      case bottom
      case left
