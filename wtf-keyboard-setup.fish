@@ -4,4 +4,5 @@ function wtf-keyboard-setup
   xmodmap ~/.i3/keys
   vi3_setup-keyboard
   vi3_bind-shift-keys
+  xmodmap ~/.i3/keys
 end
