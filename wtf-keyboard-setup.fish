@@ -2,9 +2,9 @@ function wtf-keyboard-setup
 	mate-session &
   sleep 3
   sudo killall caja
-  sudo killall mate-sesion
-  sudo killall mate-screensave
-  sudo killall mate-volume-con
+  sudo killall mate-session
+  sudo kill -9 (pgrep mate-screensave)
+  sudo kill -9 (pgrep mate-volume-con)
   g15macro &
   wp recall
   xmodmap ~/.i3/keys
