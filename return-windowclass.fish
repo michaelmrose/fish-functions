@@ -19,6 +19,8 @@ function return-windowclass
             set returnval Clementine
         case mpv
             set returnval mpv
+        case emc
+            set returnval Emacs
         case emacsclient
             set returnval Emacs
         case kdesudo
