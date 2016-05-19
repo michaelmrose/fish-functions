@@ -51,7 +51,9 @@ function wallpaper
             create-wallpaper-category $argv[2..-1]
             return 0
         case album
-            wp (album-art)
+            if exists (album-art)
+              wp (album-art)
+            end
             return 0
         case trackalbum
            toggle-album-wp-tracking 
