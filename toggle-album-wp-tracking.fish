@@ -1,3 +1,3 @@
 function toggle-album-wp-tracking
-	set -U WP_ALBUM_WP (inverse-of $WP_ALBUM_WP)
+	set -U UPDATE_ALBUM_WP (inverse-of $UPDATE_ALBUM_WP)
 end
