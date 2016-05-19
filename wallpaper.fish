@@ -53,6 +53,9 @@ function wallpaper
         case album
             wp (album-art)
             return 0
+        case trackalbum
+           toggle-album-wp-tracking 
+           return 0
         case slideshow
             slideshow $argv[2..-1]
             return 0
