@@ -2,5 +2,6 @@ function clem
 	clementine &
   while not pgrep clementine
   end
-  update-now-playing
+  sleep 3
+  update-now-playing &
 end
