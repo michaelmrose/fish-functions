@@ -8,6 +8,4 @@ function update-vi3-config
     fix-all-trans
     hide-all-hidden-windows
     wp recall
-    freezeg15.sh
-    thawg15.sh
 end
