@@ -5,7 +5,7 @@ function album-art
             case -o
                 o $data
             case -r
-              get-resolution (data)
+              get-resolution $data
         end
     else
         echo $data
