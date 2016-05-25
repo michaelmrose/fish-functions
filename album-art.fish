@@ -4,6 +4,8 @@ function album-art
         switch $argv[1]
             case -o
                 o $data
+            case -r
+              get-resolution (data)
         end
     else
         echo $data
