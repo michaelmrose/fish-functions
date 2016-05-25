@@ -1,3 +1,3 @@
 function get-gpu-temp
-	unique (nvidia-settings -q gpucoretemp -t)
+	echo (unique (nvidia-settings -q gpucoretemp -t))°C
 end
