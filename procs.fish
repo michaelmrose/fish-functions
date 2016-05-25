@@ -1,3 +1,3 @@
 function procs
-	ps -A | grep -I $argv
+	ps -A | grep -EI "$argv"
 end
