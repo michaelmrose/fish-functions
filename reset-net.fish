@@ -1,5 +1,4 @@
 function reset-net
-	sudo ifconfig eth0 down
-    sleep 3
-    sudo ifconfig eth0 up
+	s ip link set dev eth0 down
+  s ip link set dev eth0 up
 end
