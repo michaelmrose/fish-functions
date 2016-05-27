@@ -10,6 +10,7 @@ function lq
       sudo shutdown -r now
     case suspend
       lockme
+      sleep 3
       sudo pm-suspend
   end
 end
