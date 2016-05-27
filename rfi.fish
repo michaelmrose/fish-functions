@@ -3,7 +3,7 @@ function rfi
   # set i3colors (i3-i3colors)
     switch $argv[1]
         case run
-            eval rofi $bindings -show run
+            rofi -kb-accept-custom "Return" -show run
         case window
             eval rofi -show window
         case history
