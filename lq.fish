@@ -1,16 +1,18 @@
 function lq
-	kill (pgrep emacs)
-  sleep 1
+	sleep 1
   switch $argv
-    case sd
-      sudo shutdown -h now
-    case exit
-      i3-msg exit
-    case rb
-      sudo shutdown -r now
-    case suspend
-      lockme
-      sleep 3
-      sudo pm-suspend
-  end
+case sd
+  kill (pgrep emacs)
+  sudo shutdown -h now
+case exit
+  kill (pgrep emacs)
+  i3-msg exit
+case rb
+  kill (pgrep emacs)
+  sudo shutdown -r now
+case suspend
+  lockme
+  sleep 3
+  sudo pm-suspend
+end
 end
