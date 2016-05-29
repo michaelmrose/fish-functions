@@ -14,5 +14,7 @@ case suspend
   lockme
   sleep 3
   sudo pm-suspend
+  sleep 3
+  cycleg15.sh
 end
 end
