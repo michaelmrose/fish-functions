@@ -1,4 +1,4 @@
 function rse
-	killall emacs
+	kill (pgrep emacs)
   emacs --daemon
 end
