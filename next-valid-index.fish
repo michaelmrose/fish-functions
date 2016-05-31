@@ -4,13 +4,13 @@ function next-valid-index
   set n (findindex $val $lst)
   if test $n -ge (count $lst)
     set ndx 1
-    echo pos branch
+    # echo pos branch
   else
     set ndx (math $n + 1)
-    echo else branch
+    # echo else branch
   end
-  echo n is $n
-  echo ndx is $ndx
-  echo lst is $lst
+  # echo n is $n
+  # echo ndx is $ndx
+  # echo lst is $lst
   echo $lst[$ndx]
 end
