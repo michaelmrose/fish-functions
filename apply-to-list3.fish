@@ -4,5 +4,5 @@ function apply-to-list3
   set l1 "for i in $lst"
   set l2 $fn
   set l3 end
-  echo "$l1;$l2;$l3"
+  eval "$l1;$l2;$l3"
 end
