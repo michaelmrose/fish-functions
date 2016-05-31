@@ -8,5 +8,6 @@ function next-valid-index
   end
   echo n is $n
   echo ndx is $ndx
+  echo lst is $lst
   echo $lst[$ndx]
 end
