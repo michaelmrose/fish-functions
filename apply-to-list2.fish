@@ -3,7 +3,8 @@ function apply-to-list2
     if test (count $argv) -gt 1
       set lst $argv[2..-1]
       for i in $lst
-          echo (string replace @ $i $fn)
+          set str (string replace @ $i $fn)
+          eval $str
       end
     end
 end
