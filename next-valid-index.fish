@@ -7,8 +7,5 @@ function next-valid-index
   else
     set ndx (math $n + 1)
   end
-  echo n is $n
-  echo ndx is $ndx
-  echo lst is $lst
   echo $lst[$ndx]
 end
