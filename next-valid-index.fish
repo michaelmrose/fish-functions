@@ -1,6 +1,6 @@
 function next-valid-index
-	set n $argv
-  set lst 1 5 3 8
+	set n $argv[1]
+  set lst $argv[2..-1]
   if test $n -ge (count $lst)
     set ndx $lst[1]
   else
