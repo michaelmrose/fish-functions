@@ -3,7 +3,7 @@ function apply-to-list
     if test (count $argv) -gt 1
       set lst $argv[2..-1]
       for i in $lst
-          eval $fn $i &
+          echo eval $fn $i &
       end
     end
 end
