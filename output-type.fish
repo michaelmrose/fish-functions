@@ -1,8 +1,7 @@
 function output-type
-	set output (current-output)
-    if substr $output Headset
-        echo headphones
+	if ponymix -t sink defaults --short | head -1 | grep Headset 
+      echo headphones
     else
-        echo speakers
+      echo speakers
     end
 end
