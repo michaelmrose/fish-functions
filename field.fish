@@ -1,5 +1,6 @@
 function field
 	while read -l line
-    echo "echo \'$line\' \| awk \'\{ print \$$argv\}\'"
+    set com "echo \'$line\' \| awk \'\{ print \$$argv\}\'"
+    eval $com
   end
 end
