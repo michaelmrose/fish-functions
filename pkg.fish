@@ -37,6 +37,7 @@ function pkg
     case status
       em-status
     case updateworld
+      sudo zfs snapshot tank/funtoo/root@(preferred-date)
       sudo emerge --sync
       sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert (vals 2..-1 $argv)
     case depends
