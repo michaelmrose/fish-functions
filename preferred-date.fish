@@ -1,3 +1,3 @@
 function preferred-date
-	echo (date '+%m-%d-%y' | sed 's/0\([0-9]\)//g')-(date '+%R')
+	date '+%m-%d-%y' | sed 's/0\([0-9]\)/\1/g'
 end
