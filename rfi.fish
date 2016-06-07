@@ -14,7 +14,7 @@ function rfi
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | rofi -dmenu -i -p "$argv[2]"
+            println $argv[3..-1] | rofi -dmenu -only-match -i -p "$argv[2]"
         case menu
             println "" | rofi $bindings -dmenu -i -p "$argv[2..-1]"
         case enter
