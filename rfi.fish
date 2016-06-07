@@ -4,7 +4,7 @@ function rfi
     switch $argv[1]
         case run
             # rofi -kb-accept-custom "Return" -run-list-command 'fish -c functions' -show run
-            rofi -run-list-command 'fish -c functions' -show run
+            rofi -run-list-command 'fish -c functions' -kb-accept-custom "Return" -show run
         case window
             eval rofi -show window
         case history
