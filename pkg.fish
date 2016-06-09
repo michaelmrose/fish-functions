@@ -19,8 +19,6 @@ function pkg
       sudo etc-update
     case deps
       sudo emerge --depclean -a --complete-graph --ask
-    case list-sizes
-      equery s \* | sed 's/(\|)/ /g' | sort -n -k 9 | gawk '{print $1" "$9/1048576"m"}'
     case time
       sudo genlop -t $argv[2..-1]
     case search
@@ -36,6 +34,8 @@ function pkg
       sudo emerge --sync
     case status
       em-status
+    case snap
+      sudo zfs snapshot tank/funtoo/root@(preferred-date)
     case updateworld
       # sudo zfs snapshot tank/funtoo/root@(preferred-date)
       sudo emerge --sync
