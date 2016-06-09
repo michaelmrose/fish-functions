@@ -7,12 +7,10 @@ function pkg
   switch $argv[1]
     case i
       sudo emerge $argv[2..-1]
-      shutitdown
     case p
       emerge $argv[2..-1] --pretend
     case r
       sudo emerge -C $argv[2..-1]
-      shutitdown
     case pick 
       pick-package $argv[2..-1]
     case keep
