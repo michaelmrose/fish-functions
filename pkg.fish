@@ -19,6 +19,8 @@ function pkg
       sudo etc-update
     case deps
       sudo emerge --depclean -a --complete-graph --ask
+    case list-sizes
+      equery s \* | sed 's/(\|)/ /g' | sort -n -k 9 | gawk '{print $1" "$9/1048576"m"}'
     case time
       sudo genlop -t $argv[2..-1]
     case search
