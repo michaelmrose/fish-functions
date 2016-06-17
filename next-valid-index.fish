@@ -1,7 +1,7 @@
 function next-valid-index
 	set lst $argv[2..-1]
   set n (findindex $argv[1] $lst)
-  ternary test $n -ge (count $lst) @ $lst[1] @ '$lst[(math $n + 1)]'
+  eval ternary test $n -ge (count $lst) @ $lst[1] @ '$lst[(math $n + 1)]'
 	# set val $argv[1]
   # set lst $argv[2..-1]
   # set n (findindex $val $lst)
