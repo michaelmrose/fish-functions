@@ -3,13 +3,13 @@ function ternary
   set s1 (echo $argv | cut -d '@' -f2)
   set s2 (echo $argv | cut -d '@' -f3)
 	if eval $test
-    if defined $s1
+    if defined $s1 2> /dev/null
       eval $s1
     else
       echo $s1
     end
     else
-      if defined $s2
+      if defined $s2 2> /dev/null
         eval $s2
       else
         echo $s2
