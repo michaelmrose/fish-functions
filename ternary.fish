@@ -1,7 +1,7 @@
 function ternary
-	set test (echo $argv | cut -d '@' -f1)
-  set s1 (echo $argv | cut -d '@' -f2)
-  set s2 (echo $argv | cut -d '@' -f3)
+	set test (echo $argv | cut -d '@' -f1 | trim)
+  set s1 (echo $argv | cut -d '@' -f2 | trim)
+  set s2 (echo $argv | cut -d '@' -f3 | trim)
 	if eval $test
     if defined $s1 2> /dev/null
       eval $s1
