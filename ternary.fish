@@ -3,6 +3,7 @@ function ternary
   set s1 (echo $argv | cut -d '@' -f2 | trim)
   set s2 (echo $argv | cut -d '@' -f3 | trim)
 	if eval $test
+    echo s11 is $s1[1]
     if defined $s1[1] 2> /dev/null
       eval $s1
     else
