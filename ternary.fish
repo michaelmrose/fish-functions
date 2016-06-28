@@ -9,7 +9,7 @@ function ternary
       echo $s1
     end
     else
-      if defined $s2 2> /dev/null
+      if defined $s2[1] 2> /dev/null
         eval $s2
       else
         echo $s2
