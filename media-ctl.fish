@@ -13,7 +13,7 @@ function media-ctl
         case clear
             clear-playlist
         case vol
-            setvol $argv[2]
+            setvolume $argv[2]
         case mute
             toggle-mute
         case playing
