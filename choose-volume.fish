@@ -1,3 +1,3 @@
 function choose-volume
-	setvol (rfi enter "set volume: ")
+	setvolume (rfi enter "set volume: ")
 end
