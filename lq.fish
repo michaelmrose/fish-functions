@@ -12,9 +12,9 @@ case rb
   sudo shutdown -r now
 case suspend
   lockme
-  sleep 3
+  sleep 6
   sudo pm-suspend
-  sleep 3
+  sleep 6
   cycleg15.sh
 end
 end
