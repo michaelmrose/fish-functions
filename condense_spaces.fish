@@ -3,7 +3,11 @@ function condense_spaces
         echo $argv | sed 's/\s\+/ /g' | trim
     else
         while read -l line
-            condense_spaces $line
+            if exists $line
+              condense_spaces $line
+            else
+              return 0
+            end
         end
     end
 end
