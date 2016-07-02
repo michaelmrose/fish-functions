@@ -3,7 +3,7 @@ function sched
     case new
       get-new-work-sched
     case current
-      filter-with-expr event-not-past (get-current-work-sched)
+      filter-with-expr event-not-past (get-current-work-sched 2> /dev/null)
     case show
       echo '             WORK SCHEDULE           '
       echo ------------------------------------------
@@ -31,7 +31,7 @@ function sched
         end
         return 1
       end
-      set current (println (get-current-work-sched))
+      set current (println (get-current-work-sched 2> /dev/null))
       echo new
       println $new
       echo current
