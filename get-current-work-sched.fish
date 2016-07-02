@@ -1,8 +1,8 @@
 function get-current-work-sched
 	set schedule (gcalcli search work-at-thd --details length --nocolor | condense_spaces)
-    set dates (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f1 | cut -d '-' -f2-)
-    set starts (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f2)
-    set events ''
+    # set dates (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f1 | cut -d '-' -f2-)
+    # set starts (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f2)
+    # set events ''
     # for i in (seq (count $dates))
     #     set addhour (println $schedule | grep -A1 "$dates[$i]" | grep Length | cut -d " " -f2 | cut -d : -f1)
     #     set addminute (println $schedule | grep -A1 "$dates[$i]" | grep Length | cut -d " " -f2 | cut -d : -f2)
