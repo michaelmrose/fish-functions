@@ -4,6 +4,7 @@ function clje
   while read -l line
     echo $line >> $temp
   end
-  cat $temp
+  chmod +x $temp
+  ./$temp
   rm $temp
 end
