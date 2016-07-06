@@ -5,6 +5,6 @@ function clje
     echo $line >> $temp
   end
   chmod +x $temp
-  eval .$temp
+  exec .$temp
   rm $temp
 end
