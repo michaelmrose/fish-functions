@@ -1,4 +1,5 @@
 function move-floating-window2
+	set arg (squish $argv)
 	set border (math (get-border-floating) + 1)
   set xoff (get-focused-display-x-offset)
   set yoff (get-focused-display-y-offset)
@@ -14,29 +15,29 @@ function move-floating-window2
   set availableheight (math $dheight - $barheight)
   set ycenter (math $availableheight / 2 + $yoff) 
   set xcenter (math $dwidth / 2 + $xoff)
-  switch $argv[1..-1]
+  switch $argv
     case center
       set xpos (math $xcenter - $halfwinwidth)
       set ypos (math $ycenter - $halfwinheight)
-    case top left
+    case topleft
       set xpos (math $xoff + $border)
       set ypos (math $yoff + $border)
     case top
       set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
       set ypos (math $yoff + $border)
-    case top right
+    case topright
       set xpos (math $xoff  + $dwidth - $winwidth - $border)
       set ypos (math $yoff + $border)
     case right
      set xpos (math $xoff + $dwidth - $winwidth - $border)
      set ypos (math $ycenter - $halfwinheight)
-    case bottom right
+    case bottomright
      set xpos (math $xoff + $dwidth - $winwidth - $border)
      set ypos (math $dheight - \($border + $barheight + $winheight\))
     case bottom
      set xpos (math $xoff + $halfdispwidth - $halfwinwidth)
      set ypos (math $dheight - \($border + $barheight + $winheight\))
-    case bottom left
+    case bottomleft
      set xpos (math $xoff + $border)
      set ypos (math $dheight - \($border + $barheight + $winheight\))
     case left
