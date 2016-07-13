@@ -38,5 +38,7 @@ function serv
             # serv show | grep $argv[1] | condense_spaces
             # describe-service $argv[1]
             condense-fns "serv show | grep $argv[1] | condense_spaces" := "describe-service $argv[1]" "serv $argv[1] status"
+        case '*'
+          sudo /etc/init.d/$argv[1] $argv[2..-1]
     end
 end
