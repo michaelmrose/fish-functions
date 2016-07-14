@@ -1,8 +1,8 @@
 function switch-audio
 	# set sinks   (ponymix -t sink list --short | awk '{print $2}')
   set sinks   (pactl list short sinks | cut -f1)
-  set current (ponymix -t sink defaults --short | head -1 | awk '{print $2}')
-  # set current (pactl list sinks short | grep RUNNING cut -f1)
+  # set current (ponymix -t sink defaults --short | head -1 | awk '{print $2}')
+  set current (pactl list short sinks | grep RUNNING | cut -f1)
   # set streams (ponymix -t sink-input list --short | awk '{print $2}')
   set streams (pactl list short sink-inputs | cut -f1)
   set next    (next-valid-index $current $sinks)
