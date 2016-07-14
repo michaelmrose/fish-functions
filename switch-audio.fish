@@ -6,9 +6,9 @@ function switch-audio
   if exists $streams
     # apply-to "pacmd move-sink-input \$i $next" $streams
     for stream in $streams
-      pacmd move-sink-input $stream $next
+      pac move-sink-input $stream $next
     end
   end
-  pacmd set-default-sink $next
+  pac set-default-sink $next
   signal-i3blocks output
 end
