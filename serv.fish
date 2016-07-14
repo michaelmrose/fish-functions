@@ -32,8 +32,8 @@ function serv
             sudo rc-update add $argv[1] $argv[3]
         case delete
             sudo rc-update delete $argv[1] $argv[3]
-        case restart
-            toggle-restartable $argv[1]
+        # case restart
+        #     toggle-restartable $argv[1]
         case show
             # serv show | grep $argv[1] | condense_spaces
             # describe-service $argv[1]
