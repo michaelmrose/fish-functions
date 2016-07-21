@@ -39,9 +39,9 @@ function pkg
     case updateworld
       # sudo zfs snapshot tank/funtoo/root@(preferred-date)
       sudo emerge --sync
-      sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert --ask (vals 2..-1 $argv)
-      sudo emerge @preserved-rebuild
-      sudo emerge --depclean -a --complete-graph --ask
+      and sudo emerge -auDN @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert --ask (vals 2..-1 $argv)
+      and sudo emerge @preserved-rebuild
+      and sudo emerge --depclean -a --complete-graph --ask
     case depends
         equery depends $argv[2..-1]
     case overlay
