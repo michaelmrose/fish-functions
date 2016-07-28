@@ -23,6 +23,9 @@ function ytube
     echo $playlist_url
     set data (get-youtube-html $playlist_url)
     set urls (get-urls-from-youtube $data)  
+    p $data
+    echo urls
+    p $urls
     set titles (get-titles-from-youtube $data)
     set choice (rfi match "choose a video: " $titles)
     set ndx (findindex $choice $titles)
