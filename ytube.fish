@@ -15,14 +15,11 @@ function ytube
             set com mpa
     end
     if exists $q
-      echo in if
         set playlist_url (compose-youtube-search-query $q p=$p) 
         set -U ytube_last_query $playlist_url
     else
-      echo in else
         set playlist_url (return-playlist-url $pl)
     end
-    echo done
     echo $playlist_url
     set data (get-youtube-html $playlist_url)
     set urls (get-urls-from-youtube $data)  
