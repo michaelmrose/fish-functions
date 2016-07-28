@@ -8,6 +8,7 @@ function ytube
         set val (splitwords-first-then-rest $i)
         set $val[1] $val[2]
     end
+    echo done
     switch $f
         case v
             set com mpv-wrap
@@ -23,9 +24,6 @@ function ytube
     echo $playlist_url
     set data (get-youtube-html $playlist_url)
     set urls (get-urls-from-youtube $data)  
-    p $data
-    echo urls
-    p $urls
     set titles (get-titles-from-youtube $data)
     set choice (rfi match "choose a video: " $titles)
     set ndx (findindex $choice $titles)
