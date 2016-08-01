@@ -46,11 +46,12 @@ function m
         if test -f $pl
           m open (m ls $argv[2])
           return 0
-        else
-          m ytube-pl $argv[2]
-          return 0
         end
-        echo after if
+        if exists (return-playlist-url $argv[2])
+          m ytube-pl $argv[2..-1]
+        else
+          m local $arg[2..-1]
+        end
         return 0
       case open
         umpv $argv[2..-1] &
