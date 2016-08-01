@@ -31,10 +31,10 @@ function m
       case ls
         if test -f ~/playlists/$argv[2]
           cat ~/playlists/$argv[2]
-          return 0
         else
-          return 1
+          list-youtube-playlist $argv[2..-1]
         end
+        return 0
       case rm
         rm ~/playlists/$argv[2]
         return 0
