@@ -1,10 +1,10 @@
 function m
-	"usage examples"
-  "m play ytube or local playlist"
-  "m files @replace|append:playlist"
-  "somecommand | m  @replace|append:playlist"
-  "m yt pl=playlist"
-  "m watch some key words, to play local files"
+	# usage examples
+  # m play ytube or local playlist
+  # m files @replace|append:playlist
+  # somecommand | m  @replace|append:playlist
+  # m yt pl=playlist
+  # m watch some key words, to play local files
 	if test (count $argv) -gt 0
     switch $argv[1]
       case list-playlists
