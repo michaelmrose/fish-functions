@@ -13,7 +13,7 @@ function m
       case ytube-pl
         umpv (list-youtube-playlist $argv[2..-1])
         return 0
-      case watch
+      case local
         set files (find-video $argv[2..-1])
         switch (count $files)
           case 0
