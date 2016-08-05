@@ -13,8 +13,8 @@ function pics
     #write something more complicated later
     switch (count $argv)
         case 1
-            sxiv -tbfor $target 2> /dev/null
+            sxiv-new -tbfor $target 2> /dev/null
         case 2
-            sxiv -tbfo $target/* 2> /dev/null
+            sxiv-new -tbfo $target/* 2> /dev/null
     end
 end
