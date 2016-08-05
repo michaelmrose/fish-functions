@@ -39,7 +39,7 @@ function wallpaper
             file-bg-url $argv[2..-1]
             return 0
         case recent
-            sxiv -tbfor $recent_backgrounds 2> /dev/null
+            sxiv-new -tbfor $recent_backgrounds 2> /dev/null
             return 0
         case cat
             move-current-wallpaper-to-category $argv[2]
