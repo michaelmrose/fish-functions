@@ -1,5 +1,3 @@
 function open-book-based-on-cover
-	set choice $argv
-  set books $recent_reads[(findindex $choice $RECENT_BOOK_COVERS)]
-  echo book | book-list
+	echo (books $recent_reads[(findindex "$argv" $RECENT_BOOK_COVERS)]) | book-list
 end
