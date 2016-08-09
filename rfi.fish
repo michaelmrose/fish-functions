@@ -16,13 +16,13 @@ function rfi
             if test (count $argv) -lt 3
                 return 1
             end
-            println $argv[3..-1] | rofi -dmenu -i -p "$argv[2]"
+            println $argv[3..-1] | rofi -dmenu -i -p "$argv[2]" -m (display-number)
         case menu
-            println "" | rofi $bindings -dmenu -i -p "$argv[2..-1]"
+            println "" | rofi $bindings -dmenu -i -p "$argv[2..-1]" -m (display-number)
         case enter
-            echo '' | rofi -dmenu -p "$argv[2..-1]"
+            echo '' | rofi -dmenu -p "$argv[2..-1]" -m (display-number)
         case ssh
-            rofi -show ssh
+            rofi -show ssh -m (display-number)
         case windows
             choose-window all
         case visible
