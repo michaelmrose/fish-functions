@@ -3,11 +3,11 @@ function rfi
   # set i3colors (i3-i3colors)
     switch $argv[1]
         case run
-            rofi -kb-accept-custom "Return" -run-list-command 'fish -c functions' -show run -m -1
+            rofi -kb-accept-custom "Return" -run-list-command 'fish -c functions' -show run -m (display-number)
             # rofi -run-list-command 'fish -c functions' -kb-accept-custom "Return" -show run
             # rofi -show run
         case drun
-          /usr/bin/rofi -show drun -m -1
+          /usr/bin/rofi -show drun -m (display-number)
         case window
             eval rofi -show window
         case history
