@@ -1,5 +1,5 @@
 function testfn
-	while read -l line
-    echo updated-info
+	if pstree --show-parents (wmctrl -lxp | grep (ensure-hex (xdotool getactivewindow)) | awk '{print $3}') | grep '\-steam\-'
+    i3-msg move window to workspace r
   end
 end
