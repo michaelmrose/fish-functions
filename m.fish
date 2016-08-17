@@ -44,7 +44,7 @@ function m
       case edit
         eval $EDITOR ~/playlists/$argv[2]
         return 0
-      case play
+      case pl
         set pl ~/playlists/$argv[2]
         if test -f $pl
           m open (m ls $argv[2])
