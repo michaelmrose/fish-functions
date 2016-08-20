@@ -15,5 +15,10 @@ function get-current-work-sched
         end
     end
     set events (filter-with-expr event-not-past $events)
-    println $events
+    for e in $events
+      if event-not-past $e
+        echo $e
+      end
+    end
+    # println $events
 end
