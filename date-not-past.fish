@@ -6,7 +6,7 @@ function date-not-past
     if test $diff -lt -300
         set date (math $date + 365)
     end
-    if test $diff -gt 60
+    if test $diff -gt 30
       return 1
     end
     test $date -ge $currentdate
