@@ -3,7 +3,7 @@ function filter-with-expr
   if test (count $argv) -gt 1
     set lst $argv[2..-1]
     for i in $lst
-        if fish -c $expr $i
+        if eval $expr $i
             echo $i
         end
     end
