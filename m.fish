@@ -51,7 +51,7 @@ function m
         # else
         #   m ytube-pl $argv[2..-1]
         # end
-        m (m ls $argv[2])
+        umpv (m ls $argv[2])
         return 0
       case open
         umpv $argv[2..-1] &
