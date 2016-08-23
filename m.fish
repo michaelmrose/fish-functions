@@ -49,6 +49,7 @@ function m
         return 0
       case pick
         rfi match "select a playlist: " (p (cat ~/.youtube-playlists) (ls ~/playlists))
+        return 0
       case open
         umpv $argv[2..-1] &
         return 0
