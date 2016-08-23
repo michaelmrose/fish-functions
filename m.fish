@@ -45,14 +45,10 @@ function m
         eval $EDITOR ~/playlists/$argv[2]
         return 0
       case pl
-        # set pl ~/playlists/$argv[2]
-        # if test -f $pl
-        #   m open (m ls $argv[2])
-        # else
-        #   m ytube-pl $argv[2..-1]
-        # end
         umpv (m ls $argv[2])
         return 0
+      case pick
+        rfi match "select a playlist: " (p (cat ~/.youtube-playlists) (ls ~/playlists))
       case open
         umpv $argv[2..-1] &
         return 0
