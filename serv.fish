@@ -21,13 +21,19 @@ function serv
     end
     switch $argv[2]
         case status
-            sudo /etc/init.d/$argv[1] status
+          for i in $argv[2..-1]
+            sudo /etc/init.d/$argv[1] $i
+          end
         case scriptstatus
             serv $argv[1] status | condense_spaces | cut -d " " -f3
         case start
-            sudo /etc/init.d/$argv[1] start
+          for i in $argv[2..-1]
+            sudo /etc/init.d/$argv[1] $i
+          end
         case stop
-            sudo /etc/init.d/$argv[1] stop
+          for i in $argv[2..-1]
+            sudo /etc/init.d/$argv[1] $i
+          end
         case add
             sudo rc-update add $argv[1] $argv[3]
         case delete
