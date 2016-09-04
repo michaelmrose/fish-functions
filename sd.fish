@@ -1,3 +1,3 @@
 function sd
-	shutitdown $argv; 
+	sudo shutdown -h now
 end
