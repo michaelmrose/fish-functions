@@ -10,5 +10,7 @@ function nfs
       serv nfs start
     case edit
       sudo -e /etc/exports
+    case ls
+      sudo exportfs -s
     end
 end
