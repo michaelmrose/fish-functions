@@ -12,5 +12,7 @@ function nfs
       sudo -e /etc/exports
     case ls
       sudo exportfs -s
+    case running
+      nfs status > /dev/null
     end
 end
