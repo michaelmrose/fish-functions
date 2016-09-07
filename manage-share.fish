@@ -6,7 +6,7 @@ function manage-share
       end
     case ensure-unmounted
       if all linda-desktop-exists share-mounted
-        ssh linda umount /mnt/michael
+        ssh linda umount -l /mnt/michael
       end
     end
 end
