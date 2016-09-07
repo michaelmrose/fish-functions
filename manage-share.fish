@@ -1,7 +1,7 @@
 function manage-share
 	switch $argv[1]
     case ensure-mounted
-      if all linda-desktop-exits 'not share-mounted'
+      if all linda-desktop-exists 'not share-mounted'
         ssh linda loaddirs.sh
       end
     case ensure-unmounted
