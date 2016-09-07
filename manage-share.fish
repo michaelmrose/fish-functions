@@ -1,16 +1,8 @@
 function manage-share
 	switch $argv[1]
     case ensure-mounted
-      if ping 192.168.1.3 -c 1 -W 1
-        if not ssh linda ls /mnt/michael/med
-          mount /mnt/michael
-        end
+      if all linda-desktop-exits share-mounted
+        echo hi
       end
-    case ensure-unmounted
-      if ping 192.168.1.3 -c 1 -W 1
-        if ssh linda ls /mnt/michael/med
-          umount /mnt/michael
-        end
-      end
-  end
+    end
 end
