@@ -1,5 +1,5 @@
 function find-video
-	set files (findall /mnt/ext/Videos video)
+	set files (findall /med/videos video)
     set words $argv
 
     # echo w is $words
