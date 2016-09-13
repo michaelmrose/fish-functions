@@ -1,5 +1,3 @@
 function eval-and-shell
-	eval $argv
-  sleep 5
-  fish
+	echo $argv | fish
 end
