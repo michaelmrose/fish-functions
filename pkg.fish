@@ -21,6 +21,8 @@ function pkg
       sudo emerge --depclean -a --complete-graph --ask
     case time
       sudo genlop -t $argv[2..-1]
+    case ebuild
+      eval $EDITOR (equery which $argv[2])
     case mask-reason
       equery list -p -m $argv[2..-1]
     case search
