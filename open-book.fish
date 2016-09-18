@@ -5,6 +5,7 @@ function open-book
     if substr $fullpath $library #if path is in $library
         set title (query-calibre-title title (escape-chars (extract-title $fullpath)))
         add-to-recent-reads "$title"
+        add-to-recent-reads-fnames "$fullpath"
     end
 
     switch $ext
