@@ -4,7 +4,7 @@ function bmark
     end
     switch $argv[1]
         case dl
-          echo /mnt/ext/dl
+          echo /med/dl
         case docs
           echo ~/docs
         case proj
