@@ -6,7 +6,7 @@ function return-windowclass
     end
     switch $xs[1]
         case calibre
-            set returnval libprs500
+            set returnval calibre
         case thunderbird-bin
             set returnval Thunderbird
         case urxvt
