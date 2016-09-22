@@ -47,7 +47,7 @@ function sched
               add-to-calendar $i
           end
       end
-      set -U CURRENT_SCHED (sched current)
+      set -U CURRENT_SCHED $new
       signal-i3blocks sched
   end
 end
