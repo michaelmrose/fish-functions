@@ -1,4 +1,5 @@
 function d
 	set -x DISPLAY :0
-  eval $argv &
+  set com $argv &
+  eval $com
 end
