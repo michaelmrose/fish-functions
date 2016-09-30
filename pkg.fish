@@ -22,7 +22,8 @@ function pkg
     case time
       sudo genlop -t $argv[2..-1]
     case ebuild
-      eval $EDITOR (equery which $argv[2])
+      # eval $EDITOR (equery which $argv[2])
+      emc (equery which $argv[2])
     case mask-reason
       equery list -p -m $argv[2..-1]
     case search
