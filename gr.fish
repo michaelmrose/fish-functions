@@ -1,3 +1,8 @@
 function gr
-	grep -iE $argv; 
+	switch $argv[1]
+    case -w
+      nil
+    case "*"
+      grep -iE $argv;
+    end
 end
