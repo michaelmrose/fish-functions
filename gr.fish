@@ -4,9 +4,11 @@ function gr
       while read -l line
         set input $input $line
       end
-      echo $input
-      # for word in $argv[2..-1]
-      #   set res (echo $res | gr )
+      set res $input
+      for word in $argv[2..-1]
+        set res (echo $res | gr $word)
+      end
+      echo $res
     case "*"
       grep -iE $argv;
     end
