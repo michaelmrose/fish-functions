@@ -8,7 +8,7 @@ function gr
       for word in $argv[2..-1]
         set res (p $res | gr $word)
       end
-      echo $res
+      p $res
     case "*"
       grep -iE $argv;
     end
