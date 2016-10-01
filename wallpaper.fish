@@ -80,6 +80,7 @@ function wallpaper
             return 0
         case search
             sxiv-new -tbfor (findall image | gr $argv[2..-1])
+            return 0
         case rm
             rm $bgimage
             set recent_backgrounds (remove-from-list $bgimage $recent_backgrounds)
