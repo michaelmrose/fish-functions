@@ -6,7 +6,7 @@ function gr
       end
       set res $input
       for word in $argv[2..-1]
-        set res (echo $res | gr $word)
+        set res (p $res | gr $word)
       end
       echo $res
     case "*"
