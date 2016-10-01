@@ -36,6 +36,7 @@ function pick-list-from-wh
     if test $n -eq 1
         wp $wallhavengallery/1.jpg
     else
-        pics $wallhavengallery
+        # pics $wallhavengallery
+        sxiv-new -tbfor $wallhavengallery
     end
 end
