@@ -1,5 +1,5 @@
 function blocktest
 	echo bullshit
-  msg wtf is this
+  wp recent
   blkbutton 1 msg wtf
 end
