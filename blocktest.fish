@@ -1,4 +1,4 @@
 function blocktest
 	echo bullshit
-  blkbutton wp recent
+  blkbutton 1 wp recent
 end
