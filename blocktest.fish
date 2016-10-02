@@ -1,6 +1,6 @@
 function blocktest
 	echo bullshit
-  switch $BLOCK_BUTTON
+  switch $argv
     case 1
      wp recent
   end
