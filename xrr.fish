@@ -10,7 +10,7 @@ function xrr
     for output in (get-connected-displays)
       if not contains $argv $output
         echo $output
-        set fn $fn --output $output --off
+        # set fn $fn --output $output --off
       end
     end
     echo $fn;eval $fn
