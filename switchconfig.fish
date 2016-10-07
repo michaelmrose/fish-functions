@@ -3,6 +3,6 @@ function switchconfig
         case "single"
           xrr (get-primary-display)
         case "full"
-          xrr (get-secondary-display) (get-primary-display)
+          xrr DVI-I-1 DVI-I-0
     end
 end
