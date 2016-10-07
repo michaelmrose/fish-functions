@@ -1,8 +1,9 @@
 function switchconfig
-	switch $argv
-        case "single"
-          xrr $primary
-        case "dual"
-            xrandr $secondary $primary
-    end
+	ternary 'match $argv single' @ xrr (get-primary-display) @ xrr (get-secondary-display) (get-primary-display)
+	# switch $argv
+        # case "single"
+          # xrr $primary
+        # case "dual"
+            # xrandr $secondary $primary
+    # end
 end
