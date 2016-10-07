@@ -7,5 +7,10 @@ function xrr
           set prior $output
       end
     end
+    for output in (get-connected-displays)
+      if not contains $argv $output
+        echo $output
+      end
+    end
     echo $fn;eval $fn
 end
