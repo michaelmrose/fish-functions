@@ -1,12 +1,8 @@
 function switchconfig
-	set primary DVI-I-0
-    set secondary DVI-I-1
-    switch $argv
+	switch $argv
         case "single"
-            xrandr --output $primary --auto --output $secondary --off
-        case "other"
-            xrandr --output $secondary --auto --output $primary --off
+          xrr $primary
         case "dual"
-            xrandr --output $primary --auto --output $secondary --auto --left-of $primary
+            xrandr $secondary $primary
     end
 end
