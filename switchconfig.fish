@@ -1,5 +1,6 @@
 function switchconfig
-	ternary 'match $argv[1] single' @ xrr (get-primary-display) @ xrr (get-secondary-display) (get-primary-display)
+	set choice $argv[1]
+	ternary 'match $choice single' @ xrr (get-primary-display) @ xrr (get-secondary-display) (get-primary-display)
 	# switch $argv
         # case "single"
           # xrr $primary
