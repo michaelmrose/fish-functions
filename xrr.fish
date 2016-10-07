@@ -8,6 +8,7 @@ function xrr
       end
     end
     for output in (get-connected-displays)
+      echo o is $output and a is $argv
       if not contains $output $argv
         set fn $fn --output $output --off
       end
