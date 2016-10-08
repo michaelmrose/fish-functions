@@ -1,5 +1,5 @@
 function xrr
-	switch $argv
+	switch $argv[1]
     case left
       xrr (get-disconnected-displays) (get-connected-displays)
     case right
