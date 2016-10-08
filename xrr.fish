@@ -4,6 +4,10 @@ function xrr
       xrr (get-disconnected-displays) (get-connected-displays)
     case right
       xrr (get-connected-displays) (get-disconnected-displays)
+    case single
+      xrr (get-primary-display)
+    case dual
+      xrr (get-secondary-display) (get-primary-display)
     case '*'
       set fn xrandr --auto --output $argv[1]
         set prior $argv[1]
