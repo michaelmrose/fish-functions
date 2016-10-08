@@ -1,3 +1,3 @@
 function get-disconnected-displays
-	get-ws-info get output where visible = false | sort -u
+	xrandr | gr ' connected [^0-9p]' | cut -d ' ' -f1
 end
