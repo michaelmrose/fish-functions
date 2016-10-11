@@ -44,8 +44,8 @@ function pkg
       sudo zfs snapshot tank/funtoo/root@(preferred-date)
     case updateworld
       # sudo zfs snapshot tank/funtoo/root@(preferred-date)
-      # sudo emerge --sync
-      sudo eix-sync
+      sudo emerge --sync
+      # sudo eix-sync
       and sudo emerge -auDNt @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert --ask (vals 2..-1 $argv)
       and sudo emerge @preserved-rebuild --ask
       and sudo emerge --depclean -a --complete-graph --ask
