@@ -1,5 +1,8 @@
 function xcape-file
-	set timeout (getopts $argv | grep '^t ' | cut -d ' ' -f2; or echo 500)
+	set timeout (getopts $argv | grep '^t ' | cut -d ' ' -f2)
+  if not exists $timeout
+    set timeout 500
+  end
   echo $timeout
   # set file $argv[2]
   # for line in (cat $file)
