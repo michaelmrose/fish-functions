@@ -1,4 +1,5 @@
 function xcape-file
+	killall xcape
 	set file $argv[-1]
   set options $argv[1..-2]
   
