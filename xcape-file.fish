@@ -1,7 +1,9 @@
 function xcape-file
 	killall xcape
 	set file $argv[-1]
-  set options $argv[1..-2]
+  if count $argv -gt 1
+    set options $argv[1..-2]
+  end
   
   if not test -f $file
     echo not a file
