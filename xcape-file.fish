@@ -1,11 +1,15 @@
 function xcape-file
-	killall xcape
+	set target $argv[-1]
 	set timeout (getopts $argv | grep '^t ' | cut -d ' ' -f2)
   if not exists $timeout
     set timeout 500
   end
-  set file $argv[-1]
-  for line in (cat $file)
-    eval xcape -t $timeout -e \'$line\'
+  if test -f $target
+    killall xcape
+    for line in (cat $target)
+      eval xcape -t $timeout -e \'$line\'
+    end
+  else
+    xcape -t $timeout -e "$target"
   end
 end
