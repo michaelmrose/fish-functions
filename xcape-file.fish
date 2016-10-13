@@ -3,9 +3,8 @@ function xcape-file
   if not exists $timeout
     set timeout 500
   end
-  echo $timeout
-  # set file $argv[2]
-  # for line in (cat $file)
-  #   eval xcape -t $timeout -e $line
-  # end
+  set file $argv[-1]
+  for line in (cat $file)
+    echo eval xcape -t $timeout -e $line
+  end
 end
