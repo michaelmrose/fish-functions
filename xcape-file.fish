@@ -1,7 +1,7 @@
 function xcape-file
 	killall xcape
 	set file $argv[-1]
-  if count $argv -gt 1
+  if count $argv -gt 1 > /dev/null
     set options $argv
   end
   
