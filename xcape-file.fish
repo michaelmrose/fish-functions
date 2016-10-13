@@ -5,6 +5,6 @@ function xcape-file
   end
   set file $argv[-1]
   for line in (cat $file)
-    echo eval xcape -t $timeout -e $line
+    echo eval xcape -t $timeout -e \'$line\'
   end
 end
