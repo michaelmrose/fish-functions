@@ -13,5 +13,5 @@ function xcape-file
 
   set timeout (optvalue t 500 $options) #val default
 
-	eval xcape -t $timeout -e \'(condense_lines (cat $file) | sed 's/ /;/g')\'
+	eval xcape -t $timeout -e \'(cat $file | condense_lines | sed 's/ /;/g')\'
 end
