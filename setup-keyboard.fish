@@ -1,5 +1,5 @@
 function setup-keyboard
 	xmodmap ~/.config/xkeys/keys
-  xcafe-file ~/.config/xkeys/xcapes
+  xcape-file ~/.config/xkeys/xcapes
   numlocked
 end
