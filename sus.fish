@@ -1,5 +1,5 @@
 function sus
-	# manage-share ensure-unmounted
+	manage-share ensure-unmounted
   sudo pm-suspend
-  # manage-share ensure-mounted
+  manage-share ensure-mounted
 end
