@@ -10,7 +10,7 @@ function return-trans-value
         case Emacs
             echo 0.95
         case Spacefm
-            echo 0.95
+            echo 0.90
         case LilyTerm
             echo 0.88
         case Hexchat
