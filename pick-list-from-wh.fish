@@ -37,6 +37,6 @@ function pick-list-from-wh
         wp $wallhavengallery/1.jpg
     else
         # pics $wallhavengallery
-        sxiv-new -tbfor $wallhavengallery
+        sxiv -tbfor $wallhavengallery
     end
 end
