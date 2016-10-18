@@ -79,7 +79,7 @@ function wallpaper
             save-wp $argv[2]
             return 0
         case search
-            sxiv -tbfor (findall image | gr -w $argv[2..-1]) 2> /dev/null
+            sxiv -tbfor (findall $wallpaperroot image | gr -w $argv[2..-1]) 2> /dev/null
             return 0
         case rm
             rm $bgimage
