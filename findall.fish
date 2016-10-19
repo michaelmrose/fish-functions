@@ -6,7 +6,7 @@ function findall
         set loc './'
         set lst $argv
     end
-    switch $lst
+    switch $lst[1]
         case image
             set lst bmp png jpg jpeg
         case video
