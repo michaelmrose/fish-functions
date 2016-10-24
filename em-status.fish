@@ -7,7 +7,7 @@ function em-status
     else
         return 1
     end
-    echo output
+    echo $output
     # if startswith ! $output
     #     return 1
     # else
