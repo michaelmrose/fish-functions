@@ -1,8 +1,10 @@
 function em-status
 	if pgrep emerge > /dev/null
         set res (sudo genlop -ntc 2> /dev/null)
-        if exists $res (sudo genlop -ntc 2> /dev/null)
-            set output (echo $res | condense_spaces)
+        if exists $res
+            if startswith ! $res
+              return 1
+            end
         end
     else
         return 1
