@@ -10,7 +10,7 @@ function em-status
     else
         return 1
     end
-    echo $output
+    echo $res
     # if startswith ! $output
     #     return 1
     # else
