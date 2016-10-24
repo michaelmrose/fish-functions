@@ -1,6 +1,7 @@
 function em-status
 	if pgrep emerge > /dev/null
-        if set res (sudo genlop -ntc 2> /dev/null)
+        set res (sudo genlop -ntc 2> /dev/null)
+        if exists $res (sudo genlop -ntc 2> /dev/null)
             set output (condense_lines $res)
         end
     else
