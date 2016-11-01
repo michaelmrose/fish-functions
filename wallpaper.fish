@@ -75,6 +75,14 @@ function wallpaper
         case file
             file-bg $argv[2..-1]
             return 0
+        case rename-category
+            set src (get-folder-for-backgrounds $argv[2])
+            set dest (echo $src | sed "s#/$argv[2]/#/$argv[3]/#g")
+            set -i ~/.fehbg "s#/$argv[1]/#/$argv[3]/#g"
+            echo mv $src $dest
+            set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$argv[2]/#/$argv[3]/#g")
+            wp recall
+            return 0
         case save
             save-wp $argv[2]
             return 0
