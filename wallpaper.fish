@@ -85,7 +85,7 @@ function wallpaper
             end
             set src (get-folder-for-backgrounds $old)
             set dest (echo $src | sed "s#/$old#/$new#g")
-            sed -i ~/.fehbg "s#/$old/#/$new/#g"
+            sed -i "s#/$old/#/$new/#g" ~/.fehbg
             echo mv $src $dest
             set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$argv[2]/#/$argv[3]/#g")
             wp recall
