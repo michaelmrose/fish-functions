@@ -1,5 +1,5 @@
 function rb
 	manage-share ensure-unmounted
-  sleep 5
+  cleanup-desktop
 	sudo shutdown -r now
 end
