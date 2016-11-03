@@ -1,5 +1,3 @@
 function setmeurgent
-	set id (wininfo id dec)
-  sleep 5
-  xdotool set_window --urgency 1 $id
+	xdotool set_window --urgency 1 $argv[1]
 end
