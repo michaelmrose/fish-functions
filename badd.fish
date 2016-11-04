@@ -6,7 +6,9 @@ function badd --description 'add one or more books wherein the book consists of 
 
         if contains (get-ext $i) $archives
             atool -X $tmp $i
-            rm $tmp/*.txt
+            if exists (ls $tmp | gr '.*\.txt$' )
+              rm $tmp/*.txt
+            end
         else
             mv $i $tmp/
         end
