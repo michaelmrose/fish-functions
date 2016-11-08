@@ -1,6 +1,8 @@
 function rand-pick
 	if not exists $argv
-    set lst (collect)
+    while read -l line
+      set lst $lst $line
+    end
   else 
     set lst $argv
   end
