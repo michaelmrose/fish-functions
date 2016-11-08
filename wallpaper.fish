@@ -119,7 +119,11 @@ function wallpaper
             wp style $bgstyle
             return 0
         case list
-            println $recent_backgrounds
+            if test (count $argv) -gt 1
+              findall (get-folder-for-backgrounds $argv[2]) image
+            else
+              println $recent_backgrounds
+            end
             return 0
         case clean
             set -U recent_backgrounds (println $recent_backgrounds | grep -v xrated)
