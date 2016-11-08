@@ -8,7 +8,10 @@ function wallpaper
     end
 
     if not exists $argv
-        wp recent
+        while read -l line
+          set res $res $line
+        end
+        wp $res
         return 0
     end
 
