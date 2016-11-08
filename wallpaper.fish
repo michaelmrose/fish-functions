@@ -64,7 +64,7 @@ function wallpaper
            else
              set target backgrounds
            end
-           wallpaper (findall (get-folder-for-backgrounds $target) image | rand-pick)
+           wallpaper list $target | rand-pick
            return 0
         case slideshow
             slideshow $argv[2..-1]
@@ -144,7 +144,7 @@ function wallpaper
             feh --bg-fill $bgimage
             return
         case count
-            count (findall $wallpaperroot image)
+            wallpaper list backgrounds | wc -l
             return 0
         case size
             du -hs $wallpaperroot
