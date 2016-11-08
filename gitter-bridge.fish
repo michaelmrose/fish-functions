@@ -1,7 +1,4 @@
 function gitter-bridge
-	set dir (pwd)
 	set -x DEBUG 'irc*'
-  cd ~/proj/downloaded/irc-bridge2
-  npm start &
-  cd $dir
+  in-dir ~/proj/downloaded/irc-bridge2 npm start
 end
