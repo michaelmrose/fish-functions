@@ -58,6 +58,14 @@ function wallpaper
         case trackalbum
            toggle-album-wp-tracking 
            return 0
+        case random
+           if test (count $argv) -gt 1
+             set target $argv[2]
+           else
+             set target backgrounds
+           end
+           wallpaper (findall (get-folder-for-backgrounds $target) image | rand-pick)
+           return 0
         case slideshow
             slideshow $argv[2..-1]
             return 0
