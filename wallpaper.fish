@@ -67,7 +67,7 @@ function wallpaper
            else
              set target backgrounds
            end
-           wallpaper list $target | rand-pick
+           wallpaper list $target | rand-pick | wp
            return 0
         case slideshow
             slideshow $argv[2..-1]
