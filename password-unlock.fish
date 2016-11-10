@@ -1,6 +1,6 @@
 function password-unlock
 	while true
-    if match (rfi enter 'password: ') jazz
+    if match (echo '' | /usr/bin/rofi -password -dmenu -p 'password: ') jazz
       unlockme;and break;
     else
       msg "try again"
