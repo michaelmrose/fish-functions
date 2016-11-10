@@ -1,8 +1,7 @@
 function password-unlock
 	while true
     if match (rfi enter 'password: ') jazz
-      unlockme;
-      break;
+      unlockme;and break;
     else
       msg "try again"
     end
