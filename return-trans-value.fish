@@ -3,6 +3,8 @@ function return-trans-value
     switch $app
         case Qvim
             echo 0.9
+        case DrRacket
+          echo 0.95
         case Clementine
             echo 0.89
         case Zathura
