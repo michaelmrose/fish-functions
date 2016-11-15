@@ -1,3 +1,3 @@
 function fuck
-	echo fuck
+	echo fuck this
 end
