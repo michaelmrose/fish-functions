@@ -8,6 +8,8 @@ function git-wrapper
           switch-master $argv[2..-1]
         case co
           git checkout $argv[2..-1]
+        case cs
+          git clone "$argv[2]" --depth=1 
         case c
           if test (count $argv) -gt 2
             git commit -m "$arvg[2]" $argv[3..-1]
