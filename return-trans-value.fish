@@ -17,6 +17,8 @@ function return-trans-value
             echo 0.88
         case Hexchat
             echo 0.95
+        case Firefox
+            echo 1.0
         case i3bar
             echo 0.8
         case i3-frame
