@@ -13,6 +13,8 @@ function pkg
       sudo emerge -C $argv[2..-1]
     case pick 
       pick-package $argv[2..-1]
+    case progress
+      sudo genlop -tc
     case keep
       sudo emerge --noreplace $argv[2..-1]
     case etc
