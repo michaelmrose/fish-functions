@@ -66,7 +66,7 @@ function pkg
           pkg buildtime $argv[2..-1]
       case buildtime
           sudo genlop -tq $argv[2..-1]
-      case version
+      case pick-version
           pick-version $argv[2..-1]
       case versions
           equery y $argv[2..-1]
