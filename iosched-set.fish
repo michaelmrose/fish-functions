@@ -1,3 +1,3 @@
 function iosched-set
-	echo $argv[2] | sudo tee /sys/block/$argv[1]/queue/scheduler
+	echo $argv[1] | sudo tee /sys/block/$argv[2]/queue/scheduler
 end
