@@ -6,5 +6,7 @@ function iosched
       else
         apply-to-list iosched-get (disks)
       end
+    case set
+      apply-to-list "iosched-set $argv[2]" $argv[3..-1]
   end
 end
