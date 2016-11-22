@@ -23,6 +23,9 @@ function pkg
       sudo emerge --depclean -a --complete-graph --ask
     case time
       sudo genlop -t $argv[2..-1]
+    case required
+      sudo emerge -pv --depclean $argv[2..-1]
+      equery depends $argv[2..-1]
     case ebuild
       # eval $EDITOR (equery which $argv[2])
       emc (equery which $argv[2])
