@@ -6,5 +6,7 @@ function slink
       rm $name
     end
     ln -s $target $name
+  else
+    return 1
   end
 end
