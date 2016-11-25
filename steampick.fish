@@ -1,3 +1,5 @@
 function steampick
-	steamapps | cut -d ' ' -f1 | rofi -dmenu -p "pick a game" | xargs ff steamplay
+	for i in (steamapps)                                                           
+    cutlastn " " 2- $i
+  end | rofi -dmenu -p "pick a game"
 end
