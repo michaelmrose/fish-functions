@@ -1,9 +1,10 @@
 function slink
 	set target (echo $argv | cut -d = -f2)
   set name (echo $argv | cut -d = -f1)
-  if test -L $name
+  if test -e $target
+    if test -L $name
       rm $name
+    end
+    ln -s $target $name
   end
-
-  ln -s $target $name
 end
