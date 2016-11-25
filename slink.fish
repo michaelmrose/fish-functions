@@ -4,9 +4,9 @@ function slink
   if test -f $name
     echo $name will be removed
     if read_confirm
-      echo rm $name
+      rm $name
     end
   end
 
-  echo ln -s $target $name
+  ln -s $target $name
 end
