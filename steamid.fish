@@ -1,3 +1,3 @@
 function steamid
-	steamapps | gr $argv | cut -d " " -f2
+	echo (explode (steamapps | gr dust))[-1]
 end
