@@ -1,3 +1,3 @@
 function steamid
-	echo (explode (steamapps | gr dust))[-1]
+	echo (explode (steamapps | gr $argv))[-1]
 end
