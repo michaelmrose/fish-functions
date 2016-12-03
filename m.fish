@@ -22,7 +22,7 @@ function m
       case q
         find-video $argv[2..-1]
         return 0
-      case o
+      case sel
         set files (find-video $argv[2..-1])
         switch (count $files)
           case 0
