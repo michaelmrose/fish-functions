@@ -1,10 +1,10 @@
 function m
-	if test (count $argv) -eq 1
-    if test -f $argv[1]
-      o $argv
-      return 0
-    end
-  end
+	# if test (count $argv) -eq 1
+  #   if test -f $argv[1]
+  #     o $argv
+  #     return 0
+  #   end
+  # end
   # usage examples
   # m play ytube or local playlist
   # m files @replace|append:playlist
