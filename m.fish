@@ -54,7 +54,7 @@ function m
             umpv (m ls $argv[2])
             return 0
           case queue
-            umpv (m ls $argv[2])
+            umpv $argv[2..-1] &
             return 0
             
           case pick
