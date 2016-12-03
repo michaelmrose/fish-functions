@@ -13,6 +13,7 @@ function m
   # m watch some key words, to play local files
   if test (count $argv) -gt 0
     set arguments (without-options $argv)
+    set options (getopts $argv)
     switch $argv[1]
       case list-playlists
         println (ls ~/playlists)
