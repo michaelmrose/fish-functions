@@ -12,8 +12,14 @@ function m
   # m yt pl=playlist
   # m watch some key words, to play local files
   if test (count $argv) -gt 0
-    set arguments (without-options $argv)
+    set arguments (without-options $argv[2..-1])
     set options (getopts $argv)
+    if contains q $options
+      set com umpv
+    else
+      set com mpv
+    end
+    
     switch $argv[1]
       case list-playlists
         println (ls ~/playlists)
@@ -63,7 +69,9 @@ function m
             m pl (rfi match "select a playlist: " (p (cat ~/.youtube-playlists) (ls ~/playlists)))
             return 0
           case open
-            mpv $argv[2..-1] &
+            set com $com $arguments
+            eval $com
+            # mpv $argv[2..-1] &
             return 0
           case narrow
             m ls $argv[2] | pick | m @replace:$argv @noplay
