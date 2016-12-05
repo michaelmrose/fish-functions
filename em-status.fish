@@ -1,6 +1,10 @@
 function em-status
 	if pgrep emerge > /dev/null
-    echo progress: (build-progress) complete eta: (build-time-remaining) min
+    set rem (build-time-remaining)
+    if isnumeric $rem
+      set rem $rem min
+    end
+    echo progress: (build-progress) complete eta: $rem
   end
         # set res (sudo genlop -ntc 2> /dev/null)
         # # echo res is $res
