@@ -5,4 +5,5 @@ function cleanup-desktop
   rm /tmp/ZealLocalServer
   sleep 1
 	i3-msg [class="."] kill
+  countdown 7
 end
