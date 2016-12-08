@@ -1,5 +1,5 @@
 function sd
 	manage-share ensure-unmounted
+  sudo shutdown -h -t 10
   cleanup-desktop
-	sudo shutdown -h now
 end
