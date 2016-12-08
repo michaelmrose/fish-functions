@@ -1,7 +1,8 @@
 function cleanup-desktop
-	i3-msg [class="."] kill
-  kill (pgrep emacs)
+	kill (pgrep emacs)
   kill (pgrep zeal)
-  countdown 7
+  sleep 1
   rm /tmp/ZealLocalServer
+  sleep 1
+	i3-msg [class="."] kill
 end
