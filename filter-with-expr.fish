@@ -3,7 +3,8 @@ function filter-with-expr
   if test (count $argv) -gt 1
     set lst $argv[2..-1]
     for i in $lst
-      if eval $expr \'$i\'
+      set com $expr \'$i\'
+      if eval $com
             echo $i
         end
     end
