@@ -6,6 +6,7 @@ function open-book
         set title (query-calibre-title title (escape-chars (extract-title $fullpath)))
         add-to-recent-reads "$title"
         add-to-recent-reads-fnames "$argv"
+        set-recent-book-covers
     end
 
     switch $ext
@@ -16,5 +17,4 @@ function open-book
         case "*"
             ebook-viewer "$argv" &
     end
-    set-recent-book-covers
 end
