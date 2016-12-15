@@ -1,3 +1,3 @@
 function fish_prompt
-	/opt/bin/powerlineshell.py $status --shell bare
+	/opt/bin/powerlineshell.py $status --shell bare ^/dev/null
 end
