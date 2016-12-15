@@ -19,5 +19,5 @@ function garg
   if exists $game
     set -U LAST_GAME (pathof $game)
   end
-  gargoyle $game
+  gargoyle $game &
 end
