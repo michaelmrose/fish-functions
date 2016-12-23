@@ -1,5 +1,5 @@
 function switch-workspaces
-	save-workpaces
+	save-workspaces
   select-all-in-workspace
   i3 move container to workpace foo
   i3 focus output right
