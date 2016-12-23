@@ -6,7 +6,7 @@ function switch-workspaces
   select-all-in-workspace
   i3 move container to workspace bar
   restore-workspaces
-  vi3_get-ws foo
+  vi3_get-workspace foo
   i3 focus output right
-  vi3_get-ws bar
+  vi3_get-workspace bar
 end
