@@ -5,5 +5,6 @@ function switch-workspaces
   ws $w[2]
   sleep 3
   select-all-in-workspace
+  sleep 3
   ws $w
 end
