@@ -9,7 +9,7 @@ function switch-workspaces
   i3 move container to workspace right
   sleep 3
   ws $w[1]
-  vi3_get-workspace left
-  ws $ws[2]
   vi3_get-workspace right
+  ws $ws[2]
+  vi3_get-workspace left
 end
