@@ -1,10 +1,10 @@
 function switch-workspaces
 	save-workspaces
   select-all-in-workspace
-  i3 move container to workpace foo
+  i3 move container to workspace foo
   i3 focus output right
   select-all-in-workspace
-  i3 move container to workpace bar
+  i3 move container to workspace bar
   restore-workspaces
   vi3_get-ws foo
   i3 focus output right
