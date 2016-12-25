@@ -1,6 +1,6 @@
 function get-current-work-sched
 	# set schedule (gcalcli search work-at-thd --details length --nocolor | condense_spaces)
-	set schedule (gcalcli search work-at-thd --details length --nocolor | sed 's/\s\+/ /g' | sed -e 's/^ *//' -e 's/ *$//')
+	set schedule (gcalcli --nocolor search work-at-thd --details length  | sed 's/\s\+/ /g' | sed -e 's/^ *//' -e 's/ *$//')
     set dates (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f1 | cut -d '-' -f2-)
     set starts (println $schedule | grep -E '^[0-9]' | cut -d ' ' -f2)
     set events ''
