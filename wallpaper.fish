@@ -193,7 +193,7 @@ function wallpaper
                 set lst $lst /tmp/pano-$i.jpg
             end
             set img $lst
-            set format scale
+            set format fill
     end
     feh --bg-{$format} $img
     if pgrep i3blocks > /dev/null
