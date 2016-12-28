@@ -8,4 +8,5 @@ function update-vi3-config
     fix-all-trans
     hide-all-hidden-windows
     wp recall
+    configure-gaps
 end
