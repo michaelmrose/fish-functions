@@ -1,5 +1,3 @@
 function list-binaries
-	for i in $PATH
-    p $i
-  end
+	p $PATH | xargs ls
 end
