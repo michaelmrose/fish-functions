@@ -3,6 +3,8 @@ function show-op
           switch $vi3op
               case "ws"
                   set msg "switch workspace [a-z]"
+              case 'vi3_workspace'     
+                  set msg "switch workspace [a-z]"
               case "vi3_trans"
                   set msg "set transparency [00-99]"
               case "gws"
