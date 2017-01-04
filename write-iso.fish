@@ -11,6 +11,6 @@ function write-iso
     return 1
   end
   if read_confirm
-    dd if=$file of=$disk bs=1M status=progress;and sync
+    sudo dd if=$file of=$disk bs=1M status=progress;and sync
   end
 end
