@@ -5,6 +5,7 @@ function write-iso
   echo -----------------------------------------
   s fdisk -l $disk
   echo -----------------------------------------
-  read_confirm
-  echo dd if=$file of=$disk bs=1M status=progress#;and sync
+  if test -f $file; and read_confirm
+    echo dd if=$file of=$disk bs=1M status=progress#;and sync
+  end
 end
