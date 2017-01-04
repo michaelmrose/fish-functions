@@ -1,6 +1,6 @@
 function write-iso
 	set file $argv[1]
-  set disk $argv[2]
+  set disk $argv[3]
   echo The following disk will be overwritten...
   echo -----------------------------------------
   s fdisk -l $disk
