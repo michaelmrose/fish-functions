@@ -1,4 +1,3 @@
 function get-workspace-index
-	set current (get-focused-workspace)
-  echo $workspaceindex_$current
+	echo $workspaceindex_(get-focused-workspace)
 end
