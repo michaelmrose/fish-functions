@@ -5,4 +5,7 @@ function vi3_define-vars
     # set -U vi3_workspaceOperation # valid values lws sws saw law
     set -U vi3_currentmode default
     set -U symbollock true
+    for i in (alphabet)
+      set ws workspaceindex_$i;set -U $ws 1
+    end
 end
