@@ -1,3 +1,4 @@
 function get-workspace-index
-	echo workspaceindex_(get-focused-workspace)
+	set var workspaceindex_(get-focused-workspace)
+  echo $$var
 end
