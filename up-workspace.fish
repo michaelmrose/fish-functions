@@ -3,5 +3,5 @@ function up-workspace
 	set next (math "$current + 1")
 	vi3_workspace (get-focused-workspace)$next
 	set var workspaceindex_(get-focused-workspace)
-  set -U $var $next
+  echo set -U $var $next
 end
