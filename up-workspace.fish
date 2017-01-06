@@ -3,7 +3,7 @@ function up-workspace
 	set next (math "$current + 1")
   set next (bounded $next 1 5)
   echo c is $current n is $next
-	# set com vi3_workspace (get-workspace-letter)$next
-  # eval $com
-  # set-workspace-index $next
+	set com vi3_workspace (get-workspace-letter)$next
+  eval $com
+  set-workspace-index $next
 end
