@@ -1,6 +1,6 @@
 function s
 	for i in (xauth list | condense_spaces)
-    xauth add $i
+    echo $i
   end
 	sudo $argv
 end
