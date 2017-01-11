@@ -14,7 +14,7 @@ function vi3_kill
                 select-all-in-workspace
                 i3-msg kill
             end
-        case "u" #other windows on workspace
+        case "o" #other windows on workspace
             i3-msg move container to workspace keep
             vi3_kill d
             vi3_get-workspace keep
