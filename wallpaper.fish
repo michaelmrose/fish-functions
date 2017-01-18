@@ -186,6 +186,8 @@ function wallpaper
             set format max
         case "wide"
             set format fill
+        case "extrawide"
+            set format max
         case "superwide"
             set perc (math 100 / (get-number-of-displays))
             convert -crop $perc%x100% +repage $img /tmp/pano.jpg
