@@ -16,8 +16,10 @@ function signal-i3blocks
             set val 7
         case message
             set val 8
-          case sched
+        case sched
             set val 9
+        case time
+             set val 10
         case "*"
             set val $argv
     end
