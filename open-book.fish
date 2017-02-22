@@ -11,10 +11,10 @@ function open-book
 
     switch $ext
         case "pdf"
-            nohup zathura "$argv" &
+            nohup zathura "$argv" > /dev/null &
           case "epub"
-            nohup zathura "$argv" &
+            nohup zathura "$argv" > /dev/null &
         case "*"
-            nohup ebook-viewer "$argv" &
+            nohup ebook-viewer "$argv" > /dev/null &
     end
 end
