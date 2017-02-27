@@ -9,8 +9,7 @@ function get-ws-on-current-display
     if matches $outputs[$n] $display
       set res $res $i
     end
-  end
-  set n (++ $n) 
   inc n
+  end
   p $res
 end
