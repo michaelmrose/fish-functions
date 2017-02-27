@@ -9,4 +9,5 @@ function get-ws-on-current-display
       set res $res $i
     end
   end
+  p $res
 end
