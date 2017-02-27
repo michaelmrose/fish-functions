@@ -5,7 +5,7 @@ function get-ws-on-current-display
   set res ""
   set n 1
   for i in $names
-    echo i is $i and opn is $outputs[$n]
+    echo i is $i and opn is $outputs[$n] and n is $n
     if matches $outputs[$n] $display
       set res $res $i
     end
