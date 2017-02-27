@@ -11,5 +11,6 @@ function get-ws-on-current-display
     end
   end
   set n (++ $n) 
+  inc n
   p $res
 end
