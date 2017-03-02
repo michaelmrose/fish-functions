@@ -6,7 +6,8 @@ function evaluntilquit
       if match $line quit
         break
       else
-        eval $line
+        # eval $line
+        eval $line > /tmp/fnpipeout
       end
     end
   end
