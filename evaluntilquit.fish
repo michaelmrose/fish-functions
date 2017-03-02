@@ -1,5 +1,5 @@
 function evaluntilquit
-	set $pipe /tmp/fnpipe(uid)
+	set $pipe /tmp/fnpipe
   while true; 
     if read line <$pipe
       if match $line quit
