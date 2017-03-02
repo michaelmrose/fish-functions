@@ -1,5 +1,6 @@
 function evaluntilquit
 	set pipe /tmp/fnpipe
+  mkfifo $pipe
   while true; 
     if read line <$pipe
       if match $line quit
@@ -9,4 +10,5 @@ function evaluntilquit
       end
     end
   end
+  rm $pipe
 end
