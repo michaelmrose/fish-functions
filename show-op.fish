@@ -5,6 +5,8 @@ function show-op
                   set msg "switch workspace [a-z]"
               case 'vi3_workspace'     
                   set msg "switch workspace [a-z]"
+              case 'vi3_move-window-to-workspace'
+                  set msg "relocate window to [a-z]"
               case "vi3_trans"
                   set msg "set transparency [00-99]"
               case "gws"
