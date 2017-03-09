@@ -4,8 +4,8 @@ function vi3_mode
     if match default $argv
       er vi3op
     end
-    if match arrange $argv
+    # if match arrange $argv
       er vi3op
-    end
+    # end
     update-op-status
 end
