@@ -1,5 +1,5 @@
 function show-menu
-	if pgrep rofi
+	if pgrep rofi > /dev/null
     set msg "run"
 	else if exists $vi3op
         set msg (show-op)
