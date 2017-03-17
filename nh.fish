@@ -1,4 +1,4 @@
 function nh
-	set com \'$argv \> /dev/null \&\'
+	set com \'$argv \> /dev/null &\'
   eval $com
 end
