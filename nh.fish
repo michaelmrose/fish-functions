@@ -1,3 +1,3 @@
 function nh
-	eval nohup $argv 1>&2 /dev/null &
+	nohup $argv 2> /dev/null &
 end
