@@ -1,3 +1,3 @@
 function nh
-	nohup $argv > /dev/null
+	nohup $argv > /dev/null &
 end
