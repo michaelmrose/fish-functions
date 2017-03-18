@@ -1,4 +1,3 @@
 function get-workspaces-on-focused-display
-	set offset (get-ws-info get rect.x where focused = true)
-  get-ws-info get name where rect.x = $offset
+	get-ws-info get name where rect.x = (get-ws-info get rect.x where focused = true)
 end
