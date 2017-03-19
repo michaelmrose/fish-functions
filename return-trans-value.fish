@@ -10,7 +10,7 @@ function return-trans-value
         case Zathura
             echo 1.0
         case Emacs
-            echo 0.80
+            echo 0.90
         case Spacefm
             echo 0.95
         case LilyTerm
