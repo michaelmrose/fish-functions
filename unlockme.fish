@@ -5,5 +5,6 @@ function unlockme
   fade-in-all-windows
   fix-all-trans
   xset -dpms
-  # hide-all-hidden-windows
+  hide-all-hidden-windows
+  wp recall
 end
