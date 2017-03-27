@@ -61,6 +61,8 @@ function m
           case pl
             umpv (m ls $argv[2])
             return 0
+          case o
+            m sel $argv[2..-1] 
           case queue
             umpv $argv[2..-1] &
             return 0
