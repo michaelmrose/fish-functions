@@ -14,5 +14,7 @@ function open-book
   else
     set app ebook-viewer
   end
+  echo fucked
   nh $app "$argv"
+  echo after
 end
