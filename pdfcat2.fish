@@ -7,6 +7,8 @@ function pdfcat2
     qpdf $file1 --pages $file1 1-z $file2 1-z -- $tmp
     mv $tmp $output
   else
-    pdfcat2 (pdfcat2 $argv[1] $argv[2] /tmp/(uid)) $argv[2..-1]
+    set tmp /tmp/(uid)
+    pdfcat2 $argv[1] $argv[2] $tmp
+    pdfcat2 $tmp $argv[2..-1]
   end
 end
