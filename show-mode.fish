@@ -1,7 +1,7 @@
 function show-mode
 	switch $vi3mode
         case "kill"
-          set msg 'kill (q) selected (w)orkspace (o)ther (a)ll'
+          set msg 'kill (q) selected (w) workspace (o) other (a) all'
             # set msg '(a) all appkey (d) workspace (o) others in workspace (w) window (z) all visible'
         case "default"
             set msg '(mod+hjkl change focus (RShift) command (Lshift) switch workspace (mod+a) audio (PrintScreen) screenshot'
