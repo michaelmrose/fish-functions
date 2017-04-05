@@ -66,7 +66,7 @@ function m
             return 0
           case sort
             set pl (p $argv[2..-1] | sort -V)
-            mpv $pl &
+            mpv $pl
             return 0
           case queue
             umpv $argv[2..-1] &
