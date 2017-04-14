@@ -1,5 +1,5 @@
 function real-lock
-	set focused get-focused-workspace
+	set focused (get-focused-workspace)
   save-workspaces
 	i3-elements hide
   i3 workspace left
