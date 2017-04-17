@@ -1,4 +1,4 @@
 function open-remote
-	open (list-remote)
+	firefox (list-remote)
     focus firefox
 end
