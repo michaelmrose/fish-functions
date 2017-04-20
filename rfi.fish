@@ -9,7 +9,7 @@ function rfi
         case drun
           /usr/bin/rofi -show drun -m (display-number)
       case calc
-        rfi enter "result: " (wcalc -q (rfi enter 'calc: ')| trim)
+        echo $argv[2..-1] | rfi enter "result: " (wcalc -q (rfi enter 'calc: ')| trim)
         case window
             eval rofi -show window
         case history
