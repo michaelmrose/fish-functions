@@ -5,7 +5,6 @@ function foreach
     for i in $l
         echo body is $body
         echo i is $i
-        set body (echo $fn | sed "s#_#$i#g")
-        eval $body
+        eval (echo $fn | sed "s#_#$i#g")
     end
 end
