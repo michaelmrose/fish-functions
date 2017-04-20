@@ -1,7 +1,7 @@
 function foreach
 	set fn $argv[-1]
+  if test (count $argv) -gt 1 > /dev/null
   set l $argv[1..-2]
-  if test (count $l) -gt 0 > /dev/null
     for i in $l
         eval (echo $fn | sed "s#_#$i#g")
     end
