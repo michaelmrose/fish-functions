@@ -3,8 +3,9 @@ function foreach
   set l $argv[1..-2]
   echo f is $fn and l is $l
     for i in $l
-        set body (echo $fn | sed "s#_#$i#g")
         echo body is $body
+        echo i is $i
+        set body (echo $fn | sed "s#_#$i#g")
         eval $body
     end
 end
