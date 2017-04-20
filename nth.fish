@@ -1,5 +1,5 @@
 function nth
 	while read -l line
-    eval echo $line 
+    echo $line | awk "{print \$$argv}"
   end
 end
