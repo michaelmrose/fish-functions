@@ -8,6 +8,8 @@ function rfi
             # rofi -show run
         case drun
           /usr/bin/rofi -show drun -m (display-number)
+      case calc
+        rfi enter "result: " (wcalc -q (rfi enter 'calc: ')| trim)
         case window
             eval rofi -show window
         case history
