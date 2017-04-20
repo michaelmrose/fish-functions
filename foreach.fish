@@ -5,5 +5,7 @@ function foreach
     for i in $l
         eval (echo $fn | sed "s#_#$i#g")
     end
+  else
+    return 1
   end
 end
