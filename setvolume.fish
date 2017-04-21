@@ -1,6 +1,8 @@
 function setvolume
-	if echo $argv | ag  '^\+|-' > /dev/null
+	if echo $argv | ag  '^\+' > /dev/null
     set vol (bounded (wcalc -q (ponymix get-volume)$argv) 0 130)
+  else if echo $argv | ag '^-' > /dev/null
+    set vol (wcalc -q (ponymix get-volume)$argv)
   else
     set vol (bounded $argv 0 150)
   end
