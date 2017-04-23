@@ -6,13 +6,13 @@ function real-lock
 	i3-elements hide
   i3 workspace left
   i3 workspace right
-  echo before if
+  # echo before if
   if match $oldsum $bgimage_checksum
     i3lock -i /tmp/i3lock.png -t
   else
     ~/ext-projs/i3lock-fancy-multimonitor/lock
   end
-  echo after if
+  # echo after if
 
   i3-elements trans
   restore-workspaces
