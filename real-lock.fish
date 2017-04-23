@@ -7,11 +7,11 @@ function real-lock
   i3 workspace left
   i3 workspace right
   # echo before if
-  if match $oldsum $bgimage_checksum
-    i3lock -i /tmp/i3lock.png -t
-  else
+  # if match $oldsum $bgimage_checksum
+  #   i3lock -i /tmp/i3lock.png -t
+  # else
     ~/ext-projs/i3lock-fancy-multimonitor/lock
-  end
+  # end
   # echo after if
 
   i3-elements trans
