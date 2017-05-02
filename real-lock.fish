@@ -20,4 +20,5 @@ function real-lock
   i3lock -i /med/images/locked.png
   sleep 0.5
   lightsout
+  xset -dpms
 end
