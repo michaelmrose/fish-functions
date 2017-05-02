@@ -17,8 +17,7 @@ function real-lock
   # i3-elements trans
   # restore-workspaces
   # ws $focused
-  i3lock -i /med/images/locked.png
-  sleep 0.5
   lightsout
+  i3lock -i /med/images/locked.png -n
   xset -dpms
 end
