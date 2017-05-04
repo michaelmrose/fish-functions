@@ -2,6 +2,8 @@ function fn
 	switch $argv[1]
     case tags
       ftags show
+    case q
+      ls ~/.config/fish/functions | gr $argv[2..-1]
     case edit
       fe $argv[2..-1]
     case ls
