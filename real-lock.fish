@@ -20,4 +20,5 @@ function real-lock
   lightsout
   i3lock -i /med/images/locked.png -n
   xset -dpms
+  wp recall
 end
