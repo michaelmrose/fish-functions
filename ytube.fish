@@ -32,6 +32,6 @@ function ytube
         case pick
             eval $com $url
         case startat
-            eval mpv $playlist
+            eval umpv $playlist
     end
 end
