@@ -71,7 +71,9 @@ function m
           case queue
             umpv $argv[2..-1] &
             return 0
-            
+          case recent
+            recent-videos
+            return 0
           case pick
             m pl (rfi match "select a playlist: " (p (cat ~/.youtube-playlists) (ls ~/playlists)))
             return 0
