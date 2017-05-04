@@ -1,6 +1,6 @@
 function ytube
 	set a pick
-    set pl techtalk
+    set pl clojuredev
     set q ''
     set p 1
     set f v
