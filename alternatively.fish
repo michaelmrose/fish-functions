@@ -6,13 +6,11 @@ function alternatively
     set res (eval $com)
     if exists $res
       p $res
-      echo breaking
       break
+      return 0
     end
   end
-  if not exists $res
     p $val
-  end
 
     
 	# set com $argv[1..-2]
