@@ -4,7 +4,7 @@ function toggle-playback
     set -U lastPlaying $players[1]
   end
   
-	set playing (alternatively (filter-with-expr is-playing (playerctl -l)) $lastPlaying)
+	set playing (alternatively which-playing $lastPlaying)
   playerctl -p $playing play-pause
   set -U lastPlaying $playing
 end
