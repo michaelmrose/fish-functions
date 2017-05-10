@@ -6,6 +6,7 @@ function alternatively
     set res (eval $com)
     if exists $res
       p $res
+      echo breaking
       break
     end
   end
