@@ -6,5 +6,7 @@ function which-playing
   end
   if exists $players
     p $players
+  else
+    return 1
   end
 end
