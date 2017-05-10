@@ -7,7 +7,7 @@ function alternatively
     echo f is $first
     echo c is $com
     echo cc is $$com
-    if defined $first > /dev/null
+    if defined $first 2> /dev/null
       set res (eval $com)
     else
       set res $com
