@@ -6,7 +6,6 @@ function alternatively
     set res (eval $com)
     if exists $res
       p $res
-      break
       return 0
     end
   end
