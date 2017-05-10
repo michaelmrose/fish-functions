@@ -1,11 +1,7 @@
 function toggle-playback
-	echo start
-  echo 
-	echo set players \(playerctl -l\)
-	set players (playerctl -l)
+	set players (fish -c playerctl -l)
   set active (filter-with-expr is-playing $players)
 	set playing (alternatively echo $active @ intersect lastPlaying players @ $players[1])
-  echo playerctl -p $playing play-pause
-  playerctl -p $playing play-pause
+  fish -c playerctl -p $playing play-pause
   set -U lastPlaying $playing
 end
