@@ -4,7 +4,7 @@ function alternatively
   set val $words[-1]
   for com in $coms
     set first (echo $com | cut -d ' ' -f1)
-    if defined $first
+    if defined $first > /dev/null
       set res (eval $com)
     else
       set res $$com
