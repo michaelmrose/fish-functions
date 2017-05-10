@@ -2,7 +2,6 @@ function alternatively
 	set words (split-by $argv)
   set coms $words[1..-2]
   set val $words[-1]
-  echo words are $words
   for com in $coms
     set res (eval $com)
     if exists $res
