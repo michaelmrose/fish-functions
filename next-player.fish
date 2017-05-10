@@ -1,7 +1,6 @@
 function next-player
-	# if which-playing
-  #   toggle-playback
-  # end
+	smarter-ctl pause
   set players (playerctl -l)
-  next-valid-index $lastPlaying $players
+  set -U $lastPLaying (next-valid-index $lastPlaying $players)
+  smarter-ctl play
 end
