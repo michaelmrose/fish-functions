@@ -5,10 +5,12 @@ function alternatively
   for com in $coms
     set first (echo $com | cut -d ' ' -f1)
     echo f is $first
+    echo c is $com
+    echo cc is $$com
     if defined $first > /dev/null
       set res (eval $com)
     else
-      set res $$com
+      set res $com
     end
     
     if exists $res
