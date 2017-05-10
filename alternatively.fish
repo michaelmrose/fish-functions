@@ -3,12 +3,12 @@ function alternatively
   set coms $words[1..-2]
   set val $words[-1]
   for com in $coms
-    set first (echo $com | cut -d ' ' -f1)
-    if defined $first 2> /dev/null
+    # set first (echo $com | cut -d ' ' -f1)
+    # if defined $first 2> /dev/null
       set res (eval $com)
-    else
-      set res $com
-    end
+    # else
+      # set res $com
+    # end
     
     if exists $res
       p $res
