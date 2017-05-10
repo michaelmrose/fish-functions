@@ -3,7 +3,13 @@ function alternatively
   set coms $words[1..-2]
   set val $words[-1]
   for com in $coms
-    set res (eval $com)
+    set first (echo $com | cut -d ' ' -f1)
+    if defined $first
+      set res (eval $com)
+    else
+      set res $$com
+    end
+    
     if exists $res
       p $res
       return 0
