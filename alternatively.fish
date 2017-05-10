@@ -10,7 +10,10 @@ function alternatively
       break
     end
   end
-  p $val
+  if not exists $res
+    p $val
+  end
+
     
 	# set com $argv[1..-2]
   # set val $argv[-1]
