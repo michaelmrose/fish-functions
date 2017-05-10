@@ -4,9 +4,6 @@ function alternatively
   set val $words[-1]
   for com in $coms
     set first (echo $com | cut -d ' ' -f1)
-    echo f is $first
-    echo c is $com
-    echo cc is $$com
     if defined $first 2> /dev/null
       set res (eval $com)
     else
