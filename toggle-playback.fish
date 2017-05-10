@@ -1,6 +1,12 @@
 function toggle-playback
 	set players (playerctl -l)
-  set active (filter-with-expr is-playing $players)
+  # set active (filter-with-expr is-playing $players)
+  for player in $players
+    if match (playerctl -p $player status) Playing
+      set active $active $player
+    end
+  end
+  
   echo p is $players a is $active
 	# set playing (alternatively echo $active @ intersect lastPlaying players @ $players[1])
   # if exists $active
