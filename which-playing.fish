@@ -1,3 +1,8 @@
 function which-playing
-	filter-with-expr is-playing (playerctl -l)
+	set res (filter-with-expr is-playing (playerctl -l))
+  if exists $res
+    p $res
+  else
+    return 1
+  end
 end
