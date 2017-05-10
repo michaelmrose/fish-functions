@@ -3,5 +3,5 @@ function next-player
     toggle-playback
   end
   set players (playerctl -l)
-  next-valid-index (findindex $lastPlaying $players) $players
+  next-valid-index $lastPlaying $players
 end
