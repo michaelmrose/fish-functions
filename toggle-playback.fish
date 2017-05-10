@@ -4,7 +4,7 @@ function toggle-playback
   set ins (intersect $lastPLaying $players)
 	# set playing (alternatively echo $active @ intersect lastPlaying players @ $players[1])
   if exists $active
-    set playing active
+    set playing $active
   else if exists $ins
     set playing $ins
   else
