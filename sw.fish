@@ -4,7 +4,7 @@ function sw
   set results (evens $argv[2..-1])
   for c in $cases
     if match $v $c > /dev/null
-      echo $c
+      echo c is $c and v is $v
       return 0
     end
   end
