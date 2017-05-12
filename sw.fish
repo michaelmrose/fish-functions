@@ -10,6 +10,6 @@ function sw
       echo $results[$index]
       return 0
     end
-    set index (increase index)
+    set index (increase $index)
   end
 end
