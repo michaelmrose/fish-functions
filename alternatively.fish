@@ -1,4 +1,9 @@
 function alternatively
+	if test (count $argv) -eq 1
+    echo $argv
+    return 0
+  end
+  
 	set words (split-by $argv)
   set coms $words[1..-2]
   set val $words[-1]
