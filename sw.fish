@@ -7,8 +7,7 @@ function sw
     if match $v $c > /dev/null
       echo $results[$index]
       return 0
-    else
-      set index (increase index)
     end
+    set index (increase index)
   end
 end
