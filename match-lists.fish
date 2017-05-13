@@ -1,5 +1,5 @@
 function match-lists
-  set val $argv[1]
+	set val $argv[1]
   set l1 (explode $argv[2])
   set l2 (explode $argv[3])
   set default $argv[4]
