@@ -5,6 +5,7 @@ function nstatus
 
   set modem 192.168.0.1 modem
 
-  set routes $router \n $modem $google
-  echo $routes[1]
+  check-nstatus $router
+  check-nstatus $modem
+  check-nstatus $google
 end
