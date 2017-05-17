@@ -5,8 +5,7 @@ function nstatus
 
   set modem 192.168.0.1 modem
 
-  # check-nstatus $router
-  # check-nstatus $modem
-  # check-nstatus $google
-  apply-if-t check-nstatus $router $modem $google
+  check-nstatus $router
+  check-nstatus $modem
+  check-nstatus $google
 end
