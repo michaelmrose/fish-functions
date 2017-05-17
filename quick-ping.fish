@@ -1,3 +1,3 @@
 function quick-ping
-	ping $argv -c 1 -W 0.1
+	ping $argv -c 1 -w 0.1
 end
