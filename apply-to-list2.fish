@@ -4,7 +4,9 @@ function apply-to-list2
       set lst $argv[2..-1]
       for i in $lst
           set str (string replace @ $i $fn)
-          eval $str
+          if eval $str
+            return 1
+          end
       end
     end
 end
