@@ -4,7 +4,7 @@ function apply-if
       set lst $argv[2..-1]
       for i in $lst
           set str (string replace @ $i $fn)
-          if eval $str
+          if not eval $str
             return 1
           end
       end
