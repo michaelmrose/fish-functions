@@ -1,5 +1,5 @@
 function pithoscli
-	set dbus dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos
+	set dbus 'dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos'
 
 	if not exists $argv
     set command 'pithos &'
@@ -9,6 +9,7 @@ function pithoscli
         set command 'echo try love ban tired unrate or help'
       case love
         set command $dbus.LoveCurrentSong
+        echo c is $command
       case ban
         set command $dbus.BanCurrentSong
       case tired
@@ -20,5 +21,5 @@ function pithoscli
     
   
 # dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.$command
-  eval $command
+  # eval $command
 end
