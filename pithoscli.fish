@@ -21,5 +21,6 @@ function pithoscli
     
   
 # dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.$command
-  # eval $command
+  fish -c $command
+# dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos.LoveCurrentSong
 end
