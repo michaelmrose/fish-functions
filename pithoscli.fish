@@ -7,6 +7,7 @@ function pithoscli
 	switch $argv
     case help
       echo try love ban tired unrate or help
+      return 0
     case love
       set command LoveCurrentSong
     case ban
