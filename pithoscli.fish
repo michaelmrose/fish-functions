@@ -9,7 +9,6 @@ function pithoscli
         set command 'echo try love ban tired unrate or help'
       case love
         set command $dbus.LoveCurrentSong
-        echo c is $command
       case ban
         set command $dbus.BanCurrentSong
       case tired
