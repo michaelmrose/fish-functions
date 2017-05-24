@@ -2,7 +2,7 @@ function pithoscli
 	set dbus 'dbus-send --print-reply --dest=net.kevinmehall.Pithos /net/kevinmehall/Pithos net.kevinmehall.Pithos'
 
 	if not exists $argv
-    set command 'pith'
+    set command 'pithos &'
   else
     switch $argv
       case help
