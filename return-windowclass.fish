@@ -7,6 +7,8 @@ function return-windowclass
     switch $xs[1]
         case calibre
             set returnval calibre
+      case chrome
+           set returnval Google-chrome
         case thunderbird-bin
             set returnval Thunderbird
         case urxvt
