@@ -1,13 +1,14 @@
 function smarter-ctl
-	set players (playerctl -l)
+	# set players (playerctl -l)
   # set active (filter-with-expr is-playing $players)
-  for player in $players
-    if [ (playerctl -p $player status) = Playing ]
-      set active $active $player
-    end
-  end
+  # for player in $players
+  #   if [ (playerctl -p $player status) = Playing ]
+  #     set active $active $player
+  #   end
+  # end
+  set active (active-player)
   
-  echo p is $players a is $active
+  # echo p is $players a is $active
 	# set playing (alternatively echo $active @ intersect lastPlaying players @ $players[1])
   if exists $active
     set playing $active
