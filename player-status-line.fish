@@ -15,7 +15,7 @@ function player-status-line
           case Playing
               set symbol "  "
       end
-      echo $symbol metadata
+      echo $symbol $metadata
   else
     echo none
   end
