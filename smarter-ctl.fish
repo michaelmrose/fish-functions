@@ -18,6 +18,6 @@ function smarter-ctl
     set playing $players[1]
   end
   
-  playerctl -p $playing $argv
+  echo playerctl -p $playing $argv
   set -U lastPlaying $playing
 end
