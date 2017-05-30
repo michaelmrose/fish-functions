@@ -1,4 +1,5 @@
 function smarter-ctl
+	set players (playerctl -l)
 	# set active (filter-with-expr is-playing $players)
   set active (active-player)
   
