@@ -1,5 +1,5 @@
 function player-status-line
-	if set val (playerctl status) 2> /dev/null
+	if set val (playerctl -p (active-player) status) 2> /dev/null
     switch $val
           case Paused
               set symbol "  "
