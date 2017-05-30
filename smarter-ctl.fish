@@ -1,6 +1,5 @@
 function smarter-ctl
-	set active (active-player)
-  playerctl -p $active $argv
+	active-playerctl $argv
   set -U lastPlaying $active
   signal-i3blocks playing
 end
