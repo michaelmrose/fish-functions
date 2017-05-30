@@ -3,7 +3,7 @@ function smarter-ctl
   set active (filter-with-expr is-playing $players)
   for player in $players
     if [ (playerctl -p $player status) = Playing ]
-      set active $active $player
+      set active $player
     end
   end
   # set active (active-player)
