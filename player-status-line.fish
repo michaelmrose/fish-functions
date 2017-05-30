@@ -1,6 +1,5 @@
 function player-status-line
-	# set active (active-player)
-  set title (active-playerctl metadata title)
+	set title (active-playerctl metadata title)
   set artist (active-playerctl metadata artist)
 
   if exists $title
