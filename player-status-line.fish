@@ -1,14 +1,14 @@
 function player-status-line
-	set active (active-player)
-  set title (playerctl -p $active metadata title)
-  set artist (playerctl -p $active metadata artist)
+	# set active (active-player)
+  set title (active-playerctl metadata title)
+  set artist (active-playerctl metadata artist)
 
   if exists $title
     set metadata $title by $artist
   else
     set metadata None
   end
-	if set val (playerctl -p $active status) 2> /dev/null
+	if set val (active-playerctl status) 2> /dev/null
     switch $val
           case Paused
               set symbol "  "
