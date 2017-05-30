@@ -5,5 +5,8 @@ function active-playerctl
       set active $player
     end
   end
+  if not exists $active
+    set active $lastPlaying
+  end
   playerctl -p $active $argv
 end
