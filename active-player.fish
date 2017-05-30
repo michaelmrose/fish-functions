@@ -5,4 +5,5 @@ function active-player
       set active $player
     end
   end
+  echo $active
 end
