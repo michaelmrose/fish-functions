@@ -17,7 +17,7 @@ function smarter-ctl
   else
     set playing $players[1]
   end
-  
+  echo playing is $playing
   echo playerctl -p $playing $argv
   set -U lastPlaying $playing
 end
