@@ -5,8 +5,5 @@ function active-player
       set active $player
     end
   end
-  if not exists $active
-    set active $lastPlaying
-  end
   echo $active
 end
