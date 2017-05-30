@@ -4,8 +4,8 @@ function playing
       set active $active $player
     end
   end
-  set title (playerctl -u $active metadata title)
-  set artist (playerctl -u $active metadata artist)
+  set title (playerctl -p $active metadata title)
+  set artist (playerctl -p $active metadata artist)
   if exists $title
     echo $title by $artist
   else
