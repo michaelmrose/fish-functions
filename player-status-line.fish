@@ -9,13 +9,5 @@ function player-status-line
   end
   set val (smarter-ctl status) 2> /dev/null
   set symbol (match-lists (smarter-ctl status) "Playing Paused" " " "")
-  # switch $val
-  #   case Paused
-  #     set symbol "  "
-  #   case Playing
-  #     set symbol "  "
-  #   case Stopped
-  #     set symbol ""
-  # end
   echo $symbol $metadata
 end
