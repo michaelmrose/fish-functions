@@ -5,11 +5,10 @@ function smarter-ctl
   #     set active $player
   #   end
   # end
-  # set active (alt (filter-with-expr is-playing (playerctl -l)) $lastPlaying)
-  set playing (filter-with-expr is-playing (playerctl -l))
-  set active (alt $playing $lastPlaying)
-  echo playing is $playing
-  echo active is $active
+  set active (r (filter-with-expr is-playing (playerctl -l)) $lastPlaying)
+  # set playing (filter-with-expr is-playing (playerctl -l))
+  # set active (alt $playing $lastPlaying)
+  # echo active is $active
   # if not exists $active
   #   set active $lastPlaying
   # end
