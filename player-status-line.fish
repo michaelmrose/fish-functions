@@ -1,13 +1,11 @@
 function player-status-line
-	set title (smarter-ctl metadata title)
-  set artist (smarter-ctl metadata artist)
-
-  if exists $title
+	if contains (smarter-ctl status) Playing Paused
+    set title (smarter-ctl metadata title)
+    set artist (smarter-ctl metadata artist)
     set metadata $title by $artist
+    set symbol (match-lists (smarter-ctl status) "Playing Paused" " " "")
+    echo $symbol $metadata
   else
-    set metadata None
+    echo None
   end
-  set val (smarter-ctl status) 2> /dev/null
-  set symbol (match-lists (smarter-ctl status) "Playing Paused" " " "")
-  echo $symbol $metadata
 end
