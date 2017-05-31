@@ -2,7 +2,7 @@ function apctl
 	set players (playerctl -l)
 	# set active (r (filter-with-expr is-playing $players) $lastPlaying)
   for player in $players
-    if is-playing $player
+    if [playerctl -p $player status = Playing]
       set active $player
     end
   end
