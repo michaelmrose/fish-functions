@@ -4,7 +4,7 @@ function player-status-line
     set title (smarter-ctl metadata title)
     set artist (smarter-ctl metadata artist)
     set metadata $title by $artist
-    set symbol (match-lists $status "Playing Paused" " " "")
+    set symbol (match-lists $playerStatus "Playing Paused" " " "")
     echo $symbol $metadata
   else
     echo None
