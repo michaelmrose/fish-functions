@@ -9,16 +9,8 @@ function smarter-ctl
     set active $lastPlaying
   end
   if match $argv[1] metadata
-    for entry in $argv[2..-1]
-      if startswith @ $entry
-        set res $res (echo $entry | cut -d @ -f2-)
-      else
-        set res $res (playerctl -p $active metadata $entry)
-      end
-    end
-    echo $res
+    apctl-metadata $argv[2..-1]
   else
-    
     playerctl -p $active $argv
     set -U lastPlaying $active
     signal-i3blocks playing
