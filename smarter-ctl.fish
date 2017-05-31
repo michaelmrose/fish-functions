@@ -8,7 +8,6 @@ function smarter-ctl
   if not exists $active
     set active $lastPlaying
   end
-  echo meta is $argv[2..-1]
   if match $argv[1] metadata
     for entry in $argv[2..-1]
       echo playerctl -p $active metadata $entry
