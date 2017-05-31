@@ -1,4 +1,7 @@
 function r
-	wp recall
-  setup-keyboard
+	if exists $argv[1]
+    echo $argv[1]
+  else
+    echo $argv[2]
+  end
 end
