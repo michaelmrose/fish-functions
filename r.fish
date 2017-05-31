@@ -1,6 +1,6 @@
 function r
 	for item in $argv
-    if exists item
+    if exists $item
       echo $item
       return 0
     end
