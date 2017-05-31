@@ -10,7 +10,8 @@ function smarter-ctl
   end
   if match $argv[1] metadata
     for entry in $argv[2..-1]
-      set res $res (echo playerctl -p $active metadata $entry)
+      echo playerctl -p $active metadata $entry
+      # set res $res (playerctl -p $active metadata $entry)
     end
     echo $res
   else
