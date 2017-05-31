@@ -8,7 +8,15 @@ function smarter-ctl
   if not exists $active
     set active $lastPlaying
   end
-  playerctl -p $active $argv
-  set -U lastPlaying $active
-  signal-i3blocks playing
+  if match $argv[1] metadata
+    for entry in $argv[2..-1]
+      set res $res playerctl -p metadata $entry
+    end
+    echo $res
+  else
+    
+    playerctl -p $active $argv
+    set -U lastPlaying $active
+    signal-i3blocks playing
+  end
 end
