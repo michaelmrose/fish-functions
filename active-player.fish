@@ -1,3 +1,0 @@
-function active-player
-	
-end
