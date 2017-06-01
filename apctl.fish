@@ -9,6 +9,9 @@ function apctl
   if not exists $active
     set active $lastPlaying
   end
+  if not contains $active $players
+    set active $players[1]
+  end
   
   playerctl -p $active $argv
   set -U lastPlaying $active
