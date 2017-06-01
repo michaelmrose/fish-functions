@@ -9,6 +9,7 @@ function apctl
   if not exists $active
     set active $lastPlaying
   end
+  echo a is $active p is $players
   if not contains $active $players
     set active $players[1]
   end
