@@ -10,7 +10,7 @@ function return-windowclass
     case chrome
       set returnval Google-chrome
     case googlecal
-      set returnval Google-chrome
+      set returnval Google-chrome ^Rosentwork.net
     case thunderbird-bin
       set returnval Thunderbird
     case urxvt
