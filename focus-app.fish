@@ -1,5 +1,5 @@
 function focus-app
-	set criteria (return-windowclass (appkey $argv))
+	set criteria (explode-words (return-windowclass (appkey $argv)))
   switch (count $criteria)
     case 1
       set com i3-msg \'[class=$criteria]\' focus
