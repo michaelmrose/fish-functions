@@ -7,6 +7,8 @@ function return-windowclass
   switch $xs[1]
     case calibre
       set returnval calibre
+    case qbittorrent
+      set returnval qBittorrent
     case chrome
       set returnval Google-chrome
     case googlecal
