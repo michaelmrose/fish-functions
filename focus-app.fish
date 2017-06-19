@@ -10,4 +10,5 @@ function focus-app
   set res (eval $com)
   er vi3op
   update-op-status
+  echo $res | grep true
 end
