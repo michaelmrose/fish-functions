@@ -1,7 +1,13 @@
 function open-app
 	set target (appkey $argv) \&
-    # echo $target
+  # echo $target
+  set rorrlist inbox
+  if contains $target $rorrlist
+    raiseorrun-appkey $argv
+  else
     eval $target
-    # er vi3op
-    # update-op-status
+  end
+  
+  # er vi3op
+  # update-op-status
 end
