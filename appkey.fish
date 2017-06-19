@@ -10,6 +10,8 @@ function appkey
         end
     else if matches "$argv"  'find [a-zA-Z\-]+'
         appkey show | grep -i --color=never $argv[2..-1]
+    else if matches "$argv"  'which [a-zA-Z\-]+'
+        appkey show | grep -i --color=never $argv[2..-1] | cut -d ' ' -f1
     else if matches "$argv" '[a-zA-Z] .+' # set
         set value appkey_$argv[1]
         set -U $value $argv[2..-1]
