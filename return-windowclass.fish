@@ -13,6 +13,8 @@ function return-windowclass
       set returnval Google-chrome
     case googlecal
       set returnval Google-chrome "^Rosenetwork.net"
+    case hangouts
+      set returnval Google-chrome "^Google Hangouts"
     case inbox
       set returnval Google-chrome "^Inbox"
     case thunderbird-bin
