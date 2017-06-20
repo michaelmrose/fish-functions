@@ -11,7 +11,8 @@ function focus
             im focus output $argv[2]
             return 0
         case "urgent"
-            im [urgent=latest] focus
+            i3-msg [urgent=latest] focus
+            return 0
         case "ws"
             im focus $argv[2]
             return 0
