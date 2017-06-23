@@ -5,7 +5,7 @@ function sumof
       set acc (math "$acc + $i")
     end
   else
-    while read -l $line
+    while read -l line
       set acc (math "$acc + $line")
     end
   end
