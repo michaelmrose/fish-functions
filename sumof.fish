@@ -6,7 +6,10 @@ function sumof
     end
   else
     while read -l line
-      set acc (math "$acc + $line")
+      set args (explode-words $line)
+      for i in $args
+        set acc (math "$acc + $i")
+      end
     end
   end
   echo $acc
