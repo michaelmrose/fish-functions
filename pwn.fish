@@ -4,11 +4,11 @@ function pwn
   if test -f $target
     set optional ""
   else if test -d $target
-    set optional "-R"
+    set optional "-R "
   else
     echo invalid argument
     return 1
   end
 
-  echo sudo chown $optional $owner:$owner $target
+  echo sudo chown {$optional}$owner:$owner $target
 end
