@@ -3,7 +3,7 @@ function set-wp-based-on-url
   set url (xclip -o)
   set n (echo "$url" | cut -d / -f5)   
   curl $url > /tmp/wallpaper.html
-  if grep full/wallhaven-$n.jpg
+  if grep full/wallhaven-$n.jpg /tmp/wallpaper.html
     set ext jpg
   else
     set ext png
