@@ -10,5 +10,5 @@ function pwn
     return 1
   end
 
-  echo sudo chown {$optional}$owner:$owner $target
+  sudo chown {$optional}$owner:$owner $target
 end
