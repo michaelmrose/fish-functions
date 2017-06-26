@@ -4,6 +4,6 @@ function set-wp-based-on-url
   set n (echo "$url" | cut -d / -f5)   
   set image https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$n.jpg
   # echo u is $url and i is $image
-  curl $image > /tmp/wallpaper
+  curl $image > /tmp/wallpaper.jpg
   wp /tmp/wallpaper
 end
