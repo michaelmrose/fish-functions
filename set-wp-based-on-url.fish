@@ -2,8 +2,15 @@ function set-wp-based-on-url
 	xdotool key y y
   set url (xclip -o)
   set n (echo "$url" | cut -d / -f5)   
-  set image https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$n.jpg
+  curl $url > /tmp/wallpaper.html
+  if grep full/wallhaven-$n.jpg
+    set ext jpg
+  else
+    set ext png
+  end
+  
+  set image https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-$n.$ext
   # echo u is $url and i is $image
-  curl $image > /tmp/wallpaper.jpg
-  wp /tmp/wallpaper.jpg
+  curl $image > /tmp/wallpaper.$ext
+  wp /tmp/wallpaper.$ext
 end
