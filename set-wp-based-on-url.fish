@@ -1,7 +1,5 @@
 function set-wp-based-on-url
-	xdotool key y y
-  sleep 0.3
-  set url (xclip -o)
+	set url (xclip -o)
   set n (echo "$url" | cut -d / -f5)   
   curl $url > /tmp/wallpaper.html
   if grep full/wallhaven-$n.jpg /tmp/wallpaper.html
