@@ -1,7 +1,7 @@
 function getvolume
 	set vol (ponymix get-volume)
   if test $vol -lt 100
-    set vol 0{$vol}
+    set vol " "{$vol}
   end
   
   set result {$vol}%
