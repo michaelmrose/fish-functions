@@ -6,5 +6,5 @@ function concatpdf
     set com $com $f 1-z
   end
   set com $com -- $out
-  echo $com
+  eval $com
 end
