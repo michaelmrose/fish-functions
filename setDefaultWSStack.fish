@@ -1,5 +1,5 @@
 function setDefaultWSStack
-	set wsstacka 1
+	set -U wsstacka 1
   set wsstackb 1
   set wsstackc 1
   set wsstackd 1
