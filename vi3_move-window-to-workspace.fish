@@ -1,5 +1,6 @@
 function vi3_move-window-to-workspace
-	i3-msg move container to workspace $argv
+	set w $argv(getwsstack $argv)
+	i3-msg move container to workspace $w
     er vi3op
     update-op-status
 end
