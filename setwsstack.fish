@@ -1,3 +1,4 @@
 function setwsstack
-	set -U wsstack{$argv[1]} $argv[2]
+	set com wsstack{$argv[1]} $argv[2]
+  eval $com
 end
