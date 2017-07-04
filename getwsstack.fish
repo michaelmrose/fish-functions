@@ -1,3 +1,4 @@
 function getwsstack
-	echo $wsstack{$argv}
+	set com $wsstack{$argv}
+  eval $com
 end
