@@ -1,3 +1,3 @@
 function getwsstack
-	echo $wsstack$argv
+	echo $wsstack(echo $argv)
 end
