@@ -8,7 +8,7 @@ function navwsstack
       set n (math $n + 1)
   echo n is $n
     case down
-      set n (decrease n)
+      set n (math $n - 1)
   end
 
   echo n is $n
