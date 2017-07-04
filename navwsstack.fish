@@ -9,5 +9,5 @@ function navwsstack
       set n (decrease n)
   end
 
-  echo setwsstack $letter $n
+  setwsstack $letter $n
 end
