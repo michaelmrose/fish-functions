@@ -7,6 +7,9 @@ function setDefaultWSStack
   set -U wsstackf 1
   set -U wsstackg 1
   set -U wsstackh 1
+  set -U wsstacki 1
+  set -U wsstackj 1
+  set -U wsstackk 1
   set -U wsstackl 1
   set -U wsstackm 1
   set -U wsstackn 1
