@@ -5,7 +5,7 @@ function navwsstack
   echo n is $n
   switch $argv
     case up
-      set n (increase n)
+      set n (math $n + 1)
   echo n is $n
     case down
       set n (decrease n)
