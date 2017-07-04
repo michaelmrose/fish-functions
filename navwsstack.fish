@@ -10,4 +10,5 @@ function navwsstack
   end
 
   setwsstack $letter $n
+  ws $letter$n
 end
