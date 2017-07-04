@@ -11,6 +11,7 @@ function navwsstack
       set n (math $n - 1)
   end
 
+  set n (bounded $n 1 5)
   echo n is $n
   setwsstack $letter $n
   ws $letter$n
