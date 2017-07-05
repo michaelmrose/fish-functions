@@ -1,12 +1,11 @@
 function spreadwspages
 	set letter (get-focused-workspace |cut -c1)
-  for n in (seq 2 5)
+  select-all-in-workspace
+  i3-msg move container to workspace collect
+  i3-msg workspace collect
+  for n in (seq 1 5)
     i3-msg move window to workspace {$letter}$n
-    # if windowfocused
-    #   # i3-msg [workspace={$letter}n move container to workspace {$letter}(math n - 1)]
-    # else
-    #   return 0
-    # end
   end
+  setwsstack $letter 1
    signal-i3blocks pages
 end
