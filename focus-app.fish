@@ -11,4 +11,5 @@ function focus-app
   er vi3op
   update-op-status
   echo $res | grep true
+  signal-i3blocks pages
 end
