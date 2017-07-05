@@ -3,7 +3,7 @@ function ws-status-line
   set letter (echo $current | cut -c1)
   set n (echo $current | cut -c2)
   set workspaces (list-workspaces)
-  set numbers (p $workspaces | gr "^$letter" | cut -c2)
+  set numbers (p $workspaces | gr "^$letter" | cut -c2 | sort -u)
   if test (count $numbers) -eq 1
     echo "$letter"   
   else
