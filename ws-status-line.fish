@@ -11,6 +11,6 @@ function ws-status-line
   if test (count $workspaces) -eq 1
     echo $letter
   else
-    echo $letter (echo $workspaces | sed "s/$n/\[$n\]/g")
+    echo $letter ⇒ (echo $workspaces | sed "s/$n/\[$n\]/g")
   end
 end
