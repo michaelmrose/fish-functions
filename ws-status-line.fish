@@ -5,7 +5,7 @@ function ws-status-line
   set current (get-focused-workspace)
   set letter (echo $current -c1)
   set n (echo $current -c2)
-  set workspaces (list-workspaces | gr '^f' | cut -c2)
+  set workspaces (list-workspaces | gr "^$letter" | cut -c2)
   if test (count $workspaces) -eq 1
     echo true
     # echo $letter
