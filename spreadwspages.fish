@@ -7,6 +7,6 @@ function spreadwspages
     i3-msg move window to workspace {$letter}$n
   end
   setwsstack $letter 1
-  ws h
+  ws $letter
    signal-i3blocks pages
 end
