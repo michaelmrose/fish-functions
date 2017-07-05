@@ -1,7 +1,3 @@
 function windowfocused
-	if exists (wininfo class)
-    msg its there
-  else
-    msg nope
-  end
+	exists (wininfo class)
 end
