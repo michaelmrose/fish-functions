@@ -7,6 +7,8 @@ function ws-status-line
   if test (count $numbers) -eq 1
     echo "$letter"   
   else
+    echo ns is $numbers
     echo $letter: (echo $numbers | sed "s/$n/\[$n\]/g")
+    echo echo 
   end
 end
