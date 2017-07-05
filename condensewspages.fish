@@ -4,6 +4,6 @@ function condensewspages
   # set pages (list-workspaces | gr "^$letter")
   ws {$letter}1
   for n in (seq 2 5)
-   echo i3-msg [workspace="{$letter}$n"] move container to workspace {$letter}1
+    echo i3-msg [workspace={$letter}$n] move container to workspace {$letter}1
   end
 end
