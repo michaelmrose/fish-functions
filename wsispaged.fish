@@ -1,3 +1,3 @@
 function wsispaged
-	test (count list-workspaces | gr "^$argv") -gt 1
+	count (list-workspaces | gr "^$argv")
 end
