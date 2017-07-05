@@ -20,6 +20,8 @@ function signal-i3blocks
             set val 9
         case time
              set val 10
+    case pages
+      set val 11
         case "*"
             set val $argv
     end
