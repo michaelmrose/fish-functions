@@ -1,3 +1,4 @@
 function ws-status-line-secondary
-	ws-status-line (get-active-workspaces)[1]
+	set val (ws-status-line (get-active-workspaces)[1])
+  echo $val
 end
