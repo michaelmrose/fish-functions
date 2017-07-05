@@ -7,8 +7,10 @@ function ws-status-line
   set n (echo $current -c2)
   set workspaces (list-workspaces | gr '^f' | cut -c2)
   if test (count $workspaces) -eq 1
+    echo true
     # echo $letter
   else
+    echo false
     # echo $letter (echo $workspaces | sed "s/$n/\[$n\]/g")
   end
 end
