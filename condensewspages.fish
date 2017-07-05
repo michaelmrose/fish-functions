@@ -7,5 +7,6 @@ function condensewspages
     i3-msg [workspace={$letter}$n] move container to workspace {$letter}1
   end
   setwsstack $letter 1
+  ws $letter
   signal-i3blocks pages
 end
