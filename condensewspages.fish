@@ -3,6 +3,6 @@ function condensewspages
   set letter (echo $focused | cut -c1)
   ws {$letter}1
   for n in (seq 2 5)
-    echo gws $letter{$n}
+    gws $letter{$n}
   end
 end
