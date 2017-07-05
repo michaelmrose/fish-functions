@@ -8,4 +8,5 @@ function vi3_workspace --description 'switch workspace [a-z]'
       end
       er vi3op
       update-op-status
+      signal-i3blocks pages
 end
