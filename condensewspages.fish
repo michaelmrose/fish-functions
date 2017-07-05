@@ -3,6 +3,6 @@ function condensewspages
   set letter (echo $focused | cut -c1)
   set pages (list-workspaces | gr "^$letter")
   for page in $pages
-    gws $page
+    echo gws $page
   end
 end
