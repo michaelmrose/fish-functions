@@ -9,8 +9,8 @@ function ws-status-line
   set workspaces (list-workspaces | gr "^$letter" | cut -c2)
   # echo w is $workspaces l is $letter and n is $n
   if test (count $workspaces) -eq 1
-    echo $letter
+    echo "$letter:     "  
   else
-    echo $letter ⇒ (echo $workspaces | sed "s/$n/\[$n\]/g")
+    echo $letter: (echo $workspaces | sed "s/$n/\[$n\]/g")
   end
 end
