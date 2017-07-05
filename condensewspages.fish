@@ -1,8 +1,7 @@
 function condensewspages
 	set focused (get-focused-workspace)
   set letter (echo $focused | cut -c1)
-  set pages (list-workspaces | gr "^$letter")
-  for page in $pages
-    echo gws $page
+  for n in (seq 2 5)
+    echo gws $letter{$n}
   end
 end
