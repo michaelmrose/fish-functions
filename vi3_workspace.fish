@@ -5,11 +5,10 @@ function vi3_workspace --description 'switch workspace [a-z]'
     set ws (list-workspaces)
     echo changing to $w
     if test $n -ne 1
-      echo not branch
       while not contains $w $ws
         set n (decrease $n)
         set w {$i}$n
-        echo w is now $w
+        setwsstack $i $n
       end
     end
     
