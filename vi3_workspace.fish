@@ -1,6 +1,7 @@
 function vi3_workspace --description 'switch workspace [a-z]'
 	for i in (explode-words $argv)
-    set w $i(getwsstack $i)
+    set n (getwsstack $i)
+    set w {$i}$n
     echo changing to $w
         # set ws $i(get-workspace-index $i)
         # i3-msg workspace $ws
