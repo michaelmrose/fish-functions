@@ -10,4 +10,5 @@ function open-app
   
   # er vi3op
   # update-op-status
+  signal-i3blocks pages
 end
