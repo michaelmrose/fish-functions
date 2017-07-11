@@ -11,6 +11,8 @@ function return-windowclass
       set returnval qBittorrent
     case chrome
       set returnval Google-chrome
+    case google-chrome
+      set returnval Google-chrome
     case googlecal
       set returnval Google-chrome "^Rosenetwork.net"
     case hangouts
