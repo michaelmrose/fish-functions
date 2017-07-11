@@ -1,4 +1,4 @@
 function open-remote
-	firefox (list-remote)
-    focus firefox
+	o (list-remote)
+    focus-app b
 end
