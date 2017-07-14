@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/returnormodifyvalue_setvolume.fish @ line 13
 function setvolume
-	returnormodifyvalue (ponymix get-volume) $argv
+	bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150
 	# set vol (ponymix get-volume)
   # if echo $argv | ag '^\+|-' > /dev/null
 	#   set vol (bounded (wcalc -q "$vol $argv" | trim) 0 150)
