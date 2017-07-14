@@ -1,7 +1,10 @@
 # Defined in /home/michael/.config/fish/buffer/setvolume.fish @ line 2
 function setvolume
-	set current (ponymix get-volume)
-	wcalc -q "$current $argv"
+	set vol (ponymix get-volume)
+  if echo $argv | ag '^+|-' > /dev/null
+	  set vol (bounded (wcalc -q "$current $argv") 0 150)
+  end
+  echo $vol
 	# set current (ponymix get-volume)
 	# if echo $argv | ag  '^\+' > /dev/null
   #   set vol (greaterof $current (bounded (wcalc -q {$current}$argv) 0 150))
