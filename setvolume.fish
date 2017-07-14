@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/setvolume.fish @ line 2
 function setvolume
 	set vol (ponymix get-volume)
-  if echo $argv | ag '^+|-' > /dev/null
+  if echo $argv | ag '^\+|-' > /dev/null
 	  set vol (bounded (wcalc -q "$current $argv") 0 150)
   end
   echo $vol
