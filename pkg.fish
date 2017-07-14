@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/pkg.fish @ line 2
 function pkg
 	#a wrapper for gentoo package tools
 	if contains $argv[1] (equery-fns) (equery-short-fns)
@@ -51,7 +52,7 @@ function pkg
       # sudo zfs snapshot tank/funtoo/root@(preferred-date)
       sudo emerge --sync
       # sudo eix-sync
-      and sudo emerge -auDNt @world --keep-going=y --with-bdeps=y --backtrack=300 --complete-graph --alert --ask (vals 2..-1 $argv)
+      and sudo emerge -auDNt @world --keep-going=y --with-bdeps=y --backtrack=30 --alert --ask (vals 2..-1 $argv)
       and sudo emerge @preserved-rebuild --ask
       and sudo emerge --depclean -a --complete-graph --ask
     case depends
