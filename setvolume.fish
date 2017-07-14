@@ -3,8 +3,8 @@ function setvolume
 	set vol (ponymix get-volume)
   if echo $argv | ag '^\+|-' > /dev/null
     echo addition or sub
-    echo wcalc -q "$current $argv"
-	  set vol (bounded (wcalc -q "$current $argv") 0 150)
+    echo wcalc -q "$vol $argv"
+	  set vol (bounded (wcalc -q "$vol $argv") 0 150)
   else
     set vol $argv
   end
