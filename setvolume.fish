@@ -12,6 +12,6 @@ function setvolume
   # else
   #   set vol (bounded $argv 0 180)
   # end
-  ponymix set-volume $vol
-  signal-i3blocks output
+  # ponymix set-volume $vol
+  # signal-i3blocks output
 end
