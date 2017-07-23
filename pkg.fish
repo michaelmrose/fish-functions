@@ -8,6 +8,8 @@ function pkg
   switch $argv[1]
     case i
       sudo emerge $argv[2..-1]
+    case obsolete
+      eix -u --nocolor --only-names
     case p
       emerge $argv[2..-1] --pretend
     case r
