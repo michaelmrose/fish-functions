@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/bounded_circular.fish @ line 2
 function bounded
 	set val $argv[1]
   set min $argv[2]
