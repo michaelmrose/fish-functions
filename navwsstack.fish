@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/navwsstack.fish @ line 2
 function navwsstack
 	set current (get-focused-workspace)
   set letter (echo $current | cut -c1)
@@ -11,7 +12,7 @@ function navwsstack
       set n (math $n - 1)
   end
 
-  set n (bounded $n 1 5)
+  set n (circular $n 1 5)
   echo n is $n
   setwsstack $letter $n
   ws $letter$n
