@@ -5,5 +5,7 @@ function accuweather
   curl $url > $file
   set temp (cat $file | gr temp_f | cut -d : -f2 | cut -d "'" -f2)
   set realfeel (cat $file | pup 'li[data-href="https://www.accuweather.com/en/us/bremerton-wa/98337/current-weather/331425"] span[class="realfeel"] text{}' | condense_spaces | cut -d ' ' -f2)
-  echo t $temp r $realfeel
+  set conditions (odds (cat $url | pup 'span[class="cond"] text{}' | condense_spaces))[2..4]
+  echo t $temp r $realfeel c $conditions
+  set days
 end
