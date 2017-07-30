@@ -6,6 +6,6 @@ function accuweather
   set temp (cat $file | gr temp_f | cut -d : -f2 | cut -d "'" -f2)
   set realfeel (cat $file | pup 'li[data-href="https://www.accuweather.com/en/us/bremerton-wa/98337/current-weather/331425"] span[class="realfeel"] text{}' | condense_spaces | cut -d ' ' -f2)
   set conditions (odds (cat $file | pup 'span[class="cond"] text{}' | condense_spaces))
-  echo t $temp r $realfeel c $conditions
-  set days
+  echo t $temp r $realfeel echo c
+  p $conditions
 end
