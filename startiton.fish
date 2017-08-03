@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/restore-workspaces_save-worksp.fish @ line 20
+# Defined in /home/michael/.config/fish/buffer/restore-workspaces_save-worksp.fish @ line 19
 function startiton
 	set workspacelist (odds $argv)
     set applist (evens $argv)
@@ -6,9 +6,9 @@ function startiton
     println $workspacelist
     echo printing apps
     println $applist
-    save-workspaces
-    # set workspaces (get-active-workspaces | stripnumbers)
-    # set activeWorkspace (get-focused-workspace)
+    # save-workspaces
+    set workspaces (get-active-workspaces | stripnumbers)
+    set activeWorkspace (get-focused-workspace)
    
 
     for i in (range (count $workspacelist))
@@ -23,8 +23,8 @@ function startiton
         fish -c "$app &"
         rm $layout
     end
-    restore-workspaces
-    # ws $workspaces $activeWorkspace
+    # restore-workspaces
+    ws $workspaces $activeWorkspace
     sleep 3
     # fix-all-trans
     # hide-all-hidden-windows
