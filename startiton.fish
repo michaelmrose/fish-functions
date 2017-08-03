@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/restore-workspaces_save-worksp.fish @ line 19
+# Defined in /home/michael/.config/fish/buffer/startiton.fish @ line 2
 function startiton
 	set workspacelist (odds $argv)
     set applist (evens $argv)
@@ -26,6 +26,6 @@ function startiton
     # restore-workspaces
     ws $workspaces $activeWorkspace
     sleep 3
-    # fix-all-trans
-    # hide-all-hidden-windows
+    fix-all-trans
+    hide-all-hidden-windows
 end
