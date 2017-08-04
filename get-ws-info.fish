@@ -7,9 +7,9 @@ function get-ws-info
     if contains $desired x y width height
         set desired rect.$desired
     end
-    # i3-msg -t get_workspaces|jq .[]|jq -r "select(.$var == $val).$desired"
+    i3-msg -t get_workspaces|jq .[]|jq -r "select(.$var == $val).$desired"
     # i3-msg -t get_workspaces|jq ".[]| select(.$var == $val).$desired"
-    set com 'i3-msg -t get_workspaces|jq \'.[]| select(.$var == $val).$desired\''
-    eval $com
+    # set com 'i3-msg -t get_workspaces|jq \'.[]| select(.$var == $val).$desired\''
+    # eval $com
     # eval i3-msg -t get_workspaces|jq '.[]| select(.focused == true).name'
 end
