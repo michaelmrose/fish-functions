@@ -8,5 +8,5 @@ function get-ws-info
         set desired rect.$desired
     end
     # i3-msg -t get_workspaces|jq .[]|jq -r "select(.$var == $val).$desired"
-    i3-msg -t get_workspaces|jq ".[]| select(.$var == $val).$desired"
+    i3-msg -t get_workspaces|jq ".[] | select(.$var == $val).$desired"
 end
