@@ -9,6 +9,7 @@ function get-ws-info
     end
     # i3-msg -t get_workspaces|jq .[]|jq -r "select(.$var == $val).$desired"
     # i3-msg -t get_workspaces|jq ".[]| select(.$var == $val).$desired"
-    eval i3-msg -t get_workspaces|jq '.[]| select(.$var == $val).$desired'
+    set com 'i3-msg -t get_workspaces|jq \'.[]| select(.$var == $val).$desired\''
+    eval $com
     # eval i3-msg -t get_workspaces|jq '.[]| select(.focused == true).name'
 end
