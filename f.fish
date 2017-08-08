@@ -1,5 +1,4 @@
-# Defined in /tmp/19622194-c937-403f-925d-2fd549434ab4.fish @ line 2
+# Defined in /tmp/966ef99c-1785-4703-ac87-fd4d04c6f0b2.fish @ line 2
 function f
-	set command cutlastn \; 2-(history)[2]  
-  echo command: "$command" has finished
+	echo command: (history)[1] has finished
 end
