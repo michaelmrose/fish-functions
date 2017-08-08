@@ -1,4 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/f.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/f.fish @ line 2
 function f
-	msg command: \"(history) [1]\" has finished
+	set command (history)[1]
+  echo command: "$command" has finished
 end
