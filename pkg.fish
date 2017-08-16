@@ -16,9 +16,9 @@ function pkg
       sudo emerge -C $argv[2..-1]
     case kits
       for i in /var/git/meta-repo/kits/*
-      set line (custlast / $i) : (git -C $i show-branch)
-    end
-    
+        echo (cutlast / $i) : (git -C $i show-branch)
+      end
+      
     case pick 
       pick-package $argv[2..-1]
     case progress
