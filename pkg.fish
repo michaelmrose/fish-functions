@@ -14,8 +14,8 @@ function pkg
       emerge $argv[2..-1] --pretend
     case r
       sudo emerge -C $argv[2..-1]
-    kits
-    for i in /var/git/meta-repo/kits/*
+    case kits
+      for i in /var/git/meta-repo/kits/*
       set line (custlast / $i) : (git -C $i show-branch)
     end
     
