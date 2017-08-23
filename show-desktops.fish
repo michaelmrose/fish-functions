@@ -6,6 +6,6 @@ function show-desktops
   # ws $choice
   set choices (sxiv -tbfor /tmp/screenshots | cut -d . -f1)
   for c in $choices
-    echo ws (custlast / $c)
+    ws (cutlast / $c)
   end
 end
