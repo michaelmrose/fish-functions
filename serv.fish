@@ -1,6 +1,11 @@
 # Defined in /home/michael/.config/fish/buffer/serv.fish @ line 2
 function serv
-	switch $argv[1]
+	if contains $argv[1] stop start restart status
+    serv $argv[2] $argv[1]
+    return 0
+  end
+  
+  switch $argv[1]
     case show
       if test (count $argv) -gt 1
         rc-update show $argv[2..-1]
