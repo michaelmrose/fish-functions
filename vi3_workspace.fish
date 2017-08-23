@@ -15,7 +15,7 @@ function vi3_workspace --description 'switch workspace [a-z]'
     
     # set ws $i(get-workspace-index $i)
     # i3-msg workspace $ws
-    screenshot-workspace
+    screenshot-desktop
     i3-msg workspace "$w"
   end
   er vi3op
