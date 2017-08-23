@@ -1,5 +1,7 @@
+# Defined in /home/michael/.config/fish/buffer/window:focus.fish @ line 2
 function window:focus
-	fix-all-trans
+	screenshot-desktop
+	# fix-all-trans
 	# set -U OLD_WINDOW $NEW_WINDOW
   # set -U NEW_WINDOW (xdotool getactivewindow)
   # fix-trans-fade $OLD_WINDOW
