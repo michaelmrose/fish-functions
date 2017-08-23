@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/prune-desktop-screenshots_scre.fish @ line 15
+# Defined in /home/michael/.config/fish/buffer/prune-desktop-screenshots_scre.fish @ line 14
 function screenshot
 	switch (count $argv)
     case 1
