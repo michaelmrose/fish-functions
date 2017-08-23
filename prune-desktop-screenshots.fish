@@ -1,11 +1,12 @@
-# Defined in /home/michael/.config/fish/buffer/screenshot_screenshot-desktop.fish @ line 26
+# Defined in /home/michael/.config/fish/buffer/prune-desktop-screenshots_scre.fish @ line 2
 function prune-desktop-screenshots
 	set wslist (list-workspaces)
   cd /tmp/screenshots 
   set screenshots (ls)
   for i in $screenshots
-    if not contains $i $wslist
-      rm /tmp/screenshots/$i
-    end
+    echo i is $i s is $screenshots and wslist is $wslist
+    # if not contains $i $wslist
+    #   rm /tmp/screenshots/$i
+    # end
   end
 end
