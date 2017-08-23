@@ -2,8 +2,10 @@
 function show-desktops
 	screenshot-desktop
 	prune-desktop-screenshots
-	set choice (echo (cutlast / (sxiv -tbfor /tmp/screenshots)) | cut -d . -f1)
+	# set choice (echo (cutlast / (sxiv -tbfor /tmp/screenshots)) | cut -d . -f1)
+  # ws $choice
+  set choices (sxiv -tbfor /tmp/screenshots | cut -d . -f1)
   for c in $choice
-    ws $c
+    ws (custlast / $c)
   end
 end
