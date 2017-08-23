@@ -5,7 +5,7 @@ function show-desktops
 	# set choice (echo (cutlast / (sxiv -tbfor /tmp/screenshots)) | cut -d . -f1)
   # ws $choice
   set choices (sxiv -tbfor /tmp/screenshots | cut -d . -f1)
-  for c in $choice
+  for c in $choices
     echo ws (custlast / $c)
   end
 end
