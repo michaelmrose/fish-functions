@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/vi3_workspace.fish @ line 3
+# Defined in /home/michael/.config/fish/buffer/vi3_workspace.fish @ line 2
 function vi3_workspace --description 'switch workspace [a-z]'
-	screenshot-desktop &
+	# screenshot-desktop &
 	for i in (explode-words $argv)
     set n (getwsstack $i)
     set w {$i}$n
