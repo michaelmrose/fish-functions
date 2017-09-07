@@ -4,7 +4,7 @@ function src
   for v in $vals
     switch (short-type $v)
       case file
-        set files $files $v
+        set files $files (which $v)
       case function
         set fns $fns $v
       end
