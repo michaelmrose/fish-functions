@@ -5,10 +5,12 @@ function src
   for v in $vals
     switch (short-type $v)
       case file
-        echo file
+        set files $files $v
       case function
-        echo fn
+        set fns $fns $v
       end
       
     end
+    p $files
+    p $fns
 end
