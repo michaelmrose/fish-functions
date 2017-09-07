@@ -15,4 +15,7 @@ function src
         pygmentize $f
       end
     end
+    if exists $fns
+      fn pprint $fns
+    end
 end
