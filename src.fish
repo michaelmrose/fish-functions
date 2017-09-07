@@ -15,6 +15,7 @@ function src
         pygmentize $f
       end
     end
+    echo f is $fns
     if exists $fns
         fn pprint $fns
     end
