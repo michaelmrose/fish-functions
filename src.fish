@@ -11,19 +11,11 @@ function src
       
     end
     if exists $files
-      if contains -- -e $argv
-        emc $files
-      else
-        for f in $files
-          pygmentize $f
-        end
+      for f in $files
+        pygmentize $f
       end
     end
     if exists $fns
-      if contains -- -e $argv
-        fn edit $fns
-      else
         fn pprint $fns
-      end
     end
 end
