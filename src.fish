@@ -20,6 +20,10 @@ function src
       end
     end
     if exists $fns
-      fn pprint $fns
+      if contains -- -e $argv
+        fn edit $fns
+      else
+        fn pprint $fns
+      end
     end
 end
