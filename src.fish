@@ -17,6 +17,8 @@ function src
     end
     echo f is $fns
     if exists $fns
-        fn pprint $fns
+      for f in $fns
+        fn pprint $f
+      end
     end
 end
