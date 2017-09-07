@@ -3,15 +3,12 @@ function src
 	set vals (without-options $argv)
   p $vals
   for v in $vals
-    echo $v
-    #   switch (short-type $v)
-    #     case file
-    #       set files $files $v
-    #     case function
-    #       set fns $fns $v
-    #     end
-    #   end
-    #   p $fns
-    #   f $files
-  end
+    switch (short-type $v)
+      case file
+        echo file
+      case function
+        echo fn
+      end
+      
+    end
 end
