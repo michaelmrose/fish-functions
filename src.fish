@@ -10,6 +10,9 @@ function src
       end
       
     end
-    p $files
-    p $fns
+    if exists $files
+      for f in $files
+        pygmentize $f
+      end
+    end
 end
