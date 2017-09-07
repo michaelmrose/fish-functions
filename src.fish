@@ -11,7 +11,7 @@ function src
       
     end
     if exists $files
-      if contains -e $argv
+      if contains -- -e $argv
         emc $files
       else
         for f in $files
