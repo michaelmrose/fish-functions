@@ -1,13 +1,14 @@
-# Defined in /home/michael/.config/fish/buffer/src.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/src.fish @ line 14
 function src
-	switch (short-type $argv[1])
-    case file
-      if test (count $argv) -gt 1
-        emc (which $argv[1])
-      else
-        cat (which $argv[1]) | pygmentize
+	set vals (without-options $argv)
+  for v in $vals
+    switch (short-type $v)
+      case file
+        set files $files $v
+      case function
+        set fns $fns $v
       end
-    case function
-      functions $argv[1]
     end
+    p $fns
+    f $files
 end
