@@ -11,8 +11,12 @@ function src
       
     end
     if exists $files
-      for f in $files
-        pygmentize $f
+      if contains -e $argv
+        emc $files
+      else
+        for f in $files
+          pygmentize $f
+        end
       end
     end
     if exists $fns
