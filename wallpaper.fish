@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/wallpaper.fish @ line 2
 function wallpaper
 	#default values
     set norecord false
@@ -198,6 +199,7 @@ function wallpaper
             set format fill
     end
     feh --bg-{$format} $img
+    convert $bgimage /tmp/bgimage.png
     if pgrep i3blocks > /dev/null
         signal-i3blocks wallpaper
     end
