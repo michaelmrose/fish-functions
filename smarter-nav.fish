@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/smarter-nav.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/rightmostwindow_smarter-nav.fish @ line 17
 function smarter-nav
 	switch $argv
     case left
