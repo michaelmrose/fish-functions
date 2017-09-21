@@ -1,5 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/navright.fish @ line 2
 function navright
+	set wininfo (xwininfo -id (xdotool getactivewindow))
 	switch (get-focused-display)
     case HDMI-0
       set w 1920
