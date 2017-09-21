@@ -4,4 +4,5 @@ function rightmost-window
   set c (window-right-corner)
   set diff (math $w - $c)
   test $diff -lt 100
+  echo diff is $diff
 end
