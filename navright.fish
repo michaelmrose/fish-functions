@@ -1,13 +1,17 @@
-# Defined in /home/michael/.config/fish/buffer/navright.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/navright_rightmostwindow_smart.fish @ line 2
 function navright
-	if [ (get-focused-display) = HDMI-0 ]
-    set c 1680
-  else
-    set c 0
+	switch (get-focused-display)
+    case HDMI-0
+      set w 1920
+      set x 0
+    case DVI-I-2
+      set w 1680
+      set x 1680
   end
-	if test (math 1800 - $c) -lt 100
+  set c (xwininfo -id (xdotool getactivewindow) | grep 'Absolute upper-left x' | nth 4 | subtract $w | addto (window-width))
+  if rightmostwindow
     i3 focus output right
   else
-        i3 focus right
-      end
+    i3 focus right
+  end
 end
