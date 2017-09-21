@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/navright.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/leftmostwindow_navleft_navrigh.fish @ line 23
 function navright
 	set wininfo (xwininfo -id (xdotool getactivewindow))
   set ul (p $wininfo | grep 'Absolute upper-left X' | nth 4)
