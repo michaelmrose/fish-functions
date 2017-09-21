@@ -8,8 +8,7 @@ function navright
       set w 1680
       set x 1680
   end
-  set c (xwininfo -id (xdotool getactivewindow) | grep 'Absolute upper-left x' | nth 4 | subtract $w | addto (window-width))
-  echo $c
+  set c (xwininfo -id (xdotool getactivewindow) | grep 'Absolute upper-left X' | nth 4 | subtract $w | addto (window-width))
   # if test (math $w - $c) -lt 100
   #   i3 focus output right
   # else
