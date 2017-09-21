@@ -12,7 +12,8 @@ function navright
       set x 0
   end
   set c (p $wininfo | grep 'Absolute upper-left X' | nth 4 | addto (window-width) |subtract $x)
-  echo c is $c
+  set diff (math "$w - ($ul + $winwidth - $x)")
+  echo d is $diff
   if test (math $w - $c) -lt 100
     i3 focus output right
   else
