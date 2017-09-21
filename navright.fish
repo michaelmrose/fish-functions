@@ -1,6 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/navright_rightmostwindow_smart.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/navright.fish @ line 2
 function navright
-	if test (math 1800 - (window-right-corner)) -lt 100
+	if [ (get-focused-display) = HDMI-0 ]
+    set c 1680
+  else
+    set c 0
+  end
+	if test (math 1800 - $c) -lt 100
     i3 focus output right
   else
         i3 focus right
