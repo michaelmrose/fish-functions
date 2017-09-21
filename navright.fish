@@ -2,7 +2,7 @@
 function navright
 	set wininfo (xwininfo -id (xdotool getactivewindow))
   set ul (p $wininfo | grep 'Absolute upper-left X' | nth 4)
-  set winwidth (p $wininfo | grep 'Width:')
+  set winwidth (p $wininfo | grep 'Width:' | nth 2)
 	switch (get-focused-display)
     case HDMI-0
       set w 1920
