@@ -3,6 +3,6 @@ function rightmost-window
 	set w (get-focused-display-width)
   set c (window-right-corner)
   set diff (math $w - $c)
-  test $diff -lt 100
   echo diff is $diff
+  test $diff -lt 100
 end
