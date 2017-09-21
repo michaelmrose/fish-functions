@@ -9,7 +9,7 @@ function navright
       set x 1680
   end
   set c (xwininfo -id (xdotool getactivewindow) | grep 'Absolute upper-left x' | nth 4 | subtract $w | addto (window-width))
-  if rightmostwindow
+  if test (math $w - $c) -lt 100
     i3 focus output right
   else
     i3 focus right
