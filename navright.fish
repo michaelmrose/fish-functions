@@ -9,7 +9,7 @@ function navright
       set w 1680
       set x 0
   end
-  set c (echo $wininfo | grep 'Absolute upper-left X' | nth 4 | addto (window-width) |subtract $x)
+  set c (p $wininfo | grep 'Absolute upper-left X' | nth 4 | addto (window-width) |subtract $x)
   echo c is $c
   if test (math $w - $c) -lt 100
     i3 focus output right
