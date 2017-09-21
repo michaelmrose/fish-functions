@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/rightmostwindow.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/rightmostwindow_smarter-nav.fish @ line 2
 function rightmostwindow
 	# set w (get-focused-display-width)
   switch (get-focused-display)
