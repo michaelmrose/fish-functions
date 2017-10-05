@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/return-windowclass.fish @ line 2
 function return-windowclass
 	if test (count $argv -eq 1)
     set xs (explode-words $argv)
@@ -5,6 +6,8 @@ function return-windowclass
     set xs $argv
   end
   switch $xs[1]
+    case aurora
+      set returnval Firefox
     case calibre
       set returnval calibre
     case qbittorrent
