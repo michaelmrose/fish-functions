@@ -1,5 +1,6 @@
+# Defined in /home/michael/.config/fish/buffer/set-wp-based-on-url.fish @ line 2
 function set-wp-based-on-url
-	set url (xclip -o)
+	set url (xclip -selection clipboard -o)
   set n (echo "$url" | cut -d / -f5)   
   curl $url > /tmp/wallpaper.html
   if grep full/wallhaven-$n.jpg /tmp/wallpaper.html
