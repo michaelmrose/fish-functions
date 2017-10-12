@@ -26,6 +26,6 @@ function write-iso
     return 1
   end
   if read_confirm
-    sudo dd if=$file | pv -s $size | sudo dd of=$disk bs=1M status=progress;and sync
+    sudo dd if=$file | pv | sudo dd of=$disk bs=1M status=progress;and sync
   end
 end
