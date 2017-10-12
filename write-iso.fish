@@ -15,6 +15,7 @@ function write-iso
   
   set file $argv[1]
   set disk /dev/$argv[3]
+  set size (du -hs $file | cut -f1)
   if test -f $file; and test -b $disk
     echo The following disk will be overwritten...
     echo -----------------------------------------
@@ -25,6 +26,6 @@ function write-iso
     return 1
   end
   if read_confirm
-    sudo dd if=$file of=$disk bs=1M status=progress;and sync
+    sudo dd if=$file | pv -s $size | dd of=$disk bs=1M status=progress;and sync
   end
 end
