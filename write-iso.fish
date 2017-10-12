@@ -13,9 +13,8 @@ function write-iso
     return 1
   end
   
-
-	set file $argv[1]
-  set disk $argv[3]
+  set file $argv[1]
+  set disk /dev/$argv[3]
   if test -f $file; and test -b $disk
     echo The following disk will be overwritten...
     echo -----------------------------------------
