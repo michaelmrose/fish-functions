@@ -1,13 +1,15 @@
 # Defined in /home/michael/.config/fish/buffer/write-iso.fish @ line 2
 function write-iso
-	set help "Usage: write-iso PATH-TO-ISO to PATH-TO-DEVICE \n
- Example write-iso /med/dl/distro.iso to /dev/sdz"
+	set help1 'Usage: write-iso PATH-TO-ISO to PATH-TO-DEVICE' 
+  set help2 'Example write-iso /med/dl/distro.iso to /dev/sdz'
   if not exists $argv
-    echo $help
+    echo $help1
+    echo $help2
     return 1
   end
   if match $argv[1] --help
-    echo $help
+    echo $help1
+    echo $help2
     return 1
   end
   
