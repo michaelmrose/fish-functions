@@ -160,6 +160,7 @@ function wallpaper
             set backgrounddir (get-folder-for-backgrounds $argv[2])
             echo bgd is $backgrounddir
             set img (findall $backgrounddir image | shuf | head -1)
+            set img (echo $img | sed 's#/home/michael##g')
             # set img (findall-list dirs=$backgrounddir types=jpg,jpeg,bmp,png | shuf | head -1)
             wp $img
             return 0
