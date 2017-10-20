@@ -160,7 +160,7 @@ function wallpaper
             set backgrounddir (get-folder-for-backgrounds $argv[2])
             echo bgd is $backgrounddir
             set img (findall $backgrounddir image | shuf | head -1)
-            set img (echo $img | sed 's#/home/michael##g')
+            # set img (echo $img | sed 's#/home/michael##g')
             # set img (findall-list dirs=$backgrounddir types=jpg,jpeg,bmp,png | shuf | head -1)
             wp $img
             return 0
@@ -200,9 +200,9 @@ function wallpaper
             set format fill
     end
     feh --bg-{$format} $img
-    if [ (hostname) = michael-pc ]
-      ssh desktop "set -x DISPLAY :0; and wp $img"
-    end
+    # if [ (hostname) = michael-pc ]
+    #   ssh desktop "set -x DISPLAY :0; and wp $img"
+    # end
     
     convert $bgimage /tmp/bgimage.png
     if pgrep i3blocks > /dev/null
