@@ -1,6 +1,17 @@
-# Defined in /home/michael/.config/fish/buffer/dockctl.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/dockctl_docked.fish @ line 2
 function dockctl
+	if not exists $argv
+    dockctl toggle
+    exit 0
+  end
+    
 	switch $argv
+    case toggle
+      if docked
+        dockctl undock
+      else
+        dockctl dock
+      end
     case dock
       sudo ip link set dev wlp2s0 down
       sleep 1
