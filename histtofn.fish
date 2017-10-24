@@ -5,4 +5,5 @@ function histtofn
   echo "end" >> /tmp/histfunc.fish
   emc /tmp/histfunc.fish
   funcsave $argv
+  rm /tmp/histfunc.fish
 end
