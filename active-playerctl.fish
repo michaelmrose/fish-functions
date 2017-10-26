@@ -2,7 +2,8 @@
 function active-playerctl
 	set players (playerctl -l)
   if not exists $players
-    ssh desktop "set -x DISPLAY :0;and active-playerctl $argv"
+    ssh desktop "set -x DISPLAY :0; active-playerctl $argv"
+
     return 0
   end
   for player in $players
