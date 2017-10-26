@@ -1,8 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/active-playerctl.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/active-playerctl_remote-play-b.fish @ line 2
 function active-playerctl
 	set players (playerctl -l)
   if not exists $players
-    ssh desktop echo hi
+    ssh desktop "set -x DISPLAY :0;and active-playerctl $argv"
     return 0
   end
   for player in $players
