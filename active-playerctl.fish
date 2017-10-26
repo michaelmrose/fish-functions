@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/active-playerctl_remote-play-b.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/active-playerctl_apctl.fish @ line 2
 function active-playerctl
 	set players (playerctl -l)
   if not exists $players
