@@ -1,5 +1,11 @@
+# Defined in /home/michael/.config/fish/buffer/active-playerctl_apctl.fish @ line 21
 function apctl
 	set players (playerctl -l)
+  if not exists $players
+    ssh desktop "set -x DISPLAY :0; active-playerctl $argv"
+
+    return 0
+  end
   for player in $players
     if [ (playerctl -p $player status) = Playing ]
       set active $player
