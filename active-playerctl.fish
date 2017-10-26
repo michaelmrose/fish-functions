@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/active-playerctl.fish @ line 2
 function active-playerctl
 	set players (playerctl -l)
-  if match $players "No players were found"
+  if not exists $players
     ssh desktop echo hi
     return 0
   end
