@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/dockctl_docked.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/dockctl.fish @ line 2
 function dockctl
 	if not exists $argv
     dockctl toggle
@@ -17,6 +17,7 @@ function dockctl
       sleep 1
       sudo mount /mnt/michael
       xrandr --output DP1 --auto --output eDP1 --auto --right-of DP1 --set "scaling mode" "Full aspect" --scale 0.75x0.75
+      ssh desktop xrr single
 
     case undock
       sudo umount /mnt/michael
