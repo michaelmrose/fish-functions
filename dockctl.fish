@@ -22,6 +22,7 @@ function dockctl
     case undock
       sudo umount /mnt/michael
       sudo ip link set dev wlp2s0 up
+      ssh desktop xrr dual
       xrandr --output DP1 --off --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75
   end
   setup-keyboard
