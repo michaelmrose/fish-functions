@@ -15,8 +15,8 @@ function workspace
     if contains $i $localscreens
       i3-msg workspace $i
     else
-      ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
       switch-to $remotehost
+      ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
     end
   end
   # signal-i3blocks pages
