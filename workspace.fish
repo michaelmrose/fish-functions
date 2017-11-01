@@ -7,7 +7,6 @@ function workspace
   if [ (hostname) = michael-desktop ]
     set localscreens $desktopScreens
     set remotehost laptop
-    set key F12
   else
     set localscreens $laptopScreens
     set remotehost desktop
@@ -18,7 +17,7 @@ function workspace
       i3-msg workspace $i
     else
       xdotool key $key
-      ssh $remotehost "set -x DISPLAY :0;and i3 workspace $i"
+      switch-to $remotehost
     end
   end
   # signal-i3blocks pages
