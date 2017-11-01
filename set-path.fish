@@ -4,7 +4,7 @@ function set-path
 
     set builtinpaths /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin ~/scripts
 
-    set mypaths /opt/bin /home/michael/bin /home/michael/extproj/lumoclosh/node_modules/closh/bin
+    set mypaths /opt/bin /home/michael/bin
 
 
     set -xg PATH $mypaths $javapaths $builtinpaths
