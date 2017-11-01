@@ -15,9 +15,8 @@ function workspace
     if contains $i $localscreens
       i3-msg workspace $i
     else
-      xdotool key $key
-      switch-to $remotehost
       ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
+      switch-to $remotehost
     end
   end
   # signal-i3blocks pages
