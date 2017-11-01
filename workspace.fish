@@ -14,7 +14,7 @@ function workspace
     set key F11
   end
 	for i in (explode-words $argv)
-    if true ## contains $i $localscreens
+    if contains $i $localscreens
       i3-msg workspace $i
     else
       xdotool key $key
