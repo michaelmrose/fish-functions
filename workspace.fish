@@ -16,6 +16,7 @@ function workspace
       i3-msg workspace $i
     else
       switch-to $remotehost
+      ssh $remotehost "set -x DISPLAY :0; i3-msg workspace 1"
       ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
     end
   end
