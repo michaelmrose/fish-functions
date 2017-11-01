@@ -10,7 +10,6 @@ function workspace
   else
     set localscreens $laptopScreens
     set remotehost desktop
-    set key F11
   end
 	for i in (explode-words $argv)
     if contains $i $localscreens
@@ -18,6 +17,7 @@ function workspace
     else
       xdotool key $key
       switch-to $remotehost
+      ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
     end
   end
   # signal-i3blocks pages
