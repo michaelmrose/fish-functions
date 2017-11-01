@@ -1,5 +1,10 @@
+# Defined in /home/michael/.config/fish/buffer/fn.fish @ line 2
 function fn
 	switch $argv[1]
+    case pub
+      for i in $argv[2..-1]
+        publish-function $i
+      end
     case tags
       ftags show
     case q
