@@ -2,4 +2,5 @@
 function sync-desktop-wallpaper
 	fix-wallpaper-path-list
 	ssh desktop "set -x DISPLAY :0; wp $bgimage"
+  ssh desktop sync-desktop-wallpaper
 end
