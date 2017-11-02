@@ -205,7 +205,7 @@ function wallpaper
     # end
     
     convert $bgimage /tmp/bgimage.png
-    cache-background-image
+    cache-lock-image
     if pgrep i3blocks > /dev/null
         signal-i3blocks wallpaper
     end
