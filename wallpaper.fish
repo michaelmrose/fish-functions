@@ -200,9 +200,9 @@ function wallpaper
             set format fill
     end
     feh --bg-{$format} $img
-    if [ (hostname) = michael-pc ]
-      ssh desktop "set -x DISPLAY :0; wp $bgimage"
-    end
+    # if [ (hostname) = michael-pc ]
+    #   ssh desktop "set -x DISPLAY :0; wp $bgimage"
+    # end
     
     convert $bgimage /tmp/bgimage.png
     if pgrep i3blocks > /dev/null
