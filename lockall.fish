@@ -2,7 +2,6 @@
 function lockall
 	set bg /tmp/bgimage.png
 	ssh desktop i3lock -i $bg &
-  # i3lock -n -i $bg
   mmlock
   d killall i3lock
 end
