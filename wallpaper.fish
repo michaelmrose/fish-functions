@@ -99,7 +99,7 @@ function wallpaper
             set dest (echo $src | sed "s#/$old#/$new#g")
             sed -i "s#/$old/#/$new/#g" ~/.fehbg
             mv $src $dest
-            set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$old/#/$new/#g")
+            set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$old/#/$new/#g" | sed "s#/mnt/michael##g")
             wp recall
             return 0
         case save
