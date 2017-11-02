@@ -12,7 +12,7 @@ function workspace
     set remotehost desktop
   end
 	for i in (explode-words $argv)
-    if contains $i $localscreens
+    if true # contains $i $localscreens
       i3-msg workspace $i
     else
       switch-to $remotehost
