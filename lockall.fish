@@ -2,7 +2,7 @@
 function lockall
 	set bg /tmp/bgimage.png
 	ssh desktop /home/michael/extproj/i3lock-multimonitor/lock lock &
-  sleep 0.5
+  sleep 0.25
   mmlock
   d killall i3lock
 end
