@@ -201,7 +201,7 @@ function wallpaper
     end
     feh --bg-{$format} $img
     if [ (hostname) = michael-pc ]
-      ssh desktop "set -x DISPLAY :0; wp $bgimage"
+      sync-desktop-wallpaper
     end
     
     convert $bgimage /tmp/bgimage.png
