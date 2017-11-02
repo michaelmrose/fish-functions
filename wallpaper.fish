@@ -29,7 +29,7 @@ function wallpaper
           return 0
         case view
             pics $argv[2]
-            sync-desktop-background
+            sync-desktop-wallpaper
             return 0
         case categories
             for i in (find $wallpaperroot -type d)
@@ -45,7 +45,7 @@ function wallpaper
             return 0
         case recent
             sxiv -tbfor $recent_backgrounds 2> /dev/null
-            sync-desktop-background
+            sync-desktop-wallpaper
             return 0
         case cat
             move-current-wallpaper-to-category $argv[2]
