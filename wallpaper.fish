@@ -29,7 +29,6 @@ function wallpaper
           return 0
         case view
             pics $argv[2]
-            sync-desktop-wallpaper
             return 0
         case categories
             for i in (find $wallpaperroot -type d)
@@ -45,7 +44,6 @@ function wallpaper
             return 0
         case recent
             sxiv -tbfor $recent_backgrounds 2> /dev/null
-            sync-desktop-wallpaper
             return 0
         case cat
             move-current-wallpaper-to-category $argv[2]
@@ -202,9 +200,9 @@ function wallpaper
             set format fill
     end
     feh --bg-{$format} $img
-    # if [ (hostname) = michael-pc ]
-    #   ssh desktop "set -x DISPLAY :0; wp $bgimage"
-    # end
+    if [ (hostname) = michael-pc ]
+      ssh desktop "set -x DISPLAY :0; wp $bgimage"
+    end
     
     convert $bgimage /tmp/bgimage.png
     if pgrep i3blocks > /dev/null
