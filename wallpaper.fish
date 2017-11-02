@@ -199,7 +199,6 @@ function wallpaper
             set img $lst
             set format fill
     end
-    fix-wallpaper-path-list
     feh --bg-{$format} $img
     if [ (hostname) = michael-pc ]
       sync-desktop-wallpaper
