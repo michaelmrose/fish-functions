@@ -208,6 +208,6 @@ function wallpaper
     cache-lock-image &
     sync-desktop-wallpaper &
     if pgrep i3blocks > /dev/null
-        signal-i3blocks wallpaper
+      signal-i3blocks wallpaper
     end
 end
