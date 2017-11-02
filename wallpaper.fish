@@ -199,13 +199,13 @@ function wallpaper
             set img $lst
             set format fill
     end
-    feh --bg-{$format} $img
     # if [ (hostname) = michael-pc ]
     #   sync-desktop-wallpaper
     # end
     
     convert $bgimage /tmp/bgimage.png
     cache-lock-image &
+    feh --bg-{$format} $img
     sync-desktop-wallpaper &
     if pgrep i3blocks > /dev/null
       signal-i3blocks wallpaper
