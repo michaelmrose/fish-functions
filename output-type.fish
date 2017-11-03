@@ -3,7 +3,7 @@ function output-type
 	set op (ponymix -t sink defaults --short | head -1)
 	if echo $op | grep Headset > /dev/null
     echo headphones
-  else if echo $op | grep Built-in
+  else if echo $op | grep Built-in > /dev/null
     echo builtin
   else
     echo speakers
