@@ -206,7 +206,7 @@ function wallpaper
     convert $bgimage /tmp/bgimage.png
     cache-lock-image &
     feh --bg-{$format} $img
-    if desktop-available
+    if laptop;and desktop-available
       sync-desktop-wallpaper &
     end
     if pgrep i3blocks > /dev/null
