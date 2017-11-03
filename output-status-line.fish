@@ -1,11 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/output-status-line.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/output-status-line_output-type.fish @ line 2
 function output-status-line
 	switch (output-type)
     case headphones
       set symbol 
     case speakers
       set symbol 
-    case dock
+    case builtin
       set symbol 
     case "*"
       set symbol 
