@@ -18,12 +18,14 @@ function dockctl
       sudo mount /mnt/michael
       xrandr --output DP1 --auto --output eDP1 --auto --right-of DP1 --set "scaling mode" "Full aspect" --scale 0.75x0.75
       ssh desktop xrr single
+      ssh desktop synergyc (ipaddr)
 
     case undock
       sudo umount /mnt/michael
       sudo ip link set dev wlp2s0 up
       ssh desktop xrr dual
       xrandr --output DP1 --off --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75
+      ssh desktop killall synergyc
   end
   setup-keyboard
   for i in (seq 30)
