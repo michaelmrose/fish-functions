@@ -26,6 +26,7 @@ function write-iso
     return 1
   end
   if read_confirm
+    countdown 10
     sudo dd if=$file of=$disk bs=1M status=progress;and sync
   end
 end
