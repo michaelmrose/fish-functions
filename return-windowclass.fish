@@ -7,7 +7,7 @@ function return-windowclass
   end
   switch $xs[1]
     case aurora
-      set returnval Firefox
+      set returnval Navigator
     case calibre
       set returnval calibre
     case qbittorrent
