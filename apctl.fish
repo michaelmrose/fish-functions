@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/active-playerctl_apctl.fish @ line 21
+# Defined in /home/michael/.config/fish/buffer/apctl_lanplayerctl.fish @ line 2
 function apctl
 	set players (playerctl -l)
   if not exists $players
