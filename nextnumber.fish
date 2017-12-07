@@ -4,7 +4,7 @@ function nextnumber
     for n in (seq 99)
       echo line is $line
       echo n is $n
-      if not contains $n $line
+      if contains $n $line
         echo $n
         break
       end
