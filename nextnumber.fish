@@ -2,7 +2,8 @@
 function nextnumber
 	for n in (seq 99)
     if not contains $n $argv
-      echo n
+      echo $n
+      break
     end
   end
 end
