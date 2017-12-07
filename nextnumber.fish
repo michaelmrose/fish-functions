@@ -2,6 +2,7 @@
 function nextnumber
 	while read -l line
     for n in (seq 99)
+      echo line is $line
       if not contains $n $line
         echo $n
         break
