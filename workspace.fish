@@ -12,10 +12,10 @@ function workspace
     set remotehost desktop
   end
 	for i in (explode-words $argv)
-    if true # contains $i $localscreens
+    if contains $i $localscreens
       i3-msg workspace $i
     else
-      switch-to $remotehost
+      switch-machines
       ssh $remotehost "set -x DISPLAY :0; i3-msg workspace 1"
       ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
     end
