@@ -17,7 +17,6 @@ function workspace
     else
       echo switching machines and ws
       ssh $remotehost "set -x DISPLAY :0; and i3-msg workspace $i"
-      sleep 1
       switch-machines
     end
   end
