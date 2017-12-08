@@ -1,13 +1,12 @@
+# Defined in /home/michael/.config/fish/buffer/rfi.fish @ line 2
 function rfi
 	set bindings -kb-accept-custom "Return"
   # set i3colors (i3-i3colors)
     switch $argv[1]
         case run
             rofi -kb-accept-custom "Return" -run-list-command 'fish -c functions' -show run -m (display-number)
-            # rofi -run-list-command 'fish -c functions' -kb-accept-custom "Return" -show run
-            # rofi -show run
-        case drun
-          /usr/bin/rofi -show drun -m (display-number)
+      case drun
+        /usr/bin/rofi -show drun -m (display-number)
       case calc
           rfi enter "result: " (wcalc -q (rfi enter 'calc: ')| trim)
         
