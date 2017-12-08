@@ -15,6 +15,7 @@ function workspace
     if contains $i $localscreens
       i3-msg workspace $i
     else
+      echo switching machines and ws
       ssh $remotehost "set -x DISPLAY :0; i3-msg workspace $i"
       switch-machines
     end
