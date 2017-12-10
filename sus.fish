@@ -14,7 +14,7 @@ function sus
   #   end
   # end
   # manage-share ensure-mounted
-  systemctl suspend;sleep 1
+  systemctl suspend;sleep 5
   sudo rmmod wacom
   sleep 1
   sudo modprobe wacom
