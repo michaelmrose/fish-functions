@@ -14,5 +14,9 @@ function sus
   #   end
   # end
   # manage-share ensure-mounted
-  systemctl suspend;sleep 5;setup-keyboard
+  systemctl suspend;sleep 1
+  sudo rmmod wacom
+  sleep 1
+  sudo modprobe wacom
+  setup-keyboard
 end
