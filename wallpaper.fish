@@ -206,6 +206,7 @@ function wallpaper
     convert $bgimage /tmp/bgimage.png
     cache-lock-image &
     feh --bg-{$format} $img
+    s cp $bgimage /etc/lightdm/bg.jpg
     if laptop;and desktop-available
       sync-desktop-wallpaper &
     end
