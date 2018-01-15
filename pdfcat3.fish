@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/pdfcat2_pdfcat3.fish @ line 18
+# Defined in /home/michael/.config/fish/buffer/pdfcat3_pdfcat4.fish @ line 2
 function pdfcat3
 	set files $argv[1..-2]
   set out $argv[-1]
