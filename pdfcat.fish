@@ -1,8 +1,6 @@
+# Defined in /home/michael/.config/fish/buffer/pdfcat_pdfcat5.fish @ line 2
 function pdfcat
-	set file1 $argv[1]
-    set file2 $argv[2]
-    set tmp /tmp/(uid)
-    set output $argv[3]
-    qpdf $file1 --pages $file1 1-z $file2 1-z -- $tmp
-    mv $tmp $output
+	set files $argv[1..-2]
+  set out $argv[-1]
+  qpdf $files[1] --pages (appendto $files 1-z) -- $out
 end
