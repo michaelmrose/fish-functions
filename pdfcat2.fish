@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/functions/pdfcat2.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/pdfcat2_pdfcat3.fish @ line 2
 function pdfcat2
 	if test (count $argv) -eq 3
 	  set file1 $argv[1]
