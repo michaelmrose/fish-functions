@@ -5,5 +5,5 @@ function pdfcat3
   for i in $files
     set acc $acc $i 1-z
   end
-  qpdf --pages $acc -- $out
+  qpdf $files[1] --pages $acc -- $out
 end
