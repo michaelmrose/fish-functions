@@ -1,4 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/get-remote-env.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/get-remote-env.fish @ line 2
 function get-remote-env
-	eval ssh $argv[1] echo \'\$argv[2]\'
+	set machine $argv[1]
+  set val $argv[2]
+  ssh $machine echo '$val'
 end
