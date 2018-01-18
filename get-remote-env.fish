@@ -2,7 +2,7 @@
 function get-remote-env
 	set machine $argv[1]
   set val $argv[2]
-  set com ssh $machine echo \'$val\'
+  set com ssh $machine echo \'\$$val\'
   echo $com
   eval $com
 end
