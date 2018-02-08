@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/pickclips.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/pickclips.fish @ line 2
 function pickclips
-	greenclip print | rofi -dmenu | head -c -1 | clipboard
+	greenclip print | rofi -dmenu -p clipboard | head -c -1 | clipboard
 end
