@@ -16,7 +16,7 @@ function sus
   # manage-share ensure-mounted
   systemctl suspend;sleep 5
   sudo rmmod wacom
-  sleep 1
+  sleep 10
   sudo modprobe wacom
   setup-keyboard
 end
