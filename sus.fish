@@ -14,9 +14,12 @@ function sus
   #   end
   # end
   # manage-share ensure-mounted
-  systemctl suspend;sleep 5
   sudo rmmod wacom
+  systemctl suspend;
   sleep 10
   sudo modprobe wacom
   setup-keyboard
+  for i in (seq 30)   
+      xinput map-to-output $i eDP1 2> /dev/null
+  end
 end
