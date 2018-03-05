@@ -5,5 +5,6 @@ function emacsanywhere
     if test -f $temp
         cat $temp | clipboard
         universal-paste
+        rm $temp
     end
 end
