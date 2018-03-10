@@ -22,4 +22,7 @@ function sus
   for i in (seq 30)   
       xinput map-to-output $i eDP1 2> /dev/null
   end
+  if docked
+      dockctl dock
+  end
 end
