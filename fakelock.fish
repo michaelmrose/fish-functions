@@ -6,7 +6,7 @@ function fakelock
         ws (uid);focus output right
     end
     #lock command here
-    sleep 2
+    xtrlock
     restore-workspaces
     i3-elements trans
 end
