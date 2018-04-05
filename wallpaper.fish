@@ -204,12 +204,12 @@ function wallpaper
     # end
     
     convert $bgimage /tmp/bgimage.png
-    cache-lock-image &
+    # cache-lock-image &
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
-    if laptop;and desktop-available
-      sync-desktop-wallpaper &
-    end
+    # if laptop;and desktop-available
+    #   sync-desktop-wallpaper &
+    # end
     if pgrep i3blocks > /dev/null
       signal-i3blocks wallpaper
     end
