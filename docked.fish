@@ -3,5 +3,5 @@ function docked
 	# test (count (get-connected-displays)) -gt 1
   # lspci | gr dock > /dev/null
 
-    lsusb gr OneLink > /dev/null
+    lsusb | gr OneLink > /dev/null
 end
