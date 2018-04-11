@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/cull-screenshots.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/cull-screenshots_screenshot-on.fish @ line 2
 function cull-screenshots
 	set workspaces (list-workspaces)
 	for i in ~/.config/i3/screenshots/*
