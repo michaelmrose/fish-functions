@@ -213,6 +213,6 @@ function wallpaper
       signal-i3blocks wallpaper
     end
     convert $bgimage /tmp/bgimage.png &
-    sync-desktop-wallpaper &
+    # sync-desktop-wallpaper &
     # echo checkpoint 5
 end
