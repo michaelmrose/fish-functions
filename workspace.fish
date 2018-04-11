@@ -21,5 +21,6 @@ function workspace
   #   end
   # end
   # signal-i3blocks pages
+  screenshot-workspace
   i3-msg workspace $argv
 end
