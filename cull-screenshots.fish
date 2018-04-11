@@ -2,7 +2,9 @@
 function cull-screenshots
 	set workspaces (list-workspaces)
 	for i in ~/.config/i3/screenshots/*
+      echo i is $i
       set name (echo $i | cut -d . -f1)
+      echo name is $name
       # if the current name is no longer a valid ws
       if not contains $name $workspaces
           rm ~/.config/i3/screenshots/$name.jpg
