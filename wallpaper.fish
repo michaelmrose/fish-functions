@@ -209,7 +209,7 @@ function wallpaper
     
     echo checkpoint 4
     convert $bgimage /tmp/bgimage.png
-    # cache-lock-image &
+    echo checkpoint 5
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
     if laptop;and docked
