@@ -29,8 +29,10 @@ function wallpaper
           echo album - set current album art as background
           return 0
         case view
-            pics $argv[2]
+            pics (get-folder-for-backgrounds $argv[2])
             return 0
+        case pick
+            pics (get-folder-for-backgrounds $argv[2]) | fishstdin wp
         case categories
             for i in (find $wallpaperroot -type d)
                 cutlast / $i
