@@ -209,9 +209,7 @@ function wallpaper
     # echo checkpoint 4
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
-    if laptop;and docked
-      sync-desktop-wallpaper &
-    end
+    sync-desktop-wallpaper &
     if pgrep i3blocks > /dev/null
       signal-i3blocks wallpaper
     end
