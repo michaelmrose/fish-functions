@@ -209,10 +209,10 @@ function wallpaper
     # echo checkpoint 4
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
-    sync-desktop-wallpaper &
     if pgrep i3blocks > /dev/null
       signal-i3blocks wallpaper
     end
     convert $bgimage /tmp/bgimage.png &
+    sync-desktop-wallpaper &
     # echo checkpoint 5
 end
