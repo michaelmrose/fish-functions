@@ -16,6 +16,7 @@ function wallpaper
         return 0
     end
 
+    echo checkpoint 1
     switch $argv[1]
         case help
           echo write a real fucking help option soon
@@ -174,6 +175,7 @@ function wallpaper
 
     end
 
+    echo checkpoint 2
     set -U bgimage $img
     if not match $norecord true
         add-to-recent-backgrounds $img
@@ -182,6 +184,8 @@ function wallpaper
     end
     cp $img $wallpaperroot/lightdm
 
+
+    echo checkpoint 3
     set ratio (get-image-aspect-ratio-type $img)
     switch $ratio
         case "narrow"
@@ -203,6 +207,7 @@ function wallpaper
     #   sync-desktop-wallpaper
     # end
     
+    echo checkpoint 4
     convert $bgimage /tmp/bgimage.png
     # cache-lock-image &
     feh --bg-{$format} $img
