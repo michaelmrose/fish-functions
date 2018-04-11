@@ -208,8 +208,6 @@ function wallpaper
     # end
     
     echo checkpoint 4
-    convert $bgimage /tmp/bgimage.png
-    echo checkpoint 5
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
     if laptop;and docked
@@ -218,4 +216,6 @@ function wallpaper
     if pgrep i3blocks > /dev/null
       signal-i3blocks wallpaper
     end
+    convert $bgimage /tmp/bgimage.png &
+    echo checkpoint 5
 end
