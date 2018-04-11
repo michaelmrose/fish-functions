@@ -207,10 +207,6 @@ function wallpaper
             set img $lst
             set format fill
     end
-    # if [ (hostname) = michael-pc ]
-    #   sync-desktop-wallpaper
-    # end
-    
     # echo checkpoint 4
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
