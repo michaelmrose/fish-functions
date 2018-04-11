@@ -33,6 +33,8 @@ function wallpaper
             return 0
         case pick
             pics (get-folder-for-backgrounds $argv[2]) | fishstdin wp
+            sync-desktop-wallpaper &
+            return 0
         case categories
             for i in (find $wallpaperroot -type d)
                 cutlast / $i
