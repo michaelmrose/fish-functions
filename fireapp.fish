@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/fireapp.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/fireapp.fish @ line 2
 function fireapp
-	aurora -P app "$argv"
+	eval (appkey b) -P app "$argv"
 end
