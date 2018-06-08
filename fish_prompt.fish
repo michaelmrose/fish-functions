@@ -4,6 +4,6 @@ function fish_prompt
   #   echo (pwd) \$: 
   # end
   # echo $USER:\$
-	# /opt/bin/powerlineshell.py $status --shell bare ^/dev/null
-    powerline-rs --shell bare
+	/opt/bin/powerlineshell.py $status --shell bare ^/dev/null
+    # powerline-rs --shell bare
 end
