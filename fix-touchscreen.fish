@@ -1,8 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/fix-touchscreen.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/fix-touchscreen.fish @ line 2
 function fix-touchscreen
 	s rmmod wacom
     s modprobe wacom
- for i in (xinput list | gr wacom |nth 10|cut -d = -f2)
+    for i in (get-wacom-ids)
       xinput map-to-output $i eDP1 2> /dev/null
-  end
+    end
 end
