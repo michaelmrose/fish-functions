@@ -5,5 +5,5 @@ function fish_prompt
   # end
   # echo $USER:\$
 	# /opt/bin/powerlineshell.py $status --shell bare ^/dev/null
-    powerline-rs --shell bare --modules user,ssh,cwd,perms,git,gitstage $status
+    powerline-rs --shell bare --modules user,host,ssh,cwd,perms,git,gitstage $status
 end
