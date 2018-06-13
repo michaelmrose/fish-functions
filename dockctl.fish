@@ -13,6 +13,7 @@ function dockctl
         dockctl dock
       end
     case dock
+      set -U wallpaperroot /med/images/backgrounds
       # sudo ip link set dev wlp2s0 down
       sleep 1
       sudo mount /mnt/michael
@@ -20,16 +21,16 @@ function dockctl
       # ssh desktop synergyc (ipaddr)
       ssh desktop synergyc 192.168.1.141 &
       ssh desktop xrr dual
-
     case undock
       sudo umount /mnt/michael
+      set -U wallpaperroot /home/michael/backgrounds
       # sudo ip link set dev wlp2s0 up
       ssh desktop xrr dual
       xrandr --output DP1 --off --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75
       ssh desktop killall synergyc
   end
   setup-keyboard
-  for i in (seq 30)
-    xinput map-to-output $i eDP1
+for i in (xinput list | gr wacom |nth 10|cut -d = -f2)   
+      xinput map-to-output $i eDP1 2> /dev/null
   end
 end
