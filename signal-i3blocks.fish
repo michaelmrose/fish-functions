@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/signal-i3blocks.fish @ line 2
 function signal-i3blocks
 	switch $argv
         case vi3
@@ -6,8 +7,6 @@ function signal-i3blocks
             set val 2
         case playing
             set val 3
-        case vpn
-            set val 4
         case volume
             set val 5
         case windowtitle
@@ -20,6 +19,8 @@ function signal-i3blocks
             set val 9
         case time
              set val 10
+      case battery
+          set 4
     case pages
       set val 11
         case "*"
