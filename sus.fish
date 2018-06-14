@@ -19,7 +19,8 @@ function sus
   sleep 10
   fix-touchscreen
   setup-keyboard
-  signal-i3blocks battery
+  i3 restart
+  # signal-i3blocks battery
   # sleep 10
   # if docked
   #     dockctl dock
