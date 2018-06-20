@@ -1,6 +1,7 @@
-# Defined in /home/michael/.config/fish/buffer/returnormodifyvalue_setvolume.fish @ line 13
+# Defined in /home/michael/.config/fish/buffer/setvolume.fish @ line 2
 function setvolume
-	ponymix set-volume (bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150)
+	# ponymix set-volume (bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150)
+  ponymix $argv
   signal-i3blocks output &
 	# set vol (ponymix get-volume)
   # if echo $argv | ag '^\+|-' > /dev/null
