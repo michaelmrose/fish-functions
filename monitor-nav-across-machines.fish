@@ -13,8 +13,8 @@ function monitor-nav-across-machines
     if match $newwindow $window
         echo true
         switch-machines
-        remote-i3 focus $dir
-        remote-i3 focus $dir
-        remote-i3 focus $dir
+        remote-i3 desktop focus $dir
+        remote-i3 desktop focus $dir
+        remote-i3 desktop focus $dir
     end
 end
