@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/monitor-nav-across-machines_mo.fish @ line 16
+# Defined in /home/michael/.config/fish/buffer/monitor-nav-across-machines_mo.fish @ line 23
 function monitor-nav-across-machines-left
 	set monitors HDMI-0 DVI-I-0 DP1 eDP1 
     set current (get-focused-display)
