@@ -3,7 +3,7 @@ function monitor-nav-across-machines
 	set window (xdotool getactivewindow)
     i3 focus $argv
     set newwindow (xdotool getactivewindow)
-    if [ $window == $newwindow]
+    if match $newwindow $window
         echo true
         switch-machines
         remote-i3 focus $argv
