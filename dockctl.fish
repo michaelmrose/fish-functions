@@ -21,6 +21,7 @@ function dockctl
       # ssh desktop synergyc (ipaddr)
       ssh desktop synergyc 192.168.1.141 &
       ssh desktop xrr dual
+      wp recall
     case undock
       sudo umount /mnt/michael
       set -U wallpaperroot /home/michael/backgrounds
