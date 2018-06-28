@@ -5,5 +5,9 @@ function fish_prompt
   # end
   # echo $USER:\$
 	# /opt/bin/powerlineshell.py $status --shell bare ^/dev/null
-    powerline-rs --shell bare --modules user,host,ssh,cwd,perms,git,gitstage $status
+  
+  # timeout 0.5 powerline-rs --shell bare;or echo $USER:(pwd) \$
+  # timeout 0.25 f fish_prompt_git f fish_prompt_light
+  timeout 0.25 powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms,git,gitstage";or powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms"
+  echo ...
 end
