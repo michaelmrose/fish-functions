@@ -11,5 +11,5 @@ function fish_prompt
     set simple (powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms")...
 
     # timeout 0.25 powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms,git,gitstage";or powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms"
-    timeout 0.0001 powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms,git,gitstage";or echo $simple
+    timeout 0.25 powerline-rs --shell bare --modules "user,host,cwd,ssh,jobs,perms,git,gitstage";or echo $simple
 end
