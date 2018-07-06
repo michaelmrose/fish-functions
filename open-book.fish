@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/open-book.fish @ line 2
 function open-book
 	set fullpath (pwd)/$argv
   set ext (cutlast "." $argv)
@@ -14,5 +15,5 @@ function open-book
   else
     set app ebook-viewer
   end
-  nh $app "$argv"
+  eval $app "$argv"
 end
