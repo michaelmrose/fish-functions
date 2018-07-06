@@ -9,7 +9,7 @@ function open-book
     add-to-recent-reads-fnames "$argv"
     # set-recent-book-covers
   end
-  echo before if
+  echo "before if"
   if contains $ext epub pdf djvu
     set app zathura
   else
