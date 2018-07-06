@@ -11,9 +11,8 @@ function open-book
   end
   echo "before if"
   if contains $ext epub pdf djvu
-    set app zathura
+    zathura "$argv"
   else
-    set app ebook-viewer
+    ebook-viewer "$argv"
   end
-  eval $app "$argv"
 end
