@@ -4,7 +4,7 @@ function fix-wp-var
     if test -d $desktopwallpaperdir
         if not substr $bgimage $wallpaperroot
             set path (echo $bgimage | sed 's#/home/michael#/med/images#g')
-            echo $path
+            wp $path
         end
     end
 end
