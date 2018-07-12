@@ -2,8 +2,7 @@
 function fix-wp-var
 	set desktopwallpaperdir /med/images/backgrounds
     if test -d $desktopwallpaperdir
-        echo it lives
-        if echo $bgimage |gr $desktopwallpaperdir
+        if substr $bgimage $wallpaperroot
             echo fucked
         end
     end
