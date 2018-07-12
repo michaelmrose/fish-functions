@@ -6,6 +6,6 @@ function workspace-pages
     set -U WSPAGE $argv
     set workspaces (get-active-workspaces | sed "s#[0-9]#$WSPAGE#g")
     for workspace in $workspaces
-        echo i3-msg workspace $workspace
+        i3-msg workspace $workspace
     end
 end
