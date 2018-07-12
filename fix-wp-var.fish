@@ -3,7 +3,8 @@ function fix-wp-var
 	set desktopwallpaperdir /med/images/backgrounds
     if test -d $desktopwallpaperdir
         if not substr $bgimage $wallpaperroot
-            echo fucked
+            set path (echo $bgimage | sed 's#/home/michael#/med/images/backgrounds#g')
+            echo $path
         end
     end
 end
