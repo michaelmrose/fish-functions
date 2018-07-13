@@ -2,5 +2,5 @@
 function pdfcat5
 	set files $argv[1..-2]
   set out $argv[-1]
-  qpdf $files[1] --pages (appendto $files 1-z) -- $out
+  qpdf $files[1] --pages (appendto $files[2..-1] 1-z) -- $out
 end
