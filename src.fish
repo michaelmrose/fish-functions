@@ -11,9 +11,9 @@ function src
       
     end
     if exists $files
-      for f in $files
-        pygmentize $f
-      end
+        for f in $file
+            bat $f
+        end
     end
     echo f is $fns
     if exists $fns
