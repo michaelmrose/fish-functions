@@ -3,6 +3,7 @@ function fix-touchscreen
 	s rmmod wacom
     s modprobe wacom
     for i in (get-wacom-ids)
-        echo xinput map-to-output $i eDP1 2> /dev/null
+        # xinput map-to-output $i eDP1 2> /dev/null
+        echo xinput map-to-output $i eDP1
     end
 end
