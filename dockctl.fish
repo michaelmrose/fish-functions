@@ -19,7 +19,8 @@ function dockctl
       sudo mount /mnt/michael
       xrandr --output DP1 --auto --output eDP1 --auto --right-of DP1 --set "scaling mode" "Full aspect" --scale 0.75x0.75
       # ssh desktop synergyc (ipaddr)
-      ssh desktop synergyc 192.168.1.141 &
+      # ssh desktop synergyc 192.168.1.141 &
+      ssh desktop synergyc 192.168.1.4 &
       ssh desktop xrr dual
       wp recall
     case undock
