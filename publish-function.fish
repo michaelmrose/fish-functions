@@ -1,10 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/publish-function.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/both_get-destination_publish-f.fish @ line 22
 function publish-function
-	switch (hostname)
-      case michael-laptop
-          set dest desktop
-        case michael-desktop
-            set dest laptop
-    end
+	set dest (get-destination)
     scp ~/.config/fish/functions/$argv.fish $dest:/home/michael/.config/fish/functions/
 end
