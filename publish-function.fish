@@ -6,5 +6,5 @@ function publish-function
         case michael-desktop
             set dest laptop
     end
-    scp ~/.config/fish/functions/$argv.fish $dest:/home/michael/.config/fish/functions/
+    echo scp ~/.config/fish/functions/$argv.fish $dest:/home/michael/.config/fish/functions/
 end
