@@ -4,6 +4,6 @@ function both
 	  set machines $dest
     eval $argv
     for i in $machines
-        ssh $i set -x DISPLAY :0 \; and $argv
+        ssh $i $argv
     end
 end
