@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/add-to-recent-reads_open-book.fish @ line 17
+# Defined in /home/michael/.config/fish/buffer/add-to-recent-reads_open-book.fish @ line 16
 function open-book
 	set fullpath (pathof $argv)
   set ext (cutlast "." $argv)
