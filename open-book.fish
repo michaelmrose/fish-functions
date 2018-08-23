@@ -5,7 +5,6 @@ function open-book
   set library $ebook_library
   if substr $fullpath $library #if path is in $library
     set title (query-calibre-title title (escape-chars (extract-title $fullpath)))
-    echo title is $title and argv is $argv
     add-to-recent-reads "$title"
     add-to-recent-reads-fnames "$argv"
     # set-recent-book-covers
