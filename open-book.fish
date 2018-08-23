@@ -1,10 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/open-book.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/add-to-recent-reads_open-book.fish @ line 17
 function open-book
 	set fullpath (pwd)/$argv
   set ext (cutlast "." $argv)
   set library $ebook_library
   if substr $fullpath $library #if path is in $library
     set title (query-calibre-title title (escape-chars (extract-title $fullpath)))
+    echo title is $title
     add-to-recent-reads "$title"
     add-to-recent-reads-fnames "$argv"
     # set-recent-book-covers
