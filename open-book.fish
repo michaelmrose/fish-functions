@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/add-to-recent-reads_open-book.fish @ line 17
 function open-book
-	set fullpath (pwd)/$argv
+	set fullpath (pathof $argv)
   set ext (cutlast "." $argv)
   set library $ebook_library
   if substr $fullpath $library #if path is in $library
