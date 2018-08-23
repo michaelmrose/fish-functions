@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/mime-set.fish @ line 2
 function mime-set
 	set type $argv[1]
     set mimetype (mimet $type)
@@ -18,7 +19,8 @@ function mime-set
             mime-set $i $command
         end
     else
-        gvfs-mime --set $mimetype $command.desktop
+        # gvfs-mime --set $mimetype $command.desktop
+        gio mime $mimetype $command.desktop
         xdg-mime default $command.desktop $mimetype
     end
 end
