@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/add-to-recent-reads.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/add-to-recent-reads_open-book.fish @ line 2
 function add-to-recent-reads --description 'keep a list of the 10 most recent unique items opened via this script'
 	if exists $argv
       msg argv is $argv
