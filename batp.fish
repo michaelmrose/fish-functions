@@ -5,8 +5,8 @@ function batp
     set res (bat $file)
     if test (count $argv) -gt 1
         for item in $argv[2..-1]
-            eval "set res (p $res | $item)"
+            echo eval "set res (p $res | $item)"
         end
     end
-    p $res | bat -l $lex
+    echo p $res | bat -l $lex
 end
