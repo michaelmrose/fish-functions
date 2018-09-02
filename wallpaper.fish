@@ -16,6 +16,14 @@ function wallpaper
         return 0
     end
 
+    # if sole arg is video file use as video wallpaper
+    if test (count $argv) -eq 1
+        if test -f $argv
+            if contains (get-ext $argv) mkv mp4 avi wmv
+                return 0
+            end
+        end
+    end
     # echo checkpoint 1
     switch $argv[1]
         case help
