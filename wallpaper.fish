@@ -46,6 +46,12 @@ function wallpaper
         case url
             file-bg-url $argv[2..-1]
             return 0
+        case vid
+            vidwall $argv[2..-1]
+            return 0
+        case v
+            vidwall $argv[2..-1]
+            return 0
         case recent
             sxiv -tbfor $recent_backgrounds 2> /dev/null
             return 0
