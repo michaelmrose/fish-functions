@@ -1,14 +1,20 @@
+# Defined in /home/michael/.config/fish/buffer/xrr.fish @ line 2
 function xrr
 	switch $argv[1]
-    case left
-      xrr (get-disconnected-displays) (get-connected-displays)
-    case right
-      xrr (get-connected-displays) (get-disconnected-displays)
-    case single
-      xrr (get-primary-display)
-    case dual
-      xrr (get-secondary-display) (get-primary-display)
-    case '*'
+      # case left
+      #   xrr (get-disconnected-displays) (get-connected-displays)
+      # case right
+      #   xrr (get-connected-displays) (get-disconnected-displays)
+      # case single
+      #     # xrr (get-primary-display)
+      case laptop
+          xrr eDP1
+      case desktop
+          xrr DP1
+      case dual
+          # xrr (get-secondary-display) (get-primary-display)
+          xrr DP1 eDP1
+      case '*'
       set fn xrandr --auto --output $argv[1]
         set prior $argv[1]
         if test (count $argv) -gt 1
