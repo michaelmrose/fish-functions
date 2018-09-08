@@ -1,12 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/sys_sysu.fish @ line 2
 function sys
-	switch $argv[1]
-        case s
-            sudo shutdown -h now
-        case r
-            sudo shutdown -r now
-        case l
-            i3-msg exit
-        case g
-            dm-tool switch-to-greeter
-    end
+	sudo systemctl $argv
 end
