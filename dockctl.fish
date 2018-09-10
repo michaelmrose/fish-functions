@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/dockctl.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/dock_dockctl_undock.fish @ line 6
 function dockctl
 	if not exists $argv
     dockctl toggle
