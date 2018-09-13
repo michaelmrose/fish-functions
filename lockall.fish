@@ -6,7 +6,8 @@ function lockall
   # ssh desktop /home/michael/extproj/i3lock-multimonitor/lock lock &
   # mmlock
   # d killall i3lock
-    ssh desktop fakelock &
+    # ssh desktop fakelock &
+    d fakelock &
     fakelock
   d killall xtrlock
 end
