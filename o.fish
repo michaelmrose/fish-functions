@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/o.fish @ line 2
 function o
-	gvfs-open $argv; 
+	gio open $argv;
 end
