@@ -3,5 +3,5 @@ function kill-internet
 	s iptables -A INPUT -i lo -j ACCEPT
     s iptables -A INPUT -s 192.168.0.1/16 -j ACCEPT
     s iptables -P INPUT DROP
-    s systemctl iptables start
+    s systemctl start iptables
 end
