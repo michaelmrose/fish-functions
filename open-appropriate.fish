@@ -19,7 +19,7 @@ function open-appropriate
     set biggest (max $values)
     switch $biggest
         case $numbooks
-            nil
+            open-book (p $books | rofi -dmenu -I) &
         case $numvids
             mpv (p $vids | sort -V) &
         case $numtunes

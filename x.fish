@@ -1,4 +1,7 @@
+# Defined in /home/michael/.config/fish/buffer/x_xs.fish @ line 2
 function x
-	exit
-  kill %self
+	while read -l line
+      eval $argv $line
+  end
+  return 0
 end

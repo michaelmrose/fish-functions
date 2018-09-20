@@ -1,5 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/g.fish @ line 2
-function g
+# Defined in /home/michael/.config/fish/buffer/gr_gri.fish @ line 18
+function gri
 	switch $argv[1]
     case -w
       while read -l line
@@ -7,10 +7,10 @@ function g
       end
       set res $input
       for word in $argv[2..-1]
-        set res (p $res | g $word)
+        set res (p $res | gr $word)
       end
       p $res
     case "*"
-      grep -iE --line-buffered $argv;
+      grep -iE --line-buffered --invert-match $argv;
   end
 end
