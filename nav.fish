@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/nav.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/nav.fish @ line 2
 function nav
 	while read -l line
         set acc $acc
@@ -15,4 +15,5 @@ function nav
                 set acc (p $acc | unwrap $r)
         end
     end
+    p $acc
 end
