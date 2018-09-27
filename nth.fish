@@ -3,6 +3,6 @@ function nth
 	set segments (foreach $argv 'echo \$_')
 	  while read -l line
         # echo $segments
-        echo $line | awk "{print \$$argv}"
+        echo $line | awk "{print \$$segments}"
     end
 end
