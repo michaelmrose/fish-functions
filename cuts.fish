@@ -8,7 +8,8 @@ function cuts
     while read -l line
         set acc $line
         for p in $paths
-            set acc (echo $acc | cut -d $p[1] -f $p[2])
+            echo p is $p and d is $p[1] f is $p[2]
+            # set acc (echo $acc | cut -d $p[1] -f $p[2])
         end
 
     end
