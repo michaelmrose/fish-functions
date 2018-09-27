@@ -8,7 +8,8 @@ function cuts
     while read -l line
         set acc $line
         for p in $paths
-            echo p is $p and d is $p[1] f is $p[2]
+            set ps (explode-words $p)
+            echo p is $p and d is $ps[1] f is $ps[2]
             # set acc (echo $acc | cut -d $p[1] -f $p[2])
         end
 
