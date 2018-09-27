@@ -7,7 +7,7 @@ function lines
   echo n is $numbers a is $argv
   
   if test (count $numbers) -eq 2
-      p $acc | sed -n $numbers[1],$numbers[2]
+      # p $acc | sed -n $numbers[1],$numbers[2]
       echo p $acc \| sed -n $numbers[1],$numbers[2]
   else
       p $acc | sed -n $numbers[1]
