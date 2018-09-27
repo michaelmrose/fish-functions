@@ -6,11 +6,11 @@ function lines
   set numbers (echo $argv | cut -d - -f1- --output-delimiter=" " | all explode-words)
   
   if test (count $numbers) -eq 2
-      # p $acc | sed -n $numbers[1],$numbers[2]
-      echo p $acc \| sed -n $numbers[1],$numbers[2]
+      p $acc | sed -n $numbers[1],$numbers[2]
+      # echo p $acc \| sed -n $numbers[1],$numbers[2]
   else
       echo else
-      # p $acc | sed -n $numbers[1]
-      echo p $acc \| sed -n $numbers[1]
+      p $acc | sed -n $numbers[1]
+      # echo p $acc \| sed -n $numbers[1]
   end
 end
