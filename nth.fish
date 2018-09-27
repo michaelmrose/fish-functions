@@ -4,6 +4,7 @@ function nth
 	  while read -l line
         # echo $segments
         # echo $line | awk "{print \$segments}"
+        echo segs are $segments
         set com 'echo $line | awk "{print $segments}"'
         eval $com
     end
