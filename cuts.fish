@@ -11,7 +11,7 @@ function cuts
             set ps (explode-words $p)
             set d $ps[1]
             set f $ps[2]
-            set acc (echo $acc | cut -d $d -f $d)
+            set acc (echo $acc | cut -d $d -f $f)
         end
 
         echo $acc
