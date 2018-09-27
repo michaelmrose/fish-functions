@@ -4,6 +4,7 @@ function lines
       set acc $acc $line
   end
   set numbers (echo $argv | cut -d - -f1- --output-delimiter=" ")
+  echo n is $numbers a is $argv
   
   if test (count $numbers) -eq 2
       p $acc | sed -n $numbers[1],$numbers[2]p
