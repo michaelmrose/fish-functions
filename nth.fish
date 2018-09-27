@@ -5,6 +5,6 @@ function nth
         # echo $segments
         # echo $line | awk "{print \$segments}"
         set com 'echo $line | awk "{print $segments}"'
-        echo $com
+        eval $com
     end
 end
