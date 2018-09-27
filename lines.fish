@@ -3,7 +3,7 @@ function lines
 	while read -l line
       set acc $acc $line
   end
-  set numbers (p $argv | cut -d - -f1- --output-delimiter=" ")
+  set numbers (echo $argv | cut -d - -f1- --output-delimiter=" ")
   
   if test (count $numbers) -eq 2
       # p $acc | sed -n $numbers[1],$numbers[2]
