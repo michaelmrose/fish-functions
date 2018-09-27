@@ -10,6 +10,7 @@ function lines
       # p $acc | sed -n $numbers[1],$numbers[2]
       echo p $acc \| sed -n $numbers[1],$numbers[2]
   else
-      p $acc | sed -n $numbers[1]
+      echo else
+      # p $acc | sed -n $numbers[1]
   end
 end
