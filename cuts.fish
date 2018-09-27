@@ -3,8 +3,8 @@ function cuts
 	set delimiters (odds $argv)
     set nums (evens $argv)
     set paths (zip-lists $delimiters $nums)
-    echo p is
-    p $paths
+    # echo p is
+    # p $paths
     while read -l line
         set acc $line
         for p in $paths
