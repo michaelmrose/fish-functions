@@ -10,7 +10,8 @@ function cuts
         for p in $paths
             set ps (explode-words $p)
             set f $ps[2]
-            set d (string escape $ps[1])
+            # set d (string escape $ps[1])
+            set d $ps[1]
             set acc (echo $acc | cut -d $d -f $d)
         end
 
