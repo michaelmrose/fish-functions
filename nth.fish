@@ -7,7 +7,8 @@ function nth
         # set com 'echo $line | awk "{print $segments}"'
         # eval $com
         for val in $argv
-            echo $line | awk "{print \$$val}"
+            set acc $acc (echo $line | awk "{print \$$val}")
         end
+        echo $acc
     end
 end
