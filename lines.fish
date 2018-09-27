@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/lines.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/lines_nth.fish @ line 2
 function lines
 	while read -l line
       set acc $acc $line
