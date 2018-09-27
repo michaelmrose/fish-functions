@@ -2,8 +2,8 @@
 function both
 	set dest (get-destination)
 	  set machines $dest
-    eval $argv
+    eval $argv &
     for i in $machines
-        ssh $i $argv
+        ssh $i $argv &
     end
 end
