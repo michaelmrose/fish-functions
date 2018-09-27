@@ -12,5 +12,6 @@ function lines
   else
       echo else
       # p $acc | sed -n $numbers[1]
+      echo p $acc \| sed -n $numbers[1]
   end
 end
