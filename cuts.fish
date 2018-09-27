@@ -9,11 +9,8 @@ function cuts
         set acc $line
         for p in $paths
             set ps (explode-words $p)
-            set d $ps[1]
             set f $ps[2]
-            if string match $d " "
-                set d \" \"
-            end
+            set d (string escape $ps[1])
             set acc (echo $acc | cut -d $d -f $d)
         end
 
