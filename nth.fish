@@ -1,6 +1,8 @@
-# Defined in /home/michael/.config/fish/functions/nth.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/nth.fish @ line 2
 function nth
 	while read -l line
-    echo $line | awk "{print \$$argv}"
+        set segments (foreach $line 'echo \$_')
+        echo $segments
+        echo $line | awk "{print \$$argv}"
   end
 end
