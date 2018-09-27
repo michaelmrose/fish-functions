@@ -1,13 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/nth.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/lines_nth.fish @ line 16
 function nth
-	# set segments (foreach $argv 'echo \$_')
-    # set segments (seq $argv[1] $argv[2])
+	set numbers (echo $argv | cut -d - -f1- --output-delimiter=" " | all explode-words)
 	  while read -l line
-        # echo $segments
-        # echo $line | awk "{print \$segments}"
-        # set com 'echo $line | awk "{print $segments}"'
-        # eval $com
-        for val in $argv
+        for val in $numbers
             set acc $acc (echo $line | awk "{print \$$val}")
         end
         echo $acc
