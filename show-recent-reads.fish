@@ -7,7 +7,7 @@ function show-recent-reads --description 'use rofi to pick one of the items from
               sopen $choice
           else
               # zathura $recent_reads_fnames[(findindex $choice $recent_reads)] &
-              zathura (get-fname-of-book "$choice") &
+              zathura (string escape(get-fname-of-book "$choice")) &
               # books $choice
           end
       else
