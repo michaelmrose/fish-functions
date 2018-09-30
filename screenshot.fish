@@ -18,8 +18,9 @@ function screenshot
     case "everything"
       maim $target
     case "window"
-        maim -x (get-window-x-pos) -y (get-window-y-pos) -w (get-window-width) -h (get-window-height) $target
+        # maim -x (get-window-x-pos) -y (get-window-y-pos) -w (get-window-width) -h (get-window-height) $target
         # maim --geometry={$x}x{$h}+{$x}+{$y} $target
+        maim --geometry={$w}x{$h}+{$x}+{$y} $target
       case "display"
           # maim -x (get-focused-display-x-offset) -y (get-focused-display-y-offset) -w (get-focused-display-width) -h (get-focused-display-height) $target
       maim --geometry={$dw}x{$dh}+{$xoff}+{$yoff} $target
