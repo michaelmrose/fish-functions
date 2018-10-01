@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/lines_nth.fish @ line 16
+# Defined in /home/michael/.config/fish/buffer/nth.fish @ line 2
 function nth
 	set numbers (echo $argv | cut -d - -f1- --output-delimiter=" " | all explode-words)
 	  while read -l line
@@ -6,5 +6,6 @@ function nth
             set acc $acc (echo $line | awk "{print \$$val}")
         end
         echo $acc
+        er acc
     end
 end
