@@ -6,6 +6,6 @@ function nth
             set acc $acc (echo $line | awk "{print \$$val}")
         end
         echo $acc
-        er acc
+        set -e acc
     end
 end
