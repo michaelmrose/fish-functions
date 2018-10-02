@@ -1,7 +1,7 @@
+# Defined in /home/michael/.config/fish/buffer/x_xs.fish @ line 10
 function all
-	for exp in $argv
-    if not eval $exp
-      return 1
-    end
+	while read -l line
+      set acc $acc \'$line\'
   end
+  eval $argv $acc
 end
