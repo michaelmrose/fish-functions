@@ -7,7 +7,7 @@ function lockall
   # mmlock
   # d killall i3lock
     # ssh desktop fakelock &
-    d fakelock &
+    ssh desktop "set -x DISPLAY :0;fakelock" &
     fakelock
   d killall xtrlock
 end
