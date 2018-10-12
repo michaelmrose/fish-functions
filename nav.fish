@@ -7,7 +7,7 @@ function nav
         set c (echo $field | cut -c1)
         set r (echo $field | cut -c2-)
         switch $c
-            case g
+            case /
                 set acc (p $acc | g $r)
             case l
                 set acc (p $acc | lines $r)
