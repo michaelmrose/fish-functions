@@ -9,6 +9,8 @@ function nav
         switch $c
             case /
                 set acc (p $acc | g $r)
+            case t
+                set acc (p $acc | trim)
             case l
                 set acc (p $acc | lines $r)
             case n
