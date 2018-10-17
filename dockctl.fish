@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/dock_dockctl_undock.fish @ line 6
+# Defined in /home/michael/.config/fish/buffer/dockctl.fish @ line 2
 function dockctl
 	if not exists $argv
     dockctl toggle
@@ -24,12 +24,13 @@ function dockctl
       ssh desktop xrr dual
       wp recall
     case undock
-      sudo umount /mnt/michael
-      set -U wallpaperroot /home/michael/backgrounds
-      # sudo ip link set dev wlp2s0 up
-      ssh desktop xrr dual
-      xrandr --output DP1 --off --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75
-      ssh desktop killall synergyc
+        ssh desktop xrr triple
+        sudo umount /mnt/michael
+        set -U wallpaperroot /home/michael/backgrounds
+        # sudo ip link set dev wlp2s0 up
+        ssh desktop xrr dual
+        xrandr --output DP1 --off --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75
+        ssh desktop killall synergyc
   end
   setup-keyboard
 for i in (xinput list | gr wacom |nth 10|cut -d = -f2)   
