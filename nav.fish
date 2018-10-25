@@ -9,6 +9,8 @@ function nav
         switch $c
             case /
                 set acc (p $acc | g $r)
+            case e
+                set acc (foreach $acc $r _)
             case c
                 set second (echo $r | cut -c1)
                 set rest (echo $r | cut -c2-)
