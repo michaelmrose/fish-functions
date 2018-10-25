@@ -12,7 +12,7 @@ function nav
             case c
                 set second (echo $r | cut -c1)
                 set rest (echo $r | cut -c2-)
-                set $acc (p $acc | cut -d $second -f $rest)
+                # set $acc (p $acc | cut -d $second -f $rest)
             case t
                 set acc (p $acc | trim)
             case l
