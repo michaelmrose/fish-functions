@@ -3,7 +3,6 @@ function nav
 	while read -l line
         set acc $acc $line
     end
-    echo acc is $acc
     for field in $argv
         set c (echo $field | cut -c1)
         set r (echo $field | cut -c2-)
