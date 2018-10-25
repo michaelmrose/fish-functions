@@ -2,11 +2,6 @@
 function fix-touchscreen
 	# s rmmod wacom
   #   s modprobe wacom
-    # set pen (xinput list | nav /wacom /'pen pen' n11 c=2)
-    # set finger (xinput list | nav /wacom /finger n9 c=2)  
-    # set ids (xinput list |nav /wacom c=2 /pointer n1)
-    # for i in $ids
-    #     xinput map-to-output $i eDP1
-    # end
-    foreach (xinput list |nav /wacom c=2 /pointer n1) 'xinput map-to-output _ eDP1'
+    set ids (xinput list |nav /wacom c=2 /pointer n1)
+    foreach $ids 'xinput map-to-output _ eDP1'
 end
