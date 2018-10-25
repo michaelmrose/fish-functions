@@ -8,5 +8,5 @@ function fix-touchscreen
     # for i in $ids
     #     xinput map-to-output $i eDP1
     # end
-    foreach (xinput list |nav /wacom c=2 /pointer n1) 'echo xinput map-to-output _ eDP1'
+    foreach (xinput list |nav /wacom c=2 /pointer n1) 'xinput map-to-output _ eDP1'
 end
