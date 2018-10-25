@@ -1,7 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/nav.fish @ line 2
 function nav
-	"Perform a series of operations to extract segments of textual data."
-	  while read -l line
+	while read -l line
         set acc $acc $line
     end
     echo acc is $acc
