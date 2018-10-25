@@ -9,6 +9,10 @@ function nav
         switch $c
             case /
                 set acc (p $acc | g $r)
+            case c
+                set second (echo $r | cut -c1)
+                set rest (echo $r | cut -c2-)
+                set $acc (p $acc | cut -d $second -f $rest)
             case t
                 set acc (p $acc | trim)
             case l
@@ -17,6 +21,8 @@ function nav
                 set acc (p $acc | nth $r)
             case u
                 set acc (p $acc | unwrap $r)
+            case s
+                set acc (p $acc | sort)
             case U
                 set acc (p $acc | sort -u)
         end
