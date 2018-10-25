@@ -25,7 +25,11 @@ function nav
             case u
                 set acc (p $acc | unwrap $r)
             case s
-                set acc (p $acc | sort)
+                if exists $r
+                    set acc (p $acc | sort -$r)
+                else
+                    set acc (p $acc | sort)
+                end
             case U
                 set acc (p $acc | sort -u)
         end
