@@ -11,7 +11,8 @@ function nav
                 set acc (p $acc | g $r)
             case e
                 set rest (echo $r | cut -c2-)
-                set acc (for i in $acc;eval $rest $i;end)
+                # set acc (for i in $acc;eval $rest $i;end)
+                set acc (foreach $acc 'eval $rest _')
             case c
                 set second (echo $r | cut -c1)
                 set rest (echo $r | cut -c2-)
