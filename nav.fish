@@ -17,6 +17,8 @@ function nav
                 set acc (p $acc | nth $r)
             case u
                 set acc (p $acc | unwrap $r)
+            case U
+                set acc (p $acc | sort -u)
         end
     end
     p $acc
