@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/fe.fish @ line 2
 function fe
 	#better funced
 	for i in $argv
@@ -25,7 +26,7 @@ function fe
   set checksum (checksum-simple $tmp)
   # eval $EDITOR $tmp
   # emacsclient -nw $tmp
-  emacsclient -c $tmp
+  emacsclient -nw $tmp
   set newsum (checksum-simple $tmp)
   if not match $checksum $newsum
     funcsave-file $tmp
