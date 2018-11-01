@@ -32,4 +32,5 @@ function fe
     funcsave-file $tmp
     set -U LASTFNS (return-fnames-of-file $tmp)
   end
+  nothing-urgent
 end
