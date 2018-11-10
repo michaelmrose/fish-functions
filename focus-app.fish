@@ -44,5 +44,5 @@ function focus-app
         case y
         case z
     end
-    i3 '[{$criteria}={$val}]' focus
+    i3 \'[{$criteria}={$val}]\' focus
 end
