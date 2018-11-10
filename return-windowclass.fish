@@ -8,8 +8,10 @@ function return-windowclass
   switch $xs[1]
     case aurora
       set returnval Nightly
-    case calibre
-      set returnval calibre
+    case withtheme
+        set returnval (return-windowclass $argv[3])
+      case calibre
+        set returnval calibre
     case qbittorrent
       set returnval qBittorrent
     case chrome
