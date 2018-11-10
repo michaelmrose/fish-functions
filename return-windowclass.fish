@@ -9,6 +9,7 @@ function return-windowclass
     case aurora
       set returnval Nightly
     case withtheme
+        echo a is $argv and third is $argv[3]
         set returnval (return-windowclass $argv[3])
       case calibre
         set returnval calibre
