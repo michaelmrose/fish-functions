@@ -3,7 +3,7 @@ function restore-workspaces
 	for i in $workspaces
         ws $i
     end
-    ws activeWorkspace
+    ws $activeWorkspace
     # vi3_workspace $activeWorkspace
     # ws $workspaces $activeWorkspace
 end
