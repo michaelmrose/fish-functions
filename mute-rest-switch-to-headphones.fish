@@ -1,8 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/mute-all-except-speakers.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/mute-rest-switch-to-headphones.fish @ line 2
 function mute-rest-switch-to-headphones
 	for i in (seq (ponymix list -t sink --short|wc -l))
-        switch (output type)
-            case headphones
+      switch (output-type)
+          case headphones
                 ponymix unmute
             case '*'
                 ponymix mute
