@@ -47,5 +47,7 @@ function focus-app
             set class title
             set val '.*mu4e.*'
     end
-    eval i3 \'[{$criteria}={$val}]\' focus
+    set com i3 \'[{$criteria}={$val}]\' focus
+    echo $com
+    eval $com
 end
