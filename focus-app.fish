@@ -24,6 +24,7 @@ function focus-app
         case d
             set val Qbittorrent
         case e
+            set val Emacs
         case f
         case g
         case h
