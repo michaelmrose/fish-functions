@@ -9,7 +9,7 @@ function focus-app
       set com i3-msg \'[class=$criteria[1] title=\"$criteria[2]\"]\' focus
   end
   if string sub mu4e $argv
-      set com i3-msg \'[title=.*mu4e.*]\' focus
+      set com i3-msg \'[title=.\*mu4e.\*]\' focus
   end
   echo com is $com
   set res (eval $com)
