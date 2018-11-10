@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mute-rest-switch-to-headphones.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/mute-rest-switch-to_mute-rest-.fish @ line 18
 function mute-rest-switch-to-headphones
 	for i in (seq (ponymix list -t sink --short|wc -l))
       switch (output-type)
