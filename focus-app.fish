@@ -11,7 +11,7 @@ function focus-app
   if string sub mu4e $argv
       set com i3-msg \'[title=.*mu4e.*]\' focus
   end
-  echo $com
+  echo com is $com
   set res (eval $com)
   er vi3op
   update-op-status
