@@ -44,7 +44,7 @@ function focus-app
         case y
         case z
         case E
-            set class title
+            set criteria title
             set val '.*mu4e.*'
     end
     set com i3 \'[{$criteria}={$val}]\' focus
