@@ -44,8 +44,10 @@ function focus-app
         case y
         case z
         case E
-            set criteria title
-            set val '.*mu4e.*'
+            # set criteria title
+            # set val '.*mu4e.*'
+            i3 workspace c
+            return 0
     end
     set com i3 \'[{$criteria}={$val}]\' focus
     echo $com
