@@ -14,10 +14,10 @@ function focus-app
     # update-op-status
     # echo $res | grep true
     # signal-i3blocks pages
+    set criteria class
     switch $argv
         case a
         case b
-            set criteria class
             set val Nightly
         case c
         case d
@@ -43,6 +43,9 @@ function focus-app
         case x
         case y
         case z
+        case E
+            set class title
+            set val '.*mu4e.*'
     end
     eval i3 \'[{$criteria}={$val}]\' focus
 end
