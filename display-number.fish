@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/display-number.fish @ line 1
 function display-number
 	# set displays xrandr|g " connected"
     # set names (p $displays | nth 1)
@@ -8,7 +9,7 @@ function display-number
             echo 0
         case '*'
             switch (get-focused-display)
-                case eDPI
+                case eDP1
                     echo 2
                 case DP1
                     echo 1
