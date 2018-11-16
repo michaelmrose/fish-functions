@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/display-number.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/display-number.fish @ line 2
 function display-number
 	# set displays xrandr|g " connected"
     # set names (p $displays | nth 1)
@@ -10,11 +10,11 @@ function display-number
         case '*'
             switch (get-focused-display)
                 case eDP1
-                    echo 2
+                    echo 0
                 case DP1
                     echo 1
                 case HDMI2
-                    echo 0
-                    end
+                    echo 2
+            end
     end
 end
