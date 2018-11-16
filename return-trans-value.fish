@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/return-trans-value.fish @ line 2
 function return-trans-value
 	set app (echo $argv | cut -d " " -f4 | cut -d "." -f1)
     switch $app
@@ -24,6 +25,6 @@ function return-trans-value
         case i3-frame
             echo 0.5
         case "*"
-            echo 1.0
+            echo 0.999
     end
 end
