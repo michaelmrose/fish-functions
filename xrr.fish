@@ -12,12 +12,12 @@ function xrr
       case desktop
           xrr DP1
       case single
-          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 
+          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --off --output HDMI2 --off
           return 0
       case dual
           # xrr (get-secondary-display) (get-primary-display)
           # xrr DP1 eDP1
-          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1
+          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output HDMI2 --off
       case triple
           xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output HDMI2 --auto --left-of DP1
           # case '*'
