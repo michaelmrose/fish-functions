@@ -19,6 +19,8 @@ function sus
   sleep 10
   fix-touchscreen
   setup-keyboard
+  xrr triple
+  sleep 1
   i3 restart
   # signal-i3blocks battery
   # sleep 10
