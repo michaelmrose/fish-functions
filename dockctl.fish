@@ -27,9 +27,11 @@ function dockctl
         xrr triple
         sleep 1
         fix-touchscreen
+        msg docked
       case undock
           ssh desktop xrr triple
           i3 restart
+          msg undocked
           # sudo umount /mnt/michael
           # set -U wallpaperroot /home/michael/backgrounds
           # sudo ip link set dev wlp2s0 up
