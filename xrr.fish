@@ -19,7 +19,9 @@ function xrr
           # xrr DP1 eDP1
           xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output HDMI2 --off
       case triple
-          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output HDMI2 --auto --left-of DP1
+          # xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output HDMI2 --auto --left-of DP1
+
+          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --left-of eDP1 --output VIRTUAL1 --auto --left-of DP1
           # case '*'
           #   set fn xrandr --auto --output $argv[1]
           # set prior $argv[1]
