@@ -4,7 +4,7 @@ function mute-rest-switch-to
         switch (output-type)
             case $argv
                 ponymix unmute
-                set ndx (math $i - 1)
+                set ndx $i
             case '*'
                 ponymix mute
         end
