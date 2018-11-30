@@ -4,7 +4,7 @@ function mute-rest-switch-to
         switch (output-type)
             case $argv
                 ponymix unmute
-                set ndx $i
+                set ndx (math $i - 1)
             case '*'
                 ponymix mute
         end
@@ -13,5 +13,6 @@ function mute-rest-switch-to
     # while not string match (output-type) $argv
     #     fishswitchaudio.fish
     # end
+
     fishswitchaudio.fish $ndx
 end
