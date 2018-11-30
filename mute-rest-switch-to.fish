@@ -4,10 +4,10 @@ function mute-rest-switch-to
         if string match (output-type) $argv
           ponymix unmute
           set ndx $i
-          echo set n $i
+          # echo set n $i
       else
           ponymix mute
-          echo set nothing and i is $i
+          # echo set nothing and i is $i
         end
         #   switch (output-type)
         #     case $argv
@@ -18,9 +18,9 @@ function mute-rest-switch-to
         # end
         fishswitchaudio.fish
     end
-    # while not string match (output-type) $argv
-    #     fishswitchaudio.fish
-    # end
-    echo n is $ndx
-    fishswitchaudio.fish $ndx
+    while not string match (output-type) $argv
+        fishswitchaudio.fish
+    end
+    # echo n is $ndx
+    # fishswitchaudio.fish $ndx
 end
