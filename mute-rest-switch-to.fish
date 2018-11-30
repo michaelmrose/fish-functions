@@ -3,7 +3,7 @@ function mute-rest-switch-to
 	for i in (seq (ponymix list -t sink --short|wc -l))
       if string match (output-type) $argv
           ponymix unmute
-          set ndx $i
+          set ndx (decrease $i)
       else
           ponymix mute
       end
