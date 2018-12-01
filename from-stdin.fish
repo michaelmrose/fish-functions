@@ -8,7 +8,8 @@ function from-stdin
     while read -l line
         echo $line >> $tmp
     end
-    emacsclient -nw $tmp
+    # emacsclient -nw $tmp
+    eval $argv $tmp
     cat $tmp
     rm $tmp
 end
