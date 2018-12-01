@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/from-stdin.fish @ line 3
+# Defined in /home/michael/.config/fish/buffer/from-stdin.fish @ line 4
 function from-stdin
 	if test -f $tmp
         rm $tmp
