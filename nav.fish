@@ -20,7 +20,7 @@ function nav
                 set acc (p $acc | trim)
             case l
                 set acc (p $acc | lines $r)
-            case m
+            case =
                 set acc (p $acc | string match $r)
             case n
                 set acc (p $acc | nth $r)
