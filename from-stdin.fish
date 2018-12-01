@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/from-stdin.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/from-stdin.fish @ line 2
 function from-stdin
 	set tmp /tmp/stdin-(uid)
   rm $tmp
@@ -7,5 +7,4 @@ function from-stdin
   end
   emacsclient -nw $tmp
   cat $tmp
-  rm $tmp
 end
