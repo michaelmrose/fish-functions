@@ -20,6 +20,11 @@ function nav
                 set acc (p $acc | trim)
             case l
                 set acc (p $acc | lines $r)
+            case m
+                # set first (p $r | cut -d @ -f1)
+                # set second (echo $r | cut -c1)
+                # set rest (echo $r | cut -c2-)
+                # set acc (p $acc | string match $rest)
             case n
                 set acc (p $acc | nth $r)
             case u
