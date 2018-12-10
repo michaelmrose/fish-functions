@@ -9,6 +9,6 @@ function splice
       set vals $argv[2..-1]
   end
   for r in $ranges
-      p $r
-    end
+      p $vals[$r]
+  end
 end
