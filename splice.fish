@@ -3,6 +3,6 @@ function splice
 	set ranges (echo $argv[1] | cut -d , -f1- --output-delimiter=" ")
     set vals $argv[2..-1]
     for r in $ranges
-        echo $r
+        p $r
     end
 end
