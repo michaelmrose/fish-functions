@@ -18,7 +18,7 @@ function mute-rest-switch-to
         # end
         fishswitchaudio.fish
     end
-    fishswitchaudio $argv
+    fishswitchaudio.fish $argv
     # while not string match (output-type) $argv
     #     fishswitchaudio.fish
     # end
