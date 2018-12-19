@@ -18,9 +18,10 @@ function mute-rest-switch-to
         # end
         fishswitchaudio.fish
     end
-    while not string match (output-type) $argv
-        fishswitchaudio.fish
-    end
+    fishswitchaudio $argv
+    # while not string match (output-type) $argv
+    #     fishswitchaudio.fish
+    # end
     # echo n is $ndx
     # fishswitchaudio.fish $ndx
 end
