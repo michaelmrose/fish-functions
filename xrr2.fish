@@ -8,5 +8,5 @@ function xrr2
             set prior output
         end
     end
-    echo $fn
+    eval $fn
 end
