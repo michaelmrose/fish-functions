@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/xrr.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/xrr_xrr2_xrr3_xrr4.fish @ line 2
 function xrr
 	switch $argv[1]
       # case left
