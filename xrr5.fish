@@ -8,7 +8,7 @@ function xrr5
           case save
               set -U SAVED_XRR_COMMAND_$argv[2] $LAST_XRR_COMMAND
           case use
-              set val SAVED_XRR_COMMAND_{$argv}
+              set val SAVED_XRR_COMMAND_{$argv[2]}
               echo v is $val
           case '*'
               #in this case we are given a list of monitors not a valid command
