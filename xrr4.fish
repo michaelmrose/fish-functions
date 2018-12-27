@@ -17,4 +17,5 @@ function xrr4
         end
     end
     echo $fn
+    eval $fn
 end
