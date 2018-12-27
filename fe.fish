@@ -24,9 +24,7 @@ function fe
   end
   println (function-definition $results[-1]) >> $tmp
   set checksum (checksum-simple $tmp)
-  # eval $EDITOR $tmp
-  # emacsclient -nw $tmp
-  emacsclient -nw $tmp
+  emacsclient -c $tmp
   set newsum (checksum-simple $tmp)
   if not match $checksum $newsum
     funcsave-file $tmp
