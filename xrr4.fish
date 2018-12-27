@@ -11,13 +11,11 @@ function xrr4
         set prior $display
     end
     for display in $all
-        echo selected is $selected and d is $display
         if not contains $display $selected
-            echo conditional false
             set fn $fn --output $display --off
         end
     end
     echo $fn
-    # eval $fn
-    # wp recall
+    eval $fn
+    wp recall
 end
