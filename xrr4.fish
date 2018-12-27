@@ -2,14 +2,13 @@
 function xrr4
 	set fn xrandr
 	  set all (xrandr | grep ' connected' | cut -d ' ' -f1)
-    for display in $argv
+    set selected $argv
+    for display in $selected
         set fn $fn --auto --output $display
         if exists $prior
             set fn $fn --right-of $prior
-            set prior $display
-        else
-            set prior $display
         end
+        set prior $display
     end
     for display in $all
         if not contains $display $argv
