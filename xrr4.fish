@@ -13,6 +13,7 @@ function xrr4
     for display in $all
         echo selected is $selected and d is $display
         if not contains $display $selected
+            echo conditional false
             set fn $fn --off --output $display
         end
     end
