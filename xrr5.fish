@@ -9,6 +9,7 @@ function xrr5
               set -U SAVED_XRR_COMMAND_$argv[2] $LAST_XRR_COMMAND
           case use
               set val SAVED_XRR_COMMAND_{$argv[2]}
+              echo v is $val
               if not exists $val
                   echo no such profile saved
                   return 1
