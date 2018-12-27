@@ -1,14 +1,20 @@
-# Defined in /home/michael/.config/fish/buffer/xrr_xrr2_xrr3_xrr4.fish @ line 102
+# Defined in /home/michael/.config/fish/buffer/xrr4_xrr5.fish @ line 24
 function xrr5
 	if not exists $argv
-        xrr5 recall
-    else
-        switch $argv[1]
-            case '*'
-                set fn xrandr
-                set all (xrandr | grep ' connected' | cut -d ' ' -f1)
-                set selected $argv
-                for display in $selected
+      #given no argument rerun last xrr command
+      set fn $LAST_XRR_COMMAND
+  else
+      switch $argv[1]
+          case save
+              set -U SAVED_XRR_COMMAND_$argv[2] $LAST_XRR_COMMAND
+          case use
+              set fn SAVED_XRR_COMMAND_$argv[2]
+          case '*'
+              #in this case we are given a list of monitors not a valid command
+              set fn xrandr
+              set all (xrandr | grep ' connected' | cut -d ' ' -f1)
+              set selected $argv
+              for display in $selected
                     set fn $fn --output $display --auto
                     if exists $prior
                         set fn $fn --right-of $prior
@@ -25,4 +31,5 @@ function xrr5
     echo $fn
     eval $fn
     wp recall
+    set -U LAST_XRR_COMMAND $fn
 end
