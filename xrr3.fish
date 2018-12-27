@@ -1,6 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/xrr2_xrr3.fish @ line 17
 function xrr3
-	set all (xrandr | grep 'connected' | cut -d ' ' -f1)
+	set fn xrandr
+	  set all (xrandr | grep 'connected' | cut -d ' ' -f1)
     for display in $all
         if contains $display $argv
             set fn $fn --auto --output $display
