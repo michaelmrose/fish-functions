@@ -9,7 +9,12 @@ function xrr5
               set -U SAVED_XRR_COMMAND_$argv[2] $LAST_XRR_COMMAND
           case use
               set val SAVED_XRR_COMMAND_{$argv[2]}
-              set fn $$val
+              if not exists $val
+                  echo no such profile saved
+                  return 1
+              else
+                  set fn $$val
+              end
           case rm
               set -e SAVED_XRR_COMMAND_$argv[2]
           case '*'
