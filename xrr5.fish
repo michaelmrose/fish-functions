@@ -19,7 +19,10 @@ function xrr5
               set -e SAVED_XRR_COMMAND_$argv[2]
           case ls
               echo profiles available:
-              set|g '^saved_xrr'|cut -d ' ' -f1 | cut -d _ -f4
+              for p in (set|g '^saved_xrr'|cut -d ' ' -f1 | cut -d _ -f4)
+                  set val SAVED_XRR_COMMAND_{$p}
+                  echo $p: $$val
+              end
               return 0
           case '*'
               #in this case we are given a list of monitors not a valid command
