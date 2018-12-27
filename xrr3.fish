@@ -14,5 +14,5 @@ function xrr3
             set fn $fn --off --output $display
         end
     end
-    echo $fn
+    eval $fn
 end
