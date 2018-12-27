@@ -18,4 +18,5 @@ function xrr4
     end
     echo $fn
     eval $fn
+    wp recall
 end
