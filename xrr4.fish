@@ -11,7 +11,8 @@ function xrr4
         set prior $display
     end
     for display in $all
-        if not contains $display $argv
+        echo selected is $selected and d is $display
+        if not contains $display $selected
             set fn $fn --off --output $display
         end
     end
