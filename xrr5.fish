@@ -10,6 +10,8 @@ function xrr5
           case use
               set val SAVED_XRR_COMMAND_{$argv[2]}
               set fn $$val
+          case rm
+              set -e SAVED_XRR_COMMAND_$argv[2]
           case '*'
               #in this case we are given a list of monitors not a valid command
               set fn xrandr
