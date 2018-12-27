@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/xrr2_xrr3_xrr4.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/xrr_xrr2_xrr3_xrr4.fish @ line 47
 function xrr2
 	set all (xrandr | grep 'connected' | cut -d ' ' -f1)
 	  set prior $argv[1]
