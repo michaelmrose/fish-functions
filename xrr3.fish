@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/xrr2_xrr3_xrr4.fish @ line 17
+# Defined in /home/michael/.config/fish/buffer/xrr_xrr2_xrr3_xrr4.fish @ line 62
 function xrr3
 	set fn xrandr
 	  set all (xrandr | grep 'connected' | cut -d ' ' -f1)
