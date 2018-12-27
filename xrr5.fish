@@ -17,6 +17,8 @@ function xrr5
               end
           case rm
               set -e SAVED_XRR_COMMAND_$argv[2]
+          case literal
+              set fn xrandr $argv[2..-1]
           case ls
               echo profiles available:
               for p in (set|g '^saved_xrr'|cut -d ' ' -f1 | cut -d _ -f4)
