@@ -31,14 +31,15 @@ function xrr5
               set fn xrandr
               set all (xrandr | grep ' connected' | cut -d ' ' -f1)
               set selected $argv
+              set prior ''
               for display in $selected
-                    set fn $fn --output $display --auto
-                    if exists $prior
-                        set fn $fn --right-of $prior
-                    end
-                    set prior $display
-                end
-                for display in $all
+                  set fn $fn --output $display --auto $prior
+                  # if exists $prior
+                  #     set fn $fn --right-of $prior
+                  # end
+                  set prior --right-of $display
+              end
+              for display in $all
                     if not contains $display $selected
                         set fn $fn --output $display --off
                     end
@@ -46,7 +47,7 @@ function xrr5
         end
     end
     echo $fn
-    eval $fn
-    wp recall
-    set -U LAST_XRR_COMMAND $fn
+    # eval $fn
+    # wp recall
+    # set -U LAST_XRR_COMMAND $fn
 end
