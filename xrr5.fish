@@ -47,7 +47,7 @@ function xrr5
         end
     end
     echo $fn
-    # eval $fn
-    # wp recall
-    # set -U LAST_XRR_COMMAND $fn
+    eval $fn
+    wp recall
+    set -U LAST_XRR_COMMAND $fn
 end
