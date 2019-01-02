@@ -1,4 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/send-email.fish @ line 2
 function send-email
-	printf "Subject: $argv[2]nn$argv[3..-1]" | msmtp $argv[1]
+	set target $argv[1]
+    set sub $argv[2]
+    set message $argv[3..-1]
+	  p "Subject: $sub" $message | msmtp $target
 end
