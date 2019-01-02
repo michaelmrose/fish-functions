@@ -10,6 +10,6 @@ function share-url-from-clipboard
     # p "Subject: $title" $url |msmtp $target
     rm /tmp/anemail.txt
     echo "Subject: $subject">>/tmp/anemail.txt
-    echo "url" >>/tmp/anemail.txt
+    echo "$url" >>/tmp/anemail.txt
     cat /tmp/anemail.txt | msmtp $target
 end
