@@ -5,5 +5,6 @@ function share-url-from-clipboard
     set title (url-to-title $url)
     echo sharing url "$url" title "$title" to "$target"
     # echo send-email "$target" "$title" "$url"
-    p "Subject: $title" "$url" | msmtp $target
+    echo the fucking url is $url
+    # p "Subject: $title" "$url" | msmtp $target
 end
