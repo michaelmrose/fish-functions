@@ -7,4 +7,5 @@ function share-url-from-clipboard
     # echo send-email "$target" "$title" "$url"
     echo the fucking url is $url
     # p "Subject: $title" "$url" | msmtp $target
+    p "Subject: $title" "$url"
 end
