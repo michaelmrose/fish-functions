@@ -3,5 +3,5 @@ function send-email
 	set target $argv[1]
     set sub $argv[2]
     set message $argv[3..-1]
-	  p "Subject: $sub" $message | msmtp $target
+	  p "Subject: $sub" "$message" | msmtp $target
 end
