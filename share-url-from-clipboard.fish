@@ -3,5 +3,6 @@ function share-url-from-clipboard
 	set url (xclip -o)
     set target $argv[1]
     set title (url-to-title $url)
+    echo sharing url $url title $title to
     echo sharing url $url title $title to $target
 end
