@@ -3,6 +3,7 @@ function share-url-from-clipboard
 	set url (xclip -selection clipboard -o)
     set target $argv[1]
     set subject (url-to-title $url)
+    set file /tmp/anemail.txt
     if test (count $argv) -gt 1
         set more $argv[2..-1]
     end
@@ -12,9 +13,9 @@ function share-url-from-clipboard
     # p "Subject: $title" "$url" | msmtp $target
     # p "Subject: $title" $url |msmtp $target
     rm /tmp/anemail.txt
-    echo "Subject: $subject">>/tmp/anemail.txt
-    echo >> /tmp/anemail.txt
-    echo "$url" >>/tmp/anemail.txt
-    echo $more >>/tmp/anemail
-    cat /tmp/anemail.txt | msmtp $target
+    echo "Subject: $subject" >> $file
+    echo >> $file
+    echo "$url" >> $file
+    echo "$more" >> $file
+    cat $file | msmtp $target
 end
