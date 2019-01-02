@@ -4,5 +4,5 @@ function share-url-from-clipboard
     set target $argv[1]
     set title (url-to-title $url)
     echo sharing url "$url" title "$title" to "$target"
-    send-email "target" "title" "url"
+    send-email "$target" "$title" "$url"
 end
