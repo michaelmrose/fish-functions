@@ -8,5 +8,5 @@ function share-url-from-clipboard
     # echo the fucking url is $url
     # p "Subject: $title" "$url" | msmtp $target
     # p "Subject: $title" $url |msmtp $target
-    echo "Subject: $subject" "\n\n" \"$url\"|msmtp $target
+    p "Subject: $subject" " " "$url"|msmtp $target
 end
