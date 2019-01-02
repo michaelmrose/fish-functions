@@ -1,8 +1,9 @@
-# Defined in /home/michael/.config/fish/buffer/share-url-from-clipboard.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/send-email_share-url-from-clip.fish @ line 10
 function share-url-from-clipboard
 	set url (xclip -selection clipboard -o)
     set target $argv[1]
     set title (url-to-title $url)
     echo sharing url "$url" title "$title" to "$target"
-    echo send-email "$target" "$title" "$url"
+    # echo send-email "$target" "$title" "$url"
+    p "Subject: $title" "$url" | msmtp $target
 end
