@@ -8,6 +8,8 @@ function share-url-from-clipboard
     # echo the fucking url is $url
     # p "Subject: $title" "$url" | msmtp $target
     # p "Subject: $title" $url |msmtp $target
-    p "Subject: $subject" "$url">/tmp/anemail.txt
+    rm /tmp/anemail.txt
+    echo "Subject: $subject">>/tmp/anemail.txt
+    echo "url" >>/tmp/anemail.txt
     cat /tmp/anemail.txt | msmtp $target
 end
