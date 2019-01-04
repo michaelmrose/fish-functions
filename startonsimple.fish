@@ -10,5 +10,6 @@ function startonsimple
     i3 workspace $workspace
     i3 append_layout $layout
     fish -c "$app" &
+    nothing-urgent
     restore-workspaces
 end
