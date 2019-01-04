@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/starton_startonsimple.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/starton_startonprep_startonsim.fish @ line 2
 function starton
 	set workspace $argv[1]
     set app $argv[2..-1]
