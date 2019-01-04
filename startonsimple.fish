@@ -11,6 +11,6 @@ function startonsimple
     i3 append_layout $layout
     restore-workspaces
     fish -c "$app" &
-    # nothing-urgent
-    noturgent $winclass
+    nothing-urgent
+    # noturgent $winclass
 end
