@@ -1,6 +1,10 @@
-# Defined in /home/michael/.config/fish/buffer/starton.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/startiton_starton.fish @ line 35
 function starton
-	set visible (i3-msg -t get_workspaces|jq .[]|jq -r "select(.visible == true).name" )
+	set workspace $argv[1]
+    set app ($argv[2..-1])
+    set winclass (return-windowclass $app)
+    set layout /tmp/(uuidgen)-layout
+	  set visible (i3-msg -t get_workspaces|jq .[]|jq -r "select(.visible == true).name" )
     set current (i3-msg -t get_workspaces|jq .[]|jq -r "select(.focused == true).name" )
     set json '{
     "swallows": [
@@ -10,5 +14,11 @@ function starton
     ],
     "type": "con"
     }'
-    p $json
+
+    p $json | sed "s/#winclass/$winclass/g" > $layout
+    i3-msg workspace $workspace
+    i3-msg append_layout $layout
+    for ea in $visible $current
+        i3-msg workspace $ea
+    end
 end
