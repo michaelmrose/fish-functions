@@ -19,7 +19,7 @@ function starton
     p $json | sed "s/#winclass/$winclass/g" > $layout
     i3-msg workspace $workspace
     i3-msg append_layout $layout
-    fish -c "$app"
+    fish -c "$app" &
     for ea in $visible $current
         i3-msg workspace $ea
     end
