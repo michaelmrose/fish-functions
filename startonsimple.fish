@@ -12,5 +12,4 @@ function startonsimple
     restore-workspaces
     fish -c "$app" &
     nothing-urgent
-    # noturgent $winclass
 end
