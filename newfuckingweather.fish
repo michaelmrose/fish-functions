@@ -1,7 +1,4 @@
 # Defined in /home/michael/.config/fish/buffer/newfuckingweather.fish @ line 2
 function newfuckingweather
-	curl wttr.in|pup body > /tmp/weather.out
-  set weather (cat /tmp/weather.out | n l4 | cut -c 31-)
-  set temp (cat /tmp/weather.out | n l5 | cut -c 79-81)F
-  echo $weather $temp
+	curl wttr.in/\?0\?T\?Q|cut -c 16- |condense_lines|condense_spaces
 end
