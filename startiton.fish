@@ -6,10 +6,9 @@ function startiton
     println $workspacelist
     echo printing apps
     println $applist
-    # save-workspaces
-    set workspaces (get-active-workspaces | stripnumbers)
-    set activeWorkspace (get-focused-workspace)
-   
+    save-workspaces
+    # set workspaces (get-active-workspaces | stripnumbers)
+    # set activeWorkspace (get-focused-workspace)
 
     for i in (range (count $workspacelist))
         set layout /tmp/(echo (uid)-layout)
@@ -23,8 +22,9 @@ function startiton
         fish -c "$app &"
         rm $layout
     end
-    # restore-workspaces
-    ws $workspaces $activeWorkspace
+    restore-workspaces
+    # ws $workspaces $activeWorkspace
+    
     sleep 3
     fix-all-trans
     hide-all-hidden-windows
