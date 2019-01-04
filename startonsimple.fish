@@ -11,6 +11,4 @@ function startonsimple
     i3 append_layout $layout
     restore-workspaces
     fish -c "$app" &
-    sleep 1
-    nothing-urgent
 end
