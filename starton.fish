@@ -21,4 +21,6 @@ function starton
     for ea in $visible $current
         i3-msg workspace $ea
     end
+    echo layout is thus
+    cat $layout
 end
