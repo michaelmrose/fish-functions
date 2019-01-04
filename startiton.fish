@@ -23,9 +23,10 @@ function startiton
         rm $layout
     end
     restore-workspaces
+    nothing-urgent
     # ws $workspaces $activeWorkspace
     
-    sleep 3
+    # sleep 3
     # fix-all-trans
     # hide-all-hidden-windows
 end
