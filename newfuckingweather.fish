@@ -2,6 +2,6 @@
 function newfuckingweather
 	curl wttr.in|pup body > /tmp/weather.out
   set weather (cat /tmp/weather.out | n l4 | cut -c 31-)
-  set temp (cat /tmp/weather.out | n l5 | cut -c 79-81) °F
-  echo $weather $temp > /tmp/weather
+  set temp (cat /tmp/weather.out | n l5 | cut -c 79-81)F
+  echo $weather $temp
 end
