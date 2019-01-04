@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/startiton_starton.fish @ line 35
 function starton
 	set workspace $argv[1]
-    set app ($argv[2..-1])
+    set app $argv[2..-1]
     set winclass (return-windowclass $app)
     set layout /tmp/(uuidgen)-layout
 	  set visible (i3-msg -t get_workspaces|jq .[]|jq -r "select(.visible == true).name" )
