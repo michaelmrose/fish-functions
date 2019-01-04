@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/startiton.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/startiton_starton.fish @ line 2
 function startiton
 	set workspacelist (odds $argv)
     set applist (evens $argv)
