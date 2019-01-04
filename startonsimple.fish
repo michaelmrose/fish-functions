@@ -9,7 +9,7 @@ function startonsimple
     p $json | sd \#winclass $winclass > $layout
     i3 workspace $workspace
     i3 append_layout $layout
+    restore-workspaces
     fish -c "$app" &
     nothing-urgent
-    restore-workspaces
 end
