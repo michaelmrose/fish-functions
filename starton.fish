@@ -3,7 +3,8 @@ function starton
 	set workspace $argv[1]
     set app $argv[2..-1]
     set winclass (return-windowclass $app)
-    set layout /tmp/(uuidgen)-layout
+    # set layout /tmp/(uuidgen)-layout
+    set layout /tmp/layout
 	  set visible (i3-msg -t get_workspaces|jq .[]|jq -r "select(.visible == true).name" )
     set current (i3-msg -t get_workspaces|jq .[]|jq -r "select(.focused == true).name" )
     set json '{
