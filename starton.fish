@@ -1,10 +1,13 @@
+# Defined in /home/michael/.config/fish/buffer/startiton.fish @ line 34
 function starton
-	set ws $argv[1]
-    set program $argv[2..-1] &
-    set num (instances-of $program)
-    ws $ws
-    eval $program &
-    while test (instances-of $program) -le $num
-        sleep 0.25
-    end
+	set visible (i3-msg -t get_workspaces|jq .[]|jq -r "select(.visible == true).name" )
+    set current (i3-msg -t get_workspaces|jq .[]|jq -r "select(.focused == true).name" )
+    set json '{
+    "swallows": [
+    {
+    "class": "^#winclass$"
+    }
+    ],
+    "type": "con"
+    }'
 end
