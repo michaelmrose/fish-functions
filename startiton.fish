@@ -26,6 +26,6 @@ function startiton
     # ws $workspaces $activeWorkspace
     
     sleep 3
-    fix-all-trans
-    hide-all-hidden-windows
+    # fix-all-trans
+    # hide-all-hidden-windows
 end
