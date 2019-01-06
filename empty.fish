@@ -1,4 +1,4 @@
 # Defined in /home/michael/.config/fish/buffer/empty.fish @ line 2
 function empty
-	string length $argv
+	not string length $argv
 end
