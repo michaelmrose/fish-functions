@@ -1,7 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/empty.fish @ line 2
 function empty
-	if [ $argv = "" ]
-        return 0
-    else
-        return 1
-    end
+	not string length $argv
 end
