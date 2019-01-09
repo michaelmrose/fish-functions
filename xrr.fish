@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/xrr_xrr2_xrr3_xrr4.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/xrr.fish @ line 2
 function xrr
 	switch $argv[1]
       # case left
@@ -10,7 +10,7 @@ function xrr
       case laptop
           xrr eDP1
       case desktop
-          xrr DP1
+          xrandr --output eDP1 --off --output DP1 auto --output HDMI2 --off
       case single
           xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --off --output HDMI2 --off
           return 0
