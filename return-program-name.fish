@@ -1,7 +1,8 @@
+# Defined in /home/michael/.config/fish/buffer/return-program-name.fish @ line 2
 function return-program-name
-	set words (explode $argv)
+	set words $argv
     switch $words[1]
-        case kdesudo
+      case kdesudo
             echo $words[2..-1]
         case sudo
             echo $words[2..-1]
