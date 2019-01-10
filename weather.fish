@@ -2,5 +2,6 @@
 function weather
 	# set g (geo find)
     set g (geo)
-	  curl "wttr.in/$g$argv"
+	  curl "wttr.in/$g.png" --output /tmp/bremerton.png
+    sxiv /tmp/bremerton.png
 end
