@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/weather.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/newfuckingweather_weather.fish @ line 8
 function weather
-	curl "wttr.in/47.56626170000001,-122.6264645$argv"
+	curl "wttr.in/(geo)$argv"
 end
