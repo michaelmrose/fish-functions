@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/get-display-position_get-focus.fish @ line 7
+# Defined in /home/michael/.config/fish/buffer/calculate-available-space_get-.fish @ line 12
 function get-focused-display
-	get-ws-info get output where focused = true
+	i3-msg -t get_workspaces|jq .[]|jq -r "select(.focused == true).output"
 end
