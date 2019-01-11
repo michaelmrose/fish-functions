@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/rofim.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/rofim.fish @ line 2
 function rofim
-	rofim $argv -m (display-number)
+	rofi $argv -m (display-number)
 end
