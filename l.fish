@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/l.fish @ line 2
 function l
-	ls++ --ptsf $argv
+	exa $argv
 end
