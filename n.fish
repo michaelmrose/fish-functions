@@ -28,6 +28,7 @@ function n
                 set acc (p $acc | unwrap $r)
             case _
                 set $acc (p $acc | condense_spaces)
+                echo condenseing
             case s
                 if exists $r
                     set acc (p $acc | sort -$r)
