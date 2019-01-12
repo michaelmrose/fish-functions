@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/n.fish @ line 2
 function n
 	while read -l line
         set acc $acc $line
@@ -25,6 +26,8 @@ function n
                 set acc (p $acc | nth $r)
             case u
                 set acc (p $acc | unwrap $r)
+            case _
+                set $acc (p $acc | condense_spaces)
             case s
                 if exists $r
                     set acc (p $acc | sort -$r)
