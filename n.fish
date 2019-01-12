@@ -26,9 +26,8 @@ function n
                 set acc (p $acc | nth $r)
             case u
                 set acc (p $acc | unwrap $r)
-            case S
-                set $acc (p $acc | condense_spaces)
-                echo condenseing
+            case _
+                set acc (p $acc | condense_spaces)
             case s
                 if exists $r
                     set acc (p $acc | sort -$r)
