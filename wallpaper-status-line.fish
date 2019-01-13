@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wallpaper-status-line.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/wallpaper-status-line.fish @ line 2
 function wallpaper-status-line
-	basename $bgimage .jpg|sd - " "
+	basename $bgimage |sd - " " | cut -d . -f1
 end
