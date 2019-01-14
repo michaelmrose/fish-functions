@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/vi3_get-workspace.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/gws_tws_vi3_get-workspace_vi3_.fish @ line 12
 function vi3_get-workspace
 	er vi3op
     update-op-status
