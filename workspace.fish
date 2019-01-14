@@ -22,6 +22,6 @@ function workspace
   # end
   # signal-i3blocks pages
 # echo hi |  screenshot-workspace
-  set w "[   $argv   ]"
+  set w "|   $argv   |"
   i3-msg workspace $w
 end
