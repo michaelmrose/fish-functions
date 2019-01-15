@@ -15,7 +15,12 @@ function wp
             case recent
                 wp (sxiv -tbfor $recent_backgrounds 2> /dev/null)
             case cat
-                switch $argv[2]
+                if test (count $argv) -lt 2
+                    set nextarg help
+                else
+                    set nextarg $argv[2]
+                end
+                switch $nextarg
                     case help
                         echo you can use mv create or ls
                     case mv
