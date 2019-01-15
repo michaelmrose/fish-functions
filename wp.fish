@@ -38,7 +38,12 @@ function wp
             case similar
                 wp style $bgstyle
             case list
-                findall (get-folder-for-backgrounds $argv[2]) image
+                if test (count $argv) -gt 2
+                    set target $argv[3]
+                else
+                    set target backgrounds
+                end
+                findall (get-folder-for-backgrounds $target) image
             case next
                 wallpaper-next
             case prev
