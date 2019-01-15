@@ -37,7 +37,7 @@ function wp
                 wp style any
             case similar
                 wp style $bgstyle
-            case list
+            case ls
                 if test (count $argv) -gt 2
                     set target $argv[3]
                 else
