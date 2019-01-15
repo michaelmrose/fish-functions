@@ -7,4 +7,5 @@ function range-to-brace
     end
     set acc $acc[1..-2]
     set acc "$acc}"
+    echo a is $acc
 end
