@@ -230,6 +230,6 @@ function wallpaper
     # echo checkpoint 5
     echo bgimage is $bgimage
     echo img is $img
-    set -U bgimage $img
+    set -Ux bgimage $img
     echo bgimage is now $bgimage
 end
