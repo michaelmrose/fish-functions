@@ -6,6 +6,7 @@ function wp
         set $rest $argv[2..-1]
         switch $argv[1]
             case view
+                echo r is $rest
                 echo pics (get-folder-for-backgrounds $rest)
             case edit
                 gimp $bgimage
