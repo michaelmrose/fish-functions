@@ -38,8 +38,8 @@ function wp
             case similar
                 wp style $bgstyle
             case ls
-                if test (count $argv) -gt 2
-                    set target $argv[3]
+                if test (count $argv) -gt 1
+                    set target $argv[2]
                 else
                     set target backgrounds
                 end
