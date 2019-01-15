@@ -15,5 +15,5 @@ function set-wallpaper
   end
   feh --bg-{$format} $img
   s cp $img /etc/lightdm/bg.jpg
-  set -Ux bgimage $img
+  set -U bgimage $img
 end
