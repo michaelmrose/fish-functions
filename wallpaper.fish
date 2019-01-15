@@ -229,5 +229,6 @@ function wallpaper
     # sync-desktop-wallpaper &
     # echo checkpoint 5
     echo bgimage is $bgimage
+    echo img is $img
     set -U bgimage $img
 end
