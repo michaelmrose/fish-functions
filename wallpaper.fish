@@ -1,7 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/wallpaper.fish @ line 2
 function wallpaper
-	#default values
-    set norecord false
+	set norecord false
 
     for i in (getvariables $argv)
         set val (explode $i)
@@ -223,11 +222,11 @@ function wallpaper
     # echo checkpoint 4
     feh --bg-{$format} $img
     s cp $bgimage /etc/lightdm/bg.jpg
-    if pgrep i3blocks > /dev/null
-      signal-i3blocks wallpaper
-    end
-    convert $bgimage /tmp/bgimage.png &
+    # if pgrep i3blocks > /dev/null
+    #   signal-i3blocks wallpaper
+    # end
     signal-i3blocks 12
+    convert $bgimage /tmp/bgimage.png &
     # sync-desktop-wallpaper &
     # echo checkpoint 5
 end
