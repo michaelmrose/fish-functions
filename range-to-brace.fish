@@ -6,7 +6,5 @@ function range-to-brace
         echo acc is $acc
     end
     set acc $acc[1..-2]
-    echo acc is $acc
-    set acc "$acc}"
-    echo a is $acc
+    echo acc is now $acc
 end
