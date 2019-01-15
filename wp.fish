@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wallpaper_wp.fish @ line 256
+# Defined in /home/michael/.config/fish/buffer/set-wallpaper_wp.fish @ line 23
 function wp
 	if test -f $argv[1]
         set-wallpaper $argv[1]
