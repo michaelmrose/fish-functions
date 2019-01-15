@@ -14,6 +14,8 @@ function wp
                 wp (sxiv -tbfor $recent_backgrounds 2> /dev/null)
             case cat
                 switch $argv[2]
+                    case help
+                        echo you can use mv create or ls
                     case mv
                         move-current-wallpaper-to-category $argv[3..-1]
                     case create
@@ -44,8 +46,6 @@ function wp
                     set target backgrounds
                 end
                 findall (get-folder-for-backgrounds $target) image
-                echo c is (count $argv)
-                echo t is $target
             case next
                 wallpaper-next
             case prev
