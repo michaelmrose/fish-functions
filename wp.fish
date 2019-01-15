@@ -43,8 +43,9 @@ function wp
                 else
                     set target backgrounds
                 end
-                echo t is $target
                 findall (get-folder-for-backgrounds $target) image
+                echo c is (count $argv)
+                echo t is $target
             case next
                 wallpaper-next
             case prev
