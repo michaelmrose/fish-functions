@@ -5,5 +5,5 @@ function range-to-brace
         echo acc is $acc
         set acc $acc$i,
     end
-    echo $acc[1..-2]
+    echo $acc[1..-2]\}
 end
