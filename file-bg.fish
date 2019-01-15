@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/file-bg.fish @ line 2
 function file-bg
 	set file $argv[1]
     set target $argv[2]
@@ -11,5 +12,4 @@ function file-bg
     set location $dir/$name.$ext
     mv $file $location
     wp $location
-    touch $wallpaperroot/checksums/(checksum-simple $file)
 end
