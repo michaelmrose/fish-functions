@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/change-dolphin-dir.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/change-dolphin-dir_change-dolp.fish @ line 2
 function change-dolphin-dir
 	echo "$argv" | clipboard
     sleep 0.1
