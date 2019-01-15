@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/set-wallpaper.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/set-wallpaper_wp.fish @ line 2
 function set-wallpaper
 	set img $argv[1]
   echo i is $img
@@ -16,4 +16,5 @@ function set-wallpaper
   feh --bg-{$format} $img
   s cp $img /etc/lightdm/bg.jpg
   set -U bgimage $img
+  signal-i3blocks 12
 end
