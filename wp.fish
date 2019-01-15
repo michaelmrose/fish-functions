@@ -4,11 +4,10 @@ function wp
         set-wallpaper $argv[1]
     else
 
-        set $rest $argv[2..-1]
+        set rest $argv[2..-1]
 
         switch $argv[1]
             case view
-                echo r is $argv[2]
                 echo pics (get-folder-for-backgrounds $rest)
             case edit
                 gimp $bgimage
