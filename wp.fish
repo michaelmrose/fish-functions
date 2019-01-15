@@ -28,7 +28,7 @@ function wp
                     case create
                         create-wallpaper-category $argv[3..-1]
                     case ls
-                        find $wallpaperroot -type d | each cutlast /
+                        find $wallpaperroot -type d |rev | cut -d / -f1|rev
                 end
             case name
                 name-of-wallpaper
