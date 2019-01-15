@@ -13,7 +13,7 @@ function wp
                 gimp $bgimage
                 wp $bgimage
             case recent
-                sxiv -tbfor $recent_backgrounds 2> /dev/null
+                wp (sxiv -tbfor $recent_backgrounds 2> /dev/null)
             case cat
                 switch $argv[2]
                     case help
