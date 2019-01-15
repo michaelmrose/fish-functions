@@ -1,4 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/change-dolphin-dir_change-dolp.fish @ line 12
+# Defined in /home/michael/.config/fish/buffer/change-dolphin-dir_change-dolp.fish @ line 13
 function change-dolphin-to-autojump-target
-	change-dolphin-dir (autojump (rfi enter))
+	set target (autojump (rfi enter))
+    change-dolphin-dir $target
 end
