@@ -192,7 +192,6 @@ function wallpaper
     end
 
     # echo checkpoint 2
-    set -U bgimage $img
     if not match $norecord true
         add-to-recent-backgrounds $img
         set -U wallpaperindex 1
@@ -229,4 +228,6 @@ function wallpaper
     convert $bgimage /tmp/bgimage.png &
     # sync-desktop-wallpaper &
     # echo checkpoint 5
+    echo bgimage is $bgimage
+    set -U bgimage $img
 end
