@@ -8,7 +8,7 @@ function wp
 
         switch $argv[1]
             case view
-                echo pics (get-folder-for-backgrounds $rest)
+                pics (get-folder-for-backgrounds $rest)
             case edit
                 gimp $bgimage
                 wp $bgimage
