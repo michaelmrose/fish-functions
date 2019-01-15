@@ -43,6 +43,7 @@ function wp
                 else
                     set target backgrounds
                 end
+                echo t is $target
                 findall (get-folder-for-backgrounds $target) image
             case next
                 wallpaper-next
@@ -55,7 +56,7 @@ function wp
             case fill
                 feh --bg-fill $bgimage
             case count
-                # wallpaper list backgrounds | wc -l
+                wp ls |wc -l
             case size
                 du -hs $wallpaperroot
             case rename
