@@ -2,6 +2,7 @@
 function range-to-brace
 	set acc "{"
     for i in (seq $argv[1] $argv[2])
+        echo acc is $acc
         set acc $i{$acc},
     end
     echo $acc[1..-2]
