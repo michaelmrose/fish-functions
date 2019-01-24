@@ -1,7 +1,14 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
-	if test -f $argv[1]
-        set-wallpaper $argv[1]
+	if not exists $argv
+        while read -l line
+            wp $line
+        end
+        return 0
+    end
+
+	  if test -f $argv[1]
+            set-wallpaper $argv[1]
     else
         switch $argv[1]
             case view
@@ -82,5 +89,5 @@ function wp
                 wp $img
         end
 
-    end
+        end
 end
