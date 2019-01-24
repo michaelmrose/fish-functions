@@ -23,7 +23,7 @@ function wp
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case cat
                 if test (count $argv) -lt 2
-                    echo try mk, mv, file, ls 'recent|categories|some category' 
+                    echo try mk, mv, file, ls, ls 'some category' 
                     return 1
                 end
                 switch $argv[2]
