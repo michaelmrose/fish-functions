@@ -93,6 +93,8 @@ function wp
             case ls
             case next
                 wallpaper-next
+            case open
+                sxiv $bgimage
             case prev
                 wallpaper-prev
             case scale
