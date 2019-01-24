@@ -41,6 +41,7 @@ function wp
                     case file
                         move-current-wallpaper-to-category $argv[3]
                     case ls
+                        echo in ls
                         switch $argv[3]
                             case recent
                                 println $recent_backgrounds
