@@ -22,7 +22,7 @@ function wp
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case cat
-                if test (count $argv) -lt 3
+                if test (count $argv) -lt 2
                     echo try mk, mv, file, ls 'recent|categories|some category' 
                     return 1
                 end
@@ -41,17 +41,12 @@ function wp
                     case file
                         move-current-wallpaper-to-category $argv[3]
                     case ls
-                        echo in ls
-                        switch $argv[3]
-                            case recent
-                                println $recent_backgrounds
-                            case categories
-                                for i in (find $wallpaperroot -type d)
-                                    cutlast / $i
-                                end
-                                
-                            case '*'
-                                findall (get-folder-for-backgrounds $argv[3]) image
+                        if test (count $argv) -eq 2
+                            for i in (find $wallpaperroot -type d)
+                                cutlast / $i
+                            end
+                        else
+                            findall (get-folder-for-backgrounds $argv[3]) image
                         end
                         
                 end
