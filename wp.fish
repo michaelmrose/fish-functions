@@ -73,7 +73,14 @@ function wp
             case save
                 save-wp $argv[2]
             case search
-                sxiv -tbfor (findall $wallpaperroot image | gr -w $argv[2..-1]) 2> /dev/null
+                set images (findall $wallpaperroot image |g $argv[2..-1]) 2> /dev/null
+                if exists $images
+                    sxiv -tbfor $images
+                else
+                    echo no results
+                end
+
+                # sxiv -tbfor (findall $wallpaperroot image | gr -w $argv[2..-1]) 2> /dev/null
             case rm
                 rm $bgimage
                 set recent_backgrounds (remove-from-list $bgimage $recent_backgrounds)
