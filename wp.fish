@@ -75,7 +75,8 @@ function wp
             case search
                 set images (findall $wallpaperroot image |g $argv[2..-1]) 2> /dev/null
                 if exists $images
-                    sxiv -tbfor $images
+                    # sxiv -tbfor $images
+                    p $images
                 else
                     echo no results
                 end
