@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/wallpaper_wp.fish @ line 236
 function wp
 	if not exists $argv
         while read -l line
@@ -105,6 +105,13 @@ function wp
                 return
             case count
                 wallpaper list backgrounds | wc -l
+            case pano
+                set perc (math 100 / (get-number-of-displays))
+                convert -crop $perc%x100% +repage $bgimage /tmp/pano.jpg
+                for i in (get-display-order)
+                    set lst $lst /tmp/pano-$i.jpg
+                end
+                feh --bg-fill $lst 
             case size
                 du -hs $wallpaperroot
             case rename
