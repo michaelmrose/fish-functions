@@ -14,9 +14,6 @@ function wp
             case view
                 pics (get-folder-for-backgrounds $argv[2])
             case categories
-                for i in (find $wallpaperroot -type d)
-                    cutlast / $i
-                end
             case edit
                 gimp $bgimage
                 wp $bgimage
@@ -25,27 +22,39 @@ function wp
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case cat
-                move-current-wallpaper-to-category $argv[2]
+                switch $argv[2]
+                    case mk
+                        create-wallpaper-category $argv[3..-1]
+                    case mv
+                        set old $argv[3]
+                        set new $argv[4]
+                        set src (get-folder-for-backgrounds $old)
+                        set dest (echo $src | sed "s#/$old#/$new#g")
+                        sed -i "s#/$old/#/$new/#g" ~/.fehbg
+                        mv $src $dest
+                        set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$old/#/$new/#g")
+                        wp recall
+                    case file
+                        move-current-wallpaper-to-category $argv[3]
+                    case ls
+                        switch $argv[3]
+                            case recent
+                                println $recent_backgrounds
+                            case categories
+                                for i in (find $wallpaperroot -type d)
+                                    cutlast / $i
+                                end
+                                
+                            case '*'
+                                findall (get-folder-for-backgrounds $argv[2]) image
+                        end
+                        
+                end
             case name
                 name-of-wallpaper
             case create
-                create-wallpaper-category $argv[2..-1]
             case file
                 file-bg $argv[2..-1]
-            case rename-category
-                if test (count $argv -gt 2)
-                    set old $argv[2]
-                    set new $argv[3]
-                else
-                    set old (cutlastn / 2 $bgimage) 
-                    set new $argv[2]
-                end
-                set src (get-folder-for-backgrounds $old)
-                set dest (echo $src | sed "s#/$old#/$new#g")
-                sed -i "s#/$old/#/$new/#g" ~/.fehbg
-                mv $src $dest
-                set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$old/#/$new/#g" | sed "s#/mnt/michael##g")
-                wp recall
             case save
                 save-wp $argv[2]
             case search
@@ -59,11 +68,6 @@ function wp
             case similar
                 wp style $bgstyle
             case ls
-                if test (count $argv) -gt 1
-                    findall (get-folder-for-backgrounds $argv[2]) image
-                else
-                    println $recent_backgrounds
-                end
             case next
                 wallpaper-next
             case prev
