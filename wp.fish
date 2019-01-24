@@ -36,7 +36,7 @@ function wp
                 gimp $bgimage
                 wp $bgimage
             case recent
-                sxiv -tbfor $recent_backgrounds 2> /dev/null
+                sxiv -tbfor $recent_backgrounds 2> /dev/null | wp
             case cat
                 if test (count $argv) -lt 2
                     echo try mk, mv, file, ls, ls 'some category' 
