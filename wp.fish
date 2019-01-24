@@ -22,8 +22,12 @@ function wp
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case cat
+                if test (count $argv) -lt 3
+                    echo try mk, mv, file, ls 'recent|categories|some category' 
+                    return 1
+                end
                 switch $argv[2]
-                    case mk
+                        case mk
                         create-wallpaper-category $argv[3..-1]
                     case mv
                         set old $argv[3]
