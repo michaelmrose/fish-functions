@@ -1,4 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/pac_paci.fish @ line 7
+# Defined in /home/michael/.config/fish/buffer/paci.fish @ line 2
 function paci
-	pacaur -S --noconfirm --noedit $argv
+	
+    yay -S $argv
 end
