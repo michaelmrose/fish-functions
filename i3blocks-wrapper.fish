@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/i3blocks-wrapper.fish @ line 2
 function i3blocks-wrapper
-	set click \"$argv[1]\"
-    set output \"$argv[2]\"
+	set click (echo $argv | cut -d @ -f1)
+    set output (echo $argv | cut -d @ -f2)
     echo click is $click
     # if exists $BLOCK_BUTTON
     #     eval "$click"
