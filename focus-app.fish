@@ -1,8 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/focus-app.fish @ line 2
 function focus-app
-	# set criteria (explode-words (return-windowclass (appkey $argv)))
-
-    #   switch (count $criteria)
+	
     #           case 1
     #     set com i3-msg \'[class=$criteria]\' focus
     #   case 2
@@ -61,5 +59,5 @@ function focus-app
     end
     set com i3 \'[{$criteria}={$val}]\' focus
     echo $com
-    eval $com
+    eval $com > /dev/null
 end
