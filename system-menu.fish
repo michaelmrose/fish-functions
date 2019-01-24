@@ -1,17 +1,13 @@
+# Defined in /home/michael/.config/fish/buffer/system-menu.fish @ line 2
 function system-menu
-	set choice (rfi match "logout" "reboot" "shutdown" "new session")
-    if exists $choice
-        switch $choice
-            case "logout"
-                i3-msg exit
-            case "reboot"
-                sudo shutdown -r now
-            case "shutdown"
-                sudo shutdown -h now
-            case "new session"
-                new-session
-            case "*"
-                echo not an option
+	switch (p Suspend Shutdown Switch Reboot | rofi -dmenu -i -p System:)
+        case Suspend
+            echo suspending
+        case Shutdown
+            echo shutting down
+        case Reboot
+            echo rebooting
+        case Switch
+            dm-tool switch-to-greeter
         end
-    end
 end
