@@ -13,15 +13,22 @@ function wp
         switch $argv[1]
             case help
                 echo 'wp command arguments:'
-                echo 'view [category] -> view all images in folder' 
-                echo 'edit            -> edit in gimp and then reload'
-                echo 'recent          -> view recent backgrounds via sxiv'
-                echo 'cat create [category] -> to create a category'
+                echo 'view [category]        -> view all images in folder' 
+                echo 'edit                   -> edit in gimp and then reload'
+                echo 'recent                 -> view recent backgrounds via sxiv'
+                echo 'cat create [category]  -> to create a category'
                 echo 'cat rename [old] [new] -> rename old to new'
-                echo 'cat mv [category] -> move current background to category'
-                echo 'cat ls -> list categories'
-                echo 'cat ls [category] -> list files in category'
-                echo 'name -> print category: filename with - replaced with spaces'
+                echo 'cat mv [category]      -> move current background to category'
+                echo 'cat ls                 -> list categories'
+                echo 'cat ls [category]      -> list files in category'
+                echo 'cat [category]         -> pick a random background from category'
+                echo 'name                   -> print category: filename with - replaced with spaces'
+                echo 'save spec              -> save current image as category/name-of-wallpaper'
+                echo 'rm                     -> remove current wallpaper'
+                echo 'recall                 -> rerun last feh command'
+                echo 'similar                -> set a random wallpaper in the category as current as defined by bgstyle'
+                echo 'next/prev              -> set next or previous wp in recent_backgrounds list'
+                echo 'fill|scale|max         -> set current image to fill scale or max setting per feh'
             case view
                 pics (get-folder-for-backgrounds $argv[2])
             case categories
@@ -55,11 +62,12 @@ function wp
                         else
                             findall (get-folder-for-backgrounds $argv[3]) image
                         end
+                    case '*'
+                        wp style $argv[2]
                         
                 end
             case name
                 name-of-wallpaper
-            case create
             case file
                 file-bg $argv[2..-1]
             case save
