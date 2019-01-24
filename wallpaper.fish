@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wallpaper_wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/set-wallpaper_wallpaper.fish @ line 25
 function wallpaper
 	set norecord false
 
