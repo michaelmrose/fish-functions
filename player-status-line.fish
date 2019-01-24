@@ -2,7 +2,10 @@
 function player-status-line
 	set playerStatus (apctl status)
 	if contains $playerStatus Playing Paused
-      set title (apctl metadata title | cut -c1-20)
+      set title (apctl metadata title)
+      if test (echo $title | wc -c) -gt 30
+          set title (echo $title | cut -c1-30)..
+      end
       set artist (apctl metadata artist)
       set symbol (match-lists $playerStatus "Playing Paused" " " "")
       echo $symbol $title by $artist
