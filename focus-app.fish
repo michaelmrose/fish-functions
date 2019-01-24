@@ -1,7 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/focus-app.fish @ line 2
 function focus-app
 	
-    #           case 1
     #     set com i3-msg \'[class=$criteria]\' focus
     #   case 2
     #     set com i3-msg \'[class=$criteria[1] title=\"$criteria[2]\"]\' focus
@@ -58,6 +57,6 @@ function focus-app
             return 0
     end
     set com i3 \'[{$criteria}={$val}]\' focus
-    echo $com
+    # echo $com
     eval $com > /dev/null
 end
