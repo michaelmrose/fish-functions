@@ -5,6 +5,7 @@ function i3blocks-wrapper
     echo click is $click
     echo output is $output
     if exists $BLOCK_BUTTON
+        echo button defined
         eval "$click"
     else
         eval $output
