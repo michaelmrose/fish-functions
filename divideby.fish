@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/divideby.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/divideby.fish @ line 2
 function divideby
 	while read -l line
-        math \\ $argv
-    end
+      eval math "$line / $argv"
+  end
 end
