@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wallpaper_wp.fish @ line 236
+# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
 	if not exists $argv
         while read -l line
@@ -101,7 +101,7 @@ function wp
                 feh --bg-max $bgimage
                 return
             case fill
-                feh --bg-fill $bgimage
+                feh --bg-max $bgimage
                 return
             case count
                 wallpaper list backgrounds | wc -l
