@@ -9,5 +9,5 @@ function human-byte-count
     return sprintf( xf"%s
 ", x, s)
     }
-    {gsub(/^[0-9]+/, human($1)); print}'
+    {gsub(/^[0-9]+/, human($argv)); print}'
 end
