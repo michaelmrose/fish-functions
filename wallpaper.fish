@@ -30,9 +30,7 @@ function wallpaper
           echo view \[category\] - view category
           echo categories - list categories
           echo edit - edit $bgimage with gimp, reload on exit
-          echo recent - show recently used backgrounds
-          echo cat \[cateory\] - move $bgime to category
-          echo name - return name
+          echo recent - show recently used backgrounds echo cat \[cateory\] - move $bgime to category echo name - return name
           echo album - set current album art as background
           return 0
         case view
