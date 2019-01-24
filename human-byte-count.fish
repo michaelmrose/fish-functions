@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/human-byte-count.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/human-byte-count.fish @ line 2
 function human-byte-count
 	awk 'function human(x) {
     s=" B   KiB MiB GiB TiB EiB PiB YiB ZiB"
@@ -6,7 +6,8 @@ function human-byte-count
     {x/=1024; s=substr(s,5)}
     s=substr(s,1,4)
     xf=(s==" B  ")?"%5d   ":"%8.2f"
-    return sprintf( xf"%s\n", x, s)
+    return sprintf( xf"%s
+", x, s)
     }
-    {gsub(/^[0-9]+/, human($argv)); print}'
+    {gsub(/^[0-9]+/, human($1)); print}'
 end
