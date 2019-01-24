@@ -51,7 +51,7 @@ function wp
                                 end
                                 
                             case '*'
-                                findall (get-folder-for-backgrounds $argv[2]) image
+                                findall (get-folder-for-backgrounds $argv[3]) image
                         end
                         
                 end
