@@ -1,6 +1,8 @@
 # Defined in /home/michael/.config/fish/buffer/system-menu.fish @ line 2
 function system-menu
-	switch (p Suspend Shutdown Switch Reboot | rofi -dmenu -i -p System:)
+	switch (p Lightsout Suspend Shutdown Switch Reboot | rofi -dmenu -i -p System:)
+        case Lightsout
+            lightsout
         case Suspend
             echo suspending
         case Shutdown
