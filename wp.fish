@@ -11,14 +11,23 @@ function wp
             set-wallpaper $argv[1]
     else
         switch $argv[1]
+            case help
+                echo 'wp command arguments:'
+                echo 'view [category] -> view all images in folder' 
+                echo 'edit            -> edit in gimp and then reload'
+                echo 'recent          -> view recent backgrounds via sxiv'
+                echo 'cat create [category] -> to create a category'
+                echo 'cat rename [old] [new] -> rename old to new'
+                echo 'cat mv [category] -> move current background to category'
+                echo 'cat ls -> list categories'
+                echo 'cat ls [category] -> list files in category'
+                echo 'name -> print category: filename with - replaced with spaces'
             case view
                 pics (get-folder-for-backgrounds $argv[2])
             case categories
             case edit
                 gimp $bgimage
                 wp $bgimage
-            case url
-                file-bg-url $argv[2..-1]
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case cat
@@ -27,9 +36,9 @@ function wp
                     return 1
                 end
                 switch $argv[2]
-                        case mk
+                    case create
                         create-wallpaper-category $argv[3..-1]
-                    case mv
+                    case rename
                         set old $argv[3]
                         set new $argv[4]
                         set src (get-folder-for-backgrounds $old)
@@ -38,13 +47,11 @@ function wp
                         mv $src $dest
                         set -U recent_backgrounds (p $recent_backgrounds | sed "s#/$old/#/$new/#g")
                         wp recall
-                    case file
+                    case mv
                         move-current-wallpaper-to-category $argv[3]
                     case ls
                         if test (count $argv) -eq 2
-                            for i in (find $wallpaperroot -type d)
-                                cutlast / $i
-                            end
+                            find $wallpaperroot -type d|rev | cut -d / -f1|rev
                         else
                             findall (get-folder-for-backgrounds $argv[3]) image
                         end
