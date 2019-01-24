@@ -3,8 +3,8 @@ function i3blocks-wrapper
 	set click $argv[1]
     set output $argv[2]
     if exists $BLOCK_BUTTON
-        $click > /dev/null
+        eval $click
     else
-        $output
+        eval $output
     end
 end
