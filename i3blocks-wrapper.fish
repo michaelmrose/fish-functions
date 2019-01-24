@@ -3,7 +3,7 @@ function i3blocks-wrapper
 	set click (echo $argv | cut -d @ -f1)
     set output (echo $argv | cut -d @ -f2)
     if exists $BLOCK_BUTTON
-        eval "$click"
+        eval "$click" > /dev/null
     else
         eval $output
     end
