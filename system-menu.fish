@@ -4,12 +4,12 @@ function system-menu
         case Lightsout
             lightsout
         case Suspend
-            msg suspending
-      case Shutdown
-          msg shutting down
-      case Reboot
-          msg rebooting
+            sus
+        case Shutdown
+            sdown
+        case Reboot
+            rboot
         case "Switch User"
             dm-tool switch-to-greeter
-        end
+    end
 end
