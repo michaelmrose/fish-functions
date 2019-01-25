@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/rb.fish @ line 8
+# Defined in /home/michael/.config/fish/buffer/rb_rboot_sdown.fish @ line 16
 function sdown
-	# manage-share ensure-unmounted
+	sudo umount -fl /mnt/michael
     cleanup-desktop
 	  sudo shutdown -h now
 end
