@@ -4,7 +4,7 @@ function count-matching-words
     set text (echo $argv | cut -d @ -f2)
     set cnt 0
     echo words is $words and text is $text
-    for word in (p $words)
+    for word in (explode-words $words)
         echo word is $word
         if echo $text |g $word > /dev/null
             set cnt (increase $cnt)
