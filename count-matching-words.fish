@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/count-matching-words.fish @ line 2
 function count-matching-words
-	set words (echo $argv | cut -d @ -f1)
-    set text (echo $argv | cut -d @ -f2)
+	set words (echo $argv | cut -d @ -f1 | trim)
+    set text (echo $argv | cut -d @ -f2| trim)
     set cnt 0
     echo words is $words and text is $text
     for word in (explode-words $words)
