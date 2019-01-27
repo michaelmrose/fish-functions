@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/save-wp_wp.fish @ line 10
 function wp
 	if not exists $argv
         while read -l line
@@ -68,10 +68,10 @@ function wp
                 end
             case name
                 name-of-wallpaper
-            case file
-                file-bg $argv[2..-1]
+                # case file
+                #     file-bg $argv[2..-1]
             case save
-                echo save-wp $argv[2]
+	              file-bg $bgimage $argv[2..-1]
             case search
                 set images (findall $wallpaperroot image |g $argv[2..-1]) 2> /dev/null
                 if exists $images
