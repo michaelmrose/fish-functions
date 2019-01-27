@@ -7,8 +7,10 @@ function system-menu
             sus
         case Shutdown
             sdown
-        case Reboot
-            rboot
+      case Restart
+          restart-i3
+      case Reboot
+          rboot
         case "Switch User"
             dm-tool switch-to-greeter
     end
