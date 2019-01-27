@@ -71,7 +71,7 @@ function wp
             case file
                 file-bg $argv[2..-1]
             case save
-                save-wp $argv[2]
+                echo save-wp $argv[2]
             case search
                 set images (findall $wallpaperroot image |g $argv[2..-1]) 2> /dev/null
                 if exists $images
