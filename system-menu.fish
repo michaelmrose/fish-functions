@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/system-menu.fish @ line 2
 function system-menu
-	switch (p Lightsout Suspend Shutdown "Switch User" Reboot | rofi -dmenu -i -p System:)
+	switch (p Lightsout Suspend Shutdown "Restart i3wm" Reboot "Switch User"| rofi -dmenu -i -p System:)
         case Lightsout
             lightsout
         case Suspend
