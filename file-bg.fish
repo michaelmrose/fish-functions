@@ -10,6 +10,6 @@ function file-bg
     #   return 1
     # end
     set location $dir/$name.$ext
-    mv $file $location
-    wp $location
+    echo mv $file $location
+    echo wp $location
 end
