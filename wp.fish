@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/save-wp_wp.fish @ line 10
+# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
 	if not exists $argv
         while read -l line
@@ -37,6 +37,8 @@ function wp
                 wp $bgimage
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null | wp
+            case open
+                sxiv -f $bgimage
             case cat
                 if test (count $argv) -lt 2
                     echo try mk, mv, file, ls, ls 'some category' 
