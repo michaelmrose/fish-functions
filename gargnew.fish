@@ -5,8 +5,8 @@ function gargnew
       case select
             p $games | all select | each gargoyle
         case search
-            p $games | all select | g $argv[2..-1]| each gargoyle
-        case open
+            p $games | g $argv[2..-1] | all select | each gargoyle
+      case open
             set -U LAST_GAME $argv[2]
             gargoyle $argv[2]
         case last
