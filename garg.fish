@@ -1,7 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/garg.fish @ line 2
 function garg
-	
-    if not exists $argv
+	if not exists $argv
         garg select
         return 0
     end
