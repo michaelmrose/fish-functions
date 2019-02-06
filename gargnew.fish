@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/garg.fish @ line 31
+# Defined in /home/michael/.config/fish/buffer/garg_gargnew.fish @ line 31
 function gargnew
 	set games (endsin z5 z3 gblorb ~/if)
     switch $argv
@@ -10,6 +10,6 @@ function gargnew
             set -U LAST_GAME $argv[2]
             gargoyle $argv[2]
         case last
-            gargoyle open $LAST_GAME
+            gargoyle $LAST_GAME
     end
 end
