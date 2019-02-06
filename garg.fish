@@ -1,12 +1,18 @@
+# Defined in /home/michael/.config/fish/buffer/garg.fish @ line 2
 function garg
-	switch $argv[1]
-    case last
+	
+    if not exists $argv
+        garg select
+        return 0
+    end
+	  switch $argv[1]
+        case last
       set game $LAST_GAME
     case select
       switch (count $argv)
         case 1
-          set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]')
-          set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]$|.gblorb$')
+            # set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]')
+            set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]$|.gblorb$')
         case '*'
           set games (find ~/if -type f | grep -Ei '.*\.Z[0-9]$|.gblorb$' | grep -i $argv[2..-1])
       end
