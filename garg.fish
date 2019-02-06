@@ -9,7 +9,7 @@ function garg
 	  set games (endsin z5 z3 gblorb ~/if)
     switch $list[1]
         case select
-            p $games | all select | each gargoyle
+            p $games | all select | each garg open
         case search
             p $games | g $list[2..-1] | all select | each garg open
         case open
