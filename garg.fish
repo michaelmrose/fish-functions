@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/garg.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/garg_gargnew.fish @ line 2
 function garg
 	if not exists $argv
         garg select
