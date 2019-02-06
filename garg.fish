@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/garg.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/garg.fish @ line 2
 function garg
 	set list $argv
 
@@ -11,7 +11,7 @@ function garg
         case select
             p $games | all select | each gargoyle
         case search
-            p $games | g $list[2..-1] | all select | each gargoyle
+            p $games | g $list[2..-1] | all select | each garg open
         case open
             set -U LAST_GAME $list[2]
             gargoyle $list[2]
