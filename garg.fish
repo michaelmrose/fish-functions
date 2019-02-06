@@ -13,7 +13,6 @@ function garg
         case search
             p $games | g $list[2..-1] | all select | each garg open
         case open
-            echo in open and list is $list
             set -U LAST_GAME $list[2]
             gargoyle $list[2]
         case last
