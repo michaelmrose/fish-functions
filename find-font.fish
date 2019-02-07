@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/find-font.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/find-font.fish @ line 2
 function find-font
-	fc-list |g $argv | cut -d . -f3- | cut -d " " -f2-|cut -d : -f1
+	fc-list |g $argv|rev|cut -d : -f2|rev|trim|sort -u
 end
