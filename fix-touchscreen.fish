@@ -6,6 +6,7 @@ function fix-touchscreen
     # set id (xinput list |n /finger n9 c=2)
     # foreach $ids 'xinput map-to-output _ eDP1'
     # echo xinput map-to-output $id eDP1
+    sleep 0.5
     for i in (xinput list| n /finger n9 c=2)
         xinput map-to-output $i eDP1
     end
