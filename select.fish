@@ -7,8 +7,8 @@ function select
             echo $argv
         end
     else
-        while read -l $line
-            set acc $acc
+        while read -l line
+            set acc $acc $line
         end
         select $acc
     end
