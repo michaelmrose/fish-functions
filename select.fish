@@ -1,8 +1,15 @@
 # Defined in /home/michael/.config/fish/buffer/select.fish @ line 2
 function select
-	if test (count $argv) -gt 1
-	      p $argv | rofi -dmenu -I -p 'choose: ' 
+	if exists $argv
+	      if test (count $argv) -gt 1
+            p $argv | rofi -dmenu -I -p 'choose: ' 
+        else
+            echo $argv
+        end
     else
-        echo $argv
+        while read -l $line
+            set acc $acc
+        end
+        select $acc
     end
 end
