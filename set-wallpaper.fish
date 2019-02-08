@@ -17,6 +17,7 @@ function set-wallpaper
   add-to-recent-backgrounds $img
   set -U bgstyle (cutlastn "/" 2 $img)
   s cp $img /etc/lightdm/bg.jpg
+  cp $img /home/michael/backgrounds/lightdm
   set -U bgimage $img
   signal-i3blocks 12
 end
