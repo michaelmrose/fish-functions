@@ -1,5 +1,5 @@
 # Defined in /home/michael/.config/fish/buffer/unlocklogin.fish @ line 2
 function unlocklogin
 	echo -n (rofim -i -password -dmenu) | gnome-keyring-daemon --unlock
-  killall gnome-keyring-daemon
+  killall gnome-keyring-d
 end
