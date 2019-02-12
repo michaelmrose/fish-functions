@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/unlocklogin.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/unlocklogin.fish @ line 2
 function unlocklogin
-	echo -n (rofim -i -dmenu) | gnome-keyring-daemon --unlock
+	echo -n (rofim -i -password -dmenu) | gnome-keyring-daemon --unlock
 end
