@@ -1,9 +1,9 @@
 # Defined in /home/michael/.config/fish/buffer/set-wallpaper.fish @ line 2
 function set-wallpaper
-	set img $argv[1]
-  # echo i is $img
-  set ratio (get-image-aspect-ratio-type $img)
-  switch $ratio
+	set img (fullpath$argv[1])
+    # echo i is $img
+    set ratio (get-image-aspect-ratio-type $img)
+    switch $ratio
       case "narrow"
           set format max
       case "wide"
