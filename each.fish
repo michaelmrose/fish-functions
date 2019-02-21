@@ -2,7 +2,7 @@
 function each
 	if string match _ $argv
         while read -l line
-            echo (echo $argv | sd _ $line)
+            eval (echo $argv | sd _ $line)
         end
     else
         while read -l line
