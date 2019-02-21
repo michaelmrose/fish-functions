@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/each.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/all_each.fish @ line 17
 function each
 	if string match _ $argv > /dev/null
         while read -l line
