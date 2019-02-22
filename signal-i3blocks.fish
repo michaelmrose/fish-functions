@@ -26,5 +26,6 @@ function signal-i3blocks
         case "*"
             set val $argv
     end
-    pkill -RTMIN+$val i3blocks
+    # pkill -RTMIN+$val i3blocks
+    pkill -SIGRTMIN+$val i3blocks
 end
