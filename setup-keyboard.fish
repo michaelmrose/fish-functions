@@ -5,5 +5,6 @@ function setup-keyboard
   numlocked
   xset r rate 250 30
   fucking-caps-led 0
+  fix-touchscreen
   msg keyboard setup
 end
