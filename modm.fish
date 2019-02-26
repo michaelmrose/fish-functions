@@ -1,8 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/modm.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/modm.fish @ line 2
 function modm
 	switch $argv[1]
         case ls
-            if test (count $argv) -eq 2
+            if test (count $argv) -eq 1
                 lsmod
             else
                 lsmod |g $argv[2..-1]
