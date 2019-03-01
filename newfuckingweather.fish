@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/newfuckingweather.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/newfuckingweather_newnewfuckin.fish @ line 2
 function newfuckingweather
 	if not areweonline
       either $priorweather unavailable
