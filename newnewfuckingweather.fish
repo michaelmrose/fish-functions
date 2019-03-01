@@ -1,8 +1,9 @@
 # Defined in /home/michael/.config/fish/buffer/newfuckingweather_newnewfuckin.fish @ line 17
 function newnewfuckingweather
 	set icon (weather-icon)
-	set report (weather-report fips5303590288)
+	set report (weather-report (geo find))
   set temp (p $report|n l3 n2)°F
   set conditions ( p $report|n l6 |cut -d : -f2|trim)
-  echo $icon $temp $conditions
+  set wind (p $report|n l5 n8-9)
+  echo $icon $temp $conditions wind: $wind
 end
