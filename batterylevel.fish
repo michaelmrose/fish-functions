@@ -1,4 +1,5 @@
 # Defined in /home/michael/.config/fish/buffer/batterylevel.fish @ line 2
 function batterylevel
-	upower -i (upower -e | grep 'BAT') | grep -E "state|to\ full|percentage" |nth 2 | condense_lines
+	
+  upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"|awk '{print $2}'|sd \n " " 
 end
