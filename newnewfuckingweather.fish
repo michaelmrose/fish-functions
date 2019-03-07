@@ -4,6 +4,7 @@ function newnewfuckingweather
 	  set report (weather-report (geo find))
     set temp (p $report|n l3 n2)°F
     set conditions ( p $report|n l6 |cut -d : -f2|trim)
-    set wind (p $report|n l5|cut -d : -f1-|trim)
-    echo $icon $temp $conditions $wind
+    # set wind (p $report|n l5|cut -d : -f1-|trim)
+    set windchill (p $report |grep Windchill)
+    echo $icon $temp $conditions $windchill
 end
