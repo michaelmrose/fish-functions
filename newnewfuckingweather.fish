@@ -6,5 +6,6 @@ function newnewfuckingweather
     set conditions ( p $report|n l6 |cut -d : -f2|trim)
     # set wind (p $report|n l5|cut -d : -f1-|trim)
     set windchill (p $report |grep Windchill|trim)
-    echo $icon $temp $conditions $windchill
+    set wind (filter-with-expr) isnumeric (explode-words (p $report|n l5))
+    echo $icon $temp $conditions wind: $wind mph $windchill
 end
