@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/emf.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/emf.fish @ line 2
 function emf
-	emacsclient -ce \'\($argv\)\'
+	echo emacsclient -ce \'\($argv\)\'
 end
