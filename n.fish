@@ -28,6 +28,8 @@ function n
                 set acc (p $acc | unwrap $r)
             case _
                 set acc (p $acc | condense_spaces)
+            case L
+                set acc (p $acc | condense_lines)
             case s
                 if exists $r
                     set acc (p $acc | sort -$r)
