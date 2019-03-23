@@ -10,4 +10,7 @@ function fix-touchscreen
     for i in (xinput list| n /finger n9 c=2)
         xinput map-to-output $i eDP1
     end
+    for i in (xinput list|n /'pen pen' n11 c=2)
+        xinput map-to-output $i eDP1
+    end
 end
