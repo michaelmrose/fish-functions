@@ -4,6 +4,6 @@ function nthn
         set acc $acc $line
     end
     set com awk \'"{print \$$argv}"\'
-    echo $com
+    p $acc | $com
     # p $acc | awk "{print \${$argv[1]}}"
 end
