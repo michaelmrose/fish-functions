@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/newnewfuckingweather.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/bremerton-weather_format-weath.fish @ line 18
 function newnewfuckingweather
 	if not areweonline
         either $priorweather unavailable
