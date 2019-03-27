@@ -3,5 +3,5 @@ function reasonable-weather
 	if set weather (bremerton-weather)
       set -U priorweather (weather-icon) (format-weather-report $weather)
   end
-  either $priorweather unavailable
+  either (echo $priorweather) unavailable
 end
