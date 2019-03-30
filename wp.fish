@@ -36,7 +36,7 @@ function wp
                 gimp $bgimage
                 wp $bgimage
             case recent
-                sxiv -tbfor $recent_backgrounds 2> /dev/null | wp
+                sxiv -tbfor $recent_backgrounds 2> /dev/null
             case open
                 sxiv -f $bgimage
             case cat
