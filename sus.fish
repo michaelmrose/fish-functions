@@ -1,7 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/lightsout_rboot_sdown_sus_syst.fish @ line 30
+# Defined in /home/michael/.config/fish/buffer/cleanup-desktop_lightsout_rboo.fish @ line 42
 function sus
 	
-  #   setup-keyboard
   # end
   
   # if exists $argv
