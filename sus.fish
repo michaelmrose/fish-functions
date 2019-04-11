@@ -1,8 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/sus.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/lightsout_rboot_sdown_sus_syst.fish @ line 30
 function sus
 	
-  # wp recall
-  # if [ (whoami) = michael ]
   #   setup-keyboard
   # end
   
