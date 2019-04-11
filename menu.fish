@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/cleanup-desktop_lightsout_rboo.fish @ line 89
+# Defined in /home/michael/.config/fish/buffer/menu.fish @ line 1
 function menu
 	
 end
