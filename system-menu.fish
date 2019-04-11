@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/cleanup-desktop_lightsout_rboo.fish @ line 70
+# Defined in /home/michael/.config/fish/buffer/menu_system-menu.fish @ line 7
 function system-menu
 	switch (p Lightsout Suspend Shutdown "Restart i3wm" Reboot "Switch User"| rofi -dmenu -i -p System:)
         case Lightsout
