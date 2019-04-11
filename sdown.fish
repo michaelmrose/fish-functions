@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/rb_rboot_sdown.fish @ line 16
+# Defined in /home/michael/.config/fish/buffer/lightsout_rboot_sdown_sus_syst.fish @ line 23
 function sdown
 	sudo umount -fl /mnt/michael
     cleanup-desktop
