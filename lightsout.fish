@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/lightsout_rboot_sdown_sus_syst.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/cleanup-desktop_lightsout_rboo.fish @ line 14
 function lightsout
 	sleep 0.5
     xset dpms force off
