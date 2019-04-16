@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/filter-with_filter-with-fn.fish @ line 2
 function filter-with
 	for i in $$argv[2]
         if eval $argv[1] $i
