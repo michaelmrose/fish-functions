@@ -1,4 +1,9 @@
-# Defined in /home/michael/.config/fish/buffer/tdown.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/tdown.fish @ line 2
 function tdown
-	kitty -1 -e termdown $argv
+	if not exists $argv
+        set input (rofi -dmenu -i -p duration:)
+    else
+        set input $argv
+    end
+	  kitty -1 -e termdown $input
 end
