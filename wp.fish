@@ -29,6 +29,7 @@ function wp
                 echo 'similar                -> set a random wallpaper in the category as current as defined by bgstyle'
                 echo 'next/prev              -> set next or previous wp in recent_backgrounds list'
                 echo 'fill|scale|max         -> set current image to fill scale or max setting per feh'
+                echo 'search [string]        -> enter a search string to be compared to file names'
             case view
                 pics (get-folder-for-backgrounds $argv[2])
             case categories
@@ -39,6 +40,8 @@ function wp
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case open
                 sxiv -f $bgimage
+            case search
+                fnd '.*' -t f ~/backgrounds|g $argv[2..-1]|select|wp
             case cat
                 if test (count $argv) -lt 2
                     echo try mk, mv, file, ls, ls 'some category' 
