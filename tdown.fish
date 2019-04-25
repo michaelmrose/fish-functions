@@ -4,4 +4,5 @@ function tdown
   set title  (echo $info | cut -d @ -f1| trim)
   set duration (echo $info | cut -d @ -f2 | trim)
   eval kitty -o font_size=50 -e termdown --no-figlet -v en-us -T (quote $title) $duration
+  msg timer set
 end
