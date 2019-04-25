@@ -1,6 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/fe.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/fe_fe.fish @ line 37
 function fe
-	#better funced
 	for i in $argv
     if startswith @ $i
       set results $results (ftags list $i)
@@ -8,9 +7,11 @@ function fe
       set results $results $i
     end
   end
-  set results (println $results | sort -d)
-  set name (trunc 30 (sort-list $results | sed 's# #_#g'))
-  ensure-dir-exists ~/.config/fish/buffer
+  if test (count $results) -gt 1
+      set results (println $results | sort -d)
+      set name (trunc 30 (sort-list $results | sed 's# #_#g'))
+  end
+  # ensure-dir-exists ~/.config/fish/buffer
   set tmp ~/.config/fish/buffer/$name.fish
   if test -f $tmp
     rm $tmp
@@ -30,5 +31,5 @@ function fe
     funcsave-file $tmp
     set -U LASTFNS (return-fnames-of-file $tmp)
   end
-  nothing-urgent
+  # nothing-urgent
 end
