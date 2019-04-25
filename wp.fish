@@ -41,7 +41,7 @@ function wp
             case open
                 sxiv -f $bgimage
             case search
-                fnd '.*' -t f ~/backgrounds|g $argv[2..-1]|select|wp
+                sxiv -tbfor (fnd '.*' -t f ~/backgrounds|g $argv[2..-1])|wp
             case cat
                 if test (count $argv) -lt 2
                     echo try mk, mv, file, ls, ls 'some category' 
