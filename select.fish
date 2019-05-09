@@ -2,7 +2,7 @@
 function select
 	if exists $argv
 	      if test (count $argv) -gt 1
-            p $argv | rofi -dmenu -I -p 'choose: ' 
+            p $argv | rofi -dmenu -m -1 -I -p 'choose: ' 
         else
             echo $argv
         end
