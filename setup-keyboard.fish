@@ -3,7 +3,8 @@ function setup-keyboard
 	xmodmap ~/.config/xkeys/keys
   xcape-file ~/.config/xkeys/xcapes
   numlocked
-  xset r rate 250 30
+  # xset r rate 250 30
+  xset r rate 300 30
   fucking-caps-led 0
   fix-touchscreen
   msg keyboard setup
