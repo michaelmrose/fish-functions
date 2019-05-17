@@ -1,4 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/emc.fish @ line 2
 function emc
-	emacsclient -c $argv &
+	if not pgrep emacs
+        emd &
+    end
+	  emacsclient -c $argv &
 end
