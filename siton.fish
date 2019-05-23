@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/startiton.fish @ line 33
+# Defined in /home/michael/.config/fish/buffer/siton_startiton.fish @ line 2
 function siton
 	set ws $argv[1]
     set command $argv[2]
@@ -10,8 +10,9 @@ function siton
     echo $json  | sed "s/#winclass/$class/g" > $layout
     i3-msg workspace $ws
     i3-msg append_layout $layout
+    eval $command
     for w in $active
         i3-msg workspace $w
     end
-    i3-msg focus $focused
+    i3-msg workspace $focused
 end
