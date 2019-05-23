@@ -40,6 +40,10 @@ function wp
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case open
                 sxiv -f $bgimage
+            case url
+                set tmp /tmp/(uid)-wallpaper.jpg
+                curl $argv[2] > $tmp
+                wp $tmp
             case search
                 sxiv -tbfor (fnd '.*' -t f ~/backgrounds|g $argv[2..-1])|wp
             case cat
