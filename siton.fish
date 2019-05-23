@@ -10,7 +10,7 @@ function siton
     echo $json  | sed "s/#winclass/$class/g" > $layout
     i3-msg workspace $ws
     i3-msg append_layout $layout
-    eval $command &
+    $command &
     for w in $active
         i3-msg workspace $w
     end
