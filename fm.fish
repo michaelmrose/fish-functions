@@ -1,7 +1,8 @@
+# Defined in /home/michael/.config/fish/buffer/fm.fish @ line 2
 function fm
 	if not exists $argv
-    spacefm (pwd)
+      dolphin (pwd)
   else
-    spacefm $argv
+      dolphin $argv
   end
 end
