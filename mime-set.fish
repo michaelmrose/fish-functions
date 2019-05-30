@@ -20,7 +20,7 @@ function mime-set
         end
     else
         # gvfs-mime --set $mimetype $command.desktop
-        gio mime $mimetype $command.desktop
+        # gio mime $mimetype $command.desktop
         xdg-mime default $command.desktop $mimetype
     end
 end
