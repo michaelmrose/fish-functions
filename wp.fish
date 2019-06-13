@@ -142,6 +142,7 @@ function wp
                 set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
                 feh --bg-scale $pics
                 echo $pics
+                set -U bgimage $pics
         end
 
     end
