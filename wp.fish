@@ -136,7 +136,10 @@ function wp
                 set numdisp (count (get-connected-displays))
                 set style $argv[2]
                 feh --bg-scale (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
-
+            case randstyle
+                set numdisp (count (get-connected-displays))
+                set style (wp cat ls|shuf|all take 1)   
+                feh --bg-scale (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
         end
 
     end
