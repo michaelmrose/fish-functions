@@ -144,7 +144,7 @@ function wp
                 wp url (xclip -o -selection clip)
             case multi
                 feh --bg-max $argv[2..-1]
-                set -U $bgimage $argv[2..-1]
+                set -U bgimage $argv[2..-1]
             case randstyle
                 set numdisp (count (get-connected-displays))
                 set style (wp cat ls|shuf|all take 1)   
