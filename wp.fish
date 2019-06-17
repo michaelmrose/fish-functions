@@ -152,6 +152,8 @@ function wp
                 feh --bg-max $pics
                 echo $pics
                 set -U bgimage $pics
+            case shuf
+                p $bgimage |shuf |condense_lines|each wp multi
         end
 
     end
