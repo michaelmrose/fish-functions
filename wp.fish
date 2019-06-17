@@ -140,6 +140,8 @@ function wp
                 feh --bg-max $pics
                 echo $pics
                 set -U bgimage $pics
+            case clip
+                wp url (cl)
             case randstyle
                 set numdisp (count (get-connected-displays))
                 set style (wp cat ls|shuf|all take 1)   
