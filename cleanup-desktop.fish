@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/cleanup-desktop_lightsout_rboo.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/cleanup-desktop.fish @ line 2
 function cleanup-desktop
 	sudo umount -fl /mnt/michael
 	  kill (pgrep emacs)
@@ -7,5 +7,5 @@ function cleanup-desktop
     rm /tmp/ZealLocalServer
     sleep 1
 	  i3-msg [class="."] kill
-    countdown 7
+    countdown 3
 end
