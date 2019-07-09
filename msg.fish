@@ -1,4 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/msg.fish @ line 2
 function msg
-	# twmnc --id 1 --content (center-text $argv)
-	twmnc -d 4000 --id 1 --content "$argv"
+	twmnc -d 2000 --id 1 --content "$argv"
 end
