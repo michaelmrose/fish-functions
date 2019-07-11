@@ -1,5 +1,7 @@
-# Defined in /home/michael/.config/fish/buffer/cargo-test.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/cargo-test.fish @ line 2
 function cargo-test
-	cd /home/michael/proj/rust/playground
+	set dir (pwd)
+	  cd /home/michael/proj/rust/playground
     cargo run
+    cd $dir
 end
