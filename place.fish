@@ -4,5 +4,5 @@ function place
     set command (get-command-for-window $wid)
     set target (cat /tmp/fuckingstart/$command)
     i3 move window to $target
-    rm /tmp/fuckingstart/$command
+    # rm /tmp/fuckingstart/$command
 end
