@@ -7,7 +7,9 @@ function place
     if exists $target
         i3 move window to workspace $target
         rm /tmp/fuckingstart/$command
+        msg removing target
     else
+        msg target is empty
         return 0
     end
 end
