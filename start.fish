@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/place_start.fish @ line 11
+# Defined in /home/michael/.config/fish/buffer/get-command-for-window_place_s.fish @ line 23
 function start
 	set commandname $argv[1]
     set command $argv
