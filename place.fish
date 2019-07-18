@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/get-command-for-window_place_s.fish @ line 14
+# Defined in /home/michael/.config/fish/buffer/get-command-for-window_place_s.fish @ line 19
 function place
 	set wid (dectohex (xdotool getactivewindow))
     set command (get-command-for-window $wid)
