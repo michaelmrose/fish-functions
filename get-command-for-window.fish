@@ -7,5 +7,10 @@ function get-command-for-window
     end
     set pid (wmctrl -lp|grep $wid|awk '{print $3}')
     set com (cat /proc/$pid/comm )
-    echo $com
+    switch $com
+        case GUIPool
+            echo calibre
+        case '*'
+            echo $com
+    end
 end
