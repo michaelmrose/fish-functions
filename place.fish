@@ -5,6 +5,7 @@ function place
     set command (get-command-for-window $wid)
     set target (cat /tmp/fuckingstart/$command > /dev/null)
 	  msg in place fn wid is $wid command is $command and target is $target
+	  echo in place fn wid is $wid command is $command and target is $target
     if exists $target
         i3 move window to workspace $target
         rm /tmp/fuckingstart/$command
