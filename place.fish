@@ -3,6 +3,6 @@ function place
 	set wid (dectohex (xdotool getactivewindow))
     set command (get-command-for-window $wid)
     set target (cat /tmp/fuckingstart/$command)
-    i3 move window to $target
+    i3 move window to workspace $target
     # rm /tmp/fuckingstart/$command
 end
