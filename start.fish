@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/place_start.fish @ line 21
+# Defined in /home/michael/.config/fish/buffer/place_start_start2.fish @ line 14
 function start
 	set commandname $argv[1]
     set command $argv
