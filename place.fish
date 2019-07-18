@@ -6,6 +6,6 @@ function place
 	  msg in place fn wid is $wid command is $command and target is $target
     if exists $target
         i3 move window to workspace $target
-        # rm /tmp/fuckingstart/$command
+        rm /tmp/fuckingstart/$command
     end
 end
