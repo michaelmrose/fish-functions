@@ -1,6 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/place_start.fish @ line 2
 function place
-	set wid (dectohex (xdotool getactivewindow))
+	echo starting
+	  set wid (dectohex (xdotool getactivewindow))
     set command (get-command-for-window $wid)
     set target (cat /tmp/fuckingstart/$command > /dev/null)
 	  msg in place fn wid is $wid command is $command and target is $target
