@@ -2,11 +2,13 @@
 function place
 	set wid (dectohex (xdotool getactivewindow))
     set command (get-command-for-window $wid)
-    set target (cat /tmp/fuckingstart/$command)
+    set target (cat /tmp/fuckingstart/$command > /dev/null)
 	  msg in place fn wid is $wid command is $command and target is $target
     if exists $target
         i3 move window to workspace $target
         sleep 10
         rm /tmp/fuckingstart/$command
+    else
+        return 0
     end
 end
