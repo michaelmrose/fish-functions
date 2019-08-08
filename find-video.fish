@@ -1,5 +1,8 @@
+# Defined in /home/michael/.config/fish/buffer/find-video.fish @ line 2
 function find-video
-	set files (findall /med/videos video)
+	for entry in $VID_DIRS
+        set files $files (findall $entry video)
+    end
     set words $argv
 
     # echo w is $words
