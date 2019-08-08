@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/v.fish @ line 2
 function v
-	qvim $argv
+	find-video $argv | select | all mpv
 end
