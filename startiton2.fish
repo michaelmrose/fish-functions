@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/floating_term_focus_focus-dist.fish @ line 118
 function startiton2
 	set apps (evens $argv)
     set ws (odds $argv)
@@ -7,7 +8,7 @@ function startiton2
         ws $ws[$i]
         fish -c $apps[$i] &
         waituntilfocused (return-windowclass $apps[$i])
-        im workspace back_and_forth
+        i3 workspace back_and_forth
     end
     restore-workspaces
 end
