@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/allwindows.fish @ line 2
 function allwindows
-	im [class='.\*'] $argv
+	i3 [class='.\*'] $argv
 end
