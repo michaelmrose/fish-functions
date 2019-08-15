@@ -1,9 +1,10 @@
+# Defined in /home/michael/.config/fish/buffer/floating_term_focus_focus-dist.fish @ line 107
 function scratchpad
 	switch $argv
         case "show"
-            im scratchpad show
+            i3 scratchpad show
             float_fullscreen
         case "hide"
-            im scratchpad show
-    end
+            i3 scratchpad show
+  end
 end
