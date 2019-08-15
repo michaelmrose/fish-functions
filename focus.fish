@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/floating_term_focus_focus-dist.fish @ line 10
 function focus
 	set original (wininfo id dec)
     switch $argv[1]
@@ -8,13 +9,13 @@ function focus
             set criteria class
             set choice \'(return-windowclass $argv[2])\'
         case "output"
-            im focus output $argv[2]
+            i3 focus output $argv[2]
             return 0
         case "urgent"
             i3-msg [urgent=latest] focus
             return 0
         case "ws"
-            im focus $argv[2]
+            i3 focus $argv[2]
             return 0
         case "regex"
             set criteria $argv[2]
@@ -28,7 +29,7 @@ function focus
                 set choice \'$argv[2]\'
             end
     end
-    im [$criteria=$choice] focus
+    i3 [$criteria=$choice] focus
     set final (wininfo id dec)
     if [ $final = $original ]
         return 1
