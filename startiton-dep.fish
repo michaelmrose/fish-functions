@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/floating_term_focus_focus-dist.fish @ line 133
 function startiton-dep
 	set workspacelist (odds $argv)
     set applist (evens $argv)
@@ -17,7 +18,7 @@ function startiton-dep
         echo w is $winclass and a is $app
         cat ~/scripts/test.json | sed "s/#winclass/$winclass/g" > $layout
         ws $workspace
-        im append_layout $layout
+        i3 append_layout $layout
         fish -c "$app &"
         rm $layout
     end
