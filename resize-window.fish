@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/floating_term_focus_focus-dist.fish @ line 95
 function resize-window
 	set dim $argv[1]
     set num (abs $argv[2])
@@ -6,5 +7,5 @@ function resize-window
     else
         set direction shrink
     end
-    im resize $direction $dim {$num}px or {$num}pc
+    i3 resize $direction $dim {$num}px or {$num}pc
 end
