@@ -1,7 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/mpd-status-line.fish @ line 2
 function mpd-status-line
 	
-    #   set playtime (mpc status |condense_lines | cut -d\# -f2-|nth 2)
     #   if not exists $mpdstat
     #       echo none
     #       return 0
@@ -17,7 +16,7 @@ function mpd-status-line
     if exists $mpdstatus
         set current (mpc status |head -1)
         set playtime (mpc status |condense_lines | cut -d\# -f2-|nth 2)
-        switch $mpdstat
+        switch $mpdstatus
             case paused
                 echo  $current $playtime
             case playing
