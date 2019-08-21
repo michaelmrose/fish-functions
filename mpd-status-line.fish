@@ -8,8 +8,8 @@ function mpd-status-line
     end
     switch $mpdstat
         case paused
-            echo  (mpc current)
+            echo  (mpc current) $playtime
         case playing
-            echo  (mpc current)
+            echo  (mpc current) $playtime
     end
 end
