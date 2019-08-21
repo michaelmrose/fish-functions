@@ -8,8 +8,7 @@ function player-status-line
       end
       set artist (apctl metadata artist)
       set symbol (match-lists $playerStatus "Playing Paused" " " "")
-      set playtime (playtime-status)
-      echo $symbol $title by $artist $playtime
+      echo $symbol $title by $artist
   else
     echo None
   end
