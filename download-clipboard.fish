@@ -2,5 +2,5 @@
 function download-clipboard
 	set target (xclip -o -sel clip)
   cd ~/youtube-dl
-  youtube-dl $target
+  youtube-dl --no-playlist $target
 end
