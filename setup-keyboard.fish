@@ -10,5 +10,5 @@ function setup-keyboard
       fix-touchscreen
   end
   # msg keyboard setup
-  twmnc -d 200 -id 1 --contents "keyboard setup"
+  twmnc -d 200 -id 1 --content "keyboard setup"
 end
