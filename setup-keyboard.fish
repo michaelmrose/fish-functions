@@ -9,5 +9,6 @@ function setup-keyboard
       fucking-caps-led 0
       fix-touchscreen
   end
-  msg keyboard setup
+  # msg keyboard setup
+  twmnc -d 200 -id 1 --contents keyboard setup
 end
