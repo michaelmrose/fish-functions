@@ -6,6 +6,8 @@ function setup-keyboard
   # xset r rate 250 30
   xset r rate 300 30
   fucking-caps-led 0
-  fix-touchscreen
+  if not exists $argv
+      fix-touchscreen
+  end
   msg keyboard setup
 end
