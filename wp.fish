@@ -24,6 +24,9 @@ function wp
                 echo 'cat [category]         -> pick a random background from category'
                 echo 'name                   -> print category: filename with - replaced with spaces'
                 echo 'save spec              -> save current image as category/name-of-wallpaper'
+                echo 'swap                   -> swap left and right'
+                echo 'rand style             -> given a style put a different random image of that style on all screens'
+                echo 'randstyle              -> randomly choose a style and apply rand style'
                 echo 'rm                     -> remove current wallpaper'
                 echo 'recall                 -> rerun last feh command'
                 echo 'similar                -> set a random wallpaper in the category as current as defined by bgstyle'
@@ -145,6 +148,8 @@ function wp
             case multi
                 feh --bg-max $argv[2..-1]
                 set -U bgimage $argv[2..-1]
+            case swap
+                wp multi $bgimage[2] $bgimage[1]
             case randstyle
                 set numdisp (count (get-connected-displays))
                 set style (wp cat ls|shuf|all take 1)   
