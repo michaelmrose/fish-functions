@@ -10,5 +10,6 @@ function setup-keyboard
       fix-touchscreen
   end
   # msg keyboard setup
+  set -U SYMBOLLOCK true
   twmnc -d 200 -id 1 --content "keyboard setup"
 end
