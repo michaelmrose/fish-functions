@@ -1,5 +1,6 @@
+# Defined in /home/michael/.config/fish/buffer/toggle-symbol-lock.fish @ line 2
 function toggle-symbol-lock
-	if [ $symbollock = true ]
+	if [ $SYMBOLLOCK = true ]
         remap code 10 1 exclam
         remap code 11 2 at
         remap code 12 3 numbersign
@@ -10,7 +11,7 @@ function toggle-symbol-lock
         remap code 17 8 asterisk
         remap code 18 9 parenleft
         remap code 19 0 parenright
-        set symbollock false
+        set -u SYMBOLLOCK false
     else
         remap code 10 exclam 1
         remap code 11 at 2
@@ -22,6 +23,6 @@ function toggle-symbol-lock
         remap code 17 asterisk 8
         remap code 18 parenleft 9
         remap code 19 parenright 0
-        set symbollock true
+        set -u SYMBOLLOCK true
     end
 end
