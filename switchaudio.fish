@@ -13,7 +13,9 @@ function switchaudio
         case toggle
             set next 0
       case '*'
-          echo invalid argument
+          echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
+          echo 'Sinks:'
+          p $sinks
           return 1
   end
 
