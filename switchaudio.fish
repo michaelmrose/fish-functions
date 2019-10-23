@@ -6,19 +6,23 @@ function switchaudio
     switch $argv[1]
         case set
             set next (ponymix -t sink list --short | grep -i $argv[2]| head -1 |awk '{print $2}')
-            if not exists $next
-                echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
-                echo 'Sinks:'
-                ponymix -t sink list --short
-                return 1
-            end
         case toggle
-            set next 0
-        case '*'
-            echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
-            echo 'Sinks:'
-            ponymix -t sink list --short
-            return 1
+            set current (ponymix -t sink defaults --short | awk '{print $2}'|head -1)
+            set first (ponymix -t sink list --short | grep -i $argv[2]| head -1 |awk '{print $2}')
+            set second (ponymix -t sink list --short | grep -i $argv[3]| head -1 |awk '{print $2}')
+            if [ $current = $first ]
+                set next $second
+            else
+                set next $first
+            end
+
+    end
+
+    if not exists $next
+        echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
+        echo 'Sinks:'
+        ponymix -t sink list --short
+        return 1
     end
 
     for s in $streams
