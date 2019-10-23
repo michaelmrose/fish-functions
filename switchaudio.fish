@@ -7,7 +7,9 @@ function switchaudio
         case set
             set next (ponymix -t sink list --short | grep -i $argv[2]| head -1 |awk '{print $2}')
             if not exists $next
-                echo no target found
+                echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
+                echo 'Sinks:'
+                ponymix -t sink list --short
                 return 1
             end
         case toggle
