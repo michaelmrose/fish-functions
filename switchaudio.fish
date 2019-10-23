@@ -1,15 +1,21 @@
-# Defined in /home/michael/.config/fish/buffer/switchaudio.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/switchaudio.fish @ line 2
 function switchaudio
-	set sinks (pactl list short sinks | awk '{print $1}')
-    set streams (pactl list short sink-inputs | cut -f1)
+	switch $argv[1]
+        case set
+            set sinks (pactl list short sinks | awk '{print $1}')
+            set streams (pactl list short sink-inputs | cut -f1)
 
-    set next (ponymix -t sink list --short | grep -i $argv| head -1 |awk '{print $2}')
-    if not exists $next
-        echo no target found
+            set next (ponymix -t sink list --short | grep -i $argv| head -1 |awk '{print $2}')
+            if not exists $next
+                echo no target found
+                return 0
+            end
+        case toggle
+            set next 0
     end
 
     for s in $streams
-        pactl move-sink-input $s $next
+                pactl move-sink-input $s $next
     end
     pactl set-default-sink $next
     ponymix unmute
