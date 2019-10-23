@@ -12,9 +12,12 @@ function switchaudio
             end
         case toggle
             set next 0
-    end
+      case '*'
+          echo invalid argument
+          return 1
+  end
 
-    for s in $streams
+  for s in $streams
                 pactl move-sink-input $s $next
     end
     pactl set-default-sink $next
