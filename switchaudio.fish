@@ -1,0 +1,17 @@
+# Defined in /home/michael/.config/fish/buffer/switchaudio.fish @ line 1
+function switchaudio
+	set sinks (pactl list short sinks | awk '{print $1}')
+    set streams (pactl list short sink-inputs | cut -f1)
+
+    set next (ponymix -t sink list --short | grep -i $argv| head -1 |awk '{print $2}')
+    if not exists $next
+        echo no target found
+    end
+
+    for s in $streams
+        pactl move-sink-input $s $next
+    end
+    pactl set-default-sink $next
+    ponymix unmute
+    signal-i3blocks output
+end
