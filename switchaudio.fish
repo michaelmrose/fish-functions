@@ -1,10 +1,10 @@
 # Defined in /home/michael/.config/fish/buffer/switchaudio.fish @ line 2
 function switchaudio
-	switch $argv[1]
-        case set
-            set sinks (pactl list short sinks | awk '{print $1}')
-            set streams (pactl list short sink-inputs | cut -f1)
+	set sinks (pactl list short sinks | awk '{print $1}')
+    set streams (pactl list short sink-inputs | cut -f1)
 
+    switch $argv[1]
+        case set
             set next (ponymix -t sink list --short | grep -i $argv[2]| head -1 |awk '{print $2}')
             if not exists $next
                 echo no target found
@@ -12,15 +12,15 @@ function switchaudio
             end
         case toggle
             set next 0
-      case '*'
-          echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
-          echo 'Sinks:'
-          p $sinks
-          return 1
-  end
+        case '*'
+            echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
+            echo 'Sinks:'
+            p $sinks
+            return 1
+    end
 
-  for s in $streams
-                pactl move-sink-input $s $next
+    for s in $streams
+        pactl move-sink-input $s $next
     end
     pactl set-default-sink $next
     ponymix unmute
