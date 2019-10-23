@@ -5,10 +5,10 @@ function switchaudio
             set sinks (pactl list short sinks | awk '{print $1}')
             set streams (pactl list short sink-inputs | cut -f1)
 
-            set next (ponymix -t sink list --short | grep -i $argv| head -1 |awk '{print $2}')
+            set next (ponymix -t sink list --short | grep -i $argv[2]| head -1 |awk '{print $2}')
             if not exists $next
                 echo no target found
-                return 0
+                return 1
             end
         case toggle
             set next 0
