@@ -15,7 +15,7 @@ function switchaudio
         case '*'
             echo 'invalid argument please enter set [name] or toggle [name] [name] wherein name is a valid substring in the sink description'
             echo 'Sinks:'
-            ponymix -t sink list --short|cut -c 1-|trim
+            ponymix -t sink list --short
             return 1
     end
 
