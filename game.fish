@@ -1,9 +1,9 @@
-# Defined in /home/michael/.config/fish/buffer/game.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/game.fish @ line 2
 function game
 	xrr desktop
     killall compton
     sleep 0.25
-    primusrun $argv
+    optirun $argv
     sleep 1
     xrr triple
     compton &
