@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/pillars2.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/runp2.fish @ line 2
 function runp2
 	killall compton
     sleep 0.25
@@ -8,4 +8,5 @@ function runp2
     optirun ./PillarsOfEternityII
     xrr triple
     compton &
+    cd "$dir"
 end
