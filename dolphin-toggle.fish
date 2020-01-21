@@ -4,7 +4,7 @@ function dolphin-toggle
         if string match (winclass) dolphin
             i3-msg move window to scratchpad
         else
-            if noti3-msg '[ class = ^dolphin ] scratchpad show;floating disable' 
+            if not i3-msg '[ class = ^dolphin ] scratchpad show;floating disable' 
                 dolphin &
             end
         end
