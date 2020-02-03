@@ -8,7 +8,7 @@ function fix-touchscreen
     # echo xinput map-to-output $id eDP1
     sleep 0.5
     for i in (xinput list| n /finger n9 c=2)
-        xinput map-to-output $i eDP-1
+        xinput map-to-output $i eDP1
     end
     for i in (xinput list|n /'pen pen' n11 c=2)
         xinput map-to-output $i eDP1
