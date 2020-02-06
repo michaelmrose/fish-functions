@@ -10,7 +10,7 @@ function xrr
       case laptop
           xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --off --output HDMI2 --off
       case desktop
-          xrandr --output eDP1 --off --output DP-1 --auto --output HDMI2 --off
+          xrandr --output eDP1 --off --output DP1 --auto
       case single
           xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --off --output HDMI2 --off
       case triple
