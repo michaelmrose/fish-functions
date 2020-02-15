@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/runp2.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/game_runp2_xrr.fish @ line 13
 function runp2
 	killall compton
     sleep 0.25
@@ -8,7 +8,7 @@ function runp2
     set dir (pwd)
     cd '/home/michael/.local/share/Steam/steamapps/common/Pillars of Eternity II'
     optirun ./PillarsOfEternityII
-    xrr triple
+    xrr double
     compton &
     cd "$dir"
 end
