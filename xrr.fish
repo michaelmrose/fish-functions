@@ -8,7 +8,7 @@ function xrr
       case triple
           xrandr --output eDP1 --size 1920x1080 --output DP1 --size 1920x1080 --right-of eDP1
       case test
-          xrandr --output eDP1 --auto --output DP1 --auto --right-of eDP1
+          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --right-of eDP1
 
   end
   wp recall
