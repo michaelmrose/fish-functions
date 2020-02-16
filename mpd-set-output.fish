@@ -1,0 +1,13 @@
+# Defined in /home/michael/.config/fish/buffer/mpd-set-output.fish @ line 1
+function mpd-set-output
+	switch $argv
+        case computer
+            mpc enable only computer
+        case http
+            mpc enable only http
+        case both
+            mpc enable http
+            mpc enable computer
+    end
+    signal-i3blocks output
+end
