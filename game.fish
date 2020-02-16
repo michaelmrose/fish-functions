@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/game.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/game_runp2_xrr.fish @ line 2
 function game
 	xrr desktop
   killall picom
