@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/game_runp2_xrr.fish @ line 13
 function runp2
-	killall compton
+	killall picom
     sleep 0.25
     if test (count (get-connected-displays)) -gt 1
         xrr desktop
@@ -9,6 +9,6 @@ function runp2
     cd '/home/michael/.local/share/Steam/steamapps/common/Pillars of Eternity II'
     optirun ./PillarsOfEternityII
     xrr double
-    compton &
+    picom &
     cd "$dir"
 end
