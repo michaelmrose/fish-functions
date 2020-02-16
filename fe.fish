@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/fe_fe.fish @ line 37
+# Defined in /home/michael/.config/fish/functions/fe.fish @ line 2
 function fe
 	for i in $argv
     if startswith @ $i
@@ -7,10 +7,10 @@ function fe
       set results $results $i
     end
   end
-  if test (count $results) -gt 1
-      set results (println $results | sort -d)
-      set name (trunc 30 (sort-list $results | sed 's# #_#g'))
-  end
+  # if test (count $results) -gt 1
+  set results (println $results | sort -d)
+  set name (trunc 30 (sort-list $results | sed 's# #_#g'))
+  # end
   # ensure-dir-exists ~/.config/fish/buffer
   set tmp ~/.config/fish/buffer/$name.fish
   if test -f $tmp
