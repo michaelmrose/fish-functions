@@ -10,6 +10,5 @@ function output-status-line
     case "*"
       set symbol 
   end
-  set mpd (mpc outputs|g enabled|cut -d \( -f2|cut -d \) -f1|condense_lines)
-  echo $symbol (getvolume) via $mpd
+  echo $symbol (getvolume)
 end
