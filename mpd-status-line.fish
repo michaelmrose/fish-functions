@@ -5,11 +5,12 @@ function mpd-status-line
   if exists $mpdstatus
         set current (mpc status |head -1)
         set playtime (mpc status |condense_lines | cut -d\# -f2-|awk '{print $2}')
+        set outputs (mpd-list-enabled-outputs)
         switch $mpdstatus
             case paused
-                echo  $current $playtime
+                echo  $current $playtime via $outputs
             case playing
-                echo  $current $playtime
+                echo  $current $playtime via $outputs
         end
     else
         echo none
