@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-set-output.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/mpd-set-output.fish @ line 2
 function mpd-set-output
 	switch $argv
         case computer
@@ -9,5 +9,4 @@ function mpd-set-output
             mpc enable http
             mpc enable computer
     end
-    signal-i3blocks output
 end
