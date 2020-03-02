@@ -1,4 +1,4 @@
 # Defined in /home/michael/.config/fish/buffer/roficlip.fish @ line 2
 function roficlip
-	greenclip print|rofim -dmenu -i|xclip -selection clipboard -i > /dev/null
+	rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 end
