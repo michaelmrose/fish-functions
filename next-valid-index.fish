@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 25
+# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 26
 function next-valid-index
 	set val $argv[1]
   set lst $argv[2..-1]
