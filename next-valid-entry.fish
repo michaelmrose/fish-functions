@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 2
 function next-valid-entry
 	set current $argv[1]
     set lst $argv[2..-2]
@@ -12,6 +12,7 @@ function next-valid-entry
         end
     end
     if test $current = $lst[-1]
+        echo last entry
         echo $lst[1]
         return 0
     else
