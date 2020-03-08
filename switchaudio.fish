@@ -20,7 +20,7 @@ function switchaudio
 
     end
 
-    if not exists $next
+    if not test $next
         echo 'invalid argument please enter next, set [name], or toggle [name] [name] wherein name is a valid substring in the sink description'
         echo 'Sinks:'
         ponymix -t sink list --short
