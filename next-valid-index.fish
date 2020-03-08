@@ -1,7 +1,7 @@
+# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 22
 function next-valid-index
-	# set lst $argv[2..-1]
-  # set n (findindex $argv[1] $lst)
-  # ternary test $n -ge (count $lst) @ $lst[1] @ $lst[(math $n + 1)]
+	
+    # ternary test $n -ge (count $lst) @ $lst[1] @ $lst[(math $n + 1)]
 	set val $argv[1]
   set lst $argv[2..-1]
   set n (findindex $val $lst)
