@@ -16,7 +16,7 @@ function switchaudio
                 set next $first
             end
         case next
-            set next (next-valid-index $current $sinks)
+            set next (next-valid-entry $current $sinks)
 
     end
 
