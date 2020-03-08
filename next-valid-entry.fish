@@ -7,7 +7,7 @@ function next-valid-entry
           echo $argv[$ndx]
           return 0
       else
-          set ndx (echo 1 + $ndx|bc)
+          set ndx (expr 1 + $ndx)
       end
   end
   if [ $current = $argv[-1] ]
