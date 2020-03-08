@@ -12,6 +12,7 @@ function next-valid-entry
             set ndx (math $ndx + 1)
         end
     end
+    echo c is $current and last is $lst[-1]
     if test $current = $lst[-1]
         echo last entry
         echo $lst[1]
