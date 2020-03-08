@@ -2,6 +2,6 @@
 function z
 	if test -d $argv
     else
-	      cd ( zoxide query etc|cut -c8-)
-    end
+	      cd ( zoxide query $argv|cut -c8-)
+  end
 end
