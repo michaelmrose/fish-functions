@@ -1,21 +1,17 @@
 # Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 2
 function next-valid-entry
 	set current $argv[1]
-  set lst $argv[2..-2]
-  set last $argv[-1]
-  set ndx 2
-  for item in $lst
-      echo n is $ndx
+  set ndx 3
+  for item in $argv[2..-2]
       if test $current = $item
-            echo $lst[$ndx]
-            return 0
+          echo $argv[$ndx]
+          return 0
         else
             set ndx (math $ndx + 1)
         end
     end
-    if test $current = $last
-        echo last entry
-        echo $lst[1]
+    if test $current = $argv[-1]
+        echo $argv[2]
         return 0
     else
         return 1
