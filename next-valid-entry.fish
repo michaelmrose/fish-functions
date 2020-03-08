@@ -4,6 +4,7 @@ function next-valid-entry
     set lst $argv[2..-2]
     set ndx 2
     for item in $lst
+        echo c is $current and i is $item
         if test $current = $item
             echo $lst[$ndx]
             return 0
