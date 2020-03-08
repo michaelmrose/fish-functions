@@ -2,6 +2,9 @@
 function z
 	if test -d $argv
     else
-	      cd ( zoxide query $argv|cut -c8-)
+	      set zres ( zoxide query $argv|cut -c8-)
+        if test (count $zres) -gt 0
+            cd $zres
+        end
   end
 end
