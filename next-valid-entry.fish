@@ -3,14 +3,14 @@ function next-valid-entry
 	set current $argv[1]
   set ndx 3
   for item in $argv[2..-2]
-      if test $current = $item
+      if [ $current = $item ]
           echo $argv[$ndx]
           return 0
         else
             set ndx (math $ndx + 1)
         end
     end
-    if test $current = $argv[-1]
+    if [ $current = $argv[-1] ]
         echo $argv[2]
         return 0
     else
