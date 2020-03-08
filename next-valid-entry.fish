@@ -1,0 +1,20 @@
+# Defined in /home/michael/.config/fish/buffer/next-valid-entry_next-valid-in.fish @ line 1
+function next-valid-entry
+	set current $argv[1]
+    set lst $argv[2..-2]
+    set ndx 2
+    for item in $lst
+        if test $current = $item
+            echo $lst[$ndx]
+            return 0
+        else
+            set ndx (math $ndx + 1)
+        end
+    end
+    if test $current = $lst[-1]
+        echo $lst[1]
+        return 0
+    else
+        return 1
+    end
+end
