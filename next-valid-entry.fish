@@ -5,15 +5,14 @@ function next-valid-entry
   set last $argv[-1]
   set ndx 2
   for item in $lst
-        echo c is $current and i is $item
-        if test $current = $item
+      echo n is $ndx
+      if test $current = $item
             echo $lst[$ndx]
             return 0
         else
             set ndx (math $ndx + 1)
         end
     end
-    echo c is $current and last is $last
     if test $current = $last
         echo last entry
         echo $lst[1]
