@@ -5,7 +5,8 @@ function next-valid-entry
   for item in $argv[2..-2]
       if [ $current = $item ]
           echo $argv[$ndx]
-        else
+          return 0
+      else
             set ndx (math $ndx + 1)
         end
     end
