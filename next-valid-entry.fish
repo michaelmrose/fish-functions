@@ -7,10 +7,10 @@ function next-valid-entry
           echo $argv[$ndx]
           return 0
       else
-            set ndx (math $ndx + 1)
-        end
-    end
-    if [ $current = $argv[-1] ]
+          set ndx (echo 1 + $ndx|bc)
+      end
+  end
+  if [ $current = $argv[-1] ]
         echo $argv[2]
     else
         return 1
