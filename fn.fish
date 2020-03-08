@@ -10,7 +10,7 @@ function fn
       case trash
           set fs $argv[2..-1]
           for f in $fs
-              git mv ~/.config/fish/functions/$f.fish ~/.config/fish/trash
+              git mv ~/.config/fish/functions/$f.fish ~/.config/fish/functions/trash
           end
           git commit -m "move functions to trash"
       case q
