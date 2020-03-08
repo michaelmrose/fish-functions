@@ -7,8 +7,13 @@ function fn
       end
     case tags
       ftags show
-    case q
-      ls ~/.config/fish/functions | gr $argv[2..-1]
+      case trash
+          set fs $argv[2..-1]
+          for f in $fs
+              # git mv ~/.config/fish/functions/$f.fish ~/.config/fish/trash
+          end
+      case q
+          ls ~/.config/fish/functions | gr $argv[2..-1]
     case edit
       fe $argv[2..-1]
     case ls
