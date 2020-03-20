@@ -7,8 +7,12 @@ function file-bg
     set name (echo $target | cut -d "/" -f2)
     set dir (get-folder-for-backgrounds $category)
     if not exists $dir
-        echo category $category doesnt exist
-        return 1
+        echo category $category doesnt exist create it?
+        if read_confirm
+            mkdir $wallpaperroot/$category
+        else
+            return 1
+        end
     end
     if not test -d $dir
         echo $dir is not a directory
