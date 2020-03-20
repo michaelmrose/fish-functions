@@ -10,5 +10,6 @@ function get-folder-for-backgrounds
     # else
     #     echo $res
     # end
-    find $wallpaperroot -type d | grep $argv | head -1
+    # find $wallpaperroot -type d | grep $argv | head -1
+    find $wallpaperroot -type d| grep -E "/$argv\$"|head -1
 end
