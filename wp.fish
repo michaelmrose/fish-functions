@@ -100,6 +100,8 @@ function wp
                 wp $recent_backgrounds[1]
             case recall
                 ~/.fehbg
+            case show
+                sxiv -f $bgimage
             case similar
                 wp style $bgstyle
             case ls
