@@ -19,18 +19,12 @@ function file-bg
         return 1
     end
     echo iiiiits goood
-    # if exists $dir
-    #     if not test -d $dir 
-    #         echo $dir does not exist
-    #         return 1
-    #     end
-    # end
 
-    # set location $dir/$name.$ext
-    # if test -e $location
-    #     echo target already exists
-    #     return 1
-    # end
-    # mv $file $location
-    # wp $location
+    set location $dir/$name.$ext
+    if test -e $location
+        echo target already exists
+        return 1
+    end
+    mv $file $location
+    wp $location
 end
