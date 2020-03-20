@@ -18,7 +18,6 @@ function file-bg
         echo $dir is not a directory
         return 1
     end
-    echo iiiiits goood
 
     set location $dir/$name.$ext
     if test -e $location
