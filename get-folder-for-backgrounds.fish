@@ -11,7 +11,7 @@ function get-folder-for-backgrounds
     #     echo $res
     # end
     # find $wallpaperroot -type d | grep $argv | head -1
-    set folder (wallpaperroot -type d| grep -E "/$argv\$"|head -1)
+    set folder (find $wallpaperroot -type d| grep -E "/$argv\$"|head -1)
     if exists $folder
         echo $folder
     else
