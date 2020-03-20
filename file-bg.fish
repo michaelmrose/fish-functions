@@ -7,7 +7,7 @@ function file-bg
     set name (echo $target | cut -d "/" -f2)
     set dir (get-folder-for-backgrounds $category)
     if not exists $dir
-        echo $category doesnt exist
+        echo category $category doesnt exist
         return 1
     end
     if not test -d $dir
