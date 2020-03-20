@@ -6,10 +6,11 @@ function file-bg
     set category (echo $target | cut -d "/" -f1)
     set name (echo $target | cut -d "/" -f2)
     set dir (get-folder-for-backgrounds $category)
-    echo dir is $dir
-    if not test -d $dir
-        echo $dir does not exist
-        return 1
+    if exists $dir
+        if not test -d $dir 
+            echo $dir does not exist
+            return 1
+        end
     end
 
     # set location $dir/$name.$ext
