@@ -4,7 +4,10 @@ function fw
     while read -l line
         set acc $line
         for word in $words
-            echo $word
+            set acc (echo $acc | g $word)
+        end
+        if exists $acc
+            echo $acc
         end
     end
 end
