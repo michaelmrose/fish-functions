@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/foosetter.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/foosetter.fish @ line 2
 function foosetter
-    set foo khaaaaaaaan
+    set -x foo khaaaaaaaan
 end
