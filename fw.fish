@@ -8,6 +8,8 @@ function fw
         end
         if exists $acc
             echo $acc
+        else
+            return 1
         end
     end
 end
