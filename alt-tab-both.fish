@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/alt-tab-both.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/alt-tab-both.fish @ line 2
 function alt-tab-both
     set active (get-ws-info get name where visible = true)
     set valid (seq 10)
@@ -7,5 +7,5 @@ function alt-tab-both
     set left  (filter-with-expr is-odd $active)
     set right (filter-with-expr is-even $active)
     i3-msg workspace (next-valid-entry $left $odds)
-    i3-msg workspace (next-valid-entry $ight $evens)
+    i3-msg workspace (next-valid-entry $right $evens)
 end
