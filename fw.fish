@@ -8,8 +8,12 @@ function fw
         end
         if exists $acc
             echo $acc
-        else
-            return 1
+            set found true
         end
+    end
+    if exists $found
+        return 0
+    else
+        return 1
     end
 end
