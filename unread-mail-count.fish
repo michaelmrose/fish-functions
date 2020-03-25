@@ -3,6 +3,6 @@ function unread-mail-count
     if mu find flag:unread and date:7d..now and not maildir:/OldGmail/techmail
         nil
     else
-        0
+        echo 0
     end
 end
