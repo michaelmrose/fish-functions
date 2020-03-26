@@ -44,7 +44,7 @@ function wp
             case open
                 sxiv -f $bgimage
             case pick
-                wp multi (sxiv -tbfor (wp cat ls $argv[2]))
+                wp multi (sxiv -tbfor $argv[2..-1])
             case url
                 set tmp /tmp/(uid)-wallpaper.jpg
                 curl $argv[2] > $tmp
