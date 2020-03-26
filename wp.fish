@@ -39,7 +39,9 @@ function wp
                 # case categories
             case ls
                 for i in $argv[2..1]
-                    echo $i
+                    if string match $i recent
+                        echo $i
+                    end
                 end
                 # switch $argv[2]
                 #     case recent
