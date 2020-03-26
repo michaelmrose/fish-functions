@@ -36,7 +36,16 @@ function wp
                 echo 'search [string]        -> enter a search string to be compared to file names'
             case view
                 pics (get-folder-for-backgrounds $argv[2])
-            case categories
+                # case categories
+            case ls
+                switch $argv[2]
+                    case recent
+                        p $recent_backgrounds
+                    case '*'
+                        for d in $argv[2..-1]
+                            wp cat ls $d
+                        end
+                end
             case edit
                 gimp $bgimage
                 wp $bgimage
