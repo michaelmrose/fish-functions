@@ -42,7 +42,7 @@ function wp
                     if string match $i recent
                         p $recent_backgrounds
                     else
-                        echo  wp cat ls $i
+                        wp cat ls $i
                     end
                 end
             case edit
