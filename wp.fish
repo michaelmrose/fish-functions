@@ -38,14 +38,14 @@ function wp
                 pics (get-folder-for-backgrounds $argv[2])
                 # case categories
             case ls
-                switch $argv[2]
-                    case recent
-                        p $recent_backgrounds
-                    case '*'
-                        for d in $argv[2..-1]
-                            wp cat ls $d
-                        end
-                end
+                # switch $argv[2]
+                #     case recent
+                #         p $recent_backgrounds
+                #     case '*'
+                #         for d in $argv[2..-1]
+                #             wp cat ls $d
+                #         end
+                # end
             case edit
                 gimp $bgimage
                 wp $bgimage
