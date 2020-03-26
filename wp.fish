@@ -43,6 +43,8 @@ function wp
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case open
                 sxiv -f $bgimage
+            case pick
+                wp multi (sxiv -tbfor (wp cat ls $argv[2]))
             case url
                 set tmp /tmp/(uid)-wallpaper.jpg
                 curl $argv[2] > $tmp
