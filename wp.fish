@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/functions/wp.fish @ line 2
 function wp
 	if not exists $argv
         while read -l line
