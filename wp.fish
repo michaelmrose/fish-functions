@@ -43,7 +43,7 @@ function wp
                         p $recent_backgrounds
                     else
                         if string match ':.*' $i
-                            wp find (echo $i|cut -c2-)
+                            echo wp find (echo $i|cut -c2-)
                         else
                             wp cat ls $i
                         end
