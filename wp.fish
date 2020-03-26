@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/functions/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
 	if not exists $argv
         while read -l line
@@ -61,6 +61,8 @@ function wp
                 wp $tmp
             case search
                 sxiv -tbfor (fnd '.*' -t f ~/backgrounds|g $argv[2..-1])|wp
+            case find
+                fnd '.*' -t f ~/backgrounds|g $argv[2..-1]
             case cat
                 if test (count $argv) -lt 2
                     echo try mk, mv, file, ls, ls 'some category' 
