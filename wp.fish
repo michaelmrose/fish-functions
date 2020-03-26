@@ -41,6 +41,8 @@ function wp
                 for i in $argv[2..1]
                     if string match $i recent
                         p $recent_backgrounds
+                    else
+                        wp cat ls $i
                     end
                 end
                 # switch $argv[2]
