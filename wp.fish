@@ -45,7 +45,7 @@ function wp
                         if string match ':.*' $i
                             echo wp find (echo $i|cut -c2-)
                         else
-                            wp cat ls $i
+                            echo wp cat ls $i
                         end
                     end
                 end
