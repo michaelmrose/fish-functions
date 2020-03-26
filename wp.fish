@@ -42,7 +42,11 @@ function wp
                     if string match $i recent
                         p $recent_backgrounds
                     else
-                        wp cat ls $i
+                        if string match ':.*' $i
+                            wp find (echo $i|cut -c2-)
+                        else
+                            wp cat ls $i
+                        end
                     end
                 end
             case edit
