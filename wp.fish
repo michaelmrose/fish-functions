@@ -38,6 +38,9 @@ function wp
                 pics (get-folder-for-backgrounds $argv[2])
                 # case categories
             case ls
+                for i in $argv[2..1]
+                    echo $i
+                end
                 # switch $argv[2]
                 #     case recent
                 #         p $recent_backgrounds
