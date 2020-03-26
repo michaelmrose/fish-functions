@@ -42,17 +42,9 @@ function wp
                     if string match $i recent
                         p $recent_backgrounds
                     else
-                        wp cat ls $i
+                        echo  wp cat ls $i
                     end
                 end
-                # switch $argv[2]
-                #     case recent
-                #         p $recent_backgrounds
-                #     case '*'
-                #         for d in $argv[2..-1]
-                #             wp cat ls $d
-                #         end
-                # end
             case edit
                 gimp $bgimage
                 wp $bgimage
