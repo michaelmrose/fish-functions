@@ -2,8 +2,9 @@
 function wp
 	if not exists $argv
         while read -l line
-            wp $line
+            set acc $acc $line
         end
+        wp multi $acc
         return 0
     end
 
