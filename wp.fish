@@ -157,7 +157,8 @@ function wp
             case rand
                 set numdisp (count (get-connected-displays))
                 set style $argv[2]
-                set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
+                # set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
+                set pics (wp ls $argv[2..-1]|shuf | head -$numdisp)
 
                 feh --bg-max $pics
                 echo $pics
