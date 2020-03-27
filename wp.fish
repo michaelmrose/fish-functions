@@ -117,6 +117,7 @@ function wp
                 wp $recent_backgrounds[1]
             case recall
                 ~/.fehbg
+                signal-i3blocks 12
             case show
                 sxiv -f $bgimage
             case similar
@@ -163,11 +164,13 @@ function wp
                 feh --bg-max $pics
                 echo $pics
                 set -U bgimage $pics
+                signal-i3blocks 12
             case clip
                 wp url (xclip -o -selection clip)
             case multi
                 feh --bg-max $argv[2..-1]
                 set -U bgimage $argv[2..-1]
+                signal-i3blocks 12
             case swap
                 wp multi $bgimage[2] $bgimage[1]
             case randstyle
@@ -177,6 +180,7 @@ function wp
                 feh --bg-max $pics
                 echo $pics
                 set -U bgimage $pics
+                signal-i3blocks 12
             case shuf
                 p $bgimage |shuf |condense_lines|each wp multi
         end
