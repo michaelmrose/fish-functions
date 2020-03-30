@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/set-wallpaper_wp.fish @ line 26
+# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
 	if not exists $argv
         while read -l line
@@ -163,6 +163,9 @@ function wp
                 set style $argv[2]
                 # set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
                 set pics (wp ls $argv[2..-1]|shuf | head -$numdisp)
+                for i in $pics
+                    add-to-recent-backgrounds $i
+                end
 
                 feh --bg-max $pics
                 echo $pics
