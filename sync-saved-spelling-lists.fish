@@ -14,10 +14,15 @@ function sync-saved-spelling-lists
     set enchant_words (cat $enchant)
     set hunspell_words (cat $hunspell)
 
+    set libreoffice_contents (cat $libreoffice)
+    set libreoffice_header (p $libreoffice_contents[1..4])
+    set libreoffice_words (p $libreoffice_contents[5..-1])
+
     set combined (p $aspell_words $firefox_words $enchant_words $hunspell_words | sort -u)
 
     p $aspell_header > $aspell
     p $combined >> $aspell
+
     p $combined > $firefox
     p $combined > $hunspell
     p $combined > $enchant
