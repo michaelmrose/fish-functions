@@ -4,18 +4,19 @@ function sync-saved-spelling-lists
     set hunspell ~/.hunspell_en_US
     set enchant ~/.config/enchant/en_US.dic
     set firefox $FIREFOX_WORDS_FILE
+    set libreoffice ~/.config/libreoffice/4/user/wordbook/standard.dic
 
-    set aspellcontents (cat $aspell)
-    set header $aspellcontents[1]
-    set aspellwords $aspellcontents[2..-1]
+    set aspell_contents (cat $aspell)
+    set aspell_header $aspellcontents[1]
+    set aspell_words $aspellcontents[2..-1]
 
-    set firefoxwords (cat $firefox)
-    set enchantwords (cat $enchant)
-    set hunspellwords (cat $hunspell)
+    set firefox_words (cat $firefox)
+    set enchant_words (cat $enchant)
+    set hunspell_words (cat $hunspell)
 
-    set combined (p $aspellwords $firefoxwords $enchantwords $hunspellwords | sort -u)
+    set combined (p $aspell_words $firefox_words $enchant_words $hunspell_words | sort -u)
 
-    p $header > $aspell
+    p $aspell_header > $aspell
     p $combined >> $aspell
     p $combined > $firefox
     p $combined > $hunspell
