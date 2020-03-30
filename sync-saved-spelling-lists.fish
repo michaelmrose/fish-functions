@@ -9,5 +9,5 @@ function sync-saved-spelling-lists
 
     p $header > $aspell
     p $combined >> $aspell
-    p $words > $FIREFOX_WORDS_FILE
+    p $combined > $FIREFOX_WORDS_FILE
 end
