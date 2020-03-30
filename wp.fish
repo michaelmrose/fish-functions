@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/set-wallpaper_wp.fish @ line 26
 function wp
 	if not exists $argv
         while read -l line
@@ -174,6 +174,9 @@ function wp
                 feh --bg-max $argv[2..-1]
                 set -U bgimage $argv[2..-1]
                 signal-i3blocks 12
+                for i in $argv[2..-1]
+                    add-to-recent-backgrounds $i
+                end
             case swap
                 wp multi $bgimage[2] $bgimage[1]
             case randstyle
