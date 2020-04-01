@@ -1,0 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/kitty-pick-with-z.fish @ line 1
+function kitty-pick-with-z
+    set -U KITTY_PICK (zi)
+end
