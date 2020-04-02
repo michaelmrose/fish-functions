@@ -2,9 +2,8 @@
 function restart-i3
 	set wid (xdotool getactivewindow)
 	  i3 restart
-    picom
+    killall picom
     sleep 0.25
-    compton &
     picom &
     sleep 0.5
     wmctrl -l|awk '{print $1}'|each remove-opacity-from-window
