@@ -1,4 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/decorate-workspacename_workspa.fish @ line 36
+# Defined in /home/michael/.config/fish/buffer/ws.fish @ line 2
 function ws
-	workspace $argv;
+	# workspace $argv;
+  ws2 $argv
 end
