@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/gws_tws_vi3_get-workspace_vi3_.fish @ line 36
+# Defined in /home/michael/.config/fish/buffer/decorate-workspacename_workspa.fish @ line 8
 function workspace
 	# set hostname (hostname)
   # set desktopScreens a s d z x c 1 2 3
