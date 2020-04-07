@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/save-website.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/save-website.fish @ line 2
 function save-website
     wget \
         --recursive \
@@ -7,7 +7,7 @@ function save-website
         --html-extension \
         --convert-links \
         --restrict-file-names=windows \
-        --domains website.org \
+        --domains cs.cornell.edu \
         --no-parent \
         $argv
 end
