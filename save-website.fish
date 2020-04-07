@@ -6,8 +6,8 @@ function save-website
         --page-requisites \
         --html-extension \
         --convert-links \
-        --restrict-file-names=windows \
-        --domains cs.cornell.edu \
-        --no-parent \
+        # --restrict-file-names=windows \
+        # --domains cs.cornell.edu \
+        # --no-parent \
         $argv
 end
