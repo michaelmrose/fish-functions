@@ -7,5 +7,5 @@ function ws2
             set target 2
     end
 
-    echo $target $argv
+    echo $target: $argv
 end
