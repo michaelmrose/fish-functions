@@ -55,7 +55,7 @@ function ws2
             set target 26
         case "*"
 
-        echo $target:$argv
+        echo $$argv
         i3-msg workspace $argv
         return 0
     end
