@@ -53,6 +53,11 @@ function ws2
             set target 25
         case z
             set target 26
+        case "*"
+
+        echo $target:$argv
+        i3-msg workspace $argv
+        return 0
     end
 
     echo $target:$argv
