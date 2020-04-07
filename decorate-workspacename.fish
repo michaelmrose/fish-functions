@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/decorate-workspacename.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/alphaordering_decorate-workspa.fish @ line 84
 function decorate-workspacename
     switch $argv
         case a
