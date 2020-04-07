@@ -16,7 +16,7 @@ function vi3_workspace --description 'switch workspace [a-z]'
     
     # set ws $i(get-workspace-index $i)
     # i3-msg workspace $ws
-    i3-msg workspace "$w"
+    i3-msg workspace (decorate-workspacename $w)
   end
   er vi3op
   update-op-status
