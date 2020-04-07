@@ -60,6 +60,6 @@ function ws2
         return 0
     end
 
-    echo $target:$argv
-    i3-msg workspace $target:$argv
+    echo {$target}:{$argv}
+    i3-msg workspace {$target}:{$argv}
 end
