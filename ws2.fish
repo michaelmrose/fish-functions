@@ -1,13 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/decorate-workspacename_workspa.fish @ line 40
+# Defined in /home/michael/.config/fish/buffer/ws2.fish @ line 2
 function ws2
-    set target (
     switch $argv
         case a
-            1
+            set target 1
         case b
-            2
+            set target 2
     end
-    )
 
-            echo $target $argv
+    echo $target $argv
 end
