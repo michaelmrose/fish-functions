@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/gws_tws_vi3_get-workspace_vi3_.fish @ line 7
+# Defined in /home/michael/.config/fish/buffer/tws.fish @ line 2
 function tws
-	vi3_take-window-to-workspace $argv;
+	  vi3_take-window-to-workspace (decorate-workspacename $argv);
 end
