@@ -55,5 +55,5 @@ function ws2
             set target 26
     end
 
-    i3-msg workspace $target: $argv
+    i3-msg workspace $target:$argv
 end
