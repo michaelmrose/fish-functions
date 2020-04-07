@@ -1,10 +1,7 @@
+# Defined in /home/michael/.config/fish/buffer/arrangews.fish @ line 2
 function arrangews
-	set letter (get-focused-workspace | cut -c1)
-  if wsispaged $letter
-    condensewspages
-  end
   switch $argv
-    case tabbed
+      case tabbed
       i3-msg layout tabbed
     case splith
       i3-msg layout splith
@@ -12,7 +9,5 @@ function arrangews
       i3-msg layout splitv
     case stacked
       i3-msg layout stacked
-    case paged
-      spreadwspages
   end
 end
