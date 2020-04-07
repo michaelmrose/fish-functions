@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/decorate-workspacename_ws_ws2.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/decorate-workspacename.fish @ line 2
 function decorate-workspacename
     switch $argv
         case a
@@ -53,6 +53,26 @@ function decorate-workspacename
             set target 25
         case z
             set target 26
+        case 1
+            set target 27
+        case 2
+            set target 28
+        case 3
+            set target 29
+        case 4
+            set target 30
+        case 5
+            set target 31
+        case 6
+            set target 32
+        case 7
+            set target 33
+        case 8
+            set target 34
+        case 9
+            set target 35
+        case 0
+            set target 36
         case "*"
 
         echo $argv
