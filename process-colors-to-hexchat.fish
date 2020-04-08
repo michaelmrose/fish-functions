@@ -4,7 +4,6 @@ function process-colors-to-hexchat
     set numbers (seq 1 (count $colors))
     set ndx 1
     for c in $colors
-        set acc $acc colors_$ndx = (hexcolor-to-hexchatcolor $c)
+        echo  colors_$ndx = (hexcolor-to-hexchatcolor $c)
     end
-    p $acc
 end
