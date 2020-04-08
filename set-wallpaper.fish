@@ -19,5 +19,6 @@ function set-wallpaper
   s cp $img /etc/lightdm/bg.jpg
   cp $img /home/michael/backgrounds/lightdm
   set -U bgimage $img
+  walfn
   signal-i3blocks 12
 end
