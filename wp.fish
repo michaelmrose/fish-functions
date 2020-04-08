@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/walfn_wp.fish @ line 8
 function wp
 	if not exists $argv
         while read -l line
@@ -170,12 +170,14 @@ function wp
                 feh --bg-max $pics
                 echo $pics
                 set -U bgimage $pics
+                walfn
                 signal-i3blocks 12
             case clip
                 wp url (xclip -o -selection clip)
             case multi
                 feh --bg-max $argv[2..-1]
                 set -U bgimage $argv[2..-1]
+                walfn
                 signal-i3blocks 12
                 for i in $argv[2..-1]
                     add-to-recent-backgrounds $i
@@ -187,9 +189,9 @@ function wp
                 set style (wp cat ls|shuf|all take 1)   
                 set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
                 feh --bg-max $pics
-                walfn
                 echo $pics
                 set -U bgimage $pics
+                walfn
                 signal-i3blocks 12
             case shuf
                 p $bgimage |shuf |condense_lines|each wp multi
