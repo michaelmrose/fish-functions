@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 23
+# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 17
 function walfn
 
 if test (count $bgimage) -gt 1
