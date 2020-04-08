@@ -6,5 +6,5 @@ function walfn
     else
         set target $bgimage
     end
-    wal -n --saturate 0.7 -i $target
+    wal -n --saturate 0.6 -i $target
 end
