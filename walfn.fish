@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 18
+# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 19
 function walfn
 
 wal -n --saturate 1.0 -i $target
