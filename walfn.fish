@@ -6,7 +6,7 @@ wal -n --saturate 1.0 -i $target
 if exists $argv
     set accent $argv[1]
     set fg $argv[2]
-    set bg $argv[1]
+    set bg $argv[3]
 else
     set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
     set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
