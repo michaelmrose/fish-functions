@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/replace-color-in-i3_walfn.fish @ line 7
 function walfn
     set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
     replace-color-in-i3 $accent
