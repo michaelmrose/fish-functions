@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/set-wallpaper.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/set-wallpaper_walfn.fish @ line 2
 function set-wallpaper
 	set img (pathof $argv[1])
     # echo i is $img
@@ -19,6 +19,6 @@ function set-wallpaper
   s cp $img /etc/lightdm/bg.jpg
   cp $img /home/michael/backgrounds/lightdm
   set -U bgimage $img
-  wal -n -i $bgimage[1]
+  wallfn
   signal-i3blocks 12
 end
