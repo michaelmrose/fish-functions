@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/replace-color-in-i3_walfn.fish @ line 7
+# Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
 function walfn
     set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
     set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
@@ -10,7 +10,7 @@ function walfn
     else
         set target $bgimage
     end
-    wal -n --saturate 0.7 -i $target
+    wal -n --saturate 1.0 -i $target
     inject-rounded
     set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
     replace-color-in-i3 $accent
