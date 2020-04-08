@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/inject-rounded.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/inject-rounded.fish @ line 2
 function inject-rounded
     set txt 'window {
     border-radius: 9px;
@@ -7,5 +7,6 @@ function inject-rounded
     border:           1;
     }'
 
-    p $txt
+    set wal ~/.cache/wal/colors-rofi-dark.rasi
+    p $txt >> $wal
 end
