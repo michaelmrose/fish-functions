@@ -9,6 +9,7 @@ function colorize-emacs
         set acc $argv[1]
         set fg $argv[2]
         set bg $argv[3]
+        echo a f b is $accent $fg $bg
     end
     set com emf e \'mmr/pywal-colors \"$acc\" \"$fg\" \"$bg\"\'
     eval $com
