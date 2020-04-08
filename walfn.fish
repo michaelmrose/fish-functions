@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 17
+# Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
 function walfn
 
 if test (count $bgimage) -gt 1
@@ -8,7 +8,7 @@ else
     set target $bgimage
 end
 
-wal -n --saturate 1.0 -i $target
+wal -n --saturate 0.7 -i $target
 
 if exists $argv
     set accent $argv[1]
