@@ -20,7 +20,6 @@ else
     set target $bgimage
 end
 inject-rounded
-set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
