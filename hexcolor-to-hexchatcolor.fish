@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/hexcolor-to-hexchatcolor.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/hexcolor-to-hexchatcolor_proce.fish @ line 2
 function hexcolor-to-hexchatcolor
     set first (echo $argv |cut -c2-5)
     set second (echo $argv |cut -c6-9)
