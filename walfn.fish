@@ -1,6 +1,13 @@
 # Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 23
 function walfn
 
+if test (count $bgimage) -gt 1
+    montage $bgimage[1] $bgimage[2] -geometry +0+0 /tmp/montage.jpg
+    set target /tmp/montage.jpg
+else
+    set target $bgimage
+end
+
 wal -n --saturate 1.0 -i $target
 
 if exists $argv
@@ -13,12 +20,6 @@ else
     set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
 end
 replace-color-in-i3 $accent
-if test (count $bgimage) -gt 1
-    montage $bgimage[1] $bgimage[2] -geometry +0+0 /tmp/montage.jpg
-    set target /tmp/montage.jpg
-else
-    set target $bgimage
-end
 inject-rounded
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
