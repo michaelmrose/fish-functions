@@ -187,6 +187,7 @@ function wp
                 set style (wp cat ls|shuf|all take 1)   
                 set pics (get-folder-for-backgrounds $style)/(take $numdisp (ls (get-folder-for-backgrounds $style)|shuf))
                 feh --bg-max $pics
+                walfn
                 echo $pics
                 set -U bgimage $pics
                 signal-i3blocks 12
