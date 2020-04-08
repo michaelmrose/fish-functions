@@ -4,6 +4,7 @@ function colorize-emacs
         set accent (jq -r .colors.color2 ~/.cache/wal/colors.json)
         set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
         set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
+        echo a f b is $accent $fg $bg
     else
         set acc $argv[1]
         set fg $argv[2]
