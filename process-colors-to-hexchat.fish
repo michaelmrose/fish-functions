@@ -5,5 +5,6 @@ function process-colors-to-hexchat
     set ndx 1
     for c in $colors
         echo  colors_$ndx = (hexcolor-to-hexchatcolor $c)
+        set ndx (increase $ndx)
     end
 end
