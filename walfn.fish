@@ -24,6 +24,6 @@ inject-rounded
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
-sleep 3
+sleep 1
 pywalfoxupdate
 end
