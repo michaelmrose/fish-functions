@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/functions/walfn.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
 function walfn
 
 if test (count $bgimage) -gt 1
@@ -24,4 +24,7 @@ inject-rounded
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
+if pgrep fireofx
+    /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
+end
 end
