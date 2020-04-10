@@ -24,7 +24,6 @@ inject-rounded
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
-if pgrep fireofx
-    python /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
-end
+sleep 3
+pywalfoxupdate
 end
