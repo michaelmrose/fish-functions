@@ -25,6 +25,6 @@ replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
 if pgrep fireofx
-    /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
+    python /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
 end
 end
