@@ -4,7 +4,7 @@ function z
       cd "$argv"
       zoxide add
     else
-	      set zres ( zoxide query "$argv"|cut -c8-)
+	      set zres (zoxide query "$argv"|cut -c8-)
         if test (count $zres) -gt 0
             cd "$zres"
             zoxide add
