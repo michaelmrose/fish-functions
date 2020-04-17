@@ -8,6 +8,6 @@ function batterylevel
     else
         set start F00C
     end
-    set hex $start(printf '%x' (math $percentage / 10))
+    set hex $start(printf '%x' (echo "$percentage / 10"|bc))
     printf "\U$hex  $state $percentage%%" | cut -c1-90
 end
