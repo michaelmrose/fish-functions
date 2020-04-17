@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/batterylevel_batterylevelicon.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/batterylevel.fish @ line 2
 function batterylevel
     set text (	upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"|awk '{print $2}')
     set state $text[1]
@@ -11,5 +11,5 @@ function batterylevel
     end
     set hex $start(hexdigit (math $numeric / 10))
     printf "\U$hex  $state $numeric%%"|tr -d '
-'
+    '|cut -c1-90
 end
