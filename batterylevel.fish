@@ -10,6 +10,5 @@ function batterylevel
         set start F00C
     end
     set hex $start(hexdigit (math $numeric / 10))
-    printf "\U$hex  $state $numeric%%"|tr -d '
-    '|cut -c1-90
+    printf "\U$hex  $state $numeric%%" | cut -c1-90
 end
