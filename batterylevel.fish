@@ -10,6 +10,6 @@ function batterylevel
         set start F00C
     end
     set hex {$start}A
-    set level (math $numeric / 10)
+    set level (hexdigit (math $numeric / 10))
     printf "\U$hex  $state $numeric"
 end
