@@ -9,6 +9,6 @@ function batterylevel
     else
         set start F00C
     end
-    set hex $start(hexdigit (math 50 / 10))
+    set hex $start(hexdigit (math $numeric / 10))
     printf "\U$hex  $state $numeric"
 end
