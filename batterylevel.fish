@@ -4,5 +4,10 @@ function batterylevel
     set state $text[1]
     set percentage $text[2]
     set numeric (echo $percentage |rev |cut -c 2- |rev)
+    if [ state = "charging"]
+        echo charging
+    else
+        echo not
+    end
     echo $icon $state $percentage
 end
