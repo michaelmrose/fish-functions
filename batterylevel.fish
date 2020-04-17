@@ -9,5 +9,6 @@ function batterylevel
     else
         set start F00C
     end
-    printf "\U{$start}A $state $percentage"
+    set hex {$start}A
+    printf "\U$hex $state $percentage"
 end
