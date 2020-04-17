@@ -4,6 +4,7 @@ function batterylevel
     set state $text[1..-2]
     set percentage $text[-1]
     if [ $state[1] = charging ]
+        echo true
         set start F00B
     else
         set start F00C
