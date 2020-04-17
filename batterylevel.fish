@@ -10,5 +10,5 @@ function batterylevel
         set start F00C
     end
     set hex {$start}A
-    echo printf "\U$hex $state $percentage"
+    echo printf "\U$hex $state $numeric"
 end
