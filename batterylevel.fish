@@ -1,15 +1,13 @@
 # Defined in /home/michael/.config/fish/buffer/batterylevel.fish @ line 2
 function batterylevel
-    set text (	upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep -E "state|to\ full|percentage"|awk '{print $2}' |tr -d %)
+    set text (	upower -i /org/freedesktop/UPower/devices/battery_$argv | grep -E "state|to\ full|percentage"|awk '{print $2}' |tr -d %)
     set state $text[1]
     set percentage $text[2]
-    # set numeric (echo $percentage |rev |cut -c 2- |rev)
     if [ $state = charging ]
         set start F00B
     else
         set start F00C
     end
-    echo perc is $percentage
     set hex $start(printf '%x' (math $percentage / 10))
     printf "\U$hex  $state $percentage%%" | cut -c1-90
 end
