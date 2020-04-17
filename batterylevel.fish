@@ -4,6 +4,5 @@ function batterylevel
     set state $text[1]
     set percentage $text[2]
     set numeric (echo $percentage |rev |cut -c 2- |rev)
-    # switch $percentage
-    echo $icon $state $percentage $numeric
+    echo $icon $state $percentage
 end
