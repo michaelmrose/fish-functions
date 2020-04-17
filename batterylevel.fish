@@ -10,5 +10,5 @@ function batterylevel
         set start F00C
     end
     set hex {$start}A
-    printf "\U$hex $state $numeric"
+    printf "\U$hex  $state $numeric"
 end
