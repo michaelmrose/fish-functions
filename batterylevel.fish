@@ -1,8 +1,8 @@
 # Defined in /home/michael/.config/fish/buffer/batterylevel.fish @ line 2
 function batterylevel
     set text (	upower -i /org/freedesktop/UPower/devices/battery_$argv | grep -E "state|to\ full|percentage"|awk '{print $2}' |tr -d %)
-    set state $text[1]
-    set percentage $text[2]
+    set state $text[1..-2]
+    set percentage $text[-1]
     if [ $state = charging ]
         set start F00B
     else
