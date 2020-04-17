@@ -7,7 +7,7 @@ function batterylevel
     if [ state = charging ]
         echo charging
     else
-        echo not
+        echo state
     end
     echo $icon $state $percentage
 end
