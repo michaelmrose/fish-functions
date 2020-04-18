@@ -1,7 +1,7 @@
-# Defined in /home/michael/.config/fish/buffer/colorize-emacs.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 2
 function colorize-emacs
     if not exists $argv
-        set accent (jq -r .colors.color4 ~/.cache/wal/colors.json)
+        set accent (jq -r .colors.color3 ~/.cache/wal/colors.json)
         set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
         set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
     else
