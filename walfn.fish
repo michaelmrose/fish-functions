@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/colorize-emacs_walfn.fish @ line 17
 function walfn
 
 if test (count $bgimage) -gt 1
@@ -15,7 +15,7 @@ if exists $argv
     set fg $argv[2]
     set bg $argv[3]
 else
-    set accent (jq -r .colors.color4 ~/.cache/wal/colors.json)
+    set accent (jq -r .colors.color3 ~/.cache/wal/colors.json)
     set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
     set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
 end
