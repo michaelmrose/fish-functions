@@ -70,11 +70,14 @@ function fn
     case src
       functions $argv[2..-1]
     case pprint
-      fn src $argv[2..-1] | fish-color
-    case p
-      fn src $argv[2..-1] | fish-color
-    case revs
-      switch $argv[2]
+        # fn src $argv[2..-1] | fish-color
+        for f in $argv[2..-1]
+            functions $f
+        end
+      case p
+          fn pprint $argv[2..-1]
+      case revs
+          switch $argv[2]
         case edit
           edit-function-iterations $argv[3]
         case show
