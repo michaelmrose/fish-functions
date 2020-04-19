@@ -26,5 +26,4 @@ colorize-emacs $accent $fg $bg
 restart-i3
 sleep 1
 pywalfoxupdate
-daj
 end
