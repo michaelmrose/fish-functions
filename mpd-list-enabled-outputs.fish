@@ -2,5 +2,5 @@
 function mpd-list-enabled-outputs
     # mpc outputs|grep enabled|cut -d '(' -f2|cut -d ')' -f1|tr '
     # ' ' '
-    mpd outputs|grep enabled|cut -d '(' -f2|cut -d ')' -f1|cut -c1-90
+    mpc outputs|grep enabled|cut -d '(' -f2|cut -d ')' -f1|cut -c1-90
 end
