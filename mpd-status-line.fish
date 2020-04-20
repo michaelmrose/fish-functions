@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-list-enabled-outputs_mpd-s.fish @ line 7
+# Defined in /home/michael/.config/fish/buffer/mpd-list-enabled-outputs_mpd-s.fish @ line 8
 function mpd-status-line
 	  set mpd_info (mpc status)
     set mpdstatus (p $mpd_info |grep -E 'play|pause'|cut -d \[ -f2|cut -d \] -f1)
