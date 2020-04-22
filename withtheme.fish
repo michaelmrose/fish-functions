@@ -2,9 +2,12 @@
 function withtheme
     set name (echo $argv[1]| cut -d : -f1)
     set style (echo $argv[1]| cut -d : -f2)
+    echo n is $name s is $style
     if not exists $style
         set style light
     end
+
+    echo n is $name s is $style
     set theme {$name}:$style
     # env GTK_THEME=$argv[1] $argv[2..-1]
     echo env GTK_THEME=$theme $argv[2..-1]
