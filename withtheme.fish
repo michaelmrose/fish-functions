@@ -1,7 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/withtheme.fish @ line 2
 function withtheme
-    set name (echo $argv[1]| cut -d : -f1)
-    set style (echo $argv[1]| cut -d : -f2)
+    set name (echo $argv[1]  | cut -d : -f1)
+    set style (echo $argv[1] | cut -d : -f2)
     echo n is $name s is $style
     if not exists $style
         set style light
