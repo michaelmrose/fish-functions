@@ -6,6 +6,5 @@ function withtheme
         set theme $argv[1]:light
     end
 
-    # env GTK_THEME=$argv[1] $argv[2..-1]
-    echo env GTK_THEME=$theme $argv[2..-1]
+    env GTK_THEME=$theme $argv[2..-1]
 end
