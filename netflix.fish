@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/netflix.fish @ line 2
 function netflix
-	netflix-desktop $argv; 
+    chrome --app www.netflix.com
 end
