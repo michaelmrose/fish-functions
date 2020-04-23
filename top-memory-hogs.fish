@@ -4,6 +4,6 @@ function top-memory-hogs
 
 
 for h in $hogs
-    if-set h (path-of-binary $h) meminfo --full $h
+    if-set name (path-of-binary $h) meminfo --full $name
 end
 end
