@@ -7,7 +7,7 @@ function top-memory-hogs
         else
             set item (which $h)
         end
-        set acc $acc $item
+        set acc $acc \n $item
     end
 
     echo $acc
