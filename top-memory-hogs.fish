@@ -7,7 +7,8 @@ for h in $hogs
     # if-set name (path-of-binary $h) meminfo --full $name
     set name (path-of-binary $h)
     if exists $name
-        echo $name (meminfo --full $name)
+        set mem (meminfo --full $name)
+        echo $name $mem
     end
 end
 end
