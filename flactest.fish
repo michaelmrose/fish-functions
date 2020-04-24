@@ -1,4 +1,8 @@
 # Defined in /home/michael/.config/fish/buffer/flactest_oggtest.fish @ line 2
 function flactest
-    flac --test --silent (fd -e flac) 2>| cut -d : -f1|g 'flac$'
+    for f in (fd -e flac)
+        if not flac --test $f >/dev/null
+            echo (fullpath $f)
+        end
+    end
 end
