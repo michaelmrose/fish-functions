@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/albumart_albumdir.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/albumart_albumdir.fish @ line 2
 function albumart
-    echo (albumdir)/coverd.*
+    echo (albumdir)/cover.*
 end
