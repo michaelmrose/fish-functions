@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/flactest_oggtest.fish @ line 7
 function oggtest
-    for f in $argv
+    for f in (fd -e ogg)
         if ogginfo -q > /dev/null
             echo (fullpath $f)
         end
