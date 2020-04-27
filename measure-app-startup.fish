@@ -11,6 +11,7 @@ function measure-app-startup
     # set start (date +%s)
     eval $app >/dev/null &
     while true
+        echo testing...
         if window-exists $class
             # set end (date +%s)
             # echo (math $end - $start)
