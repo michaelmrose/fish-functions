@@ -7,6 +7,7 @@ function measure-app-startup
         set app $argv[1]
         set class $argv[1]
     end
+    echo app is $app and class is $class
     # set start (date +%s)
     eval $app >/dev/null &
     while true
