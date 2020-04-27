@@ -1,9 +1,4 @@
-# Defined in /home/michael/.config/fish/functions/window-exists.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/measure-app-startup.fish @ line 6
 function window-exists
-	set result (xwininfo -tree -root | grep $argv)
-    if exists $result
-        return 0
-    else
-        return 1
-    end
+    wmctl -lxp | awk '{print $4}' |g  $argv[1]
 end
