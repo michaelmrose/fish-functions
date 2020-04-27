@@ -8,7 +8,7 @@ function measure-app-startup
         set class $argv[1]
     end
     # set start (date +%s)
-    $app >/dev/null &
+    eval $app >/dev/null &
     while true
         if window-exists $class
             # set end (date +%s)
