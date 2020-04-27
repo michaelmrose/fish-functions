@@ -3,6 +3,7 @@ function measure-app-startup
     set app $argv[1]
     set class $argv[2]
     set start date +%s
+    $app &
     while true
         if window-exists $class
             set end date +%s
