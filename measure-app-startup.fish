@@ -7,7 +7,6 @@ function measure-app-startup
         set app $argv[1]
         set class $argv[1]
     end
-    echo app is $app and class is $class
     fish -c $app >/dev/null &
     while true
         if window-exists $class
