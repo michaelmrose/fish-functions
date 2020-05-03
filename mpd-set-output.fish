@@ -2,7 +2,7 @@
 function mpd-set-output
 	switch $argv
         case computer
-            mpc enable only computer
+            mpc enable only speakers
         case http
             mpc enable only http
         case both
