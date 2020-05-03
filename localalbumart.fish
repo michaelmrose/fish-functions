@@ -2,10 +2,10 @@
 function localalbumart
     set localart (albumdir)/cover.jpg
     echo $localart
-    # if exists $localart
-    #     cp "$localart" /tmp/kunst.jpg
-    #     echo "$localart"
-    # else
-    #     return 1
-    # end
+    if exists $localart
+        cp "$localart" /tmp/kunst.jpg
+        echo "$localart"
+    else
+        return 1
+    end
 end
