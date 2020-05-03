@@ -7,6 +7,6 @@ function mpd-set-output
             mpc enable only http
         case both
             mpc enable http
-            mpc enable computer
+            mpc enable speakers
     end
 end
