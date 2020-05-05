@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/albumdir_savealbumart.fish @ line 6
+# Defined in /home/michael/.config/fish/buffer/albumdir_savealbumart.fish @ line 7
 function savealbumart
-    cp /tmp/kunst.jpg (albudmdir)/cover.jpg
+    cp /tmp/kunst.jpg (albumdir)/cover.jpg
 end
