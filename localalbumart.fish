@@ -1,8 +1,7 @@
-# Defined in /home/michael/.config/fish/buffer/localalbumart.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/localalbumart.fish @ line 1
 function localalbumart
     set localart (albumdir)/cover.jpg
-    echo $localart
-    if exists $localart
+    if test -f $localart
         cp "$localart" /tmp/kunst.jpg
         echo "$localart"
     else
