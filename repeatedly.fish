@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/repeatedly.fish @ line 2
 function repeatedly
-    set -l t
+    set -l t fucker
     set -l options 't/time'
     argparse $options -- $argv
     echo a is $argv
