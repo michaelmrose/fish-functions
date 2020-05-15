@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/freebytes.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/freebytes.fish @ line 2
 function freebytes
-free -b|grep Mem|nth 3|each human
+free -b|grep Mem|nth 4|each human
 end
