@@ -1,12 +1,15 @@
 # Defined in /home/michael/.config/fish/buffer/repeatedly.fish @ line 2
 function repeatedly
-    set -l options 't/time=+'
-    argparse $options -- $argv
-    echo a is $argv
-    echo t is $t
-    echo t is $time
-    # while true
-    #     $argv[2..-1]
-    #     sleep $argv[1]
-    # end
+    if isnumeric $argv[1]
+        set t $argv[1]
+        set c $argv[2..-1]
+    else
+        set t 1
+        set c $argv
+    end
+    
+    while true
+        $c
+        sleep $t
+    end
 end
