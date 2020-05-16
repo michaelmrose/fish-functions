@@ -2,7 +2,7 @@
 function toggle-output-type
 	switch (output-type)
         case headphones
-            switchaudio set built-in
+            switchaudio set dock
         case speakers
             switchaudio set headset
     end
