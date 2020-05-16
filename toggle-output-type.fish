@@ -2,8 +2,8 @@
 function toggle-output-type
 	switch (output-type)
         case headphones
-            fishswitchaudio.fish dock
+            switchaudio set built-in
         case speakers
-            fishswitchaudio.fish headset
+            switchaudio set headset
     end
 end
