@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/msg.fish @ line 6
 function ms
-	eval sudo sed -i \'s/$argv[1]=[ynm]/$argv[1]=$argv[2]/g\' /usr/src/linux/.config
+	twmnc -d 2000 --id 1 --icon info_icon --title $argv[1] --content "$argv[2..-1]"
 end
