@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/pl.fish @ line 15
+# Defined in /home/michael/.config/fish/buffer/pick-playlist_pl.fish @ line 2
 function pick-playlist
     if exists $argv
         set selection $argv
@@ -8,5 +8,5 @@ function pick-playlist
     
     set playlists (p ~/playlists/mpv/*.m3u)
     set choice (p $playlists|g $selection|each cutlast /|cut -d . -f1|select)
-    echo (p $playlists | grep $choice)
+    mpv (p $playlists | grep $choice) &
 end
