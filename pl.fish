@@ -1,8 +1,12 @@
-# Defined in /home/michael/.config/fish/buffer/pl.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/pl.fish @ line 2
 function pl
     if exists $argv
         if test -f ~/playlists/mpv/$argv
             mpv ~/playlists/mpv/$argv
         end
     end
+    set playlists (p ~/playlists/mpv/*.m3u)
+    set choice (p $playlists|each cutlast /|cut -d . -f1|select)
+    set path (findindex choice $playlists)
+    echo $path
 end
