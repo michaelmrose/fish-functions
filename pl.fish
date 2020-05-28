@@ -8,5 +8,5 @@ function pl
     
     set playlists (p ~/playlists/mpv/*.m3u)
     set choice (p $playlists|g $selection|each cutlast /|cut -d . -f1|select)
-    echo (p $playlists | g $choice)
+    mpv (p $playlists | g $choice) &
 end
