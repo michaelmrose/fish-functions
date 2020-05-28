@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/m_pl.fish @ line 13
+# Defined in /home/michael/.config/fish/buffer/m_pl.fish @ line 17
 function pl
     if exists $argv
         set selection $argv
