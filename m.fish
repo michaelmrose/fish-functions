@@ -4,7 +4,7 @@ function m
         set name (prompt 'name?')
         if exists $name
             for file in $argv
-                set files $files (fullpath $file)
+                set files $files (fullpath $file|stripquotes)
             end
             
             p $files > ~/playlists/mpv/$name.m3u
