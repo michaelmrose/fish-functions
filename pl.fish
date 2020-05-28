@@ -9,7 +9,7 @@ function pl
     set playlists (p ~/playlists/mpv/*.m3u)
     set choice (p $playlists|g $selection|each cutlast /|cut -d . -f1|select)
     set playlist (p $playlists | g $choice)
-    if exists $choice
-        mpv $choice &
+    if exists $playlist
+        mpv $playlist &
     end
 end
