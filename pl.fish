@@ -7,6 +7,7 @@ function pl
     end
     set playlists (p ~/playlists/mpv/*.m3u)
     set choice (p $playlists|each cutlast /|cut -d . -f1|select)
+    echo $choice
     set path (findindex choice $playlists)
     echo $path
 end
