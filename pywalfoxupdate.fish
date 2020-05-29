@@ -2,6 +2,7 @@
 function pywalfoxupdate
     if pgrep firefox > /dev/null
         echo updating firefox
-        python /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
+        # python /home/michael/extproj/Pywalfox/daemon/pywalfox.py update
+        pywalfox update
     end
 end
