@@ -2,4 +2,5 @@
 function unstoppable-kill-emacs-window
 	emf e 'kill-buffer-and-window'  &
     emf e 'kill-matching-buffers-without-prompt "*eaf*"' &
+    emf e 'kill-matching-buffers-without-prompt "about:blank"' &
 end
