@@ -6,7 +6,7 @@ function str
         case \(
             set close '\)'
         case '*'
-           set close $arg[1]
+           set close $argv[1]
     end
     while read -l line
         set acc $acc $line
