@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/here.fish @ line 2
 function here
-	ls -A | grep -i $argv
+	/usr/sbin/ls -A | grep -i $argv
 end
