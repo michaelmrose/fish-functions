@@ -1,9 +1,9 @@
 # Defined in /home/michael/.config/fish/buffer/str.fish @ line 2
 function str
     switch $argv[1]
-        case '\['
+        case '['
             set close ']'
-        case '\('
+        case '('
             set close ')'
         case '*'
            set close $argv[1]
