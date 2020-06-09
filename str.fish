@@ -11,5 +11,5 @@ function str
     while read -l line
         set acc $acc $line
     end
-    p $acc | choose -f $argv[1] 0 |choose -f $close 0
+    p $acc | cut -d $argv[1] -f 1 |cut -d $close -f 1
 end
