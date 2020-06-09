@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/choose-better.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/choose-better.fish @ line 2
 function choose-better
-    if isnumeric $argv[1]
+    if not isnumeric $argv[1]
         set delim "-f $argv[1]"
         set targets $argv[2..-1]
     else
