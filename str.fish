@@ -4,7 +4,7 @@ function str
         case \[
             set close \]
         case \(
-            set close \)
+            set close '\)'
         case '*'
            set close $arg[1]
     end
