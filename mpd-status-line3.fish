@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-status-line_mpd-status-lin.fish @ line 39
+# Defined in /home/michael/.config/fish/buffer/mpd-status-line_mpd-status-lin.fish @ line 40
 function mpd-status-line3
-    set currentstatus (either (mpc status|g 'play|pause') none)
+    set currentstatus (either (mpc status|g 'play|pause'|str \[) none)
     switch $currentstatus
         case playing
             set icon 
