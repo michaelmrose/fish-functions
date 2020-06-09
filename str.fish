@@ -2,9 +2,9 @@
 function str
     switch $argv[1]
         case '\['
-            set close '\]'
+            set close ']'
         case '\('
-            set close '\)'
+            set close ')'
         case '*'
            set close $argv[1]
     end
