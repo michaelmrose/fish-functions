@@ -3,7 +3,7 @@ function str
     switch $argv[1]
         case \[
             set close \]
-        case \(
+        case '\('
             set close \)
             echo paren
         case '*'
