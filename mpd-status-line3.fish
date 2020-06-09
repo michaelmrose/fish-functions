@@ -13,7 +13,7 @@ function mpd-status-line3
         set mpdstatus (mpc status)
         set current (p $mpdstatus |head -1)
         set playtime (echo $mpdstatus |choose 7)
-        echo $icon $current $playtime via (mpd-list-enabled-outputs)
+        echo $icon $current $playtime
     else
         echo none
     end
