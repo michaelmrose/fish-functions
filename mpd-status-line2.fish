@@ -1,6 +1,6 @@
 # Defined in /home/michael/.config/fish/buffer/mpd-status-line_mpd-status-lin.fish @ line 21
 function mpd-status-line2
-    set mpdstatus (mpc status)
+    set mpdstatus (p mpc status)
     set playorpaused (p $mpdstatus| grep -E 'play|pause'|choose 0|str \[)
     echo m is $mpdstatus
     echo p is $playorpaused
