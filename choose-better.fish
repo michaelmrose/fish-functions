@@ -7,7 +7,7 @@ function choose-better
         set delim "-f ' '" 
         set targets $argv
     end
-    set targets (incriment-numbers-in-text $targegs) 
+    set targets (decrease-numbers-in-text $targegs) 
     while read -l line
         set acc $line
     end
