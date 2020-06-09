@@ -11,5 +11,5 @@ function choose-better
     while read -l line
         set acc $line
     end
-    choose $delim $targets
+   echo $acc| choose $delim $targets
 end
