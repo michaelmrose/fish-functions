@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/incriment-numbers-in-text.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/incriment-numbers-in-text.fish @ line 2
 function incriment-numbers-in-text
-    echo $argv perl -pe 's/(\d+)/$1+1/eg'
+    echo $argv | perl -pe 's/(\d+)/$1+1/eg'
 end
