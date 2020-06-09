@@ -12,7 +12,7 @@ function mpd-status-line3
     if exists $icon
         set mpdstatus (mpc status)
         set current (p $mpdstatus |head -1)
-        set playtime (echo $mpdstatus |choose 7)
+        set playtime (echo $mpdstatus |choose 9)
         echo $icon $current $playtime
     else
         echo none
