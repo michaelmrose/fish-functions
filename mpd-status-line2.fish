@@ -6,7 +6,7 @@ function mpd-status-line2
     echo p is $playorpaused
     if exists $playorpaused
         set current (echo $mpdstatus |head -1)
-        set playtime (echo $mpdstatus |consense_lines |choose 7)
+        set playtime (echo $mpdstatus |condense_lines |choose 7)
         switch $playorpaused
             case paused
                 echo  $current $playtime via (mpd-list-enabled-outputs)
