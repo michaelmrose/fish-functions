@@ -2,13 +2,9 @@
 function mpd-status-line2
     set mpdstatus (mpc status)
     set playorpaused (p $mpdstatus| grep -E 'play|pause'|choose 0|str \[)
-    echo m is $mpdstatus
-    echo p is $playorpaused
     if exists $playorpaused
         set current (p $mpdstatus |head -1)
         set playtime (echo $mpdstatus |condense_lines |choose 7)
-        echo c is $current
-        echo p is $playtime
         switch $playorpaused
             case paused
                 echo  $current $playtime via (mpd-list-enabled-outputs)
