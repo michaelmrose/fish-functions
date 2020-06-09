@@ -4,7 +4,8 @@ function str
         case \[
             set close \]
         case \(
-            set close '\)'
+            set close \)
+            echo paren
         case '*'
            set close $argv[1]
     end
