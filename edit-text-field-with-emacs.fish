@@ -10,5 +10,6 @@ function edit-text-field-with-emacs
     rm $tmp
     sleep 0.1
     xdotool key Control+a
+    xdotool key Delete
     xdotool key Control+v
 end
