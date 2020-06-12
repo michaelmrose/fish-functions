@@ -8,4 +8,6 @@ function edit-text-field-with-emacs
     emacsclient -c $tmp
     cat $tmp |clipboard
     rm $tmp
+    sleep 0.1
+    xdotool key Control+v
 end
