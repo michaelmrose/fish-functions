@@ -1,10 +1,10 @@
-# Defined in /home/michael/.config/fish/buffer/edit-text-field-with-emacs.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/edit-text-field-with-emacs.fish @ line 2
 function edit-text-field-with-emacs
     set tmp /tmp/(uid)-edit-text-field
-    xdotool key Control+A
-    xdotool key Control+C
-    xclip -o -s clip > $tmp  
-    emacsclient -c $tmp
-    cat $tmp |clipboard
-    rm $tmp
+    xdotool key Control+a
+    xdotool key Control+c
+    # xclip -o -s clip > $tmp  
+    # emacsclient -c $tmp
+    # cat $tmp |clipboard
+    # rm $tmp
 end
