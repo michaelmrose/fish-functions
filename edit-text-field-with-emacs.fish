@@ -5,7 +5,7 @@ function edit-text-field-with-emacs
     xdotool key Control+a
     xdotool key Control+c
     xclip -o -s clip > $tmp  
-    emacsclient -c $tmp
+    emacsclient +4000:4000 -c $tmp
     cat $tmp |clipboard
     rm $tmp
     sleep 0.1
