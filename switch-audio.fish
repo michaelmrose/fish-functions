@@ -1,3 +1,4 @@
+# Defined in /home/michael/.config/fish/buffer/switch-audio.fish @ line 2
 function switch-audio
 	set sinks   (pactl list short sinks | cut -f1)
   set current (pactl list short sinks | grep (pactl info | grep Sink | cut -d ' ' -f3) | cut -f1)
@@ -10,4 +11,5 @@ function switch-audio
   end
   pactl set-default-sink $next
   signal-i3blocks output
+  signal-i3blocks 4
 end
