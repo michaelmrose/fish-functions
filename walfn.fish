@@ -1,5 +1,9 @@
 # Defined in /home/michael/.config/fish/buffer/walfn.fish @ line 2
 function walfn
+    if exists $argv
+        set -l bgimage $argv
+    end
+    
 
 if test (count $bgimage) -gt 1
     montage $bgimage[1] $bgimage[2] -geometry +0+0 /tmp/montage.jpg
