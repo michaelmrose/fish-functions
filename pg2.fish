@@ -1,11 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/pg.fish @ line 13
+# Defined in /home/michael/.config/fish/buffer/pg2.fish @ line 2
 function pg2
     set tmp /tmp/pager-(uid)
     while read -l line
         set acc $acc $line
     end
     if exists $argv
-        echo $acc | column $argv > $tmp
+        p $acc | column $argv > $tmp
     else
         echo $acc > $tmp
     end
