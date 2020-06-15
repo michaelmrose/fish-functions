@@ -1,6 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/wp-without-wallfn.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/wp-without-wallfn.fish @ line 2
 function wp-without-wallfn
-    set current $bgimage
-    wp $argv
-    feh --bg-fill $current
+    feh --bg-fill $argv
 end
