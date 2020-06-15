@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/pg.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/pg.fish @ line 2
 function pg
     set tmp /tmp/pager-(uid)
     while read -l line
