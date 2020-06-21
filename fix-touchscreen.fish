@@ -11,7 +11,7 @@ function fix-touchscreen
         echo fixing id=$i
         xinput map-to-output $i eDP1
     end
-    for i in (xinput list|n /'pen pen' n11 c=2)
+    for i in (xinput list| n /'pen pen' n11 c=2)
         echo fixing id=$i
         xinput map-to-output $i eDP1
     end
