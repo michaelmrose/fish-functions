@@ -33,4 +33,5 @@ function switchaudio
     pactl set-default-sink $next
     ponymix unmute
     signal-i3blocks output
+    signal-i3blocks 4
 end
