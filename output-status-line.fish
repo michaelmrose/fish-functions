@@ -10,5 +10,5 @@ function output-status-line
     case "*"
       set symbol 
   end
-  echo $symbol (getvolume)
+  echo $symbol(getvolume)
 end
