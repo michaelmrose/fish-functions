@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/truncate.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/truncate.fish @ line 2
 function truncate
     set len $argv[1]
     set direction $argv[2]
@@ -6,10 +6,10 @@ function truncate
     set size (count $s)
     switch $direction
         case right
-            set start $len
+            set start (math $size - $len)
             set end $size
         case left
-            set start 0
+            set start 1
             set end $len
 end
 echo $s[$start..$end]
