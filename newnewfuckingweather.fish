@@ -4,7 +4,7 @@ function newnewfuckingweather
         either $priorweather unavailable
         return 0
     end
-	  set weather (weather-icon)  (weather-report fips5303590288 --no-cache --headers=Temperature,Wind,'Sky conditions' --imperial | sd '\(.*\)' '' |n l5-7|cut -d : -f2- | condense_lines |trim|condense_spaces)
+	  set weather (weather-icon) (weather-report fips5303590288 --no-cache --headers=Temperature,Wind,'Sky conditions' --imperial | sd '\(.*\)' '' |n l5-7|cut -d : -f2- | condense_lines |trim|condense_spaces)
     set -U priorweather $weather
     if going-to-rain?
         set weather $weather rain inc
