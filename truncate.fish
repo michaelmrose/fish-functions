@@ -3,7 +3,7 @@ function truncate
     set len $argv[1]
     set direction $argv[2]
     set s $argv[3..-1]
-    set size (count $s)
+    set size $echo s|wc -c
     switch $direction
         case right
             set start (math $size - (math $len - 1))
