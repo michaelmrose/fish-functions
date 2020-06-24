@@ -12,7 +12,7 @@ function mpd-status-line
                 echo  $current via (mpd-list-enabled-outputs) at(getvolume)
         end
     else
-        output-status-line 2> /dev/null
+        # output-status-line 2> /dev/null
         return 0
     end
 end
