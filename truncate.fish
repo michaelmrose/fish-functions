@@ -4,7 +4,7 @@ function truncate
     set direction $argv[2]
     set s $argv[3..-1]
     set size (echo $s|wc -c)
-    if test $size -lt $len
+    if test $size -le $len
         echo $s
     else
         switch $direction
@@ -14,7 +14,7 @@ function truncate
         case left
             set start 1
             set end $len
-end
-echo $s |  cut -c{$start}-{$end}
-end
+        end
+        echo $s |  cut -c{$start}-{$end}
+    end
 end
