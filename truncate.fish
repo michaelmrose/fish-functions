@@ -12,5 +12,6 @@ function truncate
             set start 1
             set end $len
 end
+echo s is $start e is $end
 echo cut -c{$start}-{$end}
 end
