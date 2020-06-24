@@ -11,4 +11,5 @@ function switch-audio
   end
   pactl set-default-sink $next
   signal-i3blocks output
+  signal-i3blocks 4
 end
