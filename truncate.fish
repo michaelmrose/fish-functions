@@ -6,7 +6,7 @@ function truncate
     set size (count $s)
     switch $direction
         case right
-            set start (math $size - $len)
+            set start (math $size - (math $len - 1))
             set end $size
         case left
             set start 1
