@@ -7,9 +7,9 @@ function mpd-status-line
         # set playtime (mpc status |condense_lines | cut -d\# -f2-|awk '{print $2}')
         switch $mpdstatus
             case paused
-                echo  $current via (mpd-list-enabled-outputs) at(getvolume)  
+                echo  $current via (mpd-list-enabled-outputs) at(getvolume)   
             case playing
-                echo  $current via (mpd-list-enabled-outputs) at(getvolume)  
+                echo  $current via (mpd-list-enabled-outputs) at(getvolume)   
         end
     else
         output-status-line
