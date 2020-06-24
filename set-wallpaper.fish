@@ -16,7 +16,7 @@ function set-wallpaper
   feh --bg-{$format} $img
   add-to-recent-backgrounds $img
   set -U bgstyle (cutlastn "/" 2 $img)
-  s cp $img /etc/lightdm/bg.jpg
+  set-lightdm-bg $img
   set -U bgimage $img
   walfn
   signal-i3blocks 12
