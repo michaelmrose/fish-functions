@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/fix-pen_fix-touchscreen.fish @ line 9
+# Defined in /home/michael/.config/fish/buffer/fix-pen_fix-touchscreen.fish @ line 10
 function fix-touchscreen
 	s rmmod wacom
     s modprobe wacom
@@ -11,5 +11,4 @@ function fix-touchscreen
         echo fixing id=$i
         xinput map-to-output $i eDP1
     end
-    fix-pen
 end
