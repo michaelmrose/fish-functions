@@ -12,7 +12,9 @@ function mpd-status-line4
         end
         set tail via (mpd-list-enabled-outputs) at(getvolume)
         if exists $argv #we have a max size to respect
+            echo arg exists
             if test (echo $current |wc -c) -gt $argv
+                echo fuck c being $current is gt $argv
                 set current (echo $current | choose -f ' - ' 1)
                 if test (echo $current |wc -c) -gt $argv
                     set current (truncate $argv right $current) 
