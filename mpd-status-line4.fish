@@ -20,6 +20,7 @@ function mpd-status-line4
                 
             end
         end
+        echo $symbol $current $tail
         
             
 
