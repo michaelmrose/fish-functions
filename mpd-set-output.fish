@@ -3,6 +3,12 @@ function mpd-set-output
 	switch $argv
         case computer
             mpc enable only speakers
+        case speakers
+            mpc enable only speakers
+            switchaudio set dock
+        case headphones
+            mpc enable only speakers
+            switchaudio set headset
         case http
             mpc enable only http
         case both
