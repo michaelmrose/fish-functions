@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-status-line_mpd-status-lin.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/mpd-status-line.fish @ line 2
 function mpd-status-line
 	  set mpd_info (mpc status)
     set mpdstatus (p $mpd_info |grep -E 'play|pause'|cut -d \[ -f2|cut -d \] -f1)
@@ -7,9 +7,9 @@ function mpd-status-line
         # set playtime (mpc status |condense_lines | cut -d\# -f2-|awk '{print $2}')
         switch $mpdstatus
             case paused
-                echo  $current via (mpd-list-enabled-outputs) at(getvolume)
+                echo  $current via (mpd-list-enabled-outputs) at (getvolume)
             case playing
-                echo  $current via (mpd-list-enabled-outputs) at(getvolume)
+                echo  $current via (mpd-list-enabled-outputs) at (getvolume)
         end
     else
         output-status-line
