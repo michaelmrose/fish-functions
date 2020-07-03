@@ -11,7 +11,7 @@ function mpd-status-line4
                 set symbol 
         end
         set volume (getvolume)
-        if test (echo $volume |wc -c) -gt 1
+        if test (echo $volume |wc -c) -gt 3
             ms bigger
             set volume " $volume"
         end
