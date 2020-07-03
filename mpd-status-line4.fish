@@ -10,7 +10,7 @@ function mpd-status-line4
             case playing
                 set symbol 
         end
-        set tail via (mpd-list-enabled-outputs) at(getvolume)
+        set tail via (mpd-list-enabled-outputs) at (getvolume)
         if exists $argv #we have a max size to respect
             if test (echo $symbol $current $tail |wc -c) -gt $argv
                 set current (echo $current | choose -f ' - ' 1)
