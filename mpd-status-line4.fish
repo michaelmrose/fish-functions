@@ -10,6 +10,10 @@ function mpd-status-line4
             case playing
                 set symbol 
         end
+        set volume (getvolume)
+        if test (echo $volume |wc -c) -gt 2
+            set volume " $volume"
+        end
         set tail via (mpd-list-enabled-outputs) at(getvolume)
         if exists $argv #we have a max size to respect
             if test (echo $symbol $current $tail |wc -c) -gt $argv
