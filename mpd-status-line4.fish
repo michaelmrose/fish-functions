@@ -13,10 +13,8 @@ function mpd-status-line4
         set volume (getvolume)
         if test (echo $volume |wc -c) -gt 2
             set volume " $volume"
-            echo higher
-            return 0
         end
-        set tail via (mpd-list-enabled-outputs) at(getvolume)
+        set tail via (mpd-list-enabled-outputs) at$volume
         if exists $argv #we have a max size to respect
             if test (echo $symbol $current $tail |wc -c) -gt $argv
                 set current (echo $current | choose -f ' - ' 1)
