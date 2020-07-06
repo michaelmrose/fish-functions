@@ -18,7 +18,7 @@ function mpd-status-line4
         set tail via (mpd-list-enabled-outputs) at $volume
         if exists $argv #we have a max size to respect
             if test (echo $symbol $current $tail |wc -c) -gt $argv
-                set current (echo $current | choose -f ' - ' 1)
+                set current (echo $current | choose -f ' - ' 1|tr -d  " ")
                 if test (echo $symbol $current $tail |wc -c) -gt $argv
                     set current (truncate $argv right $current) 
                 end
