@@ -6,7 +6,7 @@ function garg
         set list open $argv
     end
     
-	  set games (endsin z5 z3 gblorb ~/if)
+	  set games (endsin z5 z3 gblorb zblorb ~/if)
     switch $list[1]
         case select
             p $games | all select | each garg open
