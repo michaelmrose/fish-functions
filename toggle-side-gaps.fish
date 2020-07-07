@@ -4,7 +4,7 @@ function toggle-side-gaps
     if test $width -lt 1300
         i3 gaps horizontal current set 5
     else
-        set size (math (math $width - 1200 ) / 2)
+        set size (math (math $width - 1160 ) / 2)
         echo $size
         # i3 gaps horizontal current set 300
     end
