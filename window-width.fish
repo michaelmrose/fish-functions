@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/window-width.fish @ line 1
+# Defined in /home/michael/.config/fish/buffer/window-width.fish @ line 2
 function window-width
-	xwininfo -id (xdotool getactivewindow) | grep 'Width:' | nth 2
+    xwininfo -stats -id (xdotool getactivewindow)|grep Width|choose 1
 end
