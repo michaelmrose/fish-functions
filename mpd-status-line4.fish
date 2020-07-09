@@ -19,6 +19,7 @@ function mpd-status-line4
         if exists $argv #we have a max size to respect
             if test (echo $priorweather | wc -c ) -gt 40
                 set max (math $argv - 20)
+                echo max is $max
             else
                 set max $argv
             end
