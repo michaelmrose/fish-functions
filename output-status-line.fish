@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/output-status-line.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/mpd-status-line4_output-status.fish @ line 44
 function output-status-line
 	switch (output-type)
     case headphones
