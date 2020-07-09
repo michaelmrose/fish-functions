@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-status-line4.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/mpd-status-line4_output-status.fish @ line 2
 function mpd-status-line4
 	  set mpd_info (mpc status)
     set mpdstatus (p $mpd_info |grep -E 'play|pause'|cut -d \[ -f2|cut -d \] -f1)
@@ -23,6 +23,8 @@ function mpd-status-line4
                 set current (echo $current | choose -f ' - ' 1|condense_spaces)
                 if test (echo $symbol $current $tail |wc -c) -gt $max
                     set current (truncate $max right $current) 
+                    set tail (echo $tail | sd headphones )
+                    set tail (echo $tail | sd speakers )
                 end
                 
             end
