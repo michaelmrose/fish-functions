@@ -21,10 +21,10 @@ function mpd-status-line4
 
             if test (echo $symbol $current $tail |wc -c) -gt $max
                 set current (echo $current | choose -f ' - ' 1|condense_spaces)
+                if test (echo $symbol $current $tail |wc -c) -gt $max
                 set tail (echo $tail | sd headphones )
                 set tail (echo $tail | sd speakers )
                 set tail (echo $tail|sd " at " " ")
-                if test (echo $symbol $current $tail |wc -c) -gt $max
                     set current (truncate $max right $current) 
                 end
                 
