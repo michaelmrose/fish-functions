@@ -17,12 +17,7 @@ function mpd-status-line4
         # end
         set tail via (mpd-list-enabled-outputs) at $volume
         if exists $argv #we have a max size to respect
-            if test (echo $priorweather | wc -c ) -gt 40
-                set max (math $argv - 20)
-                echo max is $max
-            else
-                set max $argv
-            end
+            set max $argv
 
             if test (echo $symbol $current $tail |wc -c) -gt $max
                 set current (echo $current | choose -f ' - ' 1|condense_spaces)
