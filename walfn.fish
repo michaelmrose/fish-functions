@@ -25,6 +25,6 @@ replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
 sleep 1
-pywalfoxupdate
+pywalfox update
 pywalzathura
 end
