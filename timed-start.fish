@@ -1,8 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/timed-start_timed-start2.fish @ line 2
+# Defined in /home/michael/.config/fish/buffer/timed-start.fish @ line 2
 function timed-start
     if test (count $argv) -gt 1
-        set app $argv[1]
-        set class $argv[2]
+        set app $argv[1..-2]
+        set class $argv[-1]
     else
         set app $argv[1]
         set class $argv[1]
