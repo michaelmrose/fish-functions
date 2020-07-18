@@ -1,6 +1,7 @@
 # Defined in /home/michael/.config/fish/buffer/getvolume.fish @ line 2
 function getvolume
-	  set vol (ponymix get-volume 2> /dev/null)
+	  # set vol (ponymix get-volume 2> /dev/null)
+      set vol (pamixer --get-volume)
   #   if test $vol -lt 100
   #       set vol " "{$vol}
   # end
