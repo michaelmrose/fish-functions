@@ -2,7 +2,7 @@
 function typewriter-notification
     for i in (seq 1 (count $argv[2..-1]))
         ms $argv[1]  $argv[2..$i]
-        sleep 
+        sleep 1
     end
    # set title $argv[1]
    # set message $argv[2..-1]
