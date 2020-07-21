@@ -1,8 +1,8 @@
 # Defined in /home/michael/.config/fish/buffer/typewriter-notification.fish @ line 2
 function typewriter-notification
-    for i in (seq 1 (count $argv[2..-1]))
-        ms $argv[1]  $argv[2..$i]
-        sleep 1
+    for i in (seq 1 (count $argv))
+        ms $argv[1..$i]
+        sleep 0.5
     end
    # set title $argv[1]
    # set message $argv[2..-1]
