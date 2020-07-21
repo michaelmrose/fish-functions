@@ -7,6 +7,6 @@ function typewriter-notification
    set length (echo $argv|wc -c)
    for i in (seq 1 $length)
        ms (echo $argv |cut -c 1-$i)
-       sleep 0.1
+       sleep 0.05
    end
 end
