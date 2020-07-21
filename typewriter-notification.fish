@@ -9,6 +9,7 @@ function typewriter-notification
    set length (echo $message|wc -c)
    for i in (seq 1 $length)
        twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content (echo $message|cut -c 1-$i)
+       echo title is $title and message is $message
        sleep 0.02
    end
 end
