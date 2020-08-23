@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/fix-touchscreen_setup-keyboard.fish @ line 19
+# Defined in /usr/home/michael/.config/fish/buffer/setup-keyboard.fish @ line 2
 function setup-keyboard
 	xmodmap ~/.config/xkeys/keys
   xcape-file ~/.config/xkeys/xcapes
@@ -6,10 +6,10 @@ function setup-keyboard
   xset r rate 300 30
   if not exists $argv
       numlocked
-      fucking-caps-led 0
-      fix-touchscreen
+      # fucking-caps-led 0
+      # fix-touchscreen
   end
   # msg keyboard setup
-  set -U SYMBOLLOCK true
-  twmnc -d 200 -id 1 --content "keyboard setup"
+  # set -U SYMBOLLOCK true
+  # twmnc -d 200 -id 1 --content "keyboard setup"
 end
