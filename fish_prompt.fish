@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/fish_prompt.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/fish_prompt.fish @ line 2
 function fish_prompt
 	# if not timeout 0.5 /opt/bin/powerlineshell.py $status --shell bare ^/dev/null
   #   echo (pwd) \$: 
@@ -13,5 +13,7 @@ function fish_prompt
   # powerline-rs --shell bare $status
   # powerline-rs --modules user,host,cwd,ssh,jobs,perms,git,gitstage --shell bare $status
   # powerline-rs --modules ssh,cwd,perms,git,gitstage,root --shell bare $status
-  timeout 0.25 powerline-rs --modules ssh,user,host,cwd,perms,git,gitstage,root --shell bare $status;or powerline-rs --modules ssh,user,host,cwd,perms,root --shell bare $status
+  # timeout 0.25 powerline-rs --modules ssh,user,host,cwd,perms,git,gitstage,root --shell bare $status;or powerline-rs --modules ssh,user,host,cwd,perms,root --shell bare $status
+  powerline-rs --shell bare $status
+  # echo (pwd) '$ ' 
 end
