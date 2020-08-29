@@ -11,6 +11,6 @@ function typewriter-notification
        set current (echo $message|cut -c 1-$i)
        echo c is $current
        twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content $current
-       sleep 0.02
+       sleep 0.1
    end
 end
