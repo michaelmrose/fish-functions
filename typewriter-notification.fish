@@ -10,6 +10,6 @@ function typewriter-notification
    for i in (seq 1 $length)
        set current (echo $message|cut -c 1-$i)
        twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content $current
-       sleep 0.04
+       sleep 0.025
    end
 end
