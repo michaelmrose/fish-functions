@@ -5,7 +5,7 @@ function i3-elements
     set ids $i3_bar_ids $i3_frame_ids
     switch $argv[1]
     case trans
-        set val 0.6
+        set val 0.7
       case hide
       set val 0
     case show
