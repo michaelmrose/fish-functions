@@ -4,13 +4,12 @@ function newnewfuckingweather
         either $priorweather unavailable
         return 0
     end
-    set weather (weather-icon) (/usr/bin/weather  fips5303590288  --headers=Temperature,Wind,'Sky conditions' --imperial | sd '\(.*\)' '' |n l5-7|cut -d : -f2- | condense_lines |trim|condense_spaces)
+    set weather (weather-icon) (/usr/bin/weather  fips5303590288  --no-cache --headers=Temperature,Wind,'Sky conditions' --imperial | sd '\(.*\)' '' |n l5-7|cut -d : -f2- | condense_lines |trim|condense_spaces)
     # if going-to-rain?
     #     set weather $weather rain inc
     # end
 
     set aqi (aqi)
-    echo is fucking $aqi
     set weather $weather aqi: $aqi
     set -U priorweather $weather
     echo $weather
