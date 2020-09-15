@@ -10,7 +10,6 @@ function newnewfuckingweather
     # end
 
     set aqi (aqi)
-    set weather $weather aqi: $aqi
     set -U priorweather $weather
     echo $weather
 end
