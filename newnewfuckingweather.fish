@@ -8,7 +8,8 @@ function newnewfuckingweather
     # if going-to-rain?
     #     set weather $weather rain inc
     # end
-
+   
+    set weather $weather aqi: (aqi)
     set -U priorweather $weather
-    echo $weather aqi (aqi)
+    echo $weather
 end
