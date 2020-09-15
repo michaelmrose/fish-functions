@@ -9,6 +9,6 @@ function newnewfuckingweather
     #     set weather $weather rain inc
     # end
 
-    set -U priorweather $weather aqi: (aqi)
-    echo $weather
+    set -U priorweather $weather
+    echo $weather aqi (aqi)
 end
