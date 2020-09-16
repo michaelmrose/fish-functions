@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/mpd-status-line4_output-status.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/mpd-status-line4.fish @ line 2
 function mpd-status-line4
 	  set mpd_info (mpc status)
     set mpdstatus (p $mpd_info |grep -E 'play|pause'|cut -d \[ -f2|cut -d \] -f1)
@@ -15,7 +15,9 @@ function mpd-status-line4
         #     ms bigger
         #     set volume " $volume"
         # end
-        set tail via (mpd-list-enabled-outputs) at $volume
+        # set tail via (mpd-list-enabled-outputs) at $volume
+        set mpdout (mpc outputs|g enabled|choose 2|cut -d \( -f2|cut -d \) -f1|sd \n ' ')
+        set tail via (output-type) at $volume mpd: $mpdout
         if exists $argv #we have a max size to respect
             set max $argv
 
