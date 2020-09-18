@@ -4,7 +4,7 @@ function restart-i3
 	  i3 restart
     killall picom
     sleep 0.25
-    picom
+    picom &
     sleep 0.5
     wmctrl -l|awk '{print $1}'|each remove-opacity-from-window
     eval "i3 [id=$wid] focus" 
