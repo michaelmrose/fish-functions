@@ -2,7 +2,7 @@
 function restart-i3
 	set wid (xdotool getactivewindow)
 	  i3 restart
-    killall compton
+    killall picom
     sleep 0.25
     picom
     sleep 0.5
