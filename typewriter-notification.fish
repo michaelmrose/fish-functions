@@ -1,5 +1,13 @@
 # Defined in /usr/home/michael/.config/fish/buffer/typewriter-notification.fish @ line 2
 function typewriter-notification
+    if not exists $argv
+        while read -l line
+            set acc $acc $line
+        end
+        typewriter-notification $acc
+        return 0
+    end
+    
     # for i in (seq 1 (count $argv))
     #     ms $argv[1..$i]
     #     sleep 0.3
