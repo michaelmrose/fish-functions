@@ -4,7 +4,7 @@ function typewriter-notification
         while read -l line
             set acc $acc $line
         end
-        typewriter-notification $acc
+        typewriter-notification (explode $acc)
         return 0
     end
     
