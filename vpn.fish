@@ -4,6 +4,6 @@ function vpn
         case -d
             volemad-cli -d
         case  -c
-            volemad -p 'USA' -s 'Los Angeles, CA'
+            volemad-cli  -p 'USA' -s 'Los Angeles, CA'
     end
 end
