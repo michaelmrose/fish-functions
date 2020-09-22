@@ -1,3 +1,9 @@
+# Defined in /usr/home/michael/.config/fish/buffer/vpn.fish @ line 2
 function vpn
-	ovpn $argv; 
+    switch $argv[1]
+        case -d
+            volemad-cli -d
+        case  -c
+            volemad -p 'USA' -s 'Los Angeles, CA'
+    end
 end
