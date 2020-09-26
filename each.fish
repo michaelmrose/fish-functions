@@ -2,10 +2,10 @@
 function each
 	if string match _ "$argv" > /dev/null
         while read -l line
-            echo l is $line and a is $argv
             eval (echo $argv | sd _ $line)
         end
     else
+        echo in else
         while read -l line
             eval $argv $line
         end
