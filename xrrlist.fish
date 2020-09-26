@@ -8,5 +8,6 @@ function xrrlist
             set prior $d
         end
     end
+    echo $com
     eval $com
 end
