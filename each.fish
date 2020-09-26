@@ -1,7 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/each.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/each.fish @ line 2
 function each
 	if string match _ "$argv" > /dev/null
         while read -l line
+            echo l is $line and a is $argv
             eval (echo $argv | sd _ $line)
         end
     else
