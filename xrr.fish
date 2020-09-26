@@ -2,12 +2,11 @@
 function xrr
 	switch $argv[1]
         case single
-          xrandr --output HDMI-0 --auto --output DVI-D-0 --off --output DP-5 --off
+            xrrlist HDMI-0
         case triple
-            xrandr --output DP-5 --auto --output HDMI-0 --auto --left-of DP-5 --output DVI-D-0 --auto --left-of HDMI-0
+          xrrlist DVI-D-0 HDMI-0 DP-5
         case '*'
             xrrlist $argv
   end
   wp recall
-  restart picom
 end
