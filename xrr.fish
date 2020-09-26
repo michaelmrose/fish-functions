@@ -1,13 +1,10 @@
-# Defined in /home/michael/.config/fish/buffer/game_runp2_xrr.fish @ line 28
+# Defined in /usr/home/michael/.config/fish/buffer/xrr.fish @ line 2
 function xrr
 	switch $argv[1]
-      case laptop
-          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --off
-      case desktop
-          xrandr --output eDP1 --off --output DP1 --auto
-      case double
-          xrandr --output eDP1 --auto --set "scaling mode" "Full aspect" --scale 0.75x0.75 --output DP1 --auto --right-of eDP1
-
+        case single
+          xrandr --output HDMI-0 --auto --output DVI-D-0 --off --output DP-5 --off
+        case triple
+            xrandr --output DP-5 --auto --output HDMI-0 --auto --left-of DP-5 --output DVI-D-0 --auto --left-of HDMI-0
   end
   wp recall
 end
