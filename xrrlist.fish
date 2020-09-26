@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/xrrlist.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/xrr_xrrlist.fish @ line 30
 function xrrlist
     set prior $argv[1]
     set com "xrandr --output $prior --auto" 
