@@ -13,7 +13,7 @@ function xrrlist
             set com "$com --output  $d --off"
         end
     end
-    
     echo $com
+    set -U LASTXRR $com
     eval $com
 end
