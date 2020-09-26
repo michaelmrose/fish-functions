@@ -8,6 +8,12 @@ function xrrlist
             set prior $d
         end
     end
+    for d in (get-connected-displays)
+        if not contains $d $argv
+            set com "$com --output  $d --off"
+        end
+    end
+    
     echo $com
     eval $com
 end
