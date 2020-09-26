@@ -10,7 +10,7 @@ function xrr
            # add argv[2] to existing layout on right side
            xrr $ENABLED_DISPLAYS $argv[2]
         case triple
-            xrrlist DVI-D-0 HDMI-0 DP-5
+            xrr DVI-D-0 HDMI-0 DP-5
         case toggle
             if test (count (get-connected-displays)) -gt 1
                 xrr single
