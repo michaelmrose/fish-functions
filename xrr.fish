@@ -11,8 +11,8 @@ function xrr
         end
     else
         xrrswap
-
     end
     
   wp recall
+  restart picom
 end
