@@ -15,5 +15,6 @@ function xrrlist
     end
     echo $com
     set -U LASTXRR $com
+    set -U ENABLED_DISPLAYS $argv
     eval $com
 end
