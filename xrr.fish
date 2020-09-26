@@ -5,6 +5,8 @@ function xrr
           xrandr --output HDMI-0 --auto --output DVI-D-0 --off --output DP-5 --off
         case triple
             xrandr --output DP-5 --auto --output HDMI-0 --auto --left-of DP-5 --output DVI-D-0 --auto --left-of HDMI-0
+        case '*'
+            xrrlist $argv
   end
   wp recall
 end
