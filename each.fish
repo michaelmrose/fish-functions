@@ -1,11 +1,11 @@
 # Defined in /usr/home/michael/.config/fish/buffer/each.fish @ line 2
 function each
+    echo we are going to match on $argv
 	if string match _ "$argv" > /dev/null
         while read -l line
             eval (echo $argv | sd _ $line)
         end
     else
-        echo in else
         while read -l line
             eval $argv $line
         end
