@@ -7,5 +7,5 @@ function xrrlist
             set com "$com --output $d --auto --right-of $prior" 
         end
     end
-    $com
+    eval $com
 end
