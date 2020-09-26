@@ -5,6 +5,7 @@ function xrrlist
     if test (count $argv) -gt 1
         for d in $argv[2..-1]
             set com "$com --output $d --auto --right-of $prior" 
+            set prior $d
         end
     end
     eval $com
