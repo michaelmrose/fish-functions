@@ -1,3 +1,4 @@
+# Defined in /usr/home/michael/.config/fish/buffer/keyboardordering.fish @ line 2
 function keyboardordering
     switch $argv
         case a
@@ -21,15 +22,15 @@ function keyboardordering
         case b
             set target 10
         case 1
-            set target 11
+            set target 51
         case 2
-            set target 12
+            set target 52
         case 3
-            set target 13
+            set target 53
         case 4
-            set target 14
+            set target 54
         case 5
-            set target 15
+            set target 55
         case h
             set target 16
         case j
@@ -43,15 +44,15 @@ function keyboardordering
         case m
             set target 21
         case 6
-            set target 22
+            set target 56
         case 7
-            set target 23
+            set target 57
         case 8
-            set target 24
+            set target 58
         case 9
-            set target 25
+            set target 59
         case 0
-            set target 26
+            set target 60
         case "*"
 
         echo $argv
