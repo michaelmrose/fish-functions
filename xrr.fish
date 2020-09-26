@@ -9,4 +9,5 @@ function xrr
             xrrlist $argv
   end
   wp recall
+  restart picom
 end
