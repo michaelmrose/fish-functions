@@ -1,3 +1,4 @@
+# Defined in /usr/home/michael/.config/fish/buffer/get-disconnected-displays.fish @ line 2
 function get-disconnected-displays
-	xrandr | gr ' connected [^0-9p]' | cut -d ' ' -f1
+    xrandr | grep ' connected' |grep -E --invert-match '[[:print:]]{3,7} [[:print:]]{9} [0-9]{3,4}'
 end
