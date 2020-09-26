@@ -3,6 +3,10 @@ function xrr
     switch $argv[1]
         case single
             xrrlist HDMI-0
+        case left
+           # add argv[2] to existing layout on left side
+        case right
+           # add argv[2] to existing layout on right side
         case triple
             xrrlist DVI-D-0 HDMI-0 DP-5
         case toggle
