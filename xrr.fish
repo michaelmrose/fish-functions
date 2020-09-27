@@ -1,14 +1,25 @@
-# Defined in /usr/home/michael/.config/fish/buffer/xrr_xrrlist.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/xrr.fish @ line 2
 function xrr
     switch $argv[1]
         case single
             xrr HDMI-0
         case left
            # add argv[2] to existing layout on left side
-           xrr $argv[2] $ENABLED_DISPLAYS
+           if test (count $argv) -gt 1
+               xrr $argv[2] $ENABLED_DISPLAYS
+           else
+               xrr (get-disconnected-displays) $ENABLED_DISPLAYS
+           end
+           
         case right
            # add argv[2] to existing layout on right side
-           xrr $ENABLED_DISPLAYS $argv[2]
+           if test (count $argv) -gt 1
+               xrr $ENABLED_DISPLAYS $argv[2]
+           else
+               xrr $ENABLED_DISPLAYS (get-disconnected-displays) 
+           end
+           
+
         case triple
             xrr DVI-D-0 HDMI-0 DP-5
         case toggle
