@@ -4,6 +4,10 @@ function vpn
         case -d
             volemad-cli -d
         case  -c
+            if not pgrep volemad\$
+                volemad &
+                sleep 0.5
+            end
             volemad-cli  -p 'USA' -s 'Los Angeles, CA'
     end
 end
