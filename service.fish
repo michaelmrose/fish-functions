@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/?.fish @ line 6
+# Defined in /usr/home/michael/.config/fish/buffer/service_start_stop.fish @ line 2
 function service
     if test -d ~/service/$argv[2]
         sv $argv[1] $argv[2]
