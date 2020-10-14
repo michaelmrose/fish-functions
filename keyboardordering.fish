@@ -12,15 +12,15 @@ function keyboardordering
         case g
             set target 5
         case z
-            set target 6
-        case x
             set target 7
-        case c
+        case x
             set target 8
-        case v
+        case c
             set target 9
-        case b
+        case v
             set target 10
+        case b
+            set target 11
         case 1
             set target 51
         case 2
@@ -32,7 +32,7 @@ function keyboardordering
         case 5
             set target 55
         case h
-            set target 16
+            set target 6
         case j
             set target 17
         case k
