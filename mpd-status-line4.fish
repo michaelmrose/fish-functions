@@ -16,8 +16,7 @@ function mpd-status-line4
         #     set volume " $volume"
         # end
         # set tail via (mpd-list-enabled-outputs) at $volume
-        set mpdout (mpc outputs|g enabled|choose 2|cut -d \( -f2|cut -d \) -f1|sd 
- ' ')
+        set mpdout (mpc outputs|g enabled|choose 2|cut -d \( -f2|cut -d \) -f1|sd \n ' ')
         set tail via (output-type) at $volume mpd: $mpdout
         if exists $argv #we have a max size to respect
             set max $argv
