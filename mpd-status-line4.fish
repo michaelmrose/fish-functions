@@ -17,7 +17,8 @@ function mpd-status-line4
         # end
         # set tail via (mpd-list-enabled-outputs) at $volume
         set mpdout (mpc outputs|g enabled|choose 2|cut -d \( -f2|cut -d \) -f1|condense_lines)
-        set tail via (output-type) at $volume mpd: $mpdout
+        # set tail via (output-type) at $volume mpd: $mpdout
+        set tail via $mpdout  (output-status-line) 
         if exists $argv #we have a max size to respect
             set max $argv
 
