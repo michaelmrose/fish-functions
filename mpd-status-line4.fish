@@ -32,7 +32,7 @@ function mpd-status-line4
                 
             end
         end
-        echo  $symbol $current $tail (output-icon)" "
+        echo  $symbol $current $tail
         
             
 
