@@ -15,8 +15,8 @@ function m
         # if we only have one entry  and it happens to be a video we are going save it to a recent playlist
         # which will be listed in order of recency with duplicates remove and no more than 30 entries saved
         if is-a-video? $argv
-            set recent ~/playlists/mpv/recent.m3u
-            set new ~/playlists/mpv/new.m3u
+            set recent ~/playlists/recent.m3u
+            set new ~/playlists/new.m3u
             echo (fullpath $argv|stripquotes) >> $new
             cat $recent >> $new
             # remove non adjacent duplicate entries and keep the last 30 entries
