@@ -12,10 +12,13 @@ function m
     else
         if is-a-video? $argv
             set recent ~/playlists/mpv/recent.m3u
-            echo (fullpath $argv|stripquotes) >> $recent
+            set new ~/playlists/mpv/new.m3u
+            echo (fullpath $argv|stripquotes) >> $new
+            cat $recent >> $new
             # remove non adjacent duplicate entries and keep the last 30 entries
-            awk '!visited[$0]++'  $recent
-            sed -i '3,$ d' $recent
+            awk '!visited[$0]++'  $new
+            sed -i '3,$ d' $new
+            mv $new $recent
         end
     end
     mpv $argv &
