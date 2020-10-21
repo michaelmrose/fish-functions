@@ -1,12 +1,7 @@
 # Defined in /usr/home/michael/.config/fish/buffer/pl.fish @ line 2
 function pl
     if exists $argv
-        if string match $argv recent
-            select (cat ~/playlists/recent.m3u)|all o
-            return 0
-        else
             set selection $argv
-        end
     else
         set selection ''
     end
