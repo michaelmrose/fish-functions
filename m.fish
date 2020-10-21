@@ -10,7 +10,9 @@ function m
             p $files > ~/playlists/mpv/$name.m3u
         end
     else
-        echo duce!
+        if test -f $argv && string match --regex 'video/.*$' (file --mime-type $argv)
+            echo (fullpath $argv) > ~/playlists/recent.m3u
+        end
     end
     mpv $argv &
 end
