@@ -2,7 +2,7 @@
 function pl
     if exists $argv
         if string match $argv recent
-            select (cat ~/playlists/mpv/recent.m3u)|all o
+            select (cat ~/playlists/recent.m3u)|all o
             return 0
         else
             set selection $argv
