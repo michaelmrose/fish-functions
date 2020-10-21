@@ -11,6 +11,7 @@ function pl
     if exists $choice
         set playlist (p $playlists | g $choice)
         if exists $playlist
+            echo p is $playlist
             if [ $playlist = recent ]
                 select (cat ~/playlists/mpv/recent.m3u)|all o
             else
