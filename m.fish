@@ -17,7 +17,7 @@ function m
             cat $recent >> $new
             # remove non adjacent duplicate entries and keep the last 30 entries
             awk '!visited[$0]++'  $new
-            sed -i '3,$ d' $new
+            sed -i '31,$ d' $new
             mv $new $recent
         end
     end
