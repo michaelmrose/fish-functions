@@ -1,7 +1,7 @@
 # Defined in /usr/home/michael/.config/fish/buffer/pl.fish @ line 2
 function pl
     if exists $argv
-        if [$argv = recent]
+        if string match $argv recent
             select (cat ~/playlists/mpv/recent.m3u)|all o
             return 0
         else
