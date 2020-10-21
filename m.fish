@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/is-a-video?_m.fish @ line 7
+# Defined in /usr/home/michael/.config/fish/buffer/m.fish @ line 2
 function m
     if test (count $argv) -gt 1
         set name (prompt 'name?')
@@ -11,7 +11,7 @@ function m
         end
     else
         if is-a-video? $argv
-            echo (fullpath $argv) >> ~/playlists/mpv/recent.m3u
+            echo (fullpath $argv|stripquotes) >> ~/playlists/mpv/recent.m3u
         end
     end
     mpv $argv &
