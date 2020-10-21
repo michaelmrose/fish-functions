@@ -1,7 +1,12 @@
 # Defined in /usr/home/michael/.config/fish/buffer/pl.fish @ line 2
 function pl
     if exists $argv
-        set selection $argv
+        if [$argv = recent]
+            select (cat ~/playlists/mpv/recent.m3u)|all o
+            return 0
+        else
+            set selection $argv
+        end
     else
         set selection ''
     end
@@ -11,12 +16,7 @@ function pl
     if exists $choice
         set playlist (p $playlists | g $choice)
         if exists $playlist
-            echo p is $playlist
-            if [ $playlist = recent ]
-                select (cat ~/playlists/mpv/recent.m3u)|all o
-            else
                 mpv $playlist &
-            end
         end
     else
         echo aborted
