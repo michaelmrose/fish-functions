@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/m.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/is-a-video?_m.fish @ line 6
 function m
     if test (count $argv) -gt 1
         set name (prompt 'name?')
