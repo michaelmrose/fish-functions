@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/clip_clipboard_clipboard-old.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/clip_clipboard.fish @ line 6
 function clipboard
 	if exists $argv
         switch $argv
