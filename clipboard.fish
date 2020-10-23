@@ -1,7 +1,7 @@
 # Defined in /usr/home/michael/.config/fish/buffer/clipboard.fish @ line 2
 function clipboard
 	if exists $argv
-        switch $arg
+        switch $argv
             case  'o'
                 xclip  -selection clipboard -o
             case '*'
