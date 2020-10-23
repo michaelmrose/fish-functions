@@ -3,7 +3,7 @@ function clipboard
 	if exists $argv
         switch $arg
             case  "-o"
-                xclip -o -selection clipboard
+                xclip  -selection clipboard -o
             case '*'
                 eval $argv | clipboard
         end
