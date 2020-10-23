@@ -1,13 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/clipboard.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/clip_clipboard.fish @ line 1
 function clipboard
-	if exists $argv
-        switch $argv
-            case  'o'
-                xclip  -selection clipboard -o
-            case '*'
-                eval $argv | clipboard
-        end
-    else
-        xclip -selection clipboard -i
-    end
+    xclip -selection clipboard $argv
 end
