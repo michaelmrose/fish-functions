@@ -1,11 +1,11 @@
-# Defined in /home/michael/.config/fish/buffer/open-appropriate.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/open-appropriate.fish @ line 2
 function open-appropriate
 	if exists $argv
 	    set dir "$argv"
   else
         set dir (pwd)
     end
-    set contents (con $dir)
+    set contents (files $dir)
 
 	  set images (p $contents | g 'png$|jpg$|jpeg$|bmp$')
     set numimages (count $images)
