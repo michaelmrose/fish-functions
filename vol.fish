@@ -1,7 +1,8 @@
-# Defined in /home/michael/.config/fish/buffer/vol.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/vol.fish @ line 2
 function vol
 	# ponymix set-volume (bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150)
   ponymix $argv &
+  ponymix set-volume (ponymix get-volume|sd '(.*)[0-9]$' '$1 0'|sd ' ' '')
   signal-i3blocks output &
   signal-i3blocks 4 &
 	# set vol (ponymix get-volume)
