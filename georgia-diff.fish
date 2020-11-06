@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/georgia-diff.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/georgia-diff_notifiy-if-differ.fish @ line 2
 function georgia-diff
     set gnew (georgia)
     set gold $gnew
