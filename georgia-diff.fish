@@ -4,7 +4,7 @@ function georgia-diff
     set gold $gnew
     while true
         set gnew (georgia)
-        if test $gnew -gt $gold
+        if test ($gnew -gt $gold)
             set gold $gnew
             msg it changed margin is now $gnew
         else
