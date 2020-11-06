@@ -3,7 +3,6 @@ function georgia-diff
     set gnew (georgia)
     set gold $gnew
     while true
-        sleep 60
         set gnew (georgia)
         if $gnew -gt $gold
             set gold $gnew
@@ -11,5 +10,6 @@ function georgia-diff
         else
             echo still $gnew
         end
+        sleep 60
     end
 end
