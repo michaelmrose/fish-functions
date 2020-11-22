@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/services.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/services.fish @ line 2
 function services
 		if not exists $argv
 				echo                  ENABLED
@@ -19,6 +19,9 @@ function services
 						p ~/service/enabled/*|each basename
 				case all
 						p /etc/sv/*|each basename
-				case '*'
+				case disabled
+						set all (p /etc/sv/*|each basename)
+						set enabled (p /run/runit/runsvdir/current/*|each basename)
+
 		end
 end
