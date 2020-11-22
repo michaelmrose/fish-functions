@@ -1,9 +1,5 @@
 # Defined in /usr/home/michael/.config/fish/buffer/tdown.fish @ line 2
 function tdown
-		if not exists $argv
-				last-timer
-				return 0
-		end
 		set info (prompt 'title @ duration')
 		set title  (echo $info | cut -d @ -f1| trim)
 		set duration (echo $info | cut -d @ -f2 | trim)
