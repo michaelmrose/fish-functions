@@ -23,6 +23,7 @@ function services
 						set all (p /etc/sv/*|each basename)
 						set enabled (p /run/runit/runsvdir/current/*|each basename)
 						for sv in $all
+								echo sv is $sv
 								if not contains $sv $all
 										echo $sv
 								end
