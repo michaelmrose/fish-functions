@@ -22,6 +22,11 @@ function services
 				case disabled
 						set all (p /etc/sv/*|each basename)
 						set enabled (p /run/runit/runsvdir/current/*|each basename)
+						for sv in $all
+								if not contains $sv $all
+										echo $sv
+								end
+						end
 
 		end
 end
