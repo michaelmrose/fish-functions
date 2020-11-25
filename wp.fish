@@ -35,8 +35,14 @@ function wp
 								echo 'fill|scale|max				 -> set current image to fill scale or max setting per feh'
 								echo 'search [string]				 -> enter a search string to be compared to file names'
 						case with-colors
-								echo with colors
+								set colorsfrom $argv[2]
+								set image $argv[3]
+								wp $colorsfrom
+								feh --bg-(get-feh-format $image) $image
+								save-colors-for-wp-based-on-hash $colorsfrom $image
 								return 0
+						case with-saved-colors
+								wp with-colors (lookup-saved-colors-for-wp $argv[2]) $argv[2]
 						case view
 								pics (get-folder-for-backgrounds $argv[2])
 								# case categories
