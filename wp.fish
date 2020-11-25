@@ -39,7 +39,7 @@ function wp
 								set image $argv[3]
 								wp $colorsfrom
 								feh --bg-(get-feh-format $image) $image
-								# save-colors-for-wp-based-on-hash $colorsfrom $image
+								echo save-colors-for-wp-based-on-hash $colorsfrom $image
 								return 0
 						case with-saved-colors
 								wp with-colors (lookup-saved-colors-for-wp $argv[2]) $argv[2]
