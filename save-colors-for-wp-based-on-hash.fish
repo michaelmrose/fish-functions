@@ -2,6 +2,6 @@
 function save-colors-for-wp-based-on-hash
 		set colorsfrom $argv[1]
 		set image $argv[2]
-		set hash (md5sum $image)
+		set hash (md5sum $image > /dev/null)
 		echo "$colorsfrom > $wallpaperroot/saved-colors/$hash"
 end
