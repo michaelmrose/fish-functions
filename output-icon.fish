@@ -13,5 +13,5 @@ function output-icon
 		# echo $symbol
 
 		# echo "{\"state\":\"Warning\", \"text\": \"$symbol\"}"
-		i3status-rs-colorize warning $symbol
+		i3status-rs-colorize Info $symbol
 end
