@@ -10,6 +10,5 @@ function output-icon
     case "*"
       set symbol 
   end
-  # echo $symbol
-	echo '{\"icon\":\"weather_thunder\",\"state\":\"Critical\", \"text\": \"Danger!\"}'
+  echo $symbol
 end
