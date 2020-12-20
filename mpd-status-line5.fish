@@ -11,7 +11,7 @@ function mpd-status-line5
 								set symbol 
 				end
 				set mpdout (mpc outputs|g enabled|choose 2|cut -d \( -f2|cut -d \) -f1|condense_lines)
-				set tail via $mpdout	(output-status-line) 
+				set tail via $mpdout
 				if exists $argv #we have a max size to respect
 						set max $argv
 
