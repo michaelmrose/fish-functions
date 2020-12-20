@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/output-icon.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/date-status-line_output-icon_u.fish @ line 7
 function output-icon
 		switch (output-type)
 				case headphones
@@ -12,6 +12,5 @@ function output-icon
 		end
 		# echo $symbol
 
-		# echo "{\"state\":\"Warning\", \"text\": \"$symbol\"}"
-		i3status-rs-colorize Info $symbol
+		i3status-rs-colorize Warning $symbol
 end
