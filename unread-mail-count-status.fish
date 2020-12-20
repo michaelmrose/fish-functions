@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/i3status-rs-colorize_unread-ma.fish @ line 14
+# Defined in /usr/home/michael/.config/fish/buffer/date-status-line_unread-mail-c.fish @ line 7
 function unread-mail-count-status
-	i3status-rs-colorize Info   (unread-mail-count)
+	i3status-rs-colorize Warning   (unread-mail-count)
 end
