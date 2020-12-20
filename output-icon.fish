@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/output-icon_output-status-line.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/output-icon.fish @ line 2
 function output-icon
 	switch (output-type)
     case headphones
@@ -10,5 +10,6 @@ function output-icon
     case "*"
       set symbol 
   end
-  echo $symbol
+  # echo $symbol
+	echo '{\"icon\":\"weather_thunder\",\"state\":\"Critical\", \"text\": \"Danger!\"}'
 end
