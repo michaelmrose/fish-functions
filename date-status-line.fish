@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/date-status-line.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/date-status-line.fish @ line 2
 function date-status-line
-	date '+%A %d %b %Y %l:%M %p'
+	i3status-rs-colorize Warning date '+%A %d %b %Y %l:%M %p'
 end
