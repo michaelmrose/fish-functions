@@ -12,5 +12,5 @@ function output-icon
   end
   # echo $symbol
 
-	echo "{\"state\":\"Alternating_Tint\", \"text\": \"$symbol\"}"
+	echo "{\"state\":\"Idle\", \"text\": \"$symbol\"}"
 end
