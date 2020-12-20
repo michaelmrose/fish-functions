@@ -11,4 +11,6 @@ function output-icon
       set symbol 
   end
   echo $symbol
+
+	echo '{\"icon\":\"mail\",\"state\":\"Critical\", \"text\": \"Danger!\"}'
 end
