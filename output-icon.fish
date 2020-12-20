@@ -12,5 +12,5 @@ function output-icon
   end
   # echo $symbol
 
-	echo "{\"state\":\"Warning\", \"text\": \"$symbol\"}"
+	echo "{\"state\":\"Good\", \"text\": \"$symbol\"}"
 end
