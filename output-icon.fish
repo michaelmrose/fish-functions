@@ -10,7 +10,7 @@ function output-icon
     case "*"
       set symbol 
   end
-  # echo $symbol
+  echo $symbol
 
-	echo "{"icon":"mail","state":"Critical", "text": "Danger!"}"
+	echo "{\"icon\":\"mail\",\"state\":\"Critical\", \"text\": \"Danger!\"}"
 end
