@@ -13,11 +13,13 @@ function app-status
 						set symbol 
 				case rofi
 						# set symbol 
-						# set symbol 
+						set symbol 
 						# set symbol 
 						# 
 						# λ
-						set symbol 
+						# set symbol 
+				case windows
+						set symbol ჻
 		end
 		i3status-rs-colorize $style " $symbol "
 end
