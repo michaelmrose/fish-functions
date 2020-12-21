@@ -3,7 +3,7 @@ function vol
 	# ponymix set-volume (bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150)
   ponymix $argv &
   signal-i3blocks output &
-  signal-i3blocks 4 &
+  # signal-i3blocks 4 &
 	# set vol (ponymix get-volume)
   # if echo $argv | ag '^\+|-' > /dev/null
 	#   set vol (bounded (wcalc -q "$vol $argv" | trim) 0 150)
