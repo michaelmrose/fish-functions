@@ -1,15 +1,15 @@
-# Defined in /usr/home/michael/.config/fish/buffer/switch-audio_switchaudio.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/switch-audio_switchaudio_vol.fish @ line 2
 function switch-audio
-	set sinks   (pactl list short sinks | cut -f1)
-  set current (pactl list short sinks | grep (pactl info | grep Sink | cut -d ' ' -f3) | cut -f1)
-  set streams (pactl list short sink-inputs | cut -f1)
-  set next    (next-valid-index $current $sinks)
-  if exists $streams
-    for stream in $streams
-      pactl move-sink-input $stream $next
-    end
-  end
-  pactl set-default-sink $next
-  signal-i3blocks output
-  # signal-i3blocks 4
+		set sinks		(pactl list short sinks | cut -f1)
+		set current (pactl list short sinks | grep (pactl info | grep Sink | cut -d ' ' -f3) | cut -f1)
+		set streams (pactl list short sink-inputs | cut -f1)
+		set next		(next-valid-index $current $sinks)
+		if exists $streams
+				for stream in $streams
+						pactl move-sink-input $stream $next
+				end
+		end
+		pactl set-default-sink $next
+		signal-i3blocks output
+		signal-i3blocks 5
 end
