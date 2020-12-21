@@ -6,8 +6,5 @@ function app-status
 				case calc
 						set symbol 
 		end
-		if exists $symbol
-				echo it is real
-		end
 		i3status-rs-colorize $style " $symbol "
 end
