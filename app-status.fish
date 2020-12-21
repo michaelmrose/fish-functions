@@ -8,7 +8,7 @@ function app-status
 				case firefox
 						set symbol 
 				case emacs
-						set symbol 
+						set symbol 
 				case terminal
 						set symbol 
 		end
