@@ -12,5 +12,5 @@ function output-icon
 		end
 		# echo $symbol
 
-		i3status-rs-colorize Warning $symbol
+		i3status-rs-colorize Warning " $symbol "
 end
