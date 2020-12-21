@@ -12,7 +12,8 @@ function app-status
 				case terminal
 						set symbol 
 				case rofi
-						set symbol 
+						# set symbol 
+set symbol 
 						# 
 						# λ
 		end
