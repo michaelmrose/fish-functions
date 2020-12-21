@@ -9,6 +9,8 @@ function app-status
 						set symbol 
 				case emacs
 						set symbol 
+				case terminal
+						set symbol 
 		end
 		i3status-rs-colorize $style " $symbol "
 end
