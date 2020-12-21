@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/date-status-line_output-icon_u.fish @ line 29
+# Defined in /usr/home/michael/.config/fish/buffer/calculator-status.fish @ line 2
 function calculator-status
-		i3status-rs-colorize Info 🖩
+		i3status-rs-colorize Info"   "
 end
