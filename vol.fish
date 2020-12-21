@@ -1,9 +1,8 @@
-# Defined in /usr/home/michael/.config/fish/buffer/switch-audio_switchaudio_vol.fish @ line 56
+# Defined in /usr/home/michael/.config/fish/buffer/vol.fish @ line 2
 function vol
 		# ponymix set-volume (bounded ( returnormodifyvalue (ponymix get-volume) $argv) 0 150)
 		ponymix $argv &
 		signal-i3blocks output &
-		signal-i3blocks 5
 		# set vol (ponymix get-volume)
 		# if echo $argv | ag '^\+|-' > /dev/null
 		#		set vol (bounded (wcalc -q "$vol $argv" | trim) 0 150)
