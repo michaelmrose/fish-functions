@@ -6,5 +6,5 @@ function app-status
 				case calculator
 						set symbol 
 		end
-		i3status-rs-colorize $style " $symbol "
+		echo i3status-rs-colorize $style " $symbol "
 end
