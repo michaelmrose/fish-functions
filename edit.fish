@@ -1,3 +1,4 @@
+# Defined in /usr/home/michael/.config/fish/buffer/edit.fish @ line 2
 function edit
 	if not exists $argv
     while read -l line
@@ -9,7 +10,7 @@ function edit
   # set tmp /tmp/(uid)
   set tmp /tmp/edited
   println $acc > $tmp   
-  nvim $tmp
-  # eval $EDITOR $tmp
+  # nvim $tmp
+  eval $EDITOR $tmp
   cat $tmp
 end
