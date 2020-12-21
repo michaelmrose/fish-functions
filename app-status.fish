@@ -8,7 +8,7 @@ function app-status
 				case firefox
 						set symbol 
 				case emacs
-						set symbol 
+						set symbol 
 		end
 		i3status-rs-colorize $style " $symbol "
 end
