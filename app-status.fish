@@ -12,8 +12,9 @@ function app-status
 				case terminal
 						set symbol 
 				case rofi
-						set symbol λ
+						set symbol 
 						# 
+						# λ
 		end
 		i3status-rs-colorize $style " $symbol "
 end
