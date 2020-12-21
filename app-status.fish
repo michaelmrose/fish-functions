@@ -1,9 +1,10 @@
-# Defined in /usr/home/michael/.config/fish/buffer/app-status_calculator-status.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/app-status_calculator-status_i.fish @ line 2
 function app-status
-		set app $argv[1]
+		set style $arg[1]
+		set app $argv[2]
 		switch $app
 				case calculator
 						set symbol 
 		end
-		i3status-rs-colorize " $symbol "
+		i3status-rs-colorize $style " $symbol "
 end
