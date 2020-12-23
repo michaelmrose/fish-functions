@@ -7,6 +7,6 @@ function mpd-status-line2
 						case playing
 								set symbol 
 				end
-				echo $symbol (mpc status |head 1) (mpd-list-outputs)
+				echo $symbol (mpc status |head 1) (mpd-list-enabled-outputs)
 		end
 end
