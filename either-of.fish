@@ -5,5 +5,8 @@ function either-of
 		set optiona $argv[2]
 		set optionb $argv[3]
 		if eval $fn > /dev/null
+				echo $optiona
+		else
+				echo $optionb
 		end
 end
