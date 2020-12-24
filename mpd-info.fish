@@ -1,6 +1,6 @@
 # Defined in /usr/home/michael/.config/fish/buffer/mpd-info.fish @ line 2
 function mpd-info
-		switch argv
+		switch $argv
 				case metadata
 						mpc status |head -1
 				case outputs
