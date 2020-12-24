@@ -8,6 +8,6 @@ function mpd-status-line2
 				# 				set symbol 
 				# end
 				set symbol (match-lists $playback "playing paused" )
-				echo $symbol (mpc status |head -1) via (mpd-list-enabled-outputs)
+				echo (match-lists $playback "playing paused" ) (mpc status |head -1) via (mpd-list-enabled-outputs)
 		end
 end
