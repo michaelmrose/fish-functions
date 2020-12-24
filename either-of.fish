@@ -2,8 +2,8 @@
 function either-of
 		# if string match foo foo > /dev/null;echo a; else; echo b;end;
 		set fn $argv[1]
-		optiona $argv[2]
-		optionb $argv[3]
+		set optiona $argv[2]
+		set optionb $argv[3]
 		if $fn > /dev/null
 		end
 end
