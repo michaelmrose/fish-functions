@@ -4,6 +4,6 @@ function mpd-status-line2
 				set symbol (either-of "string match playing $playback"  )
 				set metadata (mpd status |head -1)
 				set outputs (mpd-list-enabled-outputs)
-				echo $syombol $metadata via $outputs
+				echo $symbol $metadata via $outputs
 		end
 end
