@@ -1,6 +1,6 @@
 # Defined in /usr/home/michael/.config/fish/buffer/mpd-info.fish @ line 2
 function mpd-info
-		echo a is $argv
+		echo a is $argv f is $argv[1]
 		switch argv[1]
 				case metadata
 						echo metadata
