@@ -1,7 +1,8 @@
-# Defined in /usr/home/michael/.config/fish/buffer/mpc-playback-status_mpd-info_m.fish @ line 7
+# Defined in /usr/home/michael/.config/fish/buffer/mpd-info.fish @ line 2
 function mpd-info
 		switch argv[1]
 				case metadata
+						echo metadata
 						mpc status |head -1
 				case outputs
 						mpc outputs | choose -f '\(|\)' 1|sd ' 
