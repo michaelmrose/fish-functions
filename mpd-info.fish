@@ -1,9 +1,7 @@
 # Defined in /usr/home/michael/.config/fish/buffer/mpd-info.fish @ line 2
 function mpd-info
-		echo a is $argv f is $argv[1]
 		switch argv
 				case metadata
-						echo metadata
 						mpc status |head -1
 				case outputs
 						mpc outputs | choose -f '\(|\)' 1|sd ' ' ' '
