@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/unread-elfeed-status_unread-ma.fish @ line 6
+# Defined in /usr/home/michael/.config/fish/buffer/unread-elfeed-status_unread-ma.fish @ line 7
 function unread-mail-count-status
 		set mail_count (unread-mail-count)
 		i3status-rs-colorize Warning "   $mail_count"
