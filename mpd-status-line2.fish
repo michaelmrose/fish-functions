@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/mpc-playback-status_mpd-info_m.fish @ line 24
+# Defined in /usr/home/michael/.config/fish/buffer/mpc-playback-status_mpd-info_m.fish @ line 26
 function mpd-status-line2
 		if set playback (mpc-playback-status)
 				set symbol (either-of "string match playing $playback"  )
