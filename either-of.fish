@@ -4,6 +4,6 @@ function either-of
 		set fn $argv[1]
 		set optiona $argv[2]
 		set optionb $argv[3]
-		if $fn > /dev/null
+		if eval $fn > /dev/null
 		end
 end
