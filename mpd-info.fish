@@ -4,7 +4,7 @@ function mpd-info
 				case metadata
 						mpc status |head -1
 				case outputs
-						mpc outputs | choose -f '\(|\)' 1
+						mpc outputs | grep  enabled | choose -f '\(|\)' 1
 				case status
 						mpc status|sed -n 2p|choose -f '\[|\]' 0|grep -E 'playing|paused'
 		end
