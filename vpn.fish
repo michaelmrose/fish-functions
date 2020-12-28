@@ -5,5 +5,9 @@ function vpn
             volemad-cli -d
         case  -c
             volemad-cli  -p 'USA' -s 'Los Angeles, CA'
-    end
+						for i in (seq 10)
+								signal-i3blocks 12
+								sleep 1
+						end
+		end
 end
