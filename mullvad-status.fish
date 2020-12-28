@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/mullvad-status.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/functions/mullvad-status.fish @ line 2
 function mullvad-status
 		set vpn (either (ip link show (mullvad-connection-name)|head -1|choose 8) DOWN)
 		switch $vpn
