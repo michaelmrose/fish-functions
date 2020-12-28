@@ -3,16 +3,13 @@ function vpn
 		switch $argv[1]
 				case -d
 						volemad-cli -d
-						for i in (seq 10)
-								signal-i3blocks 12
-								sleep 1
-						end
-
 				case  -c
 						volemad-cli  -p 'USA' -s 'Los Angeles, CA'
-						for i in (seq 10)
-								signal-i3blocks 12
-								sleep 1
+				case -t
+						if volemad-connection-status
+								vpn -d
+						else
+								vpn -c
 						end
 		end
 end
