@@ -6,7 +6,7 @@ function vpn
 				case  -c
 						volemad-cli  -p 'USA' -s 'Los Angeles, CA'
 				case -t
-						if volemad-connection-status
+						if mullvad-connection-status
 								vpn -d
 						else
 								vpn -c
