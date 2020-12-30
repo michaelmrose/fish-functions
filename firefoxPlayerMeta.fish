@@ -2,6 +2,6 @@
 function firefoxPlayerMeta
 		if set firefoxplayer (playerctl -l | g firefox)
 				set playback (playerctl -p $firefoxplayer status)
-				echo (? "string match playing $playback" " " " ")( playerctl -p $firefoxplayer metadata title)
+				echo (? "string match playing $playback" "  " "  ")( playerctl -p $firefoxplayer metadata title)
 		end
 end
