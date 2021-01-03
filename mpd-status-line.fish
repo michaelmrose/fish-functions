@@ -5,4 +5,5 @@ function mpd-status-line
 		else
 				echo fuckyou
 		end
+				echo (? "string match playing $playback" " " " ") (mpd-info metadata) via (mpd-info outputs)
 end
