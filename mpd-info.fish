@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/mpd-info.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/mpd-info_mpd-status-line.fish @ line 2
 function mpd-info
 		switch $argv
 				case metadata
