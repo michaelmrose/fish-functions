@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/bar_foo.fish @ line 6
+# Defined in /usr/home/michael/.config/fish/buffer/foo.fish @ line 2
 function foo
-    echo foo
+
 end
