@@ -11,7 +11,7 @@ function vpn
 						else
 								vpn -c
 						end
-						sleep 10
+						sleep 5
 						signal-i3blocks 12
 		end
 end
