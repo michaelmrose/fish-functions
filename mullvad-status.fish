@@ -3,6 +3,6 @@ function mullvad-status
 		if mullvad-connection-status
 				i3status-rs-colorize Warning "  "
 		else
-				i3status-rs-colorize Idle "    "
+				i3status-rs-colorize Idle "    "
 		end
 end
