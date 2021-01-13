@@ -6,14 +6,18 @@ function vpn
 				case  -c
 						volemad-cli  -p 'USA' -s 'Los Angeles, CA'
 				case -t
+						set mullvad (mullvad-status)
 						if mullvad-connection-status
 								vpn -d
 						else
 								vpn -c
 						end
-						for i in (seq 5)
-								signal-i3blocks 12
-								sleep 1
+						for i in (seq  40)
+								if not [ mullvad = (mullvad-status)]
+										signal-i3blocks 12
+										return 0
+								end
+								sleep 0.25
 						end
 		end
 end
