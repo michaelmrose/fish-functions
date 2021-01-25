@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/toggle-sound-port.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/toggle-sound-port.fish @ line 2
 function toggle-sound-port
 		set active (pactl list sinks|grep "Active Port"|choose 2)
 		switch $active
