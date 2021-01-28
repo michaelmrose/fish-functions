@@ -1,6 +1,6 @@
-# Defined in /usr/home/michael/.config/fish/buffer/toggle-alsa.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/toggle-alsa.fish @ line 2
 function toggle-alsa
-		switch (amixer get Master | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]')
+		switch (amixer -c 1 get Headphone | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]')
 				case '[on]'
 						echo on
 				case '[off]'
