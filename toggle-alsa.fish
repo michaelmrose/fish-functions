@@ -2,8 +2,10 @@
 function toggle-alsa
 		switch (amixer -c 1 get Headphone | egrep 'Playback.*?\[o' | egrep -o '\[o.+\]|' |sort -u)
 				case '[on]'
-						echo on
+						amixer set -c 1 Headphone mute
+						amixer set -c 1 Front unmute
 				case '[off]'
-						echo off
+						amixer set -c 1 Headphone unmute
+						amixer set -c 1 Front mute
 		end
 end
