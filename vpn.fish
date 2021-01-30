@@ -13,7 +13,7 @@ function vpn
 								vpn -c
 						end
 						for i in (seq  40)
-								if not [ mullvad = (mullvad-status)]
+								if not [ mullvad = (mullvad-status) ]
 										signal-i3blocks 12
 										return 0
 								end
