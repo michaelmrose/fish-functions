@@ -2,25 +2,25 @@
 function walfn
 
 if test (count $bgimage) -gt 1
-    montage $bgimage[1] $bgimage[2] -geometry +0+0 /tmp/montage.jpg
-    set target /tmp/montage.jpg
+		montage $bgimage[1] $bgimage[2] -geometry +0+0 /tmp/montage.jpg
+		set target /tmp/montage.jpg
 else
-    set target $bgimage
+		set target $bgimage
 end
 
 wal -n --saturate 0.7 -i $target
 
 if exists $argv
-    set accent $argv[1]
-    set fg $argv[2]
-    set bg $argv[3]
+		set accent $argv[1]
+		set fg $argv[2]
+		set bg $argv[3]
 else
-    set accent (jq -r .colors.color3 ~/.cache/wal/colors.json)
-    set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
-    set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
+		set accent (jq -r .colors.color3 ~/.cache/wal/colors.json)
+		set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
+		set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
+		set stat (jq -r .colors.color0 ~/.cache/wal/colors.json)
 end
-# wali3status-rs (jq -r .colors.color1 ~/.cache/wal/colors.json) (jq -r .colors.color2 ~/.cache/wal/colors.json)
-wali3status-rs $bg $bg
+wali3status-rs $accent $stat
 replace-color-in-i3 $accent
 inject-rounded
 replace-color-in-i3 $accent
