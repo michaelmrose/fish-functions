@@ -19,7 +19,8 @@ else
     set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
     set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
 end
-wali3status-rs (jq -r .colors.color1 ~/.cache/wal/colors.json) (jq -r .colors.color2 ~/.cache/wal/colors.json)
+# wali3status-rs (jq -r .colors.color1 ~/.cache/wal/colors.json) (jq -r .colors.color2 ~/.cache/wal/colors.json)
+wali3status-rs $bg $bg
 replace-color-in-i3 $accent
 inject-rounded
 replace-color-in-i3 $accent
