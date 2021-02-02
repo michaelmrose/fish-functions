@@ -1,0 +1,4 @@
+# Defined in /usr/home/michael/.config/fish/buffer/wali3status-rs.fish @ line 1
+function wali3status-rs
+		sd '^warning_bg =.* ' warning_bg=\"$argv\" ~/.config/i3status-rust/config.toml
+end
