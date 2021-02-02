@@ -19,8 +19,7 @@ else
     set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
     set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
 end
-# replace i3status-rs accent color
-sd '^warning_bg =.* ' warning_bg=\"$accent\" ~/.config/i3status-rust/config.toml
+wali3status-rs $accent
 replace-color-in-i3 $accent
 inject-rounded
 replace-color-in-i3 $accent
