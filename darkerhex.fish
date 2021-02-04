@@ -5,5 +5,5 @@ function darkerhex
 		set middle (echo $argv|cut -c4-5)
 		set right (echo $argv|cut -c5-6)
 
-		echo (darker-hex-channel $left) (darker-hex-channel $middle) (darker-hex-channel $right)
+		echo (darker-hex-channel $left)(darker-hex-channel $middle)(darker-hex-channel $right)
 end
