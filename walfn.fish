@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/walfn.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/walfn_walfnadd.fish @ line 2
 function walfn
 
 if test (count $bgimage) -gt 1
