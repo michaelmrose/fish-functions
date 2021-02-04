@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/darkerhex.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/darkerhex_darker-hex-channel.fish @ line 2
 function darkerhex
 		set start \#
 		set left (echo $argv|cut -c2-3)
