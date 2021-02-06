@@ -34,5 +34,6 @@ function xrr
     end
     
     wp recall
-    restart picom
+		killall picom
+		picom &
 end
