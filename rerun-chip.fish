@@ -1,6 +1,9 @@
-# Defined in /usr/home/michael/.config/fish/buffer/rerun-chip.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/rerun-chip.fish @ line 2
 function rerun-chip
 	 xdotool mousemove 50 50
+	 xdotool click 1
+	 xdotool key Return
+	 xdotool mousemove 350 50
 	 xdotool click 1
 	 xdotool key Return
 end
