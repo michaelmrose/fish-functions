@@ -14,4 +14,5 @@ function rerun-chip
 		xdotool click 1
 	 xdotool mousemove 125 50
 	 xdotool click 1
+	 i3 focus right
 end
