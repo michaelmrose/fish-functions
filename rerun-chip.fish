@@ -6,6 +6,7 @@ function rerun-chip
 	 xdotool mousemove 350 50
 	 xdotool click 1
 	 xdotool key Return
-	 # xdotool mousemove 125 50
-	 # xdotool click 1
+	 sleep 1
+	 xdotool mousemove 125 50
+	 xdotool click 1
 end
