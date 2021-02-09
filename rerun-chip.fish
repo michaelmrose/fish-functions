@@ -3,10 +3,11 @@ function rerun-chip
 	 xdotool mousemove 50 50
 	 xdotool click 1
 	 xdotool key Return
+	 sleep 1
 	 xdotool mousemove 350 50
 	 xdotool click 1
 	 xdotool key Return
-	 sleep 1
+	 sleep 2
 	 xdotool mousemove 125 50
 	 xdotool click 1
 end
