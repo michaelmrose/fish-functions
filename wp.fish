@@ -136,7 +136,7 @@ function wp
 						case open
 								sxiv $bgimage
 						case prev
-								wallpaper-prev
+								wp $recent_backgrounds[2]
 						case scale
 								feh --bg-scale $bgimage
 						case max
