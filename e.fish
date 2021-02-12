@@ -1,4 +1,4 @@
+# Defined in /usr/home/michael/.config/fish/buffer/e_emf.fish @ line 2
 function e
-	eval $argv &
-  exit
+		emacsclient -$argv[1] \'\($argv[2..-1]\)\' 
 end
