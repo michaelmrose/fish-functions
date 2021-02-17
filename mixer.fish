@@ -5,6 +5,6 @@ function mixer
 		# i3 fullscreen
 		kitty -1 -e cmixer
 		waituntilfocused kitty
-		i3 fullscreen
+		# i3 fullscreen
 		xdotool key Next
 end
