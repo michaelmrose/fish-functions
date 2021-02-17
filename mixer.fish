@@ -3,7 +3,7 @@ function mixer
 		# kitty -1 -e alsamixer -c 1
 		# waituntilfocused kitty
 		# i3 fullscreen
-		cmixer
+		kitty -1 -e cmixer
 		waituntilfocused kitty
 		i3 fullscreen
 		xdotool key Next
