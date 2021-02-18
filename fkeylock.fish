@@ -1,7 +1,6 @@
 # Defined in /usr/home/michael/.config/fish/buffer/fkeylock.fish @ line 2
 function fkeylock
-		set state (cat /tmp/fkeylock)
-		if string match true $state
+		if string match false (cat /tmp/fkeylock)
 				echo true > /tmp/fkeylock
 				xmodmap -e 'keycode 71 = F5'
 				xmodmap -e 'keycode 72 = F6'
