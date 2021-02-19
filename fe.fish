@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/functions/fe.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/fe.fish @ line 2
 function fe
 	for i in $argv
     if startswith @ $i
@@ -31,5 +31,5 @@ function fe
     funcsave-file $tmp
     set -U LASTFNS (return-fnames-of-file $tmp)
   end
-  # nothing-urgent
+	tabs 2
 end
