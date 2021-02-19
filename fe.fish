@@ -31,5 +31,4 @@ function fe
     funcsave-file $tmp
     set -U LASTFNS (return-fnames-of-file $tmp)
   end
-	tabs 2
 end
