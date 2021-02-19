@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/bat.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/bat.fish @ line 2
 function bat
-		bat $argv --tabs=2
+		/usr/bin/bat $argv --tabs=2
 end
