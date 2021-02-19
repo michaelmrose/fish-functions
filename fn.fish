@@ -74,7 +74,6 @@ function fn
 						for f in $argv[2..-1]
 								functions $f
 						end
-						tabs 2
 				case p
 						fn pprint $argv[2..-1]
 				case revs
