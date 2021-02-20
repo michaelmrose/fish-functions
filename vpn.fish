@@ -2,7 +2,7 @@
 function vpn
 		switch $argv[1]
 				case -d
-						olemad-cli -d
+						volemad-cli -d
 				case	-c
 						volemad-cli	 -p 'USA' -s 'Los Angeles, CA'
 				case -t
