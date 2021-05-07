@@ -13,7 +13,6 @@ function vpn
 						else
 								mullvad connect
 						end
-						sleep 2
 						signal-i3blocks 12
 						# set mullvad (mullvad-status)
 						# if mullvad-connection-status
