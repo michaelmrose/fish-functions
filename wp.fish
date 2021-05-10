@@ -69,7 +69,7 @@ function wp
 								wp multi (sxiv -tbfor $argv[2..-1])
 						case url
 								set tmp /tmp/(uid)-wallpaper.jpg
-								echo curl $argv[2] > $tmp
+								echo curl $argv[2] \> $tmp
 								echo wp $tmp
 						case search
 								sxiv -tbfor (fnd '.*' -t f ~/backgrounds|g $argv[2..-1])|wp
