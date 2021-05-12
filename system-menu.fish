@@ -1,6 +1,6 @@
 # Defined in /usr/home/michael/.config/fish/buffer/system-menu.fish @ line 2
 function system-menu
-		switch (menu System: Lightsout Logout Suspend Shutdown "Restart i3wm" Reboot "Switch User")
+		switch (menu System: Lock Lightsout Logout Suspend Shutdown "Restart i3wm" Reboot "Switch User")
 				case Lock
 						dm-tool switch-to-greeter
 						sleep 0.5
