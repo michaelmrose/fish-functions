@@ -22,7 +22,6 @@ else
 end
 wali3status-rs $accent $stat
 replace-color-in-i3 $accent
-inject-rounded
 replace-color-in-i3 $accent
 colorize-emacs $accent $fg $bg
 restart-i3
