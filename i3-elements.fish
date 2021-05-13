@@ -6,7 +6,7 @@ function i3-elements
 		if exists $argv[2]
 				set trans $argv[2]
 		else
-				set trans 0.5
+				set trans 0.7
 		end
 
 		switch $argv[1]
