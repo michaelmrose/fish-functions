@@ -2,5 +2,6 @@
 function replace-color-in-i3
     sd  "focused_workspace  #[a-fA-F0-9]{6} #[a-fA-F0-9]{6} #[a-fA-F0-9]{6}" "focused_workspace  #111111 $argv #000000" ~/.config/i3/config
     sd  "client.focused_inactive.*" "client.focused_inactive  #111111 $argv $argv $argv" ~/.config/i3/config
-    sd  " background: #.*" " active-background: $argv;" ~/.config/rofi/themes/colors-rofi-dark.rasi
+    set roficolor (echo $argv| cut -c2-)
+    sd  " background: argb:33.*" " background: argb:33$roficolor;" ~/.config/rofi/themes/colors-rofi-dark.rasi
 end
