@@ -3,6 +3,6 @@ function emd
     # set dbusvals (dbus-launch|sd " " |choose -f = 1:)
     # set -x DBUS_SESSION_BUS_ADDRESS $dbusvals[1]
     # set -x DBUS_SESSION_BUS_PID $dbusvals[2]
-	  env (dbus-launch) emacs --daemon
-      # emacs --daemon
+	  # env (dbus-launch) emacs --daemon
+      emacs --daemon
 end
