@@ -15,7 +15,7 @@ function typewriter-notification
    set title $argv[1]
    set message $argv[2..-1]
    set length (echo $message|wc -c)
-   for i in (seq 1 (math 3 + $length))
+   for i in (seq 1 $length)
        set current (echo $message|cut -c 1-$i)
        twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content $current
        sleep 0.03
