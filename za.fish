@@ -1,5 +1,7 @@
-# Defined in /usr/home/michael/.config/fish/buffer/za.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/za.fish @ line 2
 function za
-		cd $argv
+		if exists $argv
+			cd $argv
+		end
 		zoxide add
 end
