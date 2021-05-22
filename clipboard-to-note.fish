@@ -8,6 +8,4 @@ function clipboard-to-note
 		echo "[[$dest]]"|clipboard
 		rm /tmp/$uid.png
 		# emf e yank
-		# emf e org-toggle-inline-images
-		# emf e org-toggle-inline-images
 end
