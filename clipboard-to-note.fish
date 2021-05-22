@@ -7,4 +7,7 @@ function clipboard-to-note
 		convert /tmp/$uid.png -resize 50% $dest
 		echo "[[$dest]]"|clipboard
 		rm /tmp/$uid.png
+		emf e yank
+		emf e org-toggle-inline-images
+		emf e org-toggle-inline-images
 end
