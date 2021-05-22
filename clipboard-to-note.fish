@@ -7,5 +7,6 @@ function clipboard-to-note
 		convert /tmp/$uid.png -resize 50% $dest
 		echo "[[$dest]]"|clipboard
 		rm /tmp/$uid.png
-		# emf e yank
+		xdotool key i
+		xdotool type (xclip -o selection clip)
 end
