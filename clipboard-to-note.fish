@@ -7,5 +7,6 @@ function clipboard-to-note
 		convert /tmp/$uid.png -resize 50% $dest
 		echo "[[$dest]]"|clipboard
 		rm /tmp/$uid.png
+		xclip -o -selection clip
 		emacsclient -e '(with-current-buffer (first(mapcar \'window-buffer (window-list))) (org-redisplay-inline-images))'
 end
