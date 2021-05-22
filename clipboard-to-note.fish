@@ -8,6 +8,6 @@ function clipboard-to-note
 		echo "[[$dest]]"|clipboard
 		rm /tmp/$uid.png
 		set clip (xclip -o -selection clip)
-		emacsclient -e '(insert-into-buffer "$clip")'
+		eval emacsclient -e \'\(mmr/insert-into-buffer \"$clip\"\)\'
 		emacsclient -e '(with-current-buffer (first(mapcar \'window-buffer (window-list))) (org-redisplay-inline-images))'
 end
