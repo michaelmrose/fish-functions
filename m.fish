@@ -1,4 +1,8 @@
-# Defined in /usr/home/michael/.config/fish/buffer/m_pl_v_vids.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/m_pl.fish @ line 2
 function m
-		vids $argv
+		if exists $argv
+				vids $argv
+		else
+				select (cat ~/playlists/recent.m3u)|all o
+		end
 end
