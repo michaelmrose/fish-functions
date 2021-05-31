@@ -7,7 +7,7 @@ function z
 	      set zres (zoxide query "$argv")
         if test (count $zres) -gt 0
             cd "$zres"
-            zoxide add
+            zoxide add (pwd)
         end
   end
 end
