@@ -2,7 +2,6 @@
 function m
 		if exists $argv
 				videos.clj $argv
-				# vids $argv
 		else
 				select (cat ~/playlists/recent.m3u)|all o
 		end
