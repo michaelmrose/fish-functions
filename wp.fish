@@ -46,7 +46,7 @@ function wp
 						case view
 								switch $argv[2]
 										case all
-												pics $walllpaperroot
+												pics $wallpaperroot
 										case '*'
 												pics (get-folder-for-backgrounds $argv[2])
 												# case categories
