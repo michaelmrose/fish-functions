@@ -44,8 +44,13 @@ function wp
 						case with-saved-colors
 								wp with-colors (lookup-saved-colors-for-wp $argv[2]) $argv[2]
 						case view
-								pics (get-folder-for-backgrounds $argv[2])
-								# case categories
+								switch $argv[2]
+										case all
+												pics $walllpaperroot
+										case '*'
+												pics (get-folder-for-backgrounds $argv[2])
+												# case categories
+								end
 						case ls
 								for i in $argv[2..-1]
 										if string match $i recent
