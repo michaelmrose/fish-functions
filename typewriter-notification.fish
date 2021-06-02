@@ -1,22 +1,23 @@
 # Defined in /usr/home/michael/.config/fish/buffer/typewriter-notification.fish @ line 2
 function typewriter-notification
-    if not exists $argv
-        while read -l line
-            set acc $acc $line
-        end
-        typewriter-notification (explode $acc)
-        return 0
-    end
-    
-    # for i in (seq 1 (count $argv))
-    #     ms $argv[1..$i]
-    #     sleep 0.3
-    # end
-   set title $argv[1]
-   set message "$argv[2..-1] "
-   set length (echo $message|wc -c)
-   for i in (seq 1 $length)
-       set current (echo $message|cut -c 1-$i)
-       twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content $current sleep 0.07
-   end
+		if not exists $argv
+				while read -l line
+						set acc $acc $line
+				end
+				typewriter-notification (explode $acc)
+				return 0
+		end
+		
+		# for i in (seq 1 (count $argv))
+		#     ms $argv[1..$i]
+		#     sleep 0.3
+		# end
+		set title $argv[1]
+		set message "$argv[2..-1] "
+		set length (echo $message|wc -c)
+		for i in (seq 1 $length)
+				set current (echo $message|cut -c 1-$i)
+				twmnc -d 4000 --id 1 --icon ~/images/icons/xkill.png --title $title --content $current
+				sleep 0.07
+		end
 end
