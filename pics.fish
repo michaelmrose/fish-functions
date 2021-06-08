@@ -3,7 +3,7 @@ function pics
 		if exists $argv[1]
 				if test -d $argv[1]
 						set target $argv[1]
-				else if test -f $argv
+				else if test -f $argv[1]
 						sxiv -bo $argv
 				else
 						set target (get-folder-for-backgrounds $argv[1])
