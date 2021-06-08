@@ -4,7 +4,7 @@ function pics
 				if test -d $argv[1]
 						set target $argv[1]
 				else if test -f $argv[1]
-						sxiv -bo $argv
+						sxiv -tbfor $argv
 				else
 						set target (get-folder-for-backgrounds $argv[1])
 				end
