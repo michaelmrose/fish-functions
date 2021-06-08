@@ -1,9 +1,9 @@
 # Defined in /usr/home/michael/.config/fish/buffer/pics.fish @ line 2
 function pics
 		set arguments $argv
-		while read -l line
-				set arguments $arguments $line
-		end
+		# while read -l line
+		# 		set arguments $arguments $line
+		# end
 		if exists $arguments[1]
 				if test -d $arguments[1]
 						set target $arguments[1]
