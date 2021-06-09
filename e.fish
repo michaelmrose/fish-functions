@@ -1,4 +1,5 @@
-# Defined in /usr/home/michael/.config/fish/buffer/e_emf.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/e.fish @ line 2
 function e
-		emacsclient -ecn  "($argv)"
+		# emacsclient -ecn  "($argv)"
+		emacsclient -cn $argv
 end
