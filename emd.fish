@@ -1,5 +1,6 @@
-# Defined in /usr/home/michael/.config/fish/buffer/emd.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/edit_emd_emf.fish @ line 20
 function emd
-		emacs --daemon &
-		emf ec mmr/after-initial-setup &
+		emacs --bg-daemon
+		emf ecn mmr/after-initial-setup &
+		emf en mmr/load-agenda-files
 end
