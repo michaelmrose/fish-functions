@@ -1,8 +1,8 @@
-# Defined in /usr/home/michael/.config/fish/buffer/output-icon_output-status-line.fish @ line 16
+# Defined in /usr/home/michael/.config/fish/buffer/output-status-line.fish @ line 2
 function output-status-line
 	switch (output-type)
     case headphones
-      set symbol 
+      set symbol 🎧
     case speakers
       set symbol 
       case built-in
