@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/greatestof_max.fish @ line 15
+# Defined in /usr/home/michael/.config/fish/buffer/dolphin-open-path_dolphin-open.fish @ line 2
 function max
 	set biggest $argv[1]
     for i in $argv[2..-1]
