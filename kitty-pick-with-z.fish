@@ -2,7 +2,8 @@
 function kitty-pick-with-z
 if in-terminal
 		set dir (zoxide query -i)
-		spacefm -s set current_dir "$dir"
+		# spacefm -s set current_dir "$dir"
+		dolphin-open-path $dir
 else
 kitty -1 ff kitty-pick-with-z
 end
