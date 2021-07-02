@@ -4,5 +4,5 @@ function tunes
 		emf ecn mmr/tunes &
 		kitty -1 -e cava &
 		sleep 0.5
-		i3-msg resize shrink up 220px
+		i3-msg resize shrink up 400px
 end
