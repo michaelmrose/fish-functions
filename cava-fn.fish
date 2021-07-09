@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/cava.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/cava-fn.fish @ line 2
 function cava-fn
-	kitty -o font_size=20 -e cava
+	kitty -o font_size=1 -e cava
 end
