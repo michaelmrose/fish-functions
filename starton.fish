@@ -1,8 +1,9 @@
-# Defined in /home/michael/.config/fish/buffer/starton_ws.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/starton.fish @ line 2
 function starton
   set ws (decorate-workspacename $argv[1])
   set command $argv[2]
   set class $argv[3]
+  set additional \\'$argv[4]'\\
   set active ( i3-msg -t get_workspaces|jq -r '.[]| select(.visible == true).name')
   set focused ( i3-msg -t get_workspaces|jq -r '.[]| select(.focused == true).name')
   set json '{"swallows": [{"class": "^#winclass$"}], "type": "con"}'
@@ -15,4 +16,5 @@ function starton
         i3-msg workspace $w
     end
     i3-msg workspace $focused
+	echo additional is $additional
 end
