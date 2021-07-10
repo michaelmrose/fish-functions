@@ -3,7 +3,7 @@ function starton
   set ws (decorate-workspacename $argv[1])
   set command $argv[2]
   set class $argv[3]
-  set additional \\'$argv[4]'\
+  set additional $argv[4]
   set active ( i3-msg -t get_workspaces|jq -r '.[]| select(.visible == true).name')
   set focused ( i3-msg -t get_workspaces|jq -r '.[]| select(.focused == true).name')
   set json '{"swallows": [{"class": "^#winclass$"}], "type": "con"}'
