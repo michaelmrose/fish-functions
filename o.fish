@@ -1,7 +1,7 @@
-# Defined in /home/michael/.config/fish/buffer/o.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/o.fish @ line 2
 function o
 	if exists $argv
-	      gio open $argv;
+	      jaro $argv;
     else
         open-appropriate
     end
