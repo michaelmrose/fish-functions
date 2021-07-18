@@ -1,6 +1,7 @@
-# Defined in /usr/home/michael/.config/fish/buffer/startjack_stopjack.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/startjack_stopjack.fish @ line 2
 function startjack
 	stop sndiod
 	sleep 1
-	jackd -r -d alsa --device=hw:2,0
+	jackd -R -d alsa --device=hw:(cat /etc/sv/sndiod/card),0
+
 end
