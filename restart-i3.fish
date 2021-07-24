@@ -2,11 +2,9 @@
 function restart-i3
 	set wid (xdotool getactivewindow)
 	  i3 restart
-    killall picom
     sleep 0.25
-    picom &
-    sleep 0.5
     wmctrl -l|awk '{print $1}'|each remove-opacity-from-window
     eval "i3 [id=$wid] focus" 
+	restart picom
     daj
 end
