@@ -4,5 +4,6 @@ function compute-brightness
 	set rc (math 0.7 \* (hextodec (echo $color | cut -c2-3)))
 	set gc (math 0.2 \*(hextodec (echo $color | cut -c4-5)))
 	set bc (math 0.07 \*(hextodec (echo $color | cut -c6-7)))
+	echo values are $rc $gc $bc
 	math $rc + $gc + $bc
 end
