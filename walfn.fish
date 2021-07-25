@@ -20,6 +20,7 @@ function walfn
 		set accent \#(darkerhex $accent)
 		if test (compute-brightness $accent) -gt 100
 			# sd $accent \#(darkerhex $accent) ~/.cache/wal/colors.json
+			msg using darkened accent
 			sd $oldaccent \#$accent ~/.cache/wal/colors.json
 		end
 		set fg (jq -r .colors.color0 ~/.cache/wal/colors.json)
