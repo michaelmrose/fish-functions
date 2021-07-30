@@ -34,6 +34,6 @@ function walfn
 	colorize-emacs $accent $fg $bg
 	restart-i3
 	sleep 1
-	pywalfox update
+	# pywalfox update
 	pywalzathura
 end
