@@ -2,7 +2,7 @@
 function toggle-side-gaps
     set width (window-width)
     if test $width -lt 3700
-        i3 gaps horizontal current set 5
+        i3 gaps horizontal current set 0
     else
         # set size (math (math $width - 1200 ) / 2)
         i3 gaps horizontal current set 300
