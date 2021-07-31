@@ -1,6 +1,6 @@
-# Defined in /home/michael/.config/fish/buffer/emc.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/emc.fish @ line 2
 function emc
-    emacsclient -c $argv
+    emacsclient -cn $argv
     # if not emacsclient -c $argv
     #     msg daemon not running... starting now
     #     emd
