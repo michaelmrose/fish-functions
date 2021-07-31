@@ -1,4 +1,4 @@
-# Defined in /usr/home/michael/.config/fish/buffer/q_qa.fish @ line 2
+# Defined in /usr/home/michael/.config/fish/buffer/q.fish @ line 2
 function q
-	xbps-query -Rs  zathura|grep -E --invert-match ".*-dbg-.*|.*-devel-.*|.*-32bit-.*"
+	xbps-query -Rs  $argv|grep -E --invert-match ".*-dbg-.*|.*-devel-.*|.*-32bit-.*"
 end
