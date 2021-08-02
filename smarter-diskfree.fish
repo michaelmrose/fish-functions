@@ -1,6 +1,6 @@
-# Defined in /usr/home/michael/.config/fish/buffer/smarter-diskfree.fish @ line 1
+# Defined in /usr/home/michael/.config/fish/buffer/smarter-diskfree.fish @ line 2
 function smarter-diskfree
-	if mount|grep $argv
+	if mount|grep $argv > /dev/null
 		df -h $argv|n l2 n3
 	end
 end
