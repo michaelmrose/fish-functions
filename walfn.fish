@@ -36,4 +36,5 @@ function walfn
 	sleep 1
 	# pywalfox update
 	pywalzathura
+	cp ~/.cache/wal/firefox.css $FIREFOX_PROFILE_DIR/firefox.css
 end
