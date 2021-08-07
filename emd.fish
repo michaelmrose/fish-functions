@@ -1,6 +1,9 @@
-# Defined in /usr/home/michael/.config/fish/buffer/edit_emd_emf.fish @ line 20
+# Defined in /usr/home/michael/.config/fish/buffer/emd.fish @ line 2
 function emd
-		emacs --bg-daemon
-		emf ecn mmr/after-initial-setup &
-		emf en mmr/load-agenda-files
+emacs --bg-daemon
+sleep 3
+	emf ecn mmr/after-initial-setup &
+for p in (pgrep emacs)
+	mullvad split-tunnel pid add $p
+	end
 end
