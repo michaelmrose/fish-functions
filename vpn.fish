@@ -11,6 +11,8 @@ function vpn
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid add $p
 			end
+		case -ec
+			vpn -e (window-class)
 		case -i
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid delete $p
