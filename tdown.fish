@@ -9,4 +9,5 @@ function tdown
 		set duration (echo $info | cut -d @ -f2 | trim)
 		eval kitty -o font_size=100 -e termdown --no-figlet -v en-us -T (quote $title) $duration
 		echo $title completed at (date) > /tmp/timers-complete.txt
+		mpv --no-video ~/sounds/alarm.m4a
 end
