@@ -8,11 +8,11 @@ function vpn
 			# volemad-cli	 -p 'USA' -s 'Los Angeles, CA'
 			mullvad connect
 		case -e 
-			for p in (pgrep $argv)
+			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid add $p
 			end
 		case -i
-			for p in (pgrep $argv)
+			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid delete $p
 			end
 		case -t
