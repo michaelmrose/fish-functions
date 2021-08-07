@@ -12,9 +12,9 @@ function vpn
 				mullvad split-tunnel pid add $p
 			end
 		case -ec
-			vpn -e (window-class)
+			vpn -e (tolower (window-class))
 		case -ic
-			vpn -i (window-class)
+			vpn -i (tolower (window-class))
 		case -i
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid delete $p
