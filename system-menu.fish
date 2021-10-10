@@ -1,25 +1,25 @@
 function system-menu
     switch (menu System "🔒  Lock" "🔦 Lightsout" " Logout" "⏾ Suspend" "⏻ Shutdown" " Restart i3wm" "⏻ Reboot" " Switch User")
-				case Lock
+				case "🔒  Lock"
 						dm-tool switch-to-greeter &
-				case Lightsout
+				case "🔦 Lightsout"
 						sleep 0.5
 						xset dpms force off
-				case Suspend
+				case "⏾ Suspend"
 						sudo zzz
-				case Logout
+				case " Logout"
 						cleanup-desktop
 						i3 exit
 
-				case Shutdown
+				case "⏻ Shutdown"
 						cleanup-desktop
 						sudo shutdown -h now
-				case "Restart i3wm"
+				case " Restart i3wm"
 						restart-i3
-				case Reboot
+				case "⏻ Reboot"
 						cleanup-desktop
 						sudo shutdown -r now
-				case "Switch User"
+				case " Switch User"
 						dm-tool switch-to-greeter
 		end
 end
