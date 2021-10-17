@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/walfn.fish @ line 2
 function walfn
 
 	if test (count $bgimage) -gt 1
@@ -32,6 +31,8 @@ function walfn
 	replace-color-in-i3 $accent
 	replace-color-in-i3 $accent
 	colorize-emacs $accent $fg $bg
+	# fix rofi config
+	sd '(.*selected-normal-background: ).*;' "\$1 $accent;" ~/.config/rofi/themes/october.rasi
 	restart-i3
 	sleep 1
 	# pywalfox update
