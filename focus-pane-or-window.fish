@@ -6,7 +6,7 @@ function focus-pane-or-window
 	    else
 		i3-msg focus $argv
 	    end
-	case '.*'
+	case '*'
 	    i3-msg focus $argv
     end
 end
