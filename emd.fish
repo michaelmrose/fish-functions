@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/emd.fish @ line 2
 function emd
 	emacs --bg-daemon
 	sleep 3
@@ -6,5 +5,5 @@ function emd
 	for p in (pgrep emacs)
 		mullvad split-tunnel pid add $p
 	end
-	emacsclient -c &
+	starton g emc Emacs
 end
