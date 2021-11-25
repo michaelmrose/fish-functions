@@ -1,3 +1,4 @@
 function emc
-    emacsclient -cn $argv
+	while not emacsclient -e '(+ 1 1)'
+	end; emacsclient -cn $argv &
 end
