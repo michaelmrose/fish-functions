@@ -1,5 +1,5 @@
 function emc
-    emacsclient -cn $argv
+    emacsclient -cn $argv &
     sleep 3
     emf e mmr/after-initial-setup &
     for p in (pgrep emacs)
