@@ -1,3 +1,5 @@
 function ebook-open
-    rdr -o (fullpath "$argv")
+    set book(fullpath "$argv")
+	echo book is $book
+    rdr -o $book
 end
