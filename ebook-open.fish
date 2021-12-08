@@ -1,3 +1,3 @@
 function ebook-open
-    rdr -o (fullpath $argv)
+    rdr -o (fullpath "$argv")
 end
