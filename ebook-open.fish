@@ -1,4 +1,4 @@
 function ebook-open
-    set -l book (pathof "$argv")
-    rdr -o "$book"
+    zathura $argv &
+    java -jar ~/proj/clojure/rdr/target/rdr-0.1.0-SNAPSHOT-standalone.jar -a $argv &
 end
