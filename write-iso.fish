@@ -12,10 +12,10 @@ function write-iso
 	return 1
     end
 
-    echo here1
     set file $argv[1]
     set disk /dev/$argv[3]
     set size (du -hs $file | cut -f1)
+    echo here
     if test -f $file; and test -b $disk
 	echo The following disk will be overwritten...
 	echo -----------------------------------------
