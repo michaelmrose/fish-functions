@@ -1,6 +1,6 @@
 function toggle-side-gaps
     set width (window-width)
-    set monitor_width (get-focused-display-resolution)
+    set monitor_width (get-focused-display-width)
     set target_width (math $monitor_width - 140)
     set gap_width (math $monitor_with / 12.8)
     if test $width -lt $target_width
