@@ -1,6 +1,6 @@
 function cleanup-desktop
     for service in ~/service/enabled/*
-	stop $service
+	sv shutdown $service
     end
     i3-msg [class="."] kill
     countdown 3
