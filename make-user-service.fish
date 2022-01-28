@@ -7,6 +7,6 @@ function make-user-service
     echo #!/usr/bin/sh > $service_file
     echo "exec $command" >> $service_file
     chmod +x $service_file
-    emacs -c $service_file
+    emacsclient -c $service_file
     ln -s ~/service/$name ~/service/enabled
 end
