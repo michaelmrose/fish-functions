@@ -27,5 +27,5 @@ function signal-i3blocks
     end
     # pkill -RTMIN+$val i3blocks
     pkill -SIGRTMIN+$val i3status-rs
-    # pkill -SIGRTMIN+$val swaystatus
+    pkill -SIGRTMIN+$val swaystatus
 end
