@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/signal-i3blocks.fish @ line 2
 function signal-i3blocks
 	switch $argv
         case vi3
@@ -28,4 +27,5 @@ function signal-i3blocks
     end
     # pkill -RTMIN+$val i3blocks
     pkill -SIGRTMIN+$val i3status-rs
+    pkill -SIGRTMIN+$val swaystatus
 end
