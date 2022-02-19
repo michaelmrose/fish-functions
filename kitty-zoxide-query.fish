@@ -1,3 +1,5 @@
 function kitty-zoxide-query
-	kitty -1 ff qdbus org.kde.dolphin-$argv[1] /dolphin/Dolphin_1 org.kde.dolphin.MainWindow.openDirectories file://(zoxide query -i) false
+	set pid (xprop -id (xdotool getwindowfocus) | grep '_NET_WM_PID' | grep -oE '[[:digit:]]*$')
+	kitty -1 -e zoxide query -i| dolphin-open-path $pid
+
 end
