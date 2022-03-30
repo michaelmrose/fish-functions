@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/wp.fish @ line 2
 function wp
 		if not exists $argv
 				while read -l line
@@ -130,7 +129,8 @@ function wp
 								wp $recent_backgrounds[1]
 						case recall
 								~/.fehbg
-								signal-i3blocks 12
+								sleep 0.2
+								restart picom
 						case show
 								sxiv -f $bgimage
 						case similar
