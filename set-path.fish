@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/set-path.fish @ line 2
 function set-path
   #   set builtinpaths /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin ~/scripts
 
@@ -6,7 +5,7 @@ function set-path
 
   set builtinpaths  /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
 
-  set mypaths /usr/home/michael/.cargo/bin /usr/home/michael/.local/bin /usr/home/michael/scripts /usr/home/michael/bin /opt/clojure/bin /usr/home/michael/scripts/clj ~/extproj/imapnotify/node_modules/imapnotify/bin /usr/home/michael/proj/nand2tetris/tools
+  set mypaths /usr/home/michael/.cargo/bin /usr/home/michael/.local/bin /usr/home/michael/scripts /usr/home/michael/bin /opt/clojure/bin /usr/home/michael/scripts/clj ~/extproj/imapnotify/node_modules/imapnotify/bin /usr/home/michael/proj/nand2tetris/tools ~/.emacs.d/bin
 
   set -xg PATH $mypaths  $builtinpaths
 end
