@@ -1,4 +1,3 @@
-# Defined in /usr/home/michael/.config/fish/buffer/fe.fish @ line 2
 function fe
 	for i in $argv
     if startswith @ $i
