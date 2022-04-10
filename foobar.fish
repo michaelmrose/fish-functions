@@ -1,3 +1,3 @@
 function foobar
-    echo fuck me
+    echo fuck me sideways
 end
