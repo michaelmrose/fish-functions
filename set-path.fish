@@ -1,11 +1,16 @@
 function set-path
-  #   set builtinpaths /usr/local/sbin /usr/local/bin /usr/sbin /usr/bin /sbin /bin ~/scripts
-
-  # set mypaths /opt/bin /home/michael/bin /opt/android-sdk/platform-tools /home/michael/.cargo/bin /home/michael/extproj/imapnotify/node_modules/imapnotify/bin /home/michael/.gem/ruby/2.5.0/bin /usr/bin/vendor_perl /opt/android-sdk/tools/bin/ $GERBIL_HOME/bin /home/michael/.local/bin
 
   set builtinpaths  /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
 
-  set mypaths /usr/home/michael/.cargo/bin /usr/home/michael/.local/bin /usr/home/michael/scripts /usr/home/michael/bin /opt/clojure/bin /usr/home/michael/scripts/clj ~/extproj/imapnotify/node_modules/imapnotify/bin /usr/home/michael/proj/nand2tetris/tools ~/.emacs.d/bin
+  set scripts /usr/home/michael/scripts /usr/home/michael/scripts/clj
 
-  set -xg PATH $mypaths  $builtinpaths
+  set cargo /usr/home/michael/.cargo/bin
+
+  set imapnotify ~/extproj/imapnotify/node_modules/imapnotify/bin
+
+  set nand2tetris /usr/home/michael/proj/nand2tetris/tools
+
+  set mypaths  /usr/home/michael/.local/bin /usr/home/michael/bin   ~/.emacs.d/bin
+
+  set -xg PATH $scripts $cargo $imapnotify $nand2etris $mypaths  $builtinpaths
 end
