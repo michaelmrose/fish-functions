@@ -7,7 +7,7 @@ function set-wallpaper
 		set-lightdm-bg $img
 		set -U bgimage $img
 
-        wal -n --saturate 0.7 -i $img
-        xrdb ~/.cache/wal/colors-i3.conf
-        restart-i3
+        # wal -n --saturate 0.7 -i $img
+        # xrdb ~/.cache/wal/colors-i3.conf
+        # restart-i3
 end
