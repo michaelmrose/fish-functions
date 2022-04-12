@@ -26,16 +26,6 @@ function walfn
 		set bg (jq -r .colors.color15 ~/.cache/wal/colors.json)
 		set stat (jq -r .colors.color0 ~/.cache/wal/colors.json)
 	end
-# wali3status-rs $accent $stat
-	# replace-color-in-i3 $accent
-	# replace-color-in-i3 $accent
-	# colorize-emacs $accent $fg $bg
-	# fix rofi config
-	# sd '(.*selected-normal-background: ).*;' "\$1 $accent;" ~/.config/rofi/themes/october.rasi
     xrdb ~/.cache/wal/colors-i3.conf
 	restart-i3
-	# sleep 1
-	# pywalfox update
-	# pywalzathura
-	# cp ~/.cache/wal/firefox.css $FIREFOX_PROFILE_DIR/firefox.css
 end
