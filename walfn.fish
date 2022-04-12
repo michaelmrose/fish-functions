@@ -37,6 +37,6 @@ function walfn
 	restart-i3
 	sleep 1
 	# pywalfox update
-	pywalzathura
+	# pywalzathura
 	cp ~/.cache/wal/firefox.css $FIREFOX_PROFILE_DIR/firefox.css
 end
