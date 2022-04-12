@@ -32,7 +32,7 @@ function walfn
 	# replace-color-in-i3 $accent
 	# colorize-emacs $accent $fg $bg
 	# fix rofi config
-	sd '(.*selected-normal-background: ).*;' "\$1 $accent;" ~/.config/rofi/themes/october.rasi
+	# sd '(.*selected-normal-background: ).*;' "\$1 $accent;" ~/.config/rofi/themes/october.rasi
     xrdb ~/.cache/wal/colors-i3.conf
 	restart-i3
 	sleep 1
