@@ -27,7 +27,7 @@ function walfn
 		set stat (jq -r .colors.color0 ~/.cache/wal/colors.json)
 	end
 
-	wali3status-rs $accent $stat
+	# wali3status-rs $accent $stat
 	replace-color-in-i3 $accent
 	replace-color-in-i3 $accent
 	# colorize-emacs $accent $fg $bg
