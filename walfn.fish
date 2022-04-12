@@ -35,8 +35,8 @@ function walfn
 	# sd '(.*selected-normal-background: ).*;' "\$1 $accent;" ~/.config/rofi/themes/october.rasi
     xrdb ~/.cache/wal/colors-i3.conf
 	restart-i3
-	sleep 1
+	# sleep 1
 	# pywalfox update
 	# pywalzathura
-	cp ~/.cache/wal/firefox.css $FIREFOX_PROFILE_DIR/firefox.css
+	# cp ~/.cache/wal/firefox.css $FIREFOX_PROFILE_DIR/firefox.css
 end
