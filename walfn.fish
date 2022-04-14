@@ -28,4 +28,6 @@ function walfn
 	end
     xrdb ~/.cache/wal/colors-i3.conf
 	restart-i3
+    emacsclient -e '(load-file "~/.cache/wal/colors-emacs.el")'
+
 end
