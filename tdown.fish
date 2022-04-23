@@ -9,6 +9,6 @@ function tdown
 		eval kitty -o font_size=100 -e termdown --no-figlet -v en-us -T (quote $title) $duration
 		if [ $status = 0 ]
 			echo $title completed at (date) > /tmp/timers-complete.txt
-			mpv --no-video ~/sounds/alarm.m4a
+			# mpv --no-video ~/sounds/alarm.m4a
 		end
 end
