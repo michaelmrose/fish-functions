@@ -1,12 +1,16 @@
-# Defined in /usr/home/michael/.config/fish/buffer/vpn.fish @ line 2
 function vpn
 	switch $argv[1]
 		case -d
 			# volemad-cli -d
 			mullvad disconnect
+			signal-i3blocks 12
 		case	-c
 			# volemad-cli	 -p 'USA' -s 'Los Angeles, CA'
 			mullvad connect
+				for attempt in (seq 1 15)
+				    signal i3blocks 12
+				    sleep 1
+				end
 		case -e 
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid add $p
@@ -22,22 +26,15 @@ function vpn
 		case -t
 			if mullvad status | grep Connected
 				mullvad disconnect
+				signal-i3blocks 12
 			else
 				mullvad connect
+				signal-i3blocks 12
+				for attempt in (seq 1 15)
+				    signal i3blocks 12
+				    sleep 1
+				end
+				
 			end
-			signal-i3blocks 12
-			# set mullvad (mullvad-status)
-			# if mullvad-connection-status
-			# 		vpn -d
-			# else
-			# 		vpn -c
-			# end
-			# for i in (seq	 40)
-			# 		if not [ mullvad = (mullvad-status) ]
-			# 				signal-i3blocks 12
-			# 				return 0
-			# 		end
-			# 		sleep 0.25
-			# end
 	end
 end
