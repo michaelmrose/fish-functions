@@ -8,7 +8,7 @@ function vpn
 			# volemad-cli	 -p 'USA' -s 'Los Angeles, CA'
 			mullvad connect
 				for attempt in (seq 1 15)
-				    signal i3blocks 12
+				    signal-i3blocks 12
 				    sleep 1
 				end
 		case -e 
@@ -31,7 +31,7 @@ function vpn
 				mullvad connect
 				signal-i3blocks 12
 				for attempt in (seq 1 15)
-				    signal i3blocks 12
+				    signal-i3blocks 12
 				    sleep 1
 				end
 				
