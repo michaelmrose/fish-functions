@@ -1,3 +1,3 @@
 function unshare
-    sudo zfs set sharenfs="none" $argv
+    sudo zfs set sharenfs="off" $argv
 end
