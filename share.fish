@@ -6,5 +6,5 @@ function share
 	set sharepath $argv[1]
 	set options \'$argv[2]\'
     end
-    echo sudo zfs set sharenfs=$options $sharepath
+    sudo zfs set sharenfs=$options $sharepath
 end
