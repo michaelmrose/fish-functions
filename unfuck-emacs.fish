@@ -1,5 +1,5 @@
 function unfuck-emacs
     i3 fullscreen enable
-    sleep 0.5
+    sleep 1
     3 fullscreen disable
 end
