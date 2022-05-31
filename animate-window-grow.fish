@@ -17,12 +17,12 @@ function animate-window-grow
     # 	end
     # set sizes 100 200 300 400 500 600 700 800 900 1000 1100 1200 1300 1400 1500
 
-    set size 100
-    while test $size -lt 1500
-	i3-msg resize set width $size
-	set size (math $size + 50)
-	sleep 0.001
-    end
+    # set size 100
+    # while test $size -lt 1500
+    # 	i3-msg resize set width $size
+    # 	set size (math $size + 50)
+    # 	sleep 0.001
+    # end
     i3-msg floating disable
 
 end
