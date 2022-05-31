@@ -1,5 +1,5 @@
 function unfuck-emacs
-    # i3-msg floating enable
+    i3-msg shrink left 1px
+    i3-msg grow right 1px
     emf e unfuck-emacs-tab-bar-display
-    # i3-msg floating disable
 end
