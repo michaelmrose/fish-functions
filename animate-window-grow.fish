@@ -5,7 +5,7 @@ function animate-window-grow
     set size 100
     while test $size -ne 1500
 	i3-msg resize set width $size
-	set size (math $size + 50)
+	set size (math $size + 100)
 	sleep 0.0001
     end
     # for size in $sizes
