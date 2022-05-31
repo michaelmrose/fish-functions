@@ -1,5 +1,5 @@
 function unfuck-emacs
     # i3-msg fullscreen enable
-    i3-msg 'floating enable, floating disable'
+    sleep 0.1
     # i3-msg fullscreen disable
 end
