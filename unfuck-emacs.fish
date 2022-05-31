@@ -1,6 +1,5 @@
 function unfuck-emacs
-    sleep 0.1
-    i3-msg shrink left 1px
-    i3-msg grow right 1px
+    i3-msg fullscreen enable
     emf e unfuck-emacs-tab-bar-display
+    i3-msg fullscreen disable
 end
