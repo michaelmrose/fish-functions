@@ -4,7 +4,7 @@ function animate-window-grow
     for size in $sizes
 	i3-msg resize set height $size
 	i3-msg resize set width $size
-	sleep 0.01
+	sleep 0.001
     end
     i3-msg floating disable
 
