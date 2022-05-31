@@ -1,5 +1,6 @@
 function animate-window-grow
     # need to move window progressively up/left or do something to make this look better
+    i3-msg floating enable
     set monitor (get-ws-info get output where focused is true)
     switch $monitor
 	case HDMI-0
@@ -18,7 +19,7 @@ function animate-window-grow
     # set target_height (math $total_height / 2)
 
     set size 100
-    while test $size -lt 1500
+    while test $size -lt 
 	i3-msg resize set width $size
 	i3-msg resize set height $size
 	# i3-msg move left 200 px
@@ -26,8 +27,6 @@ function animate-window-grow
 	set size (math $size + 50)
 	sleep 0.01
     end
-    i3-msg floating enable
-    sleep 0.001
     i3-msg floating disable
 
 end
