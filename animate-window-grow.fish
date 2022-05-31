@@ -20,7 +20,7 @@ function animate-window-grow
 
     i3-msg resize set height $target_height
     set size 100
-    while test $size -ne $target_width
+    while test $size -lt $target_width
 	i3-msg resize set width $size
 	set size (math $size + 50)
 	sleep 0.0001
