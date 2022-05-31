@@ -20,8 +20,8 @@ function animate-window-grow
 
     set size 100
     while test $size -lt 1500
-	i3-msg resize set width 1000
-	i3-msg resize set height 100
+	i3-msg resize set width $size
+	i3-msg resize set height $size
 	# i3-msg move left 200 px
 	# i3-msg move up 200 px
 	set size (math $size + 50)
