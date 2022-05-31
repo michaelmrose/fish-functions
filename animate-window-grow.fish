@@ -25,7 +25,7 @@ function animate-window-grow
 	i3-msg move left 50 px
 	i3-msg move up 50 px
 	set size (math $size + 50)
-	sleep 0.0001
+	sleep 1
     end
     i3-msg floating disable
 
