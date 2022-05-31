@@ -8,5 +8,6 @@ function animate-window-grow
 	set size (math $size + 50)
 	sleep 0.0001
     end
+    i3-msg floating disable
 
 end
