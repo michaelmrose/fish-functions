@@ -6,8 +6,6 @@ function animate-window-grow
 	set size (math $size + 50)
 	sleep 0.0001
     end
-    i3-msg fullscreen enable
-    i3-msg fullscreen disable
     # for size in $sizes
     # 	i3-msg resize set height $size
     # 	i3-msg resize set width $size
