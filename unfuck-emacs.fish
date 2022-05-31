@@ -1,4 +1,6 @@
 function unfuck-emacs
+    xterm &
+    killall xterm
     # i3-msg fullscreen enable
     emf en unfuck-emacs-tab-bar-display
     # sleep 0.3
