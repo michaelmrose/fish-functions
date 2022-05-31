@@ -2,6 +2,8 @@ function animate-window-grow
     # need to move window progressively up/left or do something to make this look better
     i3-msg floating enable
     sleep 0.1
+    i3-msg fullscreen enable
+    sleep 0.1
 
     # set monitor (get-ws-info get output where focused is true)
     # switch $monitor
@@ -23,6 +25,8 @@ function animate-window-grow
 	set size (math $size + 50)
 	sleep 0.001
     end
+    i3-msg fullscreen disable
+    sleep 0.1
     i3-msg floating disable
 
 end
