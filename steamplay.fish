@@ -1,6 +1,3 @@
 function steamplay
-	if not pgrep stream
-    steam &
-  end
-	steam steam://rungameid/(steamid $argv)
+    eval (steam srg Exec (rg steam ~/.local/share/applications/ -l|g $argv|select)|choose -f = 1:)
 end
