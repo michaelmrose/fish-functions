@@ -4,5 +4,4 @@ function steamplay
     else
 	# pick a steam game to play
     end
-
 end
