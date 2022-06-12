@@ -3,6 +3,6 @@ function focus-workspace-group
     for w in $workspace_group_$n
 	i3-msg workpace $w
     end
-    set val workspace_group_$n_focused
+    set val workspace_group_{$n}_focused
     i3-msg workspace $$val
 end
