@@ -1,8 +1,6 @@
 function save-workspace-group
     set n $argv[1]
-    set workspaces (get-ws-info get name where visible is true|quote)
     set focused (get-ws-info get name where focused is true)
-    set val workspace_group_{$n}_focused
-    set -U workspace_group_$n $workspaces
-    set -U  $val $focused
+    set other_workspaces (get-ws-info get name where visible is true|quote|grep --invert-match $focused)
+    echo $other_workspaces $focused > ~/.config/i3/groups/$n
 end
