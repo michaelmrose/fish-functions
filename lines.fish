@@ -1,3 +1,3 @@
 function lines
-    cat $argv| xargs -n1
+    cat $argv| sd " " \n
 end
