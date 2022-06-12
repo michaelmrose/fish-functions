@@ -1,6 +1,8 @@
 function decorate-workspacename
     if exists $argv
-	keyboardordering $argv
+	for w in $argv
+	    keyboardordering $w
+	end
     else
 	while read -l line
 	    keyboardordering $line
