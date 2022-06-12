@@ -1,3 +1,3 @@
 function lines
-    cat $argv| sd " " | \\n
+    cat $argv| sd " "  \n
 end
