@@ -4,5 +4,5 @@ function focus-workspace-group
 	i3-msg workpace $w
     end
     set val workspace_group_$n_focused
-    echo i3-msg workspace workspace_group_{$n}_focused 
+    echo i3-msg workspace $workspace_group_{$n}_focused 
 end
