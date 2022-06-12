@@ -6,5 +6,5 @@ function save-workspace-group
     echo v1 is $val
     echo v2 is $$val
     set -U workspace_group_$n $workspaces
-    set -U  workspace_group_{$n} $focused
+    set -U  $val $focused
 end
