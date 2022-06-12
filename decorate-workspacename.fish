@@ -1,4 +1,9 @@
-# Defined in /home/michael/.config/fish/buffer/decorate-workspacename.fish @ line 2
 function decorate-workspacename
-    keyboardordering $argv
+    if exists $argv
+	keyboardordering $argv
+    else
+	while read -l line
+	    keyboardordering $line
+	end
+    end
 end
