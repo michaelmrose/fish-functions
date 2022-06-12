@@ -1,8 +1,8 @@
 function focus-workspace-group
     set n $argv[1]
-    set group workspace_group_$n
-    for w in $$group
-	i3-msg workspace $w
+    for w in $workspace_group_$n
+	i3-msg workpace $w
     end
-    # i3-msg workspace $workspace-group_$n_focused
+    set val workspace_group_$n_focused
+    i3-msg workspace $$val
 end
