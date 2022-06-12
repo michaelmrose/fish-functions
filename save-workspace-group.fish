@@ -3,6 +3,5 @@ function save-workspace-group
     set workspaces (get-ws-info get name where visible is true|quote)
     set focused (get-ws-info get name where focused is true)
     set -U workspace_group_$n $workspaces
-    set val workspace_group_{$n}_focused
-    echo set -U  workspace_group_{$n}_ $focused
+    set -U  workspace_group_{$n} $focused
 end
