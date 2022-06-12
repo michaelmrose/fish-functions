@@ -1,3 +1,3 @@
 function focus-workspace-group
-    ws (cat ~/.config/i3/groups/$argv|xargs -n1)
+    ws (lines ~/.config/i3/groups/$argv )
 end
