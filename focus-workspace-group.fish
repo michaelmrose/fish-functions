@@ -1,7 +1,8 @@
 function focus-workspace-group
-    set n $argv[1]
-    set workspaces (explode-words (cat ~/.config/i3/groups/$n))
-    for w in $workspaces
-	i3-msg workspace $w
-    end
+    # set n $argv[1]
+    ws (cat ~/.config/i3/groups/$argv)
+    # set workspaces (explode-words (cat ~/.config/i3/groups/$n))
+    # for w in $workspaces
+    # 	i3-msg workspace $w
+    # end
 end
