@@ -1,7 +1,7 @@
 function nicer-desktop
     set highest (pgrep '^i3$|xcape|sndiod')
     set high (pgrep 'Xorg|emacs|sndiod')
-    set low (pgrep 'firefox|qbittorrent|mullvad')
+    set low (pgrep 'firefox|Web|qbittorrent|mullvad')
 
     sudo renice -n -20 -p $highest
     sudo renice -n -10 -p $high
