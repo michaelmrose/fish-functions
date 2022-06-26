@@ -1,3 +1,3 @@
 function foo
-	echo 7
+	echo 42
 end
