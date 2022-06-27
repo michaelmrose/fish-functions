@@ -7,7 +7,8 @@ function set-wallpaper
 		set-lightdm-bg $img
 		set -U bgimage $img
         walfn
-	convert $img -resize 2000x2000 ~/.cache/wal/rofi.jpg
+		convert $img -resize 2000x2000 ~/.cache/wal/rofi.jpg
+		pywalfox update
         # wal -n --saturate 0.7 -i $img
         # xrdb ~/.cache/wal/colors-i3.conf
         # restart-i3
