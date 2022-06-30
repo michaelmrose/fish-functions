@@ -1,5 +1,5 @@
 function until-changed-by
-	set last (read -l)
+	read last
 	echo last is now $last
 	echo we are going to eval $argv
 	$argv
