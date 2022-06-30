@@ -1,4 +1,4 @@
 function bullshit
-	set foo (read)
+	set foo (read -L)
 	echo foo is $foo
 end
