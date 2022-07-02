@@ -1,3 +1,3 @@
 function albumart-path
-	playerctl -p mpd metadata mpris:artUrl|cut -c 8-|quote
+	echo (dirname (playerctl -p mpd metadata xesam:url|cut -c8-))/cover.jpg
 end
