@@ -1,3 +1,3 @@
 function readable-text-from-clipboard-url
-	readable (clip -o) |clibboard
+	readable (clip -o) |clipboard
 end
