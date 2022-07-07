@@ -1,6 +1,6 @@
 function nicer-desktop
     set highest (pgrep '^i3$|xcape|sndiod')
-    set high (pgrep 'Xorg|emacs|sndiod')
+    set high (pgrep 'Xorg|emacs')
     set ffp (ps --ppid (pgrep firefox) -o pid=)
     set low $ffp (pgrep 'qbittorrent|mullvad')
 
