@@ -1,6 +1,6 @@
-# Defined in /usr/home/michael/.config/fish/buffer/starton.fish @ line 2
 function starton
-  set ws (decorate-workspacename $argv[1])
+  # set ws (decorate-workspacename $argv[1])
+  set ws $argv[1]
   set command $argv[2]
   set class $argv[3]
   set json $argv[4]
