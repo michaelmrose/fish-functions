@@ -1,4 +1,6 @@
 function jfin
          chromium --app=http://localhost:8096 &
-		 restart jellyfin-mpv-shim
+		 if not exists $argv
+			restart jellyfin-mpv-shim
+		 end
 end
