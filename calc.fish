@@ -1,3 +1,3 @@
 function calc
-	GTK_THEME=Adwaita libreoffice --nologo --calc $argv 
+	GTK_THEME=Adwaita libreoffice --calc $argv 
 end
