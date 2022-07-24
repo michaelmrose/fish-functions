@@ -1,5 +1,4 @@
 function xrr
-	xrr.clj HDMI-0 320 DP-4 -530 DP-1
 	switch $argv
 		case left
 			xrandr --dpi 163 --output DP-0 --scale 1.75x1.75 - -output HDMI-0 --off --output DVI-D-0 --off
