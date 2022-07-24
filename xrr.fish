@@ -3,13 +3,13 @@ function xrr
 		case left
 			xrandr --dpi 163 --output DP-0 --scale 1.75x1.75 --output HDMI-0 --off --output DVI-D-0 --off
 		case all
-			for d in (get-disconnected-displays)
+			for d in (get-disconnected-displays | choose 0)
 				echo xrandr --output $d --auto
 				xrandr --output $d --auto
 			end
 			xrandr --dpi 163 --output DP-0 --scale 1.75x1.75 --output HDMI-0 --pos 3360x0 --mode 3840x2160 --output DVI-D-0 --pos 7200x0 --scale 1.75x1.75
 		case '*'
-			if test (count (get-connected-displays | choose 0)) -eq 3
+			if test (count (get-connected-displays)) -eq 3
 				xrr left
 			else
 				xrr all
