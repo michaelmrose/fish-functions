@@ -5,6 +5,7 @@ function xrr
 		case all
 			for d in (get-disconnected-displays)
 				echo xrandr --output $d --auto
+				xrandr --output $d --auto
 			end
 			xrandr --dpi 163 --output DP-0 --scale 1.75x1.75 --output HDMI-0 --pos 3360x0 --mode 3840x2160 --output DVI-D-0 --pos 7200x0 --scale 1.75x1.75
 		case '*'
