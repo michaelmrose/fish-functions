@@ -2,9 +2,9 @@ function symbol-lock
 	if exists $argv
 		switch $argv[1]
 			case on
-				set SYMBOLLOCK true
-			case off
 				set SYMBOLLOCK false
+			case off
+				set SYMBOLLOCK true
 		end
 	end
 	if [ $SYMBOLLOCK = true ]
