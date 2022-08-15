@@ -27,9 +27,11 @@ function vpn
 			if mullvad status | grep Connected
 				mullvad disconnect
 				signal-i3blocks 12
+				msg disconnecting...
 			else
 				mullvad connect
 				signal-i3blocks 12
+				msg connecting...
 				for attempt in (seq 1 15)
 				    signal-i3blocks 12
 				    sleep 1
