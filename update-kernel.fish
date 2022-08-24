@@ -2,7 +2,7 @@ function update-kernel
 	cd /usr/home/michael/extproj/voidxanmodK
 	git pull
 	cd linux-gcc
-	set kernel (fd 'linux5\...-xanmod$'|select|cut -c3-18)
+	set kernel (fd 'linux5\...-xanmod$'|cut -c3-18|select)
 	set headers $kernel-headers
 	set voidpkgs ~/extproj/void-packages
 	cp -R $kernel $voidpkgs/srcpkgs
