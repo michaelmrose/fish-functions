@@ -8,6 +8,6 @@ function update-kernel
 	cp -R $kernel $voidpkgs/srcpkgs
 	cp -R $headers $voidpkgs/srcpkgs
 	cd $voidpkgs
-	./xbps-src pkg $kernel $headers
+	./xbps-src pkg $kernel $headers -j6
 	sudo xbps-install --repository hostdir/binpkgs $kernel $headers
 end
