@@ -3,8 +3,8 @@ function system-menu
 				case " Lock"
 						dm-tool switch-to-greeter &
 				case "􀆴 Lightsout"
+					echo lightsout
 						sleep 0.5
-						msg lights out
 						xset dpms force off
 				case "⏾ Suspend"
 						sudo zzz
