@@ -4,6 +4,7 @@ function system-menu
 						dm-tool switch-to-greeter &
 				case "􀆴 Lightsout"
 						sleep 0.5
+						msg lights out
 						xset dpms force off
 				case "⏾ Suspend"
 						sudo zzz
