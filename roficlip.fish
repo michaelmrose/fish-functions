@@ -1,5 +1,5 @@
 function roficlip
 	# rofi -m -1 -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 	set text (greenclip print|select)
-	xdotool type -d 1 "$text"
+	xdotool type --delay 1 "$text"
 end
