@@ -8,7 +8,7 @@ function monitors
 			xrandr --output DVI-D-0 --auto
 			xrandr --dpi 163 --output DP-0 --auto --scale 1.75x1.75 --output HDMI-0 --pos 3360x0 --mode 3840x2160 --output DVI-D-0 --pos 7200x0 --scale 1.75x1.75
 		case '*'
-			if test -gt 1 (get-connected-displays|wc -l)
+			if test  (get-connected-displays|wc -l) -gt 1
 				xrandr --output DP-0 --off
 				xrandr --output DVI-D-0 --off
 			else
