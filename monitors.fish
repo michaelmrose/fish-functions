@@ -1,15 +1,11 @@
 function monitors
 	switch $argv
-        case bed
-            xrandr --output DVI-I-1 --auto --output DVI-I-2 --off
-        case desk
-            xrandr --output DVI-I-2 --auto --output DVI-I-1 --off
-        case toggle
-            switch (xrandr|grep 'Screen 0' | cut -d " " -f8)
-                case 1600
-                    monitors bed
-                case 1920
-                    monitors desk
-            end
+        case one
+			xrandr --output DP-0 --off
+			xrandr --output DVI-D-0 --off
+        case all
+			xrandr --output DP-0 --auto
+			xrandr --output DVI-D-0 --auto
+			xrandr --dpi 163 --output DP-0 --auto --scale 1.75x1.75 --output HDMI-0 --pos 3360x0 --mode 3840x2160 --output DVI-D-0 --pos 7200x0 --scale 1.75x1.75
     end
 end
