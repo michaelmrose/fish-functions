@@ -1,4 +1,3 @@
-# Defined in /home/michael/.config/fish/buffer/monitors.fish @ line 2
 function monitors
 	switch $argv
         case bed
