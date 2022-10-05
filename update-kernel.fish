@@ -1,4 +1,5 @@
 function update-kernel
+	set target (pwd)
 	cd /usr/home/michael/extproj/voidxanmodK
 	git pull
 	cd linux-gcc
@@ -12,4 +13,5 @@ function update-kernel
 	cd $voidpkgs
 	./xbps-src pkg $kernel $headers -j6
 	sudo xbps-install --repository hostdir/binpkgs $kernel $headers
+	cd "$target"
 end
