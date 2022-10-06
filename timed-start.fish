@@ -1,4 +1,3 @@
-# Defined in /home/michael/.config/fish/buffer/timed-start.fish @ line 2
 function timed-start
     if test (count $argv) -gt 1
         set app $argv[1..-2]
