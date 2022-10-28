@@ -3,7 +3,7 @@ function update-kernel
 	cd /usr/home/michael/extproj/voidxanmodK
 	git pull
 	cd linux-gcc
-	set kernel (fd 'linux5\...-xanmod$'|cut -c3-18|select)
+	set kernel (fd 'linux.\...-xanmod$'|cut -c3-18|select)
 	echo Do you want to install the new kernel?
 	if read_confirm
 		set headers $kernel-headers
