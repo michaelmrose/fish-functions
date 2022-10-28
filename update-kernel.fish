@@ -4,8 +4,11 @@ function update-kernel
 	git pull
 	cd linux-gcc
 	# set kernel (fd 'linux.\...-xanmod$'|cut -c3-18|select)
-	set kernel (fd 'linux(5|6)\.[0-9]{1,2}-xanmod$'| choose -f / 1| select)
-	echo Do you want to install the new kernel?
+	if set kernel (fd 'linux(5|6)\.[0-9]{1,2}-xanmod$'| choose -f / 1| select)
+		echo Do you want to install the new kernel?
+		else
+			echo no decision
+	end
 	if read_confirm
 		set headers $kernel-headers
 		set dbg $kernel-dbg
