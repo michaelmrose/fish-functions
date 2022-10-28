@@ -5,7 +5,7 @@ function update-kernel
 	cd linux-gcc
 	# set kernel (fd 'linux.\...-xanmod$'|cut -c3-18|select)
 	if set kernel (fd 'linux(5|6)\.[0-9]{1,2}-xanmod$'| choose -f / 1| select)
-		echo Do you want to install $kernel
+		echo Preparing to install new kernel version $kernel
 		if read_confirm
 			set headers $kernel-headers
 			set dbg $kernel-dbg
