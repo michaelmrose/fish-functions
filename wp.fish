@@ -33,6 +33,8 @@ function wp
 				echo 'next/prev							 -> set next or previous wp in recent_backgrounds list'
 				echo 'fill|scale|max				 -> set current image to fill scale or max setting per feh'
 				echo 'search [string]				 -> enter a search string to be compared to file names'
+			case theme 
+				wp --with-theme $argv[2] $bgimage
 			case save-theme
 				ln -s $bgimage ~/backgrounds/themes/$argv[2]
 			case with-theme
