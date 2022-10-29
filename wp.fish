@@ -36,7 +36,7 @@ function wp
 			case save-theme
 				ln -s $bgimage ~/backgrounds/themes/$argv[2]
 			case with-theme
-				wp $argv[2] 
+				wp ~/backgrounds/themes/$argv[2]
 				set img (pathof $argv[3])
 				set format (get-feh-format $img)
 				feh --bg-{$format} $img
