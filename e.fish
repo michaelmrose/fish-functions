@@ -1,5 +1,6 @@
-# Defined in /usr/home/michael/.config/fish/buffer/e.fish @ line 2
 function e
 		# emacsclient -ecn  "($argv)"
-		emacsclient -cn $argv
+		if not emacsclient -cn $argv
+			emacsclient -cn "/doas::$argv"
+		end
 end
