@@ -1,6 +1,7 @@
 function e
-		# emacsclient -ecn  "($argv)"
-		if not emacsclient -cn $argv
+		if stat -c %U $argv
+			emacsclient -cn $argv
+		else
 			emacsclient -cn "/doas::$argv"
 		end
 end
