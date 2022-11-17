@@ -7,10 +7,8 @@ function return-vpn-status-line-text
 		switch $line
 			case $vpn_connected_string
 				echo $locked
-				signal-i3blocks 12
 			case $vpn_disconnected_string
 				echo $unlocked
-				signal-i3blocks 12
 		end
 	end
 end
