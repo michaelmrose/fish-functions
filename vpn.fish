@@ -9,10 +9,6 @@ function vpn
 			# volemad-cli	 -p 'USA' -s 'Los Angeles, CA'
 			# mullvad connect
 			nmcli connection up mullvad_us_sea
-				for attempt in (seq 1 25)
-				    signal-i3blocks 12
-				    sleep 1
-				end
 		case -e 
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid add $p
@@ -38,10 +34,6 @@ function vpn
 				# mullvad connect
 				signal-i3blocks 12
 				msg connecting...
-				for attempt in (seq 1 15)
-				    signal-i3blocks 12
-				    sleep 1
-				end
 			end
 	end
 end
