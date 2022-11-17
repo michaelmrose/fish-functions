@@ -1,5 +1,5 @@
 function mullvad-status-official
-		if nmcli -g GENERAL.STATE c s tun0|grep -q 'activ' 2> /dev/null
+		if vpn -q 2> /dev/null
 				i3status-rs-colorize Warning "  "
 				# i3status-rs-colorize Warning "  🔒 "
 		else
