@@ -25,6 +25,8 @@ function vpn
 			for p in (pgrep $argv[2..-1])
 				mullvad split-tunnel pid delete $p
 			end
+		case -q
+			nmcli -g GENERAL.STATE c s tun0|grep -q 'activ' 2> /dev/null
 		case -t
 			if nmcli -g GENERAL.STATE c s tun0|grep -q 'activ' 
 				# mullvad disconnect
