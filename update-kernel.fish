@@ -15,7 +15,7 @@ function update-kernel
 			cp -R $dbg $voidpkgs/srcpkgs
 			cd $voidpkgs
 			./xbps-src pkg $kernel $headers -j6
-			sudo xbps-install --repository hostdir/binpkgs $kernel $headers
+			sudo xbps-install --repository hostdir/binpkgs $kernel $headers -f
 		end
 	end
 	cd "$target"
