@@ -1,7 +1,7 @@
 function focus-app
 	
     set criteria class
-	set appkeyValue (appkey $argv|choose 0)
+	set appkeyValue (appkey $argv|choose 0) > /dev/null
 	switch $appkeyValue
 		case emacsclient
 			set val Emacs
@@ -10,7 +10,6 @@ function focus-app
 		case '*'
 			set val (capitalize $appkeyValue)
 	end
-	echo val is $val
 
 	i3-msg "[$criteria=$val]" focus
 end
