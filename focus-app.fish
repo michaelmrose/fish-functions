@@ -56,5 +56,5 @@ function focus-app
     # set com i3 \'[{$criteria}={$val}]\' focus
     # echo $com
     # eval $com >&2 /dev/null
-	i3-msg "[$val=$criteria]" focus
+	i3-msg "[$criteria=$val]" focus
 end
