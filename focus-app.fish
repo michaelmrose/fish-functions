@@ -1,4 +1,3 @@
-# Defined in /home/michael/.config/fish/buffer/focus-app.fish @ line 2
 function focus-app
 	
     #     set com i3-msg \'[class=$criteria[1] title=\"$criteria[2]\"]\' focus
@@ -13,7 +12,7 @@ function focus-app
     switch $argv
         case a
         case b
-            set val Nightly
+            set val Firefox
         case c
             set val Speedcrunch
         case d
