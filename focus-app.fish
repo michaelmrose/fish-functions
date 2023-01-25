@@ -10,6 +10,7 @@ function focus-app
 		case '*'
 			set val (capitalize $appkeyValue)
 	end
+	echo val is $val
 
 	i3-msg "[$criteria=$val]" focus
 end
