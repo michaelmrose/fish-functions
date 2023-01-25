@@ -54,6 +54,6 @@ function focus-app
             return 0
     end
     set com i3 \'[{$criteria}={$val}]\' focus
-    # echo $com
+    echo $com
     eval $com >&2 /dev/null
 end
