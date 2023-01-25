@@ -53,7 +53,8 @@ function focus-app
             i3 workspace c
             return 0
     end
-    set com i3 \'[{$criteria}={$val}]\' focus
-    echo $com
-    eval $com >&2 /dev/null
+    # set com i3 \'[{$criteria}={$val}]\' focus
+    # echo $com
+    # eval $com >&2 /dev/null
+	i3-msg "[$class=$criteria]" focus
 end
