@@ -5,6 +5,8 @@ function focus-app
 	switch $appkeyValue
 		case emacsclient
 			set val Emacs
+		case qbittorrent
+			set val qBittorrent
 		case kitty
 			set val kitty
 		case '*'
