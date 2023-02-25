@@ -1,6 +1,6 @@
 function failed?
-	set res (up? $argv > /dev/null)
-	if not string match -r '^run.*' $res
+	set res (up? $argv )
+	if not string match -r '^run.*' $res > /dev/null
 		echo $res
 	end
 end
