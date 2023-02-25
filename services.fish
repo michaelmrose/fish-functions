@@ -19,7 +19,7 @@ function services
 		case all
 			p /etc/sv/*|each basename
 		case down
-			for service in ~/service/enabled/* /var/service/*                                                                                                                     ❮ 484 ms ❮ 
+			for service in ~/service/enabled/* /var/service/* 
 				failed? $service
 			end
 		case disabled
