@@ -1,7 +1,10 @@
 function cleanup-desktop
+	echo stopping user services...
     for service in ~/service/enabled/*
-	sv shutdown $service
+	sv force-stop $service
     end
+	countdown 7
+	echo killing windows
     i3-msg [class="."] kill
     countdown 3
 end
