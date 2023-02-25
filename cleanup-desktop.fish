@@ -1,7 +1,7 @@
 function cleanup-desktop
 	echo stopping user services...
     for service in ~/service/enabled/*
-	sv force-stop $service
+	sv stop $service
     end
 	countdown 7
 	echo killing windows
