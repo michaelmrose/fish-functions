@@ -9,6 +9,8 @@ function focus-app
 			set val qBittorrent
 		case kitty
 			set val kitty
+		case jfin
+			set val mpv
 		case '*'
 			set val (capitalize $appkeyValue)
 	end
