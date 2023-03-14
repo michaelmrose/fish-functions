@@ -1,5 +1,5 @@
-# Defined in /usr/home/michael/.config/fish/buffer/setup-keyboard.fish @ line 2
 function setup-keyboard
+	setxkbmap rose
     fk xcape
 	xmodmap ~/.config/xkeys/keys
     xcape-file ~/.config/xkeys/xcapes
