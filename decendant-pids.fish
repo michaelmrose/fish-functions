@@ -1,5 +1,6 @@
 function decendant-pids
 	if test (count $argv) -gt 0
+		echo a is $argv
 	  set pids (ps -o pid= --ppid $argv)
 	  set collect $pids
 	  for pid in $pids
