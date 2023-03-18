@@ -1,5 +1,5 @@
 function decendant-pids
-	echo called with $argv
+	# echo called with $argv
 	if not exists $argv
 		return 0
 	end
