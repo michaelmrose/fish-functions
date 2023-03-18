@@ -1,4 +1,5 @@
 function decendant-pids
+	echo called with $argv
 	set pids (ps -o pid= --ppid $argv)
 	set collect $pids
 	for pid in $pids
