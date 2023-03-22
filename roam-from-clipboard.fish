@@ -4,5 +4,5 @@ function roam-from-clipboard
 	set title (http "$url"|pup title text{})
 	set encodedtitle (encodeURIComponent $title)
 	set link "org-protocol://roam-ref?template=r&ref=$encodedurl&title=$encodedtitle"
-	echo "$link"|jaro
+	jaro "$link"
 end
