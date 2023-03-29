@@ -8,7 +8,7 @@ function starton
   set active ( i3-msg -t get_workspaces|jq -r '.[]| select(.visible == true).name')
   set focused ( i3-msg -t get_workspaces|jq -r '.[]| select(.focused == true).name')
   i3-msg workspace $ws
-  i3-msg append_layout $layout
+  i3-msg append_layout $json
   fish -c $command &
   for w in $active
         i3-msg workspace $w
