@@ -5,7 +5,7 @@ function starton --argument ws command class
   # i3-msg workspace $ws
   # i3-msg append_layout (echo $json|psub)
   # $command &
-  i3-msg workspace $ws, append_layout (echo $json|psub), exec fish -c $command
+  i3-msg workspace $ws, append_layout (echo $json|psub), exec "fish -c $command"
   for w in $active $focused
         i3-msg workspace $w
     end
