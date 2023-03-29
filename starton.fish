@@ -4,7 +4,7 @@ function starton
   set command $argv[2]
   set class $argv[3]
   set json "{\"swallows\": [{\"class\": \"^$class\$\"}], \"type\": \"con\"}"
-  echo $json
+  echo $json > /tmp/layout-(uuidgen)
   set active ( i3-msg -t get_workspaces|jq -r '.[]| select(.visible == true).name')
   set focused ( i3-msg -t get_workspaces|jq -r '.[]| select(.focused == true).name')
   i3-msg workspace $ws
