@@ -1,7 +1,7 @@
 function starton --argument ws command class
-  set ws $argv[1]
-  set command $argv[2]
-  set class $argv[3]
+  # set ws $argv[1]
+  # set command $argv[2]
+  # set class $argv[3]
   set json "{\"swallows\": [{\"class\": \"^$class\$\"}], \"type\": \"con\"}"
   set layout /tmp/layout-(uuidgen)
   echo $json > $layout
