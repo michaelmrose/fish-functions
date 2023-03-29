@@ -1,5 +1,4 @@
 function starton
-  # set ws (decorate-workspacename $argv[1])
   set ws $argv[1]
   set command $argv[2]
   set class $argv[3]
