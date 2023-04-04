@@ -9,6 +9,7 @@ function set-wallpaper
         walfn
 		convert $img -resize 2000x2000 ~/.cache/wal/rofi.jpg
 		pywalfox update
+		betterlockscreen -u $bgimage --fx
         # wal -n --saturate 0.7 -i $img
         # xrdb ~/.cache/wal/colors-i3.conf
         # restart-i3
