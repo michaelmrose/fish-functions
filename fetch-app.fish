@@ -16,6 +16,6 @@ function fetch-app
 
 	set target (get-ws-info get name where focused is true)
 	i3-msg "[$criteria=$val]" focus
-	i3-msg move window to $target
+	i3-msg move window to workspace $target
 
 end
