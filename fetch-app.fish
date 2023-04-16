@@ -6,6 +6,8 @@ function fetch-app
 			set val Emacs
 		case qbittorrent
 			set val qBittorrent
+		case mpv
+			set val mpv
 		case kitty
 			set val kitty
 		case jfin
