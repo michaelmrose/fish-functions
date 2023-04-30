@@ -6,10 +6,9 @@ function select
             echo $argv
         end
     else
-        # while read -l line
-        #     set acc $acc $line
-        # end
-		read -l | rofi -dmenu -m -1 -l -p 'choose'
-        # select $acc
+        while read -l line
+            set acc $acc $line
+        end
+        select $acc
     end
 end
