@@ -1,4 +1,3 @@
-# Defined in /home/michael/.config/fish/buffer/select.fish @ line 2
 function select
 	if exists $argv
 	      if test (count $argv) -gt 1
@@ -7,9 +6,10 @@ function select
             echo $argv
         end
     else
-        while read -l line
-            set acc $acc $line
-        end
-        select $acc
+        # while read -l line
+        #     set acc $acc $line
+        # end
+		read | rofi -dmenu -m -1 -l -p 'choose'
+        # select $acc
     end
 end
