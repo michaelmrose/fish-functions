@@ -9,7 +9,7 @@ function select
         # while read -l line
         #     set acc $acc $line
         # end
-		read | rofi -dmenu -m -1 -l -p 'choose'
+		read -l | rofi -dmenu -m -1 -l -p 'choose'
         # select $acc
     end
 end
