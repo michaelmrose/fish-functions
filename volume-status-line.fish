@@ -1,8 +1,9 @@
 function volume-status-line
 	switch $SOUND_PORT
 		case headphones
-			echo 🎧 (ponymix get-volume) %
+			set icon 🎧  
 		case speakers
-			echo 🔘  (ponymix get-volume) %
+			set icon  🔘  
 	end
+	i3status-rs-colorize Info $icon (ponymix get-volume)
 end
