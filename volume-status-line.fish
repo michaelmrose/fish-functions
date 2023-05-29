@@ -5,5 +5,5 @@ function volume-status-line
 		case speakers
 			set icon  🔘  
 	end
-	i3status-rs-colorize Info $icon (ponymix get-volume)
+	i3status-rs-colorize Good $icon (ponymix get-volume)
 end
