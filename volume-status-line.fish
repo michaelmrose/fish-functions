@@ -1,12 +1,8 @@
 function volume-status-line
-	switch $SOUND_PORT
-		case headphones
+	switch (get-active-audio-port)
+		case analog-output-headphones
 			set icon 
-		case speakers
-			# set icon  🔘  
-			# set icon 
-			# set icon 
-			set icon  
+		case analog-output-lineout
 			set icon 
 	end
 	i3status-rs-colorize Warning $icon (ponymix get-volume)%
