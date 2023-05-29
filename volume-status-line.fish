@@ -1,7 +1,7 @@
 function volume-status-line
 	switch $SOUND_PORT
 		case headphones
-			set icon 🎧  
+			set icon 
 		case speakers
 			set icon  🔘  
 	end
