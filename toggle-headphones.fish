@@ -1,10 +1,9 @@
 function toggle-headphones
-	set -U SOUND_CARD (pactl list sinks short|g (cat ~/.config/sound-settings/card_name)|choose 0) 
-	if [  $SOUND_PORT = headphones  ]
-		pactl set-sink-port $SOUND_CARD analog-output-lineout
-		set -U SOUND_PORT speakers
+	set port (get-active-audio-port)
+	set card (pactl list sinks short|g analog-stereo |choose 0)  
+	if [  $port = analog-output-headphones  ]
+		pactl set-sink-port $card analog-output-lineout
 	else
-		pactl set-sink-port $SOUND_CARD analog-output-headphones
-		set -U SOUND_PORT headphones
+		pactl set-sink-port $card analog-output-headphones
 	end
 end
