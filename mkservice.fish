@@ -1,5 +1,5 @@
 function mkservice
-	if [ $argv[1] = -e]
+	if [ $argv[1] = -e ]
 		set edit_service_file true
 		set name $argv[2..-1]
 	else
