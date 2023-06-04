@@ -19,5 +19,5 @@ function focus-app
 			set val (capitalize $appkeyValue)
 	end
 
-	i3-msg "[$criteria=$val]" focus
+	i3-msg "[$criteria=\"$val\"]" focus
 end
