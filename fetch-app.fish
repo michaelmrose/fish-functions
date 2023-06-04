@@ -20,7 +20,7 @@ function fetch-app
 
 	set vis (get-ws-info get name where visible is true)
 	set focused (get-ws-info get name where focused is true)
-	i3-msg "[$criteria=$val]" focus
+	i3-msg "[$criteria=\"$val\"]" focus
 	i3-msg move window to workspace $focused
 	ws $vis $focused
 
