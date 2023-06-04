@@ -3,6 +3,8 @@ function focus-app
     set criteria class
 	set appkeyValue (appkey $argv|choose 0) > /dev/null
 	switch $appkeyValue
+		case code-oss
+			set val "Code - OSS"
 		case emacsclient
 			set val Emacs
 		case qbittorrent
