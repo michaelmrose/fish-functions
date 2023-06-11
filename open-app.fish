@@ -5,5 +5,5 @@ function open-app
 	# 	waituntilfocused (class-of-appkey $argv)
 	# 	i3 resize set $NEXT_WINDOW_ORIENTATION $UNIVERSAL_ARGUMENT ppt
 	# end
-	erase_variables_for_next_window
+	# erase_variables_for_next_window
 end
