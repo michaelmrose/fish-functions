@@ -8,7 +8,7 @@ function monitors
 			sleep 2
 			xrandr --dpi 163 --output DP-2 --pos 3840x0 --mode 3840x2160
 			sleep 2
-			xrandr --dpi 163 --output HDMI-0 --pos 7680x0 --scale 1.75x1.75
+			xrandr --dpi 163 --output HDMI-0 --pos 7680x0 --scale 2x2
 		case '*'
 			if test  (get-connected-displays|wc -l) -gt 1
 				monitors one
