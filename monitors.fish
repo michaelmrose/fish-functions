@@ -4,7 +4,6 @@ function monitors
 			xrandr --output DP-0 --off
 			xrandr --output HDMI-0 --off
         case all
-			xrandr --output HDMI-0 --auto
 			xrandr --dpi 163 --output DP-0 --pos 0x0 --mode 3840x2160
 			sleep 2
 			xrandr --dpi 163 --output DP-2 --pos 3840x0 --mode 3840x2160
