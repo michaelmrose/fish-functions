@@ -13,7 +13,7 @@ function write-iso
     end
 
     set file $argv[1]
-    set disk /dev/$argv[3]
+    set disk $argv[3]
     set size (du -hs $file | cut -f1)
     if test -f $file; and test -b $disk
 	echo The following disk will be overwritten...
