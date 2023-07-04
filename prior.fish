@@ -3,5 +3,5 @@ function prior
 	set n (echo $prev|wc -w)
 	for i in  (seq 1 $n)
 		echo $prev|choose $i:
-	end
+	end|fzf
 end
