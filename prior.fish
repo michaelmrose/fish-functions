@@ -4,4 +4,5 @@ function prior
 	for i in  (seq 1 $n)
 		set res $res (echo $prev|choose $i:)
 	end
+	p $res
 end
