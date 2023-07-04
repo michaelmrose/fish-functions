@@ -1,5 +1,5 @@
 function prior
-	set prev (echo $history[2]|choose 1:)
+	set prev (echo (history)[2]|choose 1:)
 	echo prev is $prev
 	# set n (count $prev)
 	# echo n is $n
