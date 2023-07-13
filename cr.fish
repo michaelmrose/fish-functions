@@ -1,4 +1,4 @@
-# Defined in /home/michael/.config/fish/buffer/cr.fish @ line 1
 function cr
-	cargo run
+	mkdir -p $PWD/(echo $argv|choose -f / 0:|choose 0:-2|sd ' ' '/'echo $PWD|choose -f / 0:|choose 0:-2|sd ' ' '/')
+	touch (echo $argv|choose -f / -1)
 end
