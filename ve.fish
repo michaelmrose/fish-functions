@@ -1,3 +1,3 @@
 function ve
-	source $veNAME/bin/activate.fish
+	source .venv/bin/activate.fish
 end
