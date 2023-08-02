@@ -5,7 +5,5 @@ function ve
 		set veName '.venv'
 	end
 	source $veNAME/bin/activate.fish
-	functions -e fish_prompt
-	sleep 0.1
-	functions -c _old_fish_prompt fish_prompt
+	fix_ve_shell_prompt
 end
