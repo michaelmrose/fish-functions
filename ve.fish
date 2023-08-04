@@ -4,7 +4,7 @@ function ve
 	else
 		set name .venv
 	end
-	if not test -f $name
+	if not test -d $name
 		python -m venv $name
 	end
 	source $name/bin/activate.fish
