@@ -1,4 +1,7 @@
 function ve
-	source .venv/bin/activate.fish
-	fix_ve_shell_prompt
+	if exists $argv
+		source $argv/bin/activate.fish
+	else
+		source .venv/bin/activate.fish
+	end
 end
