@@ -1,7 +1,11 @@
 function ve
 	if exists $argv
-		source $argv/bin/activate.fish
+		set name $argv
 	else
-		source .venv/bin/activate.fish
+		set name .venv
 	end
+	if not test -f $name
+		mkdir $name
+	end
+	source $name/bin/activate.fish
 end
