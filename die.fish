@@ -1,7 +1,12 @@
 function die
-	if exists $argv
-        foreach (pgrep "$argv") "kill -9 _"
+    if exists $argv
+       switch $argv[1]
+            case "-p"
+                   killport $argv[2]
+              case "-n"
+                foreach (pgrep "$argv") "kill -9 _"
+        end
     else
-	      xkill
+          xkill
     end
 end
