@@ -1,9 +1,9 @@
 function die
     if exists $argv
-       if isnumeric $argv[2]
-          echo killport $argv[2]
+       if isnumeric $argv[1]
+          echo killport $argv[1]
        else
-           echo foreach (pgrep "$argv[2]") "kill -9 _"
+           echo foreach (pgrep "$argv[1]") "kill -9 _"
        end
     else
           xkill
