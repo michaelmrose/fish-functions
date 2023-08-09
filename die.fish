@@ -4,7 +4,7 @@ function die
             case "-p"
                    killport $argv[2]
               case "-n"
-                foreach (pgrep "$argv") "kill -9 _"
+                foreach (pgrep "$argv[2]") "kill -9 _"
         end
     else
           xkill
