@@ -4,9 +4,6 @@ function dj
          while not test -d .git
             cd ..
          end
-        if not exists $VIRTUAL_ENV
-            ve
-        end
         fd manage.py|each dirname|each cd
         if match $argv[1] run
            python manage.py runserver (either $argv[2..-1] 7000)
