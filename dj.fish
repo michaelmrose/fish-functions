@@ -10,5 +10,5 @@ function dj
         else
             python manage.py $argv
         end
-        cd $prior
+        # cd $prior
 end
