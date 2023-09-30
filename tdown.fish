@@ -9,9 +9,9 @@ function tdown
     eval kitty  --class timer -o font_size=50 -e termdown --no-figlet -v en-us -T "$title" $duration -o /tmp/timerslist/"$title"
 
     msg Times up! Time for $title
-        mpv --force-window --loop-file=inf ~/sounds/alarmvids/"$title".mp4
         if [ $status = 0 ]
             echo "$title" completed at (date) > /tmp/timers-complete.txt
+            mpv --force-window --loop-file=inf ~/sounds/alarmvids/"$title".mp4
         end
 
 
