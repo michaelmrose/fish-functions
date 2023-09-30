@@ -3,7 +3,7 @@ function tdown
         set title  (echo $info | cut -d @ -f1| trim|quote)
         set duration (echo $info | cut -d @ -f2 | trim)
         mkdir -p /tmp/timerslist
-        eval kitty  --class timer -o font_size=100 -e termdown --no-figlet -v en-us -T (quote $title) $duration -o /tmp/timerslist/$title
+        eval kitty  --class timer -o font_size=100 -e termdown --no-figlet -v en-us -T $title $duration -o /tmp/timerslist/$title
         if [ $status = 0 ]
             echo $title completed at (date) > /tmp/timers-complete.txt
         end
