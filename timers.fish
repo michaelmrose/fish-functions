@@ -3,5 +3,6 @@ function timers
         echo (basename $timer):(cat $timer|head -1)
     end|condense_lines
 
+
     
 end
