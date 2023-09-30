@@ -6,7 +6,7 @@ function tdown
     if not test -f ~/sounds/alarmvids/"$title".mp4
         ffmpeg -f lavfi -i color=c=black:s=640x480:d=5 -i ~/sounds/alarm.mp3 -vf "drawtext=fontfile=/usr/share/fonts/TTF/DejaVuSans-Bold.ttf:text=\'$title\':fontsize=100:fontcolor=white:x=(w-text_w)/2:y=(h-text_h)/2" -shortest ~/sounds/alarmvids/"$title".mp4
     end
-    eval kitty  --class timer -o font_size=100 -e termdown --no-figlet -v en-us -T "$title" $duration -o /tmp/timerslist/"$title"
+    eval kitty  --class timer -o font_size=50 -e termdown --no-figlet -v en-us -T "$title" $duration -o /tmp/timerslist/"$title"
 
     msg Times up! Time for $title
         mpv --force-window --loop-file=inf ~/sounds/alarmvids/"$title".mp4
