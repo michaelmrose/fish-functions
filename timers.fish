@@ -1,9 +1,10 @@
 function timers
     echo -n "⏱ "
     for timer in /tmp/timerslist/*
-        echo ⏺  (basename $timer):(cat $timer|head -1)
+        echo ⏺  (basename $timer):(sed -n 1p $timer)
     end|condense_lines
 
 
 
+    
 end
