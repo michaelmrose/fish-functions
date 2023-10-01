@@ -16,8 +16,8 @@ function tdown
         msg Times up! Time for $title
             echo "$title" completed at (date) > /tmp/timers-complete.txt
             mpv --force-window --loop-file=inf ~/sounds/alarmvids/"$title".mp4
-        end
+    end
 
 
-    
+
 end
