@@ -1,5 +1,9 @@
 function tdown
-    set info (prompt 'title @ duration')
+    if exists $argv
+        set info $argv
+    else
+        set info (prompt 'title @ duration')
+    end
     set title  (echo $info | cut -d @ -f1| trim)
     set duration (echo $info | cut -d @ -f2 | trim)
     mkdir -p /tmp/timerslist
@@ -8,11 +12,12 @@ function tdown
     end
     eval kitty  --class timer -o font_size=50 -e termdown -s --no-figlet -v en-us -T "$title" $duration -o /tmp/timerslist/"$title"
 
-        if [ $status = 0 ]
-            msg Times up! Time for $title
+    if [ $status = 0 ]
+        msg Times up! Time for $title
             echo "$title" completed at (date) > /tmp/timers-complete.txt
             mpv --force-window --loop-file=inf ~/sounds/alarmvids/"$title".mp4
         end
 
 
+    
 end
