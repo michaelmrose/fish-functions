@@ -1,10 +1,13 @@
 function cleanup-desktop
-	# echo stopping user services...
+    # echo stopping user services...
     # for service in ~/service/enabled/*
-	# sv stop $service
+    # sv stop $service
     # end
-	# countdown 7
-	# echo killing windows
+    # countdown 7
+    # echo killing windows
     # i3-msg [class="."] kill
     # countdown 3
+    while test -f /tmp/backup.lock
+        sleep 1
+    end
 end
