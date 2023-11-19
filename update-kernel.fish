@@ -11,7 +11,7 @@ function update-kernel
             set dbg $kernel-dbg
             set voidpkgs ~/extproj/void-packages
             cp -R $kernel $voidpkgs/srcpkgs
-            cp -R $kernel $voidpkgs/srcpkgs
+            cp -R $headers $voidpkgs/srcpkgs
             cp -R $dbg $voidpkgs/srcpkgs
             cd $voidpkgs
             ./xbps-src pkg $kernel $headers -j6
