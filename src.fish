@@ -9,7 +9,7 @@ function src
     end
 
     cd ~/extproj/void-packages/
-    ./xbps-src pkg $argv
+    ./xbps-src pkg $app
     sudo xbps-install -R hostdir/binpkgs/$subdir $app
     set res $status
     cd $dir
