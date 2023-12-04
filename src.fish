@@ -1,13 +1,7 @@
 function src
     set dir $PWD
-
-    if test (count $argv) -eq 2
-        set subdir $argv[1]
-        set app $argv[2]
-    else
-        set app $argv[1]
-    end
-
+    set app $arg[1]
+    set subdir (bat srcpkgs/$app/template|g repo|choose -f = 1)
     cd ~/extproj/void-packages/
     ./xbps-src pkg $app
     sudo xbps-install -R hostdir/binpkgs/$subdir $app
