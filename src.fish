@@ -2,6 +2,7 @@ function src
     set dir $PWD
     set app $argv[1]
     cd ~/extproj/void-packages/
+    git pull
     set subdir (bat srcpkgs/{$app}/template|g repo|choose -f = 1)
     ./xbps-src pkg $app
     sudo xbps-install -R hostdir/binpkgs/$subdir $app
