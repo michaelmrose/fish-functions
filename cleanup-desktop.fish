@@ -6,7 +6,8 @@ function cleanup-desktop
     # countdown 7
     # echo killing windows
     # i3-msg [class="."] kill
-    # countdown 3
+    stop emacs
+    countdown 3
     while test -f /tmp/backup.lock
         sleep 1
     end
