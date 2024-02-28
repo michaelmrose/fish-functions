@@ -1,10 +1,10 @@
 function volume-status-line
     switch (get-active-audio-port)
-        case analog-output-headphones
+        case headphones
             set icon 
-        case analog-output-lineout
+        case speaker
             set icon 
     end
-    set volume (amixer -c 1 get Master | grep -oP '\[\d+%\]' | awk -F"[" '{gsub(/%|\]/,""); print $2}')
+    set volume (ponymix get-volume)
     i3status-rs-colorize Warning $icon $volume%
 end
