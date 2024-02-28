@@ -1,5 +1,5 @@
 function get-active-audio-port
-    set active (pactl list short sinks|g RUNNING|choose 1)
+    set active (pactl get-default-sink)
     if string match -r $active '.*usb.*'
         echo headphones
     else
