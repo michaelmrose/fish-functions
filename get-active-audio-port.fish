@@ -1,6 +1,5 @@
 function get-active-audio-port
-    set active (pactl get-default-sink)
-    if string match -r $active '.*usb.*'
+    if string match -r (pactl get-default-sink) '.*usb.*'
         echo headphones
     else
         echo speaker
