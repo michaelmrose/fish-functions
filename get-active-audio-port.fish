@@ -1,3 +1,8 @@
 function get-active-audio-port
-	pactl list sinks|g "active port: analog-output-.*"|choose 2
+    set active (pactl list short sinks|g RUNNING|choose 1)
+    if string match -r $active '.*usb.*'
+        echo headphones
+    else
+        echo speaker
+    end
 end
