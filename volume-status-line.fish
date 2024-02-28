@@ -1,6 +1,6 @@
 function volume-status-line
     switch (get-active-audio-port)
-        case headphones
+        case headset
             set icon 
         case speaker
             set icon 
