@@ -4,5 +4,5 @@ function up?
    # if [ (echo $service_status | choose -f : 0 ) = down ]
    #     return 1
    # end
-   test service status $argv | choose -f : 0 = "up"
+   test (service status $argv | choose -f : 0) = "up"
 end
