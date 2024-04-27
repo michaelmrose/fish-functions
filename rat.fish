@@ -1,4 +1,4 @@
 function rat
-    ratbagctl cheering-viscacha $argv
+    ratbagctl singing-gundi $argv
 
 end
