@@ -6,7 +6,7 @@ function watchlock
             end
         else if string match -q '*remove*' -- $line
             if not locked?
-                betterlockscreen -l
+                betterlockscreen -l &
             end
         end
         sleep 1.5
