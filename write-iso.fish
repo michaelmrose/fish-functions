@@ -1,31 +1,31 @@
 function write-iso
-    set help1 'Usage  : write-iso PATH-TO-ISO to PATH-TO-DEVICE' 
+    set help1 'Usage  : write-iso PATH-TO-ISO to PATH-TO-DEVICE'
     set help2 'Example: write-iso /med/dl/distro.iso to /dev/sdz'
     if not exists $argv
-	echo $help1
-	echo $help2
-	return 1
+    echo $help1
+    echo $help2
+    return 1
     end
     if [ $argv[1] = --help ]
-	echo $help1
-	echo $help2
-	return 1
+    echo $help1
+    echo $help2
+    return 1
     end
 
     set file $argv[1]
     set disk $argv[3]
     set size (du -hs $file | cut -f1)
     if test -f $file; and test -b $disk
-	echo The following disk will be overwritten...
-	echo -----------------------------------------
-	s fdisk -l $disk
-	echo -----------------------------------------
+    echo The following disk will be overwritten...
+    echo -----------------------------------------
+    s fdisk -l $disk
+    echo -----------------------------------------
     else
-	echo invalid arguments
-	return 1
+    echo invalid arguments
+    return 1
     end
+    sleep 5
     if read_confirm
-	countdown 10
-	sudo dd if=$file of=$disk bs=1M status=progress;and sync
+    sudo dd if=$file of=$disk bs=1M status=progress;and sync
     end
 end
