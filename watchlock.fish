@@ -1,5 +1,5 @@
 function watchlock
-    udevadm monitor | grep -iE --line-buffered '1050.0407.*/hidraw' | while read -l line
+    udevadm monitor | grep -iE --line-buffered '1050.0407.*hidraw' | while read -l line
         if string match -q '*add*' -- $line
             if locked?
                 killall i3lock
