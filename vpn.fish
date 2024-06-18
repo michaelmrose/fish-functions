@@ -4,6 +4,10 @@ function vpn
             if not nmcli connection show wg-US-WA-53 | grep -i 'GENERAL.STATE'
                 nmcli connection up wg-US-WA-53
             end
+        case -d
+            if nmcli connection show wg-US-WA-53 | grep -i 'GENERAL.STATE'
+                nmcli connection down wg-US-WA-53
+            end
         case -t
             if nmcli connection show wg-US-WA-53 | grep -i 'GENERAL.STATE'
                 # disconnect
