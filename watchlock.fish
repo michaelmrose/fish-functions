@@ -9,6 +9,5 @@ function watchlock
                 betterlockscreen -l &
             end
         end
-        sleep 0.1
     end
 end
