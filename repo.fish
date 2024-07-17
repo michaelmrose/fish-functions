@@ -1,4 +1,3 @@
 function repo
-	sudo add-apt-repository $argv
-    aptup
+    git remote --verbose|head -1|choose 1|each xdg-open
 end
