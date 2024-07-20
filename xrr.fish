@@ -5,7 +5,7 @@ function xrr
             wp recall
             stop picom
         case all
-            xrandr --dpi 163 --output DP-0 --pos 0x0  --mode 3840x2160 --output DP-2 --pos 3840x0 --mode 3840x2160 --output HDMI-0 --pos 7680x0 --mode 1920x1080 --scale 2.0x2.0
+            xrandr --dpi 163 --output DP-0 --pos 0x0  --mode 3840x2160 --output DP-2 --pos 3840x0 --mode 3840x2160 --output HDMI-0 --pos 7680x0 --mode 1920x1080 --scale 1.75x1.75
             wp recall
             restart picom
         case 'toggle'
