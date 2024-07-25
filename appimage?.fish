@@ -11,7 +11,7 @@ function appimage?
     if string match -q "*No such file*" "$iso_output"
         echo "$argv[1] is not an app image"
     else if string match -q "*ISO 9660*" "$iso_output"
-        # echo "$argv[1] might be an app image, but there was an error reading it"
+        echo "$argv[1] might be an app image, but there was an error reading it"
         return 1
     else
         # echo "$argv[1] is not an app image"
