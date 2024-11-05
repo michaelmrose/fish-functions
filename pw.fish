@@ -1,3 +1,3 @@
 function pw
-    pwgen -cny 12
+    pwgen -cny 12|choose 0
 end
