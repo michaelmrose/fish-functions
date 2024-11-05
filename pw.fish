@@ -1,3 +1,5 @@
 function pw
-    pwgen -cny 12|choose 0
+    set pw (pwgen -cny 12|choose 0)
+    echo $pw | clipboard
+    echo $pw
 end
