@@ -4,6 +4,6 @@ function kill-workspace
     else
         set target (xprop -root _NET_CURRENT_DESKTOP)
     end
-        xdotool search --desktop (desktop-number-by-name $target) ''|each wmctrl -ic
+    xdotool search --desktop $target ''|each wmctrl -ic
 
 end
