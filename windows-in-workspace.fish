@@ -1,3 +1,3 @@
 function windows-in-workspace
-     desktop-number-by-name $argv
+     xdotool search --all --desktop (desktop-number-by-name $argv)
 end
