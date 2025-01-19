@@ -5,7 +5,7 @@ function src
     git pull
     set subdir (bat srcpkgs/{$app}/template|g repo|choose -f = 1)
     ./xbps-src pkg $app
-    sudo xbps-install -R hostdir/binpkgs/$subdir $app
+    sudo xbps-install -R hostdir/binpkgs/$subdir $app -y
     set res $status
     cd $dir
     return $res
