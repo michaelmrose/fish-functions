@@ -3,9 +3,9 @@ function return-vpn-status-line-text
     set unlocked '{"state":"Info", "text": "    "}'
     while read -l line
         switch $line
-            case $VPN_CONNECTION: connected
+            case "$VPN_CONNECTION: connected"
                 echo $locked
-            case $VPN_CONNECTION: disconnected
+            case "$VPN_CONNECTION: disconnected"
                 echo $unlocked
         end
     end
