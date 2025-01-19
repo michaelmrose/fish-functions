@@ -1,14 +1,8 @@
 function return-vpn-status-line-text
-    # set locked '{"state":"Warning", "text": "  "}'
-    # set unlocked '{"state":"Info", "text": "    "}'
     # while read -l line
-    #     switch $line
-    #         case "$VPN_CONNECTION: connected"
-    #             echo $locked
-    #         case "$VPN_CONNECTION: disconnected"
-    #             echo $unlocked
-    #     end
+    #     iff "string match $line $VPN_CONNECTION: connected" '{"state":"Warning", "text": "  "}' '{"state":"Info", "text": "    "}'
     # end
+
  set locked '{"state":"Warning", "text": "  "}'
     set unlocked '{"state":"Info", "text": "    "}'
     set vpn_connected_string 'wg-US-WA-140: connected'
