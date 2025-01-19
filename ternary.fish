@@ -5,13 +5,13 @@ function ternary
     if eval $test
     # echo its all true\!
     if defined (explode-words $s1)[1] 2> /dev/null
-      eval $s1 > /dev/null
+      eval $s1
     else
       echo $s1
     end
     else
       if defined (explode-words $s2)[1] 2> /dev/null
-        eval $s2 > /dev/null
+        eval $s2
       else
         echo $s2
       end
