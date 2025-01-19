@@ -8,6 +8,8 @@ function vpn
             if nmcli connection show wg-US-WA-140 | grep -i 'GENERAL.STATE'
                 nmcli connection down wg-US-WA-140
             end
+        case -p
+            set -U VPN_CONNECTION (nmcli connection show|g wireguard|choose 0| select)
         case -t
             if nmcli connection show wg-US-WA-140 | grep -i 'GENERAL.STATE'
                 # disconnect
