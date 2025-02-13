@@ -1,4 +1,3 @@
 function rat
-    ratbagctl singing-gundi $argv
-
+    ratbagctl hollering-marmot $argv
 end
