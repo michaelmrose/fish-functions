@@ -1,7 +1,7 @@
 function fm
-	if not exists $argv
-      dolphin (pwd) &
+    if not exists $argv
+      spacefm (pwd) &
   else
-      dolphin $argv &
+      spacefm $argv &
   end
 end
