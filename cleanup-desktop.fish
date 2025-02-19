@@ -7,6 +7,7 @@ function cleanup-desktop
     # echo killing windows
     # i3-msg [class="."] kill
     killall firefox
+    wmctrl -c "Firefox"
     stop emacs
     countdown 3
     while test -f /tmp/backup.lock
