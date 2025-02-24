@@ -1,11 +1,13 @@
-# Defined in /usr/home/michael/.config/fish/buffer/clip_clipboard.fish @ line 6
 function clipboard
-	if exists $argv
+    if exists $argv
         switch $argv
             case  'o'
                 xclip  -selection clipboard -o
             case '*'
-                eval $argv | clipboard
+                if test -f $argv
+                    cat $argv | clipboard
+                    # eval $argv | clipboard
+                end
         end
     else
         xclip -selection clipboard -i
