@@ -3,9 +3,30 @@ function spacefm_autojump
     set selection (rofi -dmenu -p "" | xargs -r zoxide query 2>/dev/null | cut -d ' ' -f2)
 
     if test -n "$selection" -a -d "$selection"
-        spacefm -s set --window $window current_dir "$selection" 2>/dev/null
+        # Get the active window ID
+        set win_id (xdotool getactivewindow)
+
+        # Get the PID of the active SpaceFM window
+        set spacefm_pid (xdotool getwindowpid $win_id 2>/dev/null)
+
+        # Verify the process name is actually SpaceFM
+        if test -n "$spacefm_pid" && ps -p $spacefm_pid -o comm= | grep -qi "spacefm"
+            # Locate SpaceFM's socket for this PID
+            set socket_path "/tmp/spacefm-socket-$spacefm_pid"
+
+            # Ensure the socket exists before sending the command
+            if test -S "$socket_path"
+                spacefm -s --socket "$socket_path" set current_dir "$selection" 2>/dev/null
+            else
+                echo "Error: Could not find SpaceFM socket for PID $spacefm_pid" >&2
+            end
+        else
+            echo "Error: Active window is not a SpaceFM instance" >&2
+        end
+        wmctrl -ia $window
     end
-    wmctrl -ia $window
+
+
 
 
 end
