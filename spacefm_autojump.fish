@@ -9,8 +9,6 @@ function spacefm_autojump
         # Get the PID of the active SpaceFM window
         set spacefm_pid (xdotool getwindowpid $win_id 2>/dev/null)
 
-        # Verify the process name is actually SpaceFM
-        if test -n "$spacefm_pid" && ps -p $spacefm_pid -o comm= | grep -qi "spacefm"
             # Locate SpaceFM's socket for this PID
             set socket_path "/tmp/spacefm-socket-$spacefm_pid"
 
@@ -20,9 +18,6 @@ function spacefm_autojump
             else
                 echo "Error: Could not find SpaceFM socket for PID $spacefm_pid" >&2
             end
-        else
-            echo "Error: Active window is not a SpaceFM instance" >&2
-        end
         wmctrl -ia $window
     end
 
