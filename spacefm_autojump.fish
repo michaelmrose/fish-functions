@@ -5,6 +5,7 @@ function spacefm_autojump
     if test -n "$selection" -a -d "$selection"
         spacefm -s set current_dir "$selection" 2>/dev/null
     end
+    wmctrl -ia $window
 
 
 end
