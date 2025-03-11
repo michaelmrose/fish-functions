@@ -3,7 +3,7 @@ function spacefm_autojump
     set selection (rofi -dmenu -p "" | xargs -r zoxide query 2>/dev/null | cut -d ' ' -f2)
 
     if test -n "$selection" -a -d "$selection"
-        spacefm -s set current_dir "$selection" 2>/dev/null
+        spacefm -s set --window $window current_dir "$selection" 2>/dev/null
     end
     wmctrl -ia $window
 
