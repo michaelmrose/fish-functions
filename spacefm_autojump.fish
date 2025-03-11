@@ -3,14 +3,9 @@ function spacefm_autojump
     set selection (rofi -dmenu -p "" | xargs -r zoxide query 2>/dev/null | cut -d ' ' -f2)
 
     if test -n "$selection" -a -d "$selection"
-        # Get the active window ID
-        set win_id (xdotool getactivewindow)
-
-        spacefm  set current_dir "$selection" 2>/dev/null
-        wmctrl -ia $window
+        spacefm -s set current_dir "$selection" 2>/dev/null
     end
-
-
+    wmctrl -ia $window
 
 
 end
