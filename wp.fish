@@ -61,7 +61,7 @@ function wp
                 set target (readlink ~/themes/$argv[2])
                 ln -s $target ~/themes/remembered/$sum
             case recall-theme
-                set sum (md5sum $bgimage)
+                set sum (md5sum $bgimage | choose 0)
                 wp $bgimage ~/themes/remembered/$sum
         end
     end
