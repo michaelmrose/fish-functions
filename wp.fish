@@ -1,4 +1,12 @@
 function wp
+
+    if not exists $argv
+        while read -l line
+            set acc $acc $line
+        end
+        wp $acc
+        return 0
+    end
     echo wp called with $argv
     if test (count $argv) -eq 1  -a -f $argv[1]
         set-wallpaper $argv[1]
