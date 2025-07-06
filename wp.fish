@@ -53,8 +53,6 @@ function wp
             case edit
                 gimp $argv[2]
                 wp $bgimage
-            case save-theme
-                cp ~/.cache/wal/colors.json ~/.config/wal/colorschemes/$argv[2]
         end
     end
 end
