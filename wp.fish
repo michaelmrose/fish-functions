@@ -3,6 +3,7 @@ function wp
     if not exists $argv
         while read -l line set acc $acc $line
         end
+        echo acc is $acc
         wp $acc
         return 0
     end
