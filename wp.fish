@@ -1,4 +1,5 @@
 function wp
+    echo wp called with $argv
 
     if not exists $argv
         while read -l line set acc $acc $line
