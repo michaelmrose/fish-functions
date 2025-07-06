@@ -7,7 +7,7 @@ function walfn
         set target $bgimage
     end
 
-    wal -n --saturate 0.7 -i $target
+    # wal -n --saturate 0.7 -i $target
 
     if exists $argv
         set accent $argv[1]
