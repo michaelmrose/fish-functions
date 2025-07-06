@@ -1,8 +1,7 @@
 function wp
 
     if not exists $argv
-        while read -l line
-            set acc $acc $line
+        while read -l line set acc $acc $line
         end
         wp $acc
         return 0
@@ -59,7 +58,8 @@ function wp
                 wp $bgimage $argv[2]
             case remember-theme
                 set sum (md5sum $bgimage)
-                ln -s ~/themes/$argv[2] ~/themes/remembered/$sum
+                set target (readlink ~/themes/$argv[2])
+                ln -s $target ~/themes/remembered/$sum
             case recall-theme
                 set sum (md5sum $bgimage)
                 wp $bgimage ~/themes/remembered/$sum
