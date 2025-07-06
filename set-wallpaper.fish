@@ -14,7 +14,7 @@ function set-wallpaper
         pywalfox update
         betterlockscreen -u $bgimage --fx > /dev/null &
         if exists $theme
-            wal -n --saturate 0.7 -i $img --theme $theme
+            wal -n --saturate 0.7  --theme $theme
         else
             wal -n --saturate 0.7 -i $img
         end
