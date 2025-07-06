@@ -13,7 +13,12 @@ function set-wallpaper
         convert $img -resize 2000x2000 ~/.cache/wal/rofi.jpg
         pywalfox update
         betterlockscreen -u $bgimage --fx > /dev/null &
-        wal -n --saturate 0.7 -i $img --theme $theme
+        if exists $theme
+            wal -n --saturate 0.7 -i $img --theme $theme
+        else
+            wal -n --saturate 0.7 -i $img
+        end
         xrdb ~/.cache/wal/colors-i3.conf
         i3 restart
+        restart picom
 end
