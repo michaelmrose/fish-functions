@@ -7,7 +7,7 @@ function wp
         return 0
     end
     if test  -f $argv[1]
-        set-wallpaper $argv[1] &
+        set-wallpaper $argv &
     else
         switch $argv[1]
             case recent
