@@ -218,6 +218,9 @@ function wp
                 echo $pics
                 set -U bgimage $pics
                 walfn
+                wp $bgimage
+
+
                 signal-i3blocks 12
             case shuf
                 p $bgimage |shuf |condense_lines|each wp multi
