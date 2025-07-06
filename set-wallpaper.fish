@@ -1,4 +1,5 @@
 function set-wallpaper
+    echo set-wallpaper called with $argv
         set img (pathof $argv[1])
         if exists $argv[2]
             set theme $argv[2]
