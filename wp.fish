@@ -1,5 +1,5 @@
 function wp
-    if test (count $argv) -eq 1  -a  test -f $argv[1]
+    if test (count $argv) -eq 1  -a -f $argv[1]
         set-wallpaper $argv[1]
     else
         switch $argv[1]
