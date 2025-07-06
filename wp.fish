@@ -3,12 +3,11 @@ function wp
     if not exists $argv
         while read -l line set acc $acc $line
         end
-        echo acc is $acc
         wp $acc
         return 0
     end
     if test  -f $argv[1]
-        set-wallpaper $argv &
+        set-wallpaper $argv[1] &
     else
         switch $argv[1]
             case recent
