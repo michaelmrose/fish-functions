@@ -7,8 +7,8 @@ function wp
         wp $acc
         return 0
     end
-    if test (count $argv) -eq 1  -a -f $argv[1]
-        set-wallpaper $argv[1] &
+    if test  -f $argv[1]
+        set-wallpaper $argv &
     else
         switch $argv[1]
             case recent
@@ -53,6 +53,8 @@ function wp
             case edit
                 gimp $argv[2]
                 wp $bgimage
+            case save-theme
+                ln -s $bgimage ~/themes/$argv[2]
         end
     end
 end
