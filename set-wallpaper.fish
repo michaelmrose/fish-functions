@@ -1,5 +1,6 @@
 function set-wallpaper
         set img (pathof $argv[1])
+        set theme $argv[2]
         set format (get-feh-format $img)
         feh --bg-{$format} $img
         add-to-recent-backgrounds $img
@@ -12,5 +13,5 @@ function set-wallpaper
         betterlockscreen -u $bgimage --fx > /dev/null &
         wal -n --saturate 0.7 -i $img
         xrdb ~/.cache/wal/colors-i3.conf
-        # restart-i3
+        i3 restart
 end
