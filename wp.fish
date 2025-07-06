@@ -55,6 +55,14 @@ function wp
                 wp $bgimage
             case save-theme
                 ln -s $bgimage ~/themes/$argv[2]
+            case theme
+                wp $bgimage $argv[2]
+            case remember-theme
+                set sum (md5sum $bgimage)
+                ln -s ~/themes/$argv[2] ~/themes/remembered/$sum
+            case recall-theme
+                set sum (md5sum $bgimage)
+                wp $bgimage ~/themes/remembered/$sum
         end
     end
 end
