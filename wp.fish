@@ -7,9 +7,9 @@ function wp
         wp $acc
         return 0
     end
-
-    if test -f $argv[1]
-        set-wallpaper $argv[1] $argv[2]
+    echo wp called with $argv
+    if test (count $argv) -eq 1  -a -f $argv[1]
+        set-wallpaper $argv[1]
     else
         switch $argv[1]
             case recent
@@ -54,6 +54,8 @@ function wp
             case edit
                 gimp $argv[2]
                 wp $bgimage
+            case save-theme
+                cp ~/.cache/wal/colors.json ~/.config/wal/colorschemes/$argv[2]
         end
     end
 end
