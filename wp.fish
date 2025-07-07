@@ -1,5 +1,4 @@
 function wp
-    echo wp called with $argv
 
     if not exists $argv
         while read -l line set acc $acc $line
@@ -65,6 +64,26 @@ function wp
                 set sum (md5sum $bgimage | choose 0)
                 set target (readlink ~/themes/remembered/$sum)
                 wp $bgimage $target
+            case view
+                switch $argv[2]
+                    case all
+                        pics $wallpaperroot
+                    case '*'
+                        pics (get-folder-for-backgrounds $argv[2])
+                        # case categories
+                end
+            case ls
+                for i in $argv[2..-1]
+                    if string match $i recent
+                        p $recent_backgrounds
+                    else
+                        if startswith : $i
+                            wp find (echo $i|cut -c2-)
+                        else
+                            wp cat ls $i
+                        end
+                    end
+                end
         end
     end
 end
