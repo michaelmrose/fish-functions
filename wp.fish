@@ -78,9 +78,9 @@ function wp
                         p $recent_backgrounds
                     else
                         if startswith : $i
-                            wp find (echo $i|cut -c2-)
+                            wp list (echo $i|cut -c2-)
                         else
-                            wp cat ls $i
+                            nil
                         end
                     end
                 end
