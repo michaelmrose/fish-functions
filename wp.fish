@@ -1,7 +1,8 @@
 function wp
 
     if not exists $argv
-        while read -l line set acc $acc $line
+        while read -l line
+            set acc $acc $line
         end
         wp $acc
         return 0
@@ -43,7 +44,7 @@ function wp
                 feh --bg-max $bgimage
                 return
             case fill
-                feh --bg-max $bgimage
+                feh --bg-fill $bgimage
                 return
             case count
                 wallpaper list backgrounds | wc -l
@@ -54,24 +55,6 @@ function wp
                 wp $bgimage
             case save-theme
                 ln -s $bgimage ~/themes/$argv[2]
-            case theme
-                wp $bgimage $argv[2]
-            case remember-theme
-                set sum (md5sum $bgimage | choose 0)
-                set target (readlink ~/themes/$argv[2])
-                ln -s $target ~/themes/remembered/$sum
-            case recall-theme
-                set sum (md5sum $bgimage | choose 0)
-                set target (readlink ~/themes/remembered/$sum)
-                wp $bgimage $target
-            case view
-                switch $argv[2]
-                    case all
-                        pics $wallpaperroot
-                    case '*'
-                        pics (get-folder-for-backgrounds $argv[2])
-                        # case categories
-                end
         end
     end
 end
