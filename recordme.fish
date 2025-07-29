@@ -1,0 +1,9 @@
+function recordme
+ffmpeg \
+  -f v4l2 -i /dev/video0 \
+  -f pulse -i hw:1,0 \
+  -t 00:05:00 \
+  -c:v libx264 -preset ultrafast \
+  -c:a aac \
+  "recording_$(date +%Y-%m-%d_%H-%M-%S).mp4"
+end
