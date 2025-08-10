@@ -13,6 +13,8 @@ function wp
         switch $argv[1]
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
+            case view
+                sxiv -tbfor (get-folder-for-backgrounds backgrounds)
             case open
                 sxiv -f $bgimage
             case url
