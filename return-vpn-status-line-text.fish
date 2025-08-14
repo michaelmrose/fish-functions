@@ -10,9 +10,9 @@ function return-vpn-status-line-text
     # set vpn_disconnected_string 'wg-US-WA-140: disconnected'
     set vpn_disconnected_string 'wg-US-.*: disconnected'
     while read -l line
-        if string match -r $vpn_connected_string
+        if string match -r $vpn_connected_string $line
             echo $locked
-        else if string match -r $vpn_disconnected_string
+        else if string match -r $vpn_disconnected_string $line
             echo $unlocked
         end
     #     switch $line
