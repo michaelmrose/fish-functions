@@ -1,6 +1,8 @@
 function every
+    set -l interval $argv[1]
     while true
-        $argv[2..]
-        sleep $argv[1]
+        # Everything after "every 5" are commands to eval
+        eval "$argv[2..-1]"
+        sleep $interval
     end
 end
