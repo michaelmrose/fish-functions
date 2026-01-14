@@ -1,6 +1,5 @@
 function bsfn
-    for i in (seq 10)
+    for i in (seq 3)
         echo hi
-        bashsleep.sh
     end
 end
