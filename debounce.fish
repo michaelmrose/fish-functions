@@ -5,16 +5,9 @@ function debounce
     set -l last_time 0
 
     while read -l line
-        set -l now (date +%s.%N)
-
-        if test "$line" = "$last"
-            continue
-        end
-
-        if test (math "$now - $last_time") -ge $interval
-            echo $line
+         if test "$line" != "$last"
             set last $line
-            set last_time $now
+            echo $line
         end
     end
 end
