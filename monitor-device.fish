@@ -2,10 +2,10 @@ function monitor-device
     set -l device $argv[1]
 
     # Escape regex metacharacters in the device string (at least dots)
-    set -l device_re (string replace -a '.' '\.' -- $device)
+    # set -l device_re (string replace -a '.' '\.' -- $device)
 
     # Build the regex
-    set -l regex ".*(add|remove).*$device_re"
+    set -l regex ".*(add|remove).*$device"
 
     echo "d is $device and r is $regex"
 
