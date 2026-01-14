@@ -4,6 +4,6 @@ function monitor-device
 
     stdbuf udevadm monitor 2>&1 \
         | stdbuf grep -iE --line-buffered "$regex" \
-        | stdbuff sed -u -n 's/.*\<add\>.*/add/ip; s/.*\<remove\>.*/remove/ip'
+        | stdbuf sed -u -n 's/.*\<add\>.*/add/ip; s/.*\<remove\>.*/remove/ip'
 
 end
