@@ -1,11 +1,12 @@
 function fe
-	for i in $argv
-    if startswith @ $i
-      set results $results (ftags list $i)
-    else
-      set results $results $i
-    end
-  end
+	set results $argv
+  # 	for i in $argv
+  #   if startswith @ $i
+  #     set results $results (ftags list $i)
+  #   else
+  #     set results $results $i
+  #   end
+  # end
   # if test (count $results) -gt 1
   set results (println $results | sort -d)
   set name (trunc 30 (sort-list $results | sed 's# #_#g'))
