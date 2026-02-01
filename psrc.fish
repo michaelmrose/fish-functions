@@ -1,3 +1,9 @@
 function psrc
-    bat (which $argv)
+    set t (typeof $argv)
+    switch t
+        case file
+            bat (which $argv)
+        case fn
+            type $argv
+    end
 end
