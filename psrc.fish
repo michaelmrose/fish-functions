@@ -1,6 +1,6 @@
 function psrc
     set t (typeof $argv)
-    switch t
+    switch $t
         case file
             bat (which $argv)
         case fn
