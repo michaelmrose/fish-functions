@@ -1,4 +1,14 @@
-# Defined in /home/michael/.config/fish/buffer/wifi.fish @ line 1
 function wifi
-	nmcli device wifi $argv
+    switch $argv[1]
+        case once
+            nmcli device wifi connect $argv[2] --ask
+        case '*'
+            while not online?
+                nmcli device wifi connect $argv[1] --ask
+                sleep 2
+            end
+        case captive
+            wifi once $argv[2]
+            firefox rosenetwork.net
+    end
 end
