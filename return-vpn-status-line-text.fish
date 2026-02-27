@@ -8,7 +8,7 @@ function return-vpn-status-line-text
     # set vpn_connected_string 'wg-US-WA-140: connected'
     set vpn_connected_string 'wg-US-.*: connected|usca.*connected'
     # set vpn_disconnected_string 'wg-US-WA-140: disconnected'
-    set vpn_disconnected_string 'wg-US-.*: disconnected|usca.*disconnected'
+    set vpn_disconnected_string 'wg-US-.*: disconnected|usca:*disconnected'
     while read -l line
         if string match -r "$vpn_connected_string" "$line"
             echo $locked
