@@ -33,9 +33,9 @@ function wp
                 set recent_backgrounds (remove-from-list $bgimage $recent_backgrounds)
                 wp $recent_backgrounds[1]
             case recall
-                ~/.fehbg
+                wp $bgimage
                 sleep 0.2
-                restart picom
+                # restart picom
             case open
                 sxiv $bgimage
             case prev
