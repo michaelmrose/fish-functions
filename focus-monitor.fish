@@ -1,7 +1,8 @@
 function focus-monitor
+    set mon (get-focused-display)
     switch $argv[1]
         case "left"
-            if get-focused-display = "Displayport-1"
+            if $mon = "Displayport-1"
                 xdotool key F10
             end
         case  '*'
