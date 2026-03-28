@@ -10,5 +10,7 @@ function wifi
         case captive
             wifi once $argv[2]
             firefox rosenetwork.net
+        case select
+            networks|select|fishstdin wifi once
     end
 end
