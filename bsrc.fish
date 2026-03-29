@@ -1,7 +1,7 @@
 function bsrc
     set dir $PWD
     set app $argv[1]
-    cd ~/extproj/void-packages/
+    cd /tank/project_archive/void-packages/
     git pull
     set subdir (bat srcpkgs/{$app}/template|g repo|choose -f = 1)
     ./xbps-src pkg $app
