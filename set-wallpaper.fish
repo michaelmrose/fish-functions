@@ -23,5 +23,4 @@ function set-wallpaper
 
         xrdb ~/.cache/wal/colors-i3.conf
         i3 restart
-        restart picom
 end
