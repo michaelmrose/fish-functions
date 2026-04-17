@@ -1,3 +1,4 @@
 function restart
-    service restart $argv
+    # service restart $argv
+    systemctl restart $argv
 end
