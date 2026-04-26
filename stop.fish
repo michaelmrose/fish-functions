@@ -1,3 +1,7 @@
 function stop
-   systemctl stop $argv
+    if string match (id -gn) root
+        systemctl stop $argv
+    else
+        systemctl --user stop $argv
+    end
 end
