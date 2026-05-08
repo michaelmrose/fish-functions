@@ -12,7 +12,7 @@ function tdown
     end
     # kitty  --class timer -o font_size=50 -e termdown -s --no-figlet -v en-us -T "$title" $duration -o /tmp/timerslist/"$title"
     kitty  --class timer -o font_size=50 -e termdown -s $duration -o /tmp/timerslist/"$title"
-
+    rm /tmp/timerslist/"$title"
     if [ $status = 0 ]
         msg Times up! Time for $title
             echo "$title" completed at (date) > /tmp/timers-complete.txt
