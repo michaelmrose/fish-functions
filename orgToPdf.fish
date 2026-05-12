@@ -1,6 +1,6 @@
 function orgToPdf
     set file "$argv[1]"
-    set out string replace -r 'org$' pdf $file
+    set out (string replace -r 'org$' pdf $file)
 pandoc $file \
             --from=org \
             --to=pdf \
