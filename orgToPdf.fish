@@ -1,5 +1,12 @@
 function orgToPdf
-    set file "$argv[1]"
+    switch (count $argv)
+        case 1
+        set file "$argv[1]"
+            set theme zenburn
+        case  2
+            set file "$argv[1]"
+            set theme "$argv[2]"
+    end
     set out (string replace -r 'org$' pdf $file)
 pandoc $file \
             --from=org \
