@@ -8,7 +8,7 @@ function orgToPdf
             set file "$argv[1]"
             set theme "$argv[2]"
             if not contains $theme $builtInStyles
-                set theme ~/.local/share/pandoc/highlight-themes/$theme
+                set theme ~/.local/share/pandoc/highlight-themes/$theme.theme
             end
     end
     set out (string replace -r 'org$' pdf $file)
