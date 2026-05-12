@@ -1,4 +1,5 @@
 function orgToPdf
+    set builtInStyles (pandoc --list-highlight-styles)
     switch (count $argv)
         case 1
             set file "$argv[1]"
@@ -6,6 +7,9 @@ function orgToPdf
         case  2
             set file "$argv[1]"
             set theme "$argv[2]"
+            if not contains $theme $builtInStyles
+                set theme ~/.local/share/pandoc/highlight-themes/$theme
+            end
     end
     set out (string replace -r 'org$' pdf $file)
     pandoc $file \
