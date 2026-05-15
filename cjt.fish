@@ -1,8 +1,9 @@
 function cjt
+    set buffer /tmp/errors.txt
     if exists $argv
-        cj -M:test -n "$argv" | tee /tmp/errrors.txt
+        cj -M:test -n "$argv" | tee $buffer
     else
-        cj -M:test | tee /tmp/errors.txt
+        cj -M:test | tee $buffer
     end
-    clip /tmp/errors.txt
+    clip $buffer
 end
