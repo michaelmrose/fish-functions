@@ -14,7 +14,7 @@ function wp
             case recent
                 sxiv -tbfor $recent_backgrounds 2> /dev/null
             case view
-                sxiv -tbfor (get-folder-for-backgrounds backgrounds)
+                sxiv -tbfor (get-folder-for-backgrounds $argv[2])
             case open
                 sxiv -f $bgimage
             case url
