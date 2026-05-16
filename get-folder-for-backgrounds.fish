@@ -1,6 +1,5 @@
-# Defined in /home/michael/.config/fish/buffer/get-folder-for-backgrounds.fish @ line 2
 function get-folder-for-backgrounds
-	
+
     #       echo $wallpaperroot
     #       return 0
     #   end
@@ -11,6 +10,10 @@ function get-folder-for-backgrounds
     #     echo $res
     # end
     # find $wallpaperroot -type d | grep $argv | head -1
+    if test $argv = backgrounds
+        echo $wallpaperroot
+        return 0
+    end
     set folder (find $wallpaperroot -type d| grep -E "/$argv\$"|head -1)
     if exists $folder
         echo $folder
