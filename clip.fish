@@ -1,6 +1,6 @@
 function clip
-    if exists $argv
-        switch $argv
+    if exists $argv[1]
+        switch $argv[1]
             case  'o'
                 xclip  -selection clipboard -o
             case '*'
