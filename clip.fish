@@ -1,4 +1,14 @@
-# Defined in /usr/home/michael/.config/fish/buffer/clip_clipboard.fish @ line 1
 function clip
-    xclip -selection clipboard $argv
+    if exists $argv
+        switch $argv
+            case  'o'
+                xclip  -selection clipboard -o
+            case '*'
+                # if test -f $argv
+                    cat $argv | clip
+                # end
+        end
+    else
+        xclip -selection clipboard -i
+    end
 end
