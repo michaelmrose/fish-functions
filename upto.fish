@@ -1,5 +1,5 @@
 function upto
-    while not test -f "$argv"; or test -d "$argv"
+    while not test -e"$argv"
         cd ..
     end
 end
