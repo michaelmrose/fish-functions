@@ -1,3 +1,4 @@
 function sp
-	smart-pick $argv; 
+    r
+    fd -t directory test|fzf|each cd
 end
