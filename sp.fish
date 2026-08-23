@@ -1,4 +1,4 @@
 function sp
     r
-    fd -t directory test|fzf|each cd
+    fd -t directory "$argv" |fzf|each cd
 end
