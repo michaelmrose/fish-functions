@@ -1,6 +1,9 @@
-# Defined in /usr/home/michael/.config/fish/buffer/each.fish @ line 2
 function each
-	if string match _  -- "$argv" > /dev/null
+    if exists $argv
+        p * |  each $argv
+        exit 0
+    end
+    if string match _  -- "$argv" > /dev/null
         while read -l line
             eval (echo $argv | sd _ $line)
         end
@@ -8,7 +11,7 @@ function each
         while read -l line
             eval $argv $line
         end
-        
+
     end
     return 0
 end
