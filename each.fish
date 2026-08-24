@@ -1,7 +1,7 @@
 function each
     if exists $argv
         p * |  each $argv
-        exit 0
+        return 0
     end
     if string match _  -- "$argv" > /dev/null
         while read -l line
