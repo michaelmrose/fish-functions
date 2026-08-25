@@ -1,3 +1,3 @@
 function nsof
-    rg '\(ns' $argv |choose 1
+    rg '\(ns' $argv | head -1 | choose 1
 end
