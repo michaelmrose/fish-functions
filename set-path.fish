@@ -1,16 +1,12 @@
 function set-path
 
-  set builtinpaths  /usr/local/bin /usr/bin /bin /usr/local/sbin /usr/sbin /sbin
+  set builtinpaths /usr/local/sbin /usr/local/bin /usr/bin /usr/bin/site_perl /usr/bin/vendor_perl /usr/bin/core_perl /usr/librustup/bin 
 
-  set scripts /usr/home/michael/scripts /usr/home/michael/scripts/clj
+  set scripts /home/michael/scripts /home/michael/scripts/clj
 
-  set cargo /usr/home/michael/.cargo/bin
+  set cargo home/michael/.cargo/bin
 
-  set imapnotify ~/extproj/imapnotify/node_modules/imapnotify/bin
+  set mypaths /home/michael/.local/bin /usr/home/michael/bin   ~/.emacs.d/bin
 
-  set nand2tetris /usr/home/michael/proj/nand2tetris/tools
-
-  set mypaths  /usr/home/michael/.local/bin /usr/home/michael/bin   ~/.emacs.d/bin
-
-  set -xg PATH $scripts $cargo $imapnotify $nand2etris $mypaths  $builtinpaths
+  set -xg PATH $scripts $cargo $mypaths  $builtinpaths
 end
