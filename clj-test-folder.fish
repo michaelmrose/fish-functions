@@ -1,5 +1,3 @@
 function clj-test-folder
-    for f in *
-          clj -M:test -n (nsof $f)
-      end
+    clj -M:test (for file in *.clj *.cljc; echo -- -n; nsof $file; end)
 end
