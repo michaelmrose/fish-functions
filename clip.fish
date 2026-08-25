@@ -1,12 +1,12 @@
 function clip
-    if exists $argv[1]
+    if exists $argv
         switch $argv[1]
             case  'o'
                 xclip  -selection clipboard -o
+            case 'ext'
+                fd  --strip-cwd-prefix (intersperse -e $argv[2..-1]) -x bat --style=header --decorations=always --color=never |clip
             case '*'
-                # if test -f $argv
-                    cat $argv | clip
-                # end
+                bat --style=header --decorations=always --color=never $argv |clip
         end
     else
         xclip -selection clipboard -i
