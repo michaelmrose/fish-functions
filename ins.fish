@@ -4,88 +4,72 @@ function ins
         return 2
     end
 
-    set -l src $argv[1]
-    set -l target $argv[2]
+    set -l src_path $argv[1]
+    set -l dst_path $argv[2]
 
-    if not test -f "$src"
-        echo "ins: source does not exist: $src" >&2
+    if not test -f "$src_path"
+        echo "ins: source does not exist: $src_path" >&2
         return 1
     end
 
-    if test -e "$target"; and not test -f "$target"
-        echo "ins: target exists but is not a regular file: $target" >&2
-        return 1
-    end
-
-    if test -f "$target"
-        set -l src_ns (nsof "$src")
-        or begin
-            echo "ins: nsof failed for source: $src" >&2
-            return 1
-        end
-
-        set -l target_ns (nsof "$target")
-        or begin
-            echo "ins: nsof failed for target: $target" >&2
-            return 1
-        end
-
-        if test "$src_ns" != "$target_ns"
-            echo "ins: namespace mismatch" >&2
-            echo "  src:    $src_ns" >&2
-            echo "  target: $target_ns" >&2
-            return 1
-        end
-
-        mkdir -p old
+    # If destination exists, verify namespace equality.
+    if test -f "$dst_path"
+        set -l src_ns (nsof "$src_path")
         or return 1
 
-        set -l name (basename "$target")
-        set -l backup "old/$name"
-        set -l n 1
+        set -l dst_ns (nsof "$dst_path")
+        or return 1
 
-        while test -e "$backup"
-            set backup "old/$name.$n"
-            set n (math $n + 1)
-        end
-
-        mv -- "$target" "$backup"
-        or begin
-            echo "ins: failed to back up target" >&2
+        if test "$src_ns" != "$dst_ns"
+            echo "ins: namespace mismatch" >&2
+            echo "  source: $src_ns" >&2
+            echo "  target: $dst_ns" >&2
             return 1
         end
+    else if test -e "$dst_path"
+        echo "ins: target exists but is not a regular file: $dst_path" >&2
+        return 1
+    else
+        read --prompt-str "ins: $dst_path does not exist. Create it? [y/N] " answer
 
-        if not cp -- "$src" "$target"
-            echo "ins: install failed; restoring backup" >&2
-            mv -- "$backup" "$target"
-            return 1
+        switch (string lower -- "$answer")
+            case y yes
+            case '*'
+                echo "ins: cancelled"
+                return 1
         end
 
-        echo "$src -> $target"
-        echo "old target -> $backup"
-        return 0
+        if not test -d (dirname "$dst_path")
+            echo "ins: target directory does not exist: "(dirname "$dst_path") >&2
+            return 1
+        end
     end
 
-    read --prompt-str "ins: $target does not exist. Create it? [y/N] " -l answer
+    mkdir -p old
+    or return 1
 
-    switch (string lower -- "$answer")
-        case y yes
-        case '*'
-            echo "ins: cancelled"
-            return 1
-    end
+    # Preserve the downloaded revisioned artifact exactly as named.
+    set -l archive_path old/(basename "$src_path")
 
-    set -l parent (dirname "$target")
-    if not test -d "$parent"
-        echo "ins: target directory does not exist: $parent" >&2
+    if test -e "$archive_path"
+        echo "ins: archive already exists: $archive_path" >&2
         return 1
     end
 
-    cp -- "$src" "$target"
+    command cp -- "$src_path" "$archive_path"
     or begin
-        echo "ins: failed to create target" >&2
+        echo "ins: failed to archive source" >&2
         return 1
     end
 
-    echo "$src -> $target"
+    # Install to the EXACT pathname supplied as argument 2.
+    command mv -- "$src_path" "$dst_path"
+    or begin
+        echo "ins: failed to install source" >&2
+        command rm -- "$archive_path"
+        return 1
+    end
+
+    echo "installed: $dst_path"
+    echo "archived:  $archive_path"
 end
