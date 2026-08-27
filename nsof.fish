@@ -1,3 +1,3 @@
 function nsof
-    rg '\(ns' $argv | head -1 | choose 0 -f "\(|\)" 0
+    rg '\(ns' $argv | head -1 | choose 0 -f "\(|\)"
 end
