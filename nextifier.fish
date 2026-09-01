@@ -4,7 +4,7 @@ function nextifier
             xdotool type next
             xdotool key Return
         case loop
-            while 1
+            while true
                 nextifier once
                 sleep 1
             end
