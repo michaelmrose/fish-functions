@@ -6,7 +6,7 @@ function nextifier
         case loop
             while true
                 nextifier once
-                sleep 1
+                sleep 600
             end
     end
 
