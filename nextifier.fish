@@ -6,7 +6,7 @@ function nextifier
         case loop
             while true
                 nextifier once
-                sleep 600
+                sleep $argv[2]
             end
     end
 
