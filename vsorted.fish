@@ -1,3 +1,3 @@
 function vsorted
-    ls -1 *.* | sed -E 's/.*[^0-9]([0-9]+)[^0-9]*$/\1\t&/' | sort -n -k1,1 | cut -f2-
+    printf '%s\n' *.* | sort -V
 end
