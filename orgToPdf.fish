@@ -25,6 +25,7 @@ function orgToPdf
         --from=org \
         --to=latex \
         --standalone \
+        --pdf-engine=lualatex \
         --highlight-style="$theme" \
         -V geometry:top=0.45in,bottom=0.65in,left=0.65in,right=0.65in \
         -V mainfont="Libertinus Serif" \
