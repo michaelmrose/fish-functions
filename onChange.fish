@@ -1,17 +1,41 @@
-function onChange --description 'Watch files/directories and run the final argument when they change'
-    if test (count $argv) -lt 2
-        echo "usage: onChange PATH [PATH ...] 'COMMAND'" >&2
+function onChange --description 'Watch files/directories and run a command when they change'
+    set -l separator (contains -i -- -- $argv)
+
+    if test -z "$separator"
+        echo "usage: onChange PATH [PATH ...] -- COMMAND [ARG ...]" >&2
         return 2
     end
 
-    set -l action $argv[-1]
-    set -e argv[-1]
-    set -l paths $argv
+    if test "$separator" -eq 1
+        echo "onChange: no paths specified" >&2
+        return 2
+    end
+
+    if test "$separator" -eq (count $argv)
+        echo "onChange: no command specified after --" >&2
+        return 2
+    end
+
+    set -l path_end (math "$separator - 1")
+    set -l command_start (math "$separator + 1")
+
+    set -l paths $argv[1..$path_end]
+    set -l action_template $argv[$command_start..-1]
 
     for path in $paths
         if not test -e "$path"
             echo "onChange: does not exist: $path" >&2
             return 1
+        end
+    end
+
+    # Replace each literal @ argument with all watched paths.
+    set -l action
+    for arg in $action_template
+        if test "$arg" = '@'
+            set -a action $paths
+        else
+            set -a action "$arg"
         end
     end
 
@@ -28,12 +52,13 @@ function onChange --description 'Watch files/directories and run the final argum
     end
 
     set -l previous (__onChange_state)
+    set -l action_display (string join ' ' -- (string escape -- $action))
 
     echo "onChange: watching:"
     for path in $paths
         echo "  $path"
     end
-    echo "onChange: action: $action"
+    echo "onChange: action: $action_display"
 
     while true
         sleep 0.25
@@ -44,15 +69,15 @@ function onChange --description 'Watch files/directories and run the final argum
             set previous $current
 
             echo
-            echo "onChange: FIRING "(date '+%H:%M:%S')" → $action"
+            echo "onChange: FIRING "(date '+%H:%M:%S')" → $action_display"
 
-            eval "$action"
+            $action[1] $action[2..-1]
             set -l action_status $status
 
             echo "onChange: FINISHED "(date '+%H:%M:%S')" ← status $action_status"
 
-            # Capture the post-command state so files changed by the command
-            # itself don't immediately trigger another run.
+            # Don't immediately retrigger if the command itself changed
+            # something inside the watched targets.
             set previous (__onChange_state)
         end
     end
