@@ -47,7 +47,12 @@ function onChange --description 'Watch files/directories and run the final argum
             echo "onChange: FIRING "(date '+%H:%M:%S')" → $action"
 
             eval "$action"
+            set -l action_status $status
 
+            echo "onChange: FINISHED "(date '+%H:%M:%S')" ← status $action_status"
+
+            # Capture the post-command state so files changed by the command
+            # itself don't immediately trigger another run.
             set previous (__onChange_state)
         end
     end
