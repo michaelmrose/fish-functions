@@ -1,10 +1,9 @@
 function orgToPdf
-
     switch (count $argv)
         case 1
             set file "$argv[1]"
             set theme hemisu
-        case  2
+        case 2
             set file "$argv[1]"
             set theme "$argv[2]"
     end
@@ -16,14 +15,33 @@ function orgToPdf
 
     set out (string replace -r 'org$' pdf $file)
 
-    pandoc $file \
+    set -l base (path basename -E "$file")
+    set -l builddir (path dirname "$file")/.orgToPdf
+    set -l tex "$builddir/$base.tex"
+
+    mkdir -p "$builddir"
+
+    pandoc "$file" \
         --from=org \
-        --to=pdf \
-        --pdf-engine=lualatex \
-        --highlight-style=$theme \
+        --to=latex \
+        --standalone \
+        --highlight-style="$theme" \
         -V geometry:top=0.45in,bottom=0.65in,left=0.65in,right=0.65in \
         -V mainfont="Libertinus Serif" \
         -V sansfont="Libertinus Sans" \
         -V monofont="JetBrains Mono" \
-        -o $out
+        -o "$tex"
+
+    or return
+
+    latexmk \
+        -lualatex \
+        -silent \
+        -halt-on-error \
+        -outdir="$builddir" \
+        "$tex"
+
+    or return
+
+    cp "$builddir/$base.pdf" "$out"
 end
