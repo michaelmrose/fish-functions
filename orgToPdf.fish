@@ -27,7 +27,8 @@ function orgToPdf
         --standalone \
         --pdf-engine=lualatex \
         --highlight-style="$theme" \
-        -V 'header-includes=\usepackage{graphicx}' \
+        # -V 'header-includes=\usepackage{graphicx}' \
+        -V graphics \
         -V geometry:top=0.45in,bottom=0.65in,left=0.65in,right=0.65in \
         -V mainfont="Libertinus Serif" \
         -V sansfont="Libertinus Sans" \
