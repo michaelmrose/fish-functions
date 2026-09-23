@@ -28,7 +28,7 @@ function orgToPdf
         --pdf-engine=lualatex \
         --highlight-style="$theme" \
         --lua-filter="$HOME/.local/share/pandoc/filters/code-block-needspace.lua" \
-        # --include-in-header="$HOME/.local/share/pandoc/code-block-needspace.tex" \
+        --include-in-header="$HOME/.local/share/pandoc/code-block-needspace.tex" \
         -V graphics \
         -V geometry:top=0.45in,bottom=0.65in,left=0.65in,right=0.65in \
         -V mainfont="Libertinus Serif" \
